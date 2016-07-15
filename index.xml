@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kenpu.ca</title>
-    <link>http://kenpu.ca/</link>
-    <description>Recent content on kenpu.ca</description>
+    <title>db@uoit</title>
+    <link>https://kenpuca.github.io/</link>
+    <description>Recent content on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://kenpu.ca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>http://kenpu.ca/writings/build-desk/</link>
+      <link>https://kenpuca.github.io/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/writings/build-desk/</guid>
+      <guid>https://kenpuca.github.io/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
@@ -96,10 +96,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/kenpu/</link>
+      <link>https://kenpuca.github.io/people/kenpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/kenpu/</guid>
+      <guid>https://kenpuca.github.io/people/kenpu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
 
@@ -127,19 +127,19 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>A stream algebra for building vision pipelines</title>
-      <link>http://kenpu.ca/projects/vision-pipeline/</link>
+      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
+      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;h1 id=&#34;introduction-to-algorithms&#34;&gt;Introduction to algorithms&lt;/h1&gt;
@@ -154,10 +154,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>Constraint Database</title>
-      <link>http://kenpu.ca/projects/constraint-db/</link>
+      <link>https://kenpuca.github.io/projects/constraint-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/constraint-db/</guid>
+      <guid>https://kenpuca.github.io/projects/constraint-db/</guid>
       <description>
 
 &lt;h1 id=&#34;about-constraint-db&#34;&gt;About constraint db&lt;/h1&gt;
@@ -170,47 +170,47 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>Mobile recommender</title>
-      <link>http://kenpu.ca/projects/mobile-recommender/</link>
+      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
+      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Open Data Integration</title>
-      <link>http://kenpu.ca/projects/open-data/</link>
+      <link>https://kenpuca.github.io/projects/open-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/open-data/</guid>
+      <guid>https://kenpuca.github.io/projects/open-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pixel level visualization</title>
-      <link>http://kenpu.ca/projects/pixel-packing/</link>
+      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
+      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>&lt;p&gt;Haskell and Clojure&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/helala/</link>
+      <link>https://kenpuca.github.io/people/helala/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/helala/</guid>
+      <guid>https://kenpuca.github.io/people/helala/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
 
@@ -224,10 +224,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/ferron/</link>
+      <link>https://kenpuca.github.io/people/ferron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/ferron/</guid>
+      <guid>https://kenpuca.github.io/people/ferron/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Michael Ferron&lt;/strong&gt;&lt;/p&gt;
 
@@ -240,10 +240,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/hedrick/</link>
+      <link>https://kenpuca.github.io/people/hedrick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/hedrick/</guid>
+      <guid>https://kenpuca.github.io/people/hedrick/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Adele Hedrick&lt;/strong&gt;&lt;/p&gt;
 
@@ -256,10 +256,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/milayhov/</link>
+      <link>https://kenpuca.github.io/people/milayhov/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/milayhov/</guid>
+      <guid>https://kenpuca.github.io/people/milayhov/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Alex Mihaylov&lt;/strong&gt;&lt;/p&gt;
 
