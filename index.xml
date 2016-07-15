@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>db@uoit</title>
-    <link>https://kenpuca.github.io/</link>
-    <description>Recent content on db@uoit</description>
+    <title>kenpu.ca</title>
+    <link>http://kenpu.ca/</link>
+    <description>Recent content on kenpu.ca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kenpu.ca/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>https://kenpuca.github.io/writings/build-desk/</link>
+      <link>http://kenpu.ca/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/writings/build-desk/</guid>
+      <guid>http://kenpu.ca/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
@@ -96,10 +96,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/people/kenpu/</link>
+      <link>http://kenpu.ca/people/kenpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/people/kenpu/</guid>
+      <guid>http://kenpu.ca/people/kenpu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
 
@@ -127,10 +127,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>Algorithms</title>
-      <link>https://kenpuca.github.io/courses/algorithms/</link>
+      <link>http://kenpu.ca/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
+      <guid>http://kenpu.ca/courses/algorithms/</guid>
       <description>
 
 &lt;h1 id=&#34;introduction-to-algorithms&#34;&gt;Introduction to algorithms&lt;/h1&gt;
@@ -145,10 +145,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>Open Data Integration</title>
-      <link>https://kenpuca.github.io/projects/open-data/</link>
+      <link>http://kenpu.ca/projects/open-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/projects/open-data/</guid>
+      <guid>http://kenpu.ca/projects/open-data/</guid>
       <description>&lt;p&gt;Open Data is the hottest addition to the Web.  Back by various nations and
 governments, millions of open data sets are being released by authoritative
 sources.  This is a vastly valuable opportunity for data scientists to gain
@@ -162,20 +162,20 @@ finding linkages in Open Data.&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>https://kenpuca.github.io/courses/programming-languages/</link>
+      <link>http://kenpu.ca/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
+      <guid>http://kenpu.ca/courses/programming-languages/</guid>
       <description>&lt;p&gt;Haskell and Clojure&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Mobile recommender</title>
-      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
+      <link>http://kenpu.ca/projects/mobile-recommender/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
+      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
       <description>&lt;p&gt;Your mobile phone knows more about what&amp;rsquo;s going on than you realize, and
 therefore, it should be able to make better recommendations that it&amp;rsquo;s doing now.&lt;/p&gt;
 
@@ -187,10 +187,10 @@ and make more sensible recommendations to the user.&lt;/p&gt;
     
     <item>
       <title>Pixel level visualization</title>
-      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
+      <link>http://kenpu.ca/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
+      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
       <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
 pixels on a mobile device.  Is it possible to build an algorithm to map each
 movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
@@ -203,10 +203,10 @@ visualization of (up to) millions of relational entities.&lt;/p&gt;
     
     <item>
       <title>Stream algebra for computer vision</title>
-      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
+      <link>http://kenpu.ca/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
+      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
       <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
 data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
 
@@ -219,10 +219,10 @@ expressions.&lt;/p&gt;
     
     <item>
       <title>Practical constraint solvers</title>
-      <link>https://kenpuca.github.io/projects/constraint-db/</link>
+      <link>http://kenpu.ca/projects/constraint-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/projects/constraint-db/</guid>
+      <guid>http://kenpu.ca/projects/constraint-db/</guid>
       <description>&lt;p&gt;If computers can &lt;a href=&#34;https://en.wikipedia.org/wiki/AlphaGo&#34;&gt;play Go&lt;/a&gt; brilliantly,
 why can&amp;rsquo;t we use our mobile phones to solve general puzzles?&lt;/p&gt;
 
@@ -235,10 +235,10 @@ application, or a special purpose programming language).&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/people/helala/</link>
+      <link>http://kenpu.ca/people/helala/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/people/helala/</guid>
+      <guid>http://kenpu.ca/people/helala/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
 
@@ -252,10 +252,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/people/ferron/</link>
+      <link>http://kenpu.ca/people/ferron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/people/ferron/</guid>
+      <guid>http://kenpu.ca/people/ferron/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Michael Ferron&lt;/strong&gt;&lt;/p&gt;
 
@@ -268,10 +268,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/people/hedrick/</link>
+      <link>http://kenpu.ca/people/hedrick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/people/hedrick/</guid>
+      <guid>http://kenpu.ca/people/hedrick/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Adele Hedrick&lt;/strong&gt;&lt;/p&gt;
 
@@ -284,10 +284,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/people/milayhov/</link>
+      <link>http://kenpu.ca/people/milayhov/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/people/milayhov/</guid>
+      <guid>http://kenpu.ca/people/milayhov/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Alex Mihaylov&lt;/strong&gt;&lt;/p&gt;
 
