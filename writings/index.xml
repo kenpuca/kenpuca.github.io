@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writings on db@uoit</title>
-    <link>http://kenpu.ca/writings/</link>
+    <link>http://kenpuca.github.io/writings/</link>
     <description>Recent content in Writings on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://kenpu.ca/writings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kenpuca.github.io/writings/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>http://kenpu.ca/writings/build-desk/</link>
+      <link>http://kenpuca.github.io/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/writings/build-desk/</guid>
+      <guid>http://kenpuca.github.io/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
