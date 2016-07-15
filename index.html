@@ -2,15 +2,15 @@
 <html>
     <head>
 	<meta name="generator" content="Hugo 0.16" />
-    <title>kenpu.ca</title>
+    <title>db@uoit</title>
     <meta name="viewport" content="width=device-width, 
                                      initial-scale=1,
                                      maximum-scale=1,
                                      user-scalable=no">
-    <link rel="stylesheet" href="http://kenpu.ca/css/bootstrap.css">
-    <link rel="stylesheet" href="http://kenpu.ca/css/fonts/fonts.css">
-    <link rel="stylesheet" href="http://kenpu.ca/style.css">
-    <link rel="stylesheet" href="http://kenpu.ca/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/style.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
     </head>
     <body>
     
@@ -247,62 +247,12 @@ vision applications.</em></p>
     <h1> Research </h1>
     
 
-<div class="row">
+<div class="research">
     
-    
-    
-    <div class="col-md-4">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    <a href="/projects/vision-pipeline">
-                       <i class="fa fa-chevron-right"></i> A stream algebra for building vision pipelines
-                    </a>
-                </h3>
-            </div>
-            <div class="panel-body"></div>
-        </div>
-    </div>
-
-    
-    
-    
-    <div class="col-md-4">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    <a href="/projects/constraint-db">
-                       <i class="fa fa-chevron-right"></i> Constraint Database
-                    </a>
-                </h3>
-            </div>
-            <div class="panel-body"><h1 id="about-constraint-db">About constraint db</h1>
-
-<blockquote>
-<p>We are working on it.</p>
-</blockquote>
-</div>
-        </div>
-    </div>
-
-    
-    
-    
-    <div class="col-md-4">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    <a href="/projects/mobile-recommender">
-                       <i class="fa fa-chevron-right"></i> Mobile recommender
-                    </a>
-                </h3>
-            </div>
-            <div class="panel-body"></div>
-        </div>
-    </div>
-
-    
-    
+        
+        <div class="row">
+        
+        
     
     <div class="col-md-4">
         <div class="panel panel-success">
@@ -313,12 +263,40 @@ vision applications.</em></p>
                     </a>
                 </h3>
             </div>
-            <div class="panel-body"></div>
+            <div class="panel-body"><p>Open Data is the hottest addition to the Web.  Back by various nations and
+governments, millions of open data sets are being released by authoritative
+sources.  This is a vastly valuable opportunity for data scientists to gain
+greater insights into a multitude of social and economic issues.</p>
+
+<p>In collaboration with <a href="http://www.cs.toronto.edu/~ekzhu/">Toronto</a>, we are
+building an Internet scale data integration system specifically designed for
+finding linkages in Open Data.</p>
+</div>
         </div>
     </div>
 
+        
     
+        
+        
     
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="/projects/mobile-recommender">
+                       <i class="fa fa-chevron-right"></i> Mobile recommender
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body">Your mobile phone knows more about what&rsquo;s going on than you realize, and therefore, it should be able to make better recommendations that it&rsquo;s doing now. In this project, we are building a new mobile based recommender system that can safely and privately observe its environment, deduce the situational context, and make more sensible recommendations to the user.</div>
+        </div>
+    </div>
+
+        
+    
+        
+        
     
     <div class="col-md-4">
         <div class="panel panel-success">
@@ -329,10 +307,58 @@ vision applications.</em></p>
                     </a>
                 </h3>
             </div>
-            <div class="panel-body"></div>
+            <div class="panel-body">There are over 1.5 million IMDB movie entries, and roughly the same number of pixels on a mobile device. Is it possible to build an algorithm to map each movie to a single pixel for the purpose of data visualization? We are looking into ways of discovering graph structures based on a relational database, and then use the graph structure to generate a pixel level data visualization of (up to) millions of relational entities.</div>
         </div>
     </div>
 
+        
+        </div>
+        
+    
+        
+        <div class="row">
+        
+        
+    
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="/projects/vision-pipeline">
+                       <i class="fa fa-chevron-right"></i> Stream algebra for computer vision
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body">Computer Vision algorithms are challenging to implement. The data input is a big data stream, and the intermediate processors often require fine tuning. We are investigating the applications of streaming database technology to enable rapid development, deployment and tuning of computer vision workflow by the means of formal streaming algebra and structural optimization of algebraic expressions.</div>
+        </div>
+    </div>
+
+        
+    
+        
+        
+    
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="/projects/constraint-db">
+                       <i class="fa fa-chevron-right"></i> Practical constraint solvers
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body"><p>If computers can <a href="https://en.wikipedia.org/wiki/AlphaGo">play Go</a> brilliantly,
+why can&rsquo;t we use our mobile phones to solve general puzzles?</p>
+
+<p>The reason is that we don&rsquo;t have a great algebra (and an interface) to enable
+user access to the powerful constraint solvers.  This project is to investigate
+the design and feasibility of such constraint solving interfaces (either as an
+application, or a special purpose programming language).</p>
+</div>
+        </div>
+    </div>
+
+        
     
 </div>
 
