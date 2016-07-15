@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peoples on db@uoit</title>
+    <link>http://kenpu.ca/people/</link>
+    <description>Recent content in Peoples on db@uoit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://kenpu.ca/people/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://kenpu.ca/people/kenpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kenpu.ca/people/kenpu/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Associate Professor &lt;br&gt;
+&lt;a href=&#34;http://www.science.uoit.ca/undergraduate/programs-and-information-for-prospective-students/computing-science/&#34;&gt;Computer Science&lt;/a&gt; /
+&lt;a href=&#34;http://science.uoit.ca&#34;&gt;Faculty of Science, UOIT&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Contact&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Email: &lt;code&gt;ken.pu@uoit.ca&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Address:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Faculty of Science, 2000 Simcoe Street North, Oshawa ON, L1H 7K3&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Office and telephone:
+&lt;a href=&#34;https://ssbp.mycampus.ca/prod/www_directory.directory_uoit.p_ShowPeople?first_name_in=ken&amp;amp;last_name_in=pu&amp;amp;button_text_in=Search&#34;&gt;See here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://kenpu.ca/people/helala/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kenpu.ca/people/helala/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;PhD Candidate in Computer Science&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Developing the theory and system of scalable streaming systems for computer
+vision applications.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://kenpu.ca/people/ferron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kenpu.ca/people/ferron/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Michael Ferron&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Master in Computer Science&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Working on pixel level visualization of Big Data.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://kenpu.ca/people/hedrick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kenpu.ca/people/hedrick/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Adele Hedrick&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Master in Computer Science&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Building a mobile recommender system&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://kenpu.ca/people/milayhov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kenpu.ca/people/milayhov/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Alex Mihaylov&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Summer research student&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Working on boolean-decision diagram based algorithms&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
