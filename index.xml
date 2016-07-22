@@ -133,10 +133,13 @@ to start with.&lt;/p&gt;
       <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
-&lt;h1 id=&#34;introduction-to-algorithms&#34;&gt;Introduction to algorithms&lt;/h1&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;This course is about understanding the fundamental concepts of algorithms.&lt;/p&gt;
+&lt;p&gt;This course is about problem solving and computation via algorithms.
+We will cover a number of known algorithms (sorting, hashing, search,
+indexing) and their applications.  We will discuss methods for analyzing
+existing algorithms and designing new algorithms.
+Finally, the students will be introduced to &lt;em&gt;complexity classes&lt;/em&gt;, in
+particular the class of &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&#34;course-outline&#34;&gt;Course outline&lt;/h1&gt;
@@ -166,7 +169,14 @@ finding linkages in Open Data.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
-      <description>&lt;p&gt;Haskell and Clojure&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
+languages&lt;/em&gt;.  We will be focused on the design principles and programming
+patterns of several programming languages from different programming
+paradigms.  We will pay particular attention to the program techniques in
+functional programming, and why they are gaining greater importance in modern
+programming.&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
