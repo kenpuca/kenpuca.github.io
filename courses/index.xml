@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on db@uoit</title>
-    <link>https://kenpuca.github.io/courses/</link>
-    <description>Recent content in Courses on db@uoit</description>
+    <title>Courses on kenpu.ca</title>
+    <link>http://kenpu.ca/courses/</link>
+    <description>Recent content in Courses on kenpu.ca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Algorithms</title>
-      <link>https://kenpuca.github.io/courses/algorithms/</link>
+      <link>http://kenpu.ca/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
+      <guid>http://kenpu.ca/courses/algorithms/</guid>
       <description>
 
 &lt;div class=&#34;jumbotron&#34;&gt;
@@ -153,10 +153,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>https://kenpuca.github.io/courses/programming-languages/</link>
+      <link>http://kenpu.ca/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
+      <guid>http://kenpu.ca/courses/programming-languages/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
 languages&lt;/em&gt;.  We will be focused on the design principles and programming
