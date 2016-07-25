@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on kenpu.ca</title>
-    <link>http://kenpu.ca/courses/</link>
-    <description>Recent content in Courses on kenpu.ca</description>
+    <title>Courses on db@uoit</title>
+    <link>https://kenpuca.github.io/courses/</link>
+    <description>Recent content in Courses on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
+&lt;div class=&#34;jumbotron&#34;&gt;
+&lt;h1&gt;Design &amp; Analysis of Algorithms&lt;/h1&gt;
+&lt;/div&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;This course is about problem solving and computation via algorithms.
+&lt;p&gt;&lt;a href=&#34;alert:info&#34;&gt;!&lt;/a&gt;
+This course is about problem solving and computation via algorithms.
 We will cover a number of known algorithms (sorting, hashing, search,
 indexing) and their applications.  We will discuss methods for analyzing
 existing algorithms and designing new algorithms.
@@ -25,16 +30,133 @@ Finally, the students will be introduced to &lt;em&gt;complexity classes&lt;/em&
 particular the class of &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;course-outline&#34;&gt;Course outline&lt;/h1&gt;
+&lt;h1 id=&#34;course-description&#34;&gt;Course description&lt;/h1&gt;
+
+&lt;p&gt;We follow the bottom-up approach to algorithm design.  Starting with the
+correctness and performance analysis of simple algorithms, we will progressively
+study more sophisticated data structures and algorithms.&lt;/p&gt;
+
+&lt;p&gt;Students will gain working knowledge of algorithms and data structures.  We will
+be using the Python programming language.&lt;/p&gt;
+
+&lt;h1 id=&#34;course-outline&#34;&gt;Course Outline&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Sorting (chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Insertion sort&lt;/li&gt;
+&lt;li&gt;Mergesort&lt;/li&gt;
+&lt;li&gt;Quicksort&lt;/li&gt;
+&lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
+&lt;li&gt;Counting sort and radix sort&lt;/li&gt;
+&lt;li&gt;Bucket sort&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Analysis of complexity (chapter 3, 4, 5)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Analysis of divide-and-conquer using recursion&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Solving recurrence equations&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(&lt;em&gt;Optional&lt;/em&gt;) Probabilistic analysis and randomized algorithm&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Bucket sort &lt;br&gt;
+Randomized quicksort&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Data structures (chapter 10, 11, 12)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Elementary data structures and their operations&lt;/li&gt;
+&lt;li&gt;Hash tables&lt;/li&gt;
+&lt;li&gt;Trees&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Design of optimization algorithms (chapter 15, 16)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dynamic programming&lt;/li&gt;
+&lt;li&gt;Greedy algorithms&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Graphs&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Graphs and search&lt;/li&gt;
+&lt;li&gt;Minimal spanning tree&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shortest path&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Bellman-Ford &lt;br&gt;
+Dijkstra
+Floyd-Washall&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Maxflow&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;NP-completeness &amp;amp; computational complexity&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Decision problems and formal language&lt;/li&gt;
+&lt;li&gt;Complexity classes&lt;/li&gt;
+&lt;li&gt;(In)tractability&lt;/li&gt;
+&lt;li&gt;Reduction&lt;/li&gt;
+&lt;li&gt;NP-completeness&lt;/li&gt;
+&lt;li&gt;Beyond NPC&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;marking-scheme&#34;&gt;Marking Scheme&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Evaluation&lt;/th&gt;
+&lt;th&gt;Grade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;There are many quizzes.&lt;/td&gt;
+&lt;td&gt;10%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Three assignments&lt;/td&gt;
+&lt;td&gt;30%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Two tests&lt;/td&gt;
+&lt;td&gt;30%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Final exam&lt;/td&gt;
+&lt;td&gt;30%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
 languages&lt;/em&gt;.  We will be focused on the design principles and programming

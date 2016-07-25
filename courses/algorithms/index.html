@@ -6,10 +6,10 @@
                                      initial-scale=1,
                                      maximum-scale=1,
                                      user-scalable=no">
-    <link rel="stylesheet" href="http://kenpu.ca/css/bootstrap.css">
-    <link rel="stylesheet" href="http://kenpu.ca/css/fonts/fonts.css">
-    <link rel="stylesheet" href="http://kenpu.ca/style.css">
-    <link rel="stylesheet" href="http://kenpu.ca/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/style.css">
+    <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
     </head>
     <body>
     
@@ -47,8 +47,13 @@
 <div class="container" style="padding-top: 70px">
     <div>
 
+<div class="jumbotron">
+<h1>Design & Analysis of Algorithms</h1>
+</div>
+
 <blockquote>
-<p>This course is about problem solving and computation via algorithms.
+<p><a href="alert:info">!</a>
+This course is about problem solving and computation via algorithms.
 We will cover a number of known algorithms (sorting, hashing, search,
 indexing) and their applications.  We will discuss methods for analyzing
 existing algorithms and designing new algorithms.
@@ -56,12 +61,152 @@ Finally, the students will be introduced to <em>complexity classes</em>, in
 particular the class of <em>NP-completeness</em>.</p>
 </blockquote>
 
-<h1 id="course-outline">Course outline</h1>
+<h1 id="course-description">Course description</h1>
+
+<p>We follow the bottom-up approach to algorithm design.  Starting with the
+correctness and performance analysis of simple algorithms, we will progressively
+study more sophisticated data structures and algorithms.</p>
+
+<p>Students will gain working knowledge of algorithms and data structures.  We will
+be using the Python programming language.</p>
+
+<h1 id="course-outline">Course Outline</h1>
+
+<ul>
+<li><p>Sorting (chapter 2.1, 2.3, 6, 7, 8)</p>
+
+<ul>
+<li>Insertion sort</li>
+<li>Mergesort</li>
+<li>Quicksort</li>
+<li>Comparison based sorting vs numeric sorting</li>
+<li>Counting sort and radix sort</li>
+<li>Bucket sort</li>
+</ul></li>
+
+<li><p>Analysis of complexity (chapter 3, 4, 5)</p>
+
+<ul>
+<li>Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$</li>
+
+<li><p>Analysis of divide-and-conquer using recursion</p>
+
+<blockquote>
+<p>Solving recurrence equations</p>
+</blockquote></li>
+
+<li><p>(<em>Optional</em>) Probabilistic analysis and randomized algorithm</p>
+
+<blockquote>
+<p>Bucket sort <br>
+Randomized quicksort</p>
+</blockquote></li>
+</ul></li>
+
+<li><p>Data structures (chapter 10, 11, 12)</p>
+
+<ul>
+<li>Elementary data structures and their operations</li>
+<li>Hash tables</li>
+<li>Trees</li>
+</ul></li>
+
+<li><p>Design of optimization algorithms (chapter 15, 16)</p>
+
+<ul>
+<li>Dynamic programming</li>
+<li>Greedy algorithms</li>
+</ul></li>
+
+<li><p><em>Graphs</em></p>
+
+<ul>
+<li>Graphs and search</li>
+<li>Minimal spanning tree</li>
+
+<li><p>Shortest path</p>
+
+<blockquote>
+<p>Bellman-Ford <br>
+Dijkstra
+Floyd-Washall</p>
+</blockquote></li>
+
+<li><p>Maxflow</p></li>
+</ul></li>
+
+<li><p><em>NP-completeness &amp; computational complexity</em></p>
+
+<ul>
+<li>Decision problems and formal language</li>
+<li>Complexity classes</li>
+<li>(In)tractability</li>
+<li>Reduction</li>
+<li>NP-completeness</li>
+<li>Beyond NPC</li>
+</ul></li>
+</ul>
+
+<h1 id="marking-scheme">Marking Scheme</h1>
+
+<table>
+<thead>
+<tr>
+<th>Evaluation</th>
+<th>Grade</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>There are many quizzes.</td>
+<td>10%</td>
+</tr>
+
+<tr>
+<td>Three assignments</td>
+<td>30%</td>
+</tr>
+
+<tr>
+<td>Two tests</td>
+<td>30%</td>
+</tr>
+
+<tr>
+<td>Final exam</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 <script src="/js/jquery-2.2.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      window.MathJax = {
+        showProcessingMessages: false,
+        messageStyle: "none",
+        tex2jax: {
+          inlineMath: [['$', '$'], ["\\(", "\\)"]],
+          processEscapes: true
+        },
+        "fast-preview": {disabled: true},
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: { noErrors: { disabled: true } },
+        MathMenu: {
+          styles: {
+            ".MathJax_Menu": {"z-index":2001}
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>
+
 
 <script src="/js/my.js"></script>
 </body>
