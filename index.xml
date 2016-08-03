@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kenpu.ca</title>
-    <link>http://kenpu.ca/</link>
-    <description>Recent content on kenpu.ca</description>
+    <title>db@uoit</title>
+    <link>https://kenpuca.github.io/</link>
+    <description>Recent content on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://kenpu.ca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>http://kenpu.ca/writings/build-desk/</link>
+      <link>https://kenpuca.github.io/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/writings/build-desk/</guid>
+      <guid>https://kenpuca.github.io/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
@@ -96,10 +96,126 @@ to start with.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/kenpu/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/kenpu/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
+      <description>
+
+&lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We use &lt;em&gt;Python&lt;/em&gt; for this course.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Basic Python will do for the most part of this course.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are not used to Python (anymore), you are only &lt;em&gt;one&lt;/em&gt; day away
+of catching up.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codecademy.com/learn/python&#34;&gt;https://www.codecademy.com/learn/python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;no-idea-what-to-say-about-this&#34;&gt;No idea what to say about this&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;programming-this-course&#34;&gt;Programming &amp;amp; This Course&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We don&amp;rsquo;t need much programming for this course because we absolutely will be
+focused on the &lt;em&gt;algorithms&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;But &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;The reality is that &lt;em&gt;programming&lt;/em&gt; is absolutely essential.&lt;/p&gt;
+
+&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;basic-programming-for-this-course&#34;&gt;Basic programming for this course&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [1, 2, 3]
+
+print &amp;quot;The middle number is %d&amp;quot; % x[1]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need arrays as a fundamental data structure.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Student:
+    name = &amp;quot;Unknown&amp;quot;
+    age = 18
+
+    def __init__(self, name):
+        self.name = name
+
+jack = Student(&amp;quot;Jack&amp;quot;)
+
+print &amp;quot;%s: %s&amp;quot; % (jack.name, jack.age)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need objects.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+while i &amp;lt; 10:
+  print i
+  i += 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(10):
+  print i
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Various loops are needed.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-3&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def reverse_string(s):
+    reversed_s = &amp;quot;&amp;quot;
+    for c in s:
+      reversed_s += c
+    return reversed_s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need functions.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/people/kenpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/people/kenpu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
 
@@ -127,10 +243,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;div class=&#34;jumbotron&#34;&gt;
@@ -162,7 +278,7 @@ be using the Python programming language.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Sorting (chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Insertion sort&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mergesort&lt;/li&gt;
 &lt;li&gt;Quicksort&lt;/li&gt;
 &lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
@@ -269,11 +385,67 @@ Floyd-Washall&lt;/p&gt;
     </item>
     
     <item>
-      <title>Open Data Integration</title>
-      <link>http://kenpu.ca/projects/open-data/</link>
+      <title>Introduction to algorithms</title>
+      <link>https://kenpuca.github.io/slides/algorithms/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/open-data/</guid>
+      <guid>https://kenpuca.github.io/slides/algorithms/intro/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introduction-to-algorithms&#34;&gt;Introduction to algorithms&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Sorting&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Hashing&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dynamic programming&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;NP-completeness&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;and a lot more&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:8&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-quiz&#34;&gt;A quiz&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This quiz is to test
+if you know how to do well.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe
+src=&#34;https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true&#34;
+width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
+marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Open Data Integration</title>
+      <link>https://kenpuca.github.io/projects/open-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/projects/open-data/</guid>
       <description>&lt;p&gt;Open Data is the hottest addition to the Web.  Back by various nations and
 governments, millions of open data sets are being released by authoritative
 sources.  This is a vastly valuable opportunity for data scientists to gain
@@ -287,10 +459,10 @@ finding linkages in Open Data.&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
 languages&lt;/em&gt;.  We will be focused on the design principles and programming
@@ -303,11 +475,117 @@ programming.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Mobile recommender</title>
-      <link>http://kenpu.ca/projects/mobile-recommender/</link>
+      <title>Symposium</title>
+      <link>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
+      <guid>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;columns 7:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;technology-to-enable-instant-gratification-evaluation&#34;&gt;Technology to enable instant gratification &amp;amp; evaluation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Powerpoint (Keynote, Openoffice) is no longer considered &lt;em&gt;technology&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;mycamps-the-right-way&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT * FROM schedule;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;
+&amp;gt; Haha.  Tricked you.  &lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;mycamps-the-right-way-1&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester FROM schedule;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Try without the &lt;code&gt;distinct&lt;/code&gt; keyword.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;mycamps-the-right-way-2&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code 
+FROM schedule
+WHERE instructor like &#39;%Ken%&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Can you modify the query to suit your own needs?&lt;/p&gt;
+
+&lt;p&gt;Can you see what the &lt;code&gt;LIKE&lt;/code&gt; clause is doing?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;mycamps-the-right-way-3&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday
+FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;How is your teaching assignment?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;mycamps-the-right-way-4&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday, starthour || &#39;:&#39; || startmin AS time
+FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;How is your teaching schedule?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;where-are-we-going-with-this&#34;&gt;Where are we going with this?&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile recommender</title>
+      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
       <description>&lt;p&gt;Your mobile phone knows more about what&amp;rsquo;s going on than you realize, and
 therefore, it should be able to make better recommendations that it&amp;rsquo;s doing now.&lt;/p&gt;
 
@@ -319,10 +597,10 @@ and make more sensible recommendations to the user.&lt;/p&gt;
     
     <item>
       <title>Pixel level visualization</title>
-      <link>http://kenpu.ca/projects/pixel-packing/</link>
+      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
+      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
       <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
 pixels on a mobile device.  Is it possible to build an algorithm to map each
 movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
@@ -335,10 +613,10 @@ visualization of (up to) millions of relational entities.&lt;/p&gt;
     
     <item>
       <title>Stream algebra for computer vision</title>
-      <link>http://kenpu.ca/projects/vision-pipeline/</link>
+      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
+      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
       <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
 data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
 
@@ -351,10 +629,10 @@ expressions.&lt;/p&gt;
     
     <item>
       <title>Practical constraint solvers</title>
-      <link>http://kenpu.ca/projects/constraint-db/</link>
+      <link>https://kenpuca.github.io/projects/constraint-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/constraint-db/</guid>
+      <guid>https://kenpuca.github.io/projects/constraint-db/</guid>
       <description>&lt;p&gt;If computers can &lt;a href=&#34;https://en.wikipedia.org/wiki/AlphaGo&#34;&gt;play Go&lt;/a&gt; brilliantly,
 why can&amp;rsquo;t we use our mobile phones to solve general puzzles?&lt;/p&gt;
 
@@ -367,10 +645,10 @@ application, or a special purpose programming language).&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/helala/</link>
+      <link>https://kenpuca.github.io/people/helala/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/helala/</guid>
+      <guid>https://kenpuca.github.io/people/helala/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
 
@@ -384,10 +662,10 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/ferron/</link>
+      <link>https://kenpuca.github.io/people/ferron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/ferron/</guid>
+      <guid>https://kenpuca.github.io/people/ferron/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Michael Ferron&lt;/strong&gt;&lt;/p&gt;
 
@@ -400,32 +678,16 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/hedrick/</link>
+      <link>https://kenpuca.github.io/people/hedrick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/hedrick/</guid>
+      <guid>https://kenpuca.github.io/people/hedrick/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Adele Hedrick&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Master in Computer Science&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Building a mobile recommender system&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://kenpu.ca/people/milayhov/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://kenpu.ca/people/milayhov/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Alex Mihaylov&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Summer research student&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Working on boolean-decision diagram based algorithms&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on kenpu.ca</title>
-    <link>http://kenpu.ca/projects/</link>
-    <description>Recent content in Projects on kenpu.ca</description>
+    <title>Projects on db@uoit</title>
+    <link>https://kenpuca.github.io/projects/</link>
+    <description>Recent content in Projects on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Open Data Integration</title>
-      <link>http://kenpu.ca/projects/open-data/</link>
+      <link>https://kenpuca.github.io/projects/open-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/open-data/</guid>
+      <guid>https://kenpuca.github.io/projects/open-data/</guid>
       <description>&lt;p&gt;Open Data is the hottest addition to the Web.  Back by various nations and
 governments, millions of open data sets are being released by authoritative
 sources.  This is a vastly valuable opportunity for data scientists to gain
@@ -27,10 +27,10 @@ finding linkages in Open Data.&lt;/p&gt;
     
     <item>
       <title>Mobile recommender</title>
-      <link>http://kenpu.ca/projects/mobile-recommender/</link>
+      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
+      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
       <description>&lt;p&gt;Your mobile phone knows more about what&amp;rsquo;s going on than you realize, and
 therefore, it should be able to make better recommendations that it&amp;rsquo;s doing now.&lt;/p&gt;
 
@@ -42,10 +42,10 @@ and make more sensible recommendations to the user.&lt;/p&gt;
     
     <item>
       <title>Pixel level visualization</title>
-      <link>http://kenpu.ca/projects/pixel-packing/</link>
+      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
+      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
       <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
 pixels on a mobile device.  Is it possible to build an algorithm to map each
 movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
@@ -58,10 +58,10 @@ visualization of (up to) millions of relational entities.&lt;/p&gt;
     
     <item>
       <title>Stream algebra for computer vision</title>
-      <link>http://kenpu.ca/projects/vision-pipeline/</link>
+      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
+      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
       <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
 data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
 
@@ -74,10 +74,10 @@ expressions.&lt;/p&gt;
     
     <item>
       <title>Practical constraint solvers</title>
-      <link>http://kenpu.ca/projects/constraint-db/</link>
+      <link>https://kenpuca.github.io/projects/constraint-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/constraint-db/</guid>
+      <guid>https://kenpuca.github.io/projects/constraint-db/</guid>
       <description>&lt;p&gt;If computers can &lt;a href=&#34;https://en.wikipedia.org/wiki/AlphaGo&#34;&gt;play Go&lt;/a&gt; brilliantly,
 why can&amp;rsquo;t we use our mobile phones to solve general puzzles?&lt;/p&gt;
 

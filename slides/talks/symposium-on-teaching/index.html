@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Symposium</title>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
+
+		
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
+
+		
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown
+						 data-separator="^---"
+						 data-separator-vertical="^--"
+						 data-separator-notes="^Note:"
+						data-charset="iso-8859-15">[!](columns 7:5)
+
+# Technology to enable instant gratification &amp; evaluation
+
+[!](split)
+
+## TL;TR
+
+&gt; Powerpoint (Keynote, Openoffice) is no longer considered *technology*.
+
+---
+
+## Mycamps - the right way
+
+
+```sql
+SELECT * FROM schedule;
+```
+
+[!](columns 8:4)
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
+
+[!](split)
+&gt; Haha.  Tricked you.  &lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt;
+
+
+---
+
+## Mycamps - the right way
+
+
+```sql
+SELECT distinct semester FROM schedule;
+```
+
+[!](columns 8:4)
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+[!](split)
+
+Try without the `distinct` keyword.
+
+---
+
+## Mycamps - the right way
+
+```sql
+SELECT distinct semester, code 
+FROM schedule
+WHERE instructor like &#39;%Ken%&#39;;
+```
+
+[!](columns 8:4)
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+[!](split)
+
+Can you modify the query to suit your own needs?
+
+
+Can you see what the `LIKE` clause is doing?
+
+---
+
+## Mycamps - the right way
+
+```sql
+SELECT distinct semester, code, weekday
+FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
+```
+
+[!](columns 8:4)
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+
+[!](split)
+
+How is your teaching assignment?
+
+---
+
+## Mycamps - the right way
+
+```sql
+SELECT distinct semester, code, weekday, starthour || &#39;:&#39; || startmin AS time
+FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
+```
+
+[!](columns 8:4)
+
+&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
+
+[!](split)
+
+How is your teaching schedule?
+
+---
+
+# Where are we going with this?
+
+
+</section>
+			</div>
+		</div>
+
+        <script src="/js/jquery-2.2.1.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
+
+		<script>
+			
+			Reveal.initialize({
+				history: true,
+
+                slideNumber: true,
+
+                transition: "zoom",
+                transitionSpeed: "fast",
+
+				
+				dependencies: [
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/markdown/marked.js' },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/markdown/markdown.js' },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

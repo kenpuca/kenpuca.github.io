@@ -1,19 +1,135 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on kenpu.ca</title>
-    <link>http://kenpu.ca/courses/</link>
-    <description>Recent content in Courses on kenpu.ca</description>
+    <title>Courses on db@uoit</title>
+    <link>https://kenpuca.github.io/courses/</link>
+    <description>Recent content in Courses on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
+      <description>
+
+&lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We use &lt;em&gt;Python&lt;/em&gt; for this course.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Basic Python will do for the most part of this course.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are not used to Python (anymore), you are only &lt;em&gt;one&lt;/em&gt; day away
+of catching up.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codecademy.com/learn/python&#34;&gt;https://www.codecademy.com/learn/python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;no-idea-what-to-say-about-this&#34;&gt;No idea what to say about this&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;programming-this-course&#34;&gt;Programming &amp;amp; This Course&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We don&amp;rsquo;t need much programming for this course because we absolutely will be
+focused on the &lt;em&gt;algorithms&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;But &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;The reality is that &lt;em&gt;programming&lt;/em&gt; is absolutely essential.&lt;/p&gt;
+
+&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;basic-programming-for-this-course&#34;&gt;Basic programming for this course&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [1, 2, 3]
+
+print &amp;quot;The middle number is %d&amp;quot; % x[1]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need arrays as a fundamental data structure.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Student:
+    name = &amp;quot;Unknown&amp;quot;
+    age = 18
+
+    def __init__(self, name):
+        self.name = name
+
+jack = Student(&amp;quot;Jack&amp;quot;)
+
+print &amp;quot;%s: %s&amp;quot; % (jack.name, jack.age)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need objects.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+while i &amp;lt; 10:
+  print i
+  i += 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(10):
+  print i
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Various loops are needed.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-3&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def reverse_string(s):
+    reversed_s = &amp;quot;&amp;quot;
+    for c in s:
+      reversed_s += c
+    return reversed_s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We need functions.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;div class=&#34;jumbotron&#34;&gt;
@@ -45,7 +161,7 @@ be using the Python programming language.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Sorting (chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Insertion sort&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mergesort&lt;/li&gt;
 &lt;li&gt;Quicksort&lt;/li&gt;
 &lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
@@ -153,10 +269,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
 languages&lt;/em&gt;.  We will be focused on the design principles and programming

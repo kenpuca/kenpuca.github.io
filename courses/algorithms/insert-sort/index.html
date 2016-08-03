@@ -1,0 +1,205 @@
+
+    <!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title></title>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
+
+		
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
+
+		
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+        <div class="reveal">
+            <div class="slides">
+
+<h1 id="basic-programming">Basic programming</h1>
+
+<p><a href="columns 6:6">!</a></p>
+
+<p>We use <em>Python</em> for this course.</p>
+
+<blockquote>
+<p>Basic Python will do for the most part of this course.</p>
+</blockquote>
+
+<p><a href="split">!</a></p>
+
+<p>If you are not used to Python (anymore), you are only <em>one</em> day away
+of catching up.</p>
+
+<ul>
+<li><a href="https://www.codecademy.com/learn/python">https://www.codecademy.com/learn/python</a></li>
+</ul>
+
+<blockquote>
+<p><a href="break">!</a></p>
+
+<h1 id="no-idea-what-to-say-about-this">No idea what to say about this</h1>
+</blockquote>
+
+<h1 id="programming-this-course">Programming &amp; This Course</h1>
+
+<p><a href="columns 6:6">!</a></p>
+
+<p>We don&rsquo;t need much programming for this course because we absolutely will be
+focused on the <em>algorithms</em>.</p>
+
+<p><a href="split">!</a></p>
+
+<p>But &hellip;</p>
+
+<p>The reality is that <em>programming</em> is absolutely essential.</p>
+
+<h1 id="break"><a href="break">!</a></h1>
+
+<h1 id="basic-programming-for-this-course">Basic programming for this course</h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<pre><code class="language-python">x = [1, 2, 3]
+
+print &quot;The middle number is %d&quot; % x[1]
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>We need arrays as a fundamental data structure.</p>
+
+<h1 id="break-1"><a href="break">!</a></h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<pre><code class="language-python">class Student:
+    name = &quot;Unknown&quot;
+    age = 18
+
+    def __init__(self, name):
+        self.name = name
+
+jack = Student(&quot;Jack&quot;)
+
+print &quot;%s: %s&quot; % (jack.name, jack.age)
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>We need objects.</p>
+
+<h1 id="break-2"><a href="break">!</a></h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<pre><code class="language-python">i = 0
+while i &lt; 10:
+  print i
+  i += 1
+</code></pre>
+
+<pre><code class="language-python">for i in range(10):
+  print i
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>Various loops are needed.</p>
+
+<h1 id="break-3"><a href="break">!</a></h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<pre><code class="language-python">def reverse_string(s):
+    reversed_s = &quot;&quot;
+    for c in s:
+      reversed_s += c
+    return reversed_s
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>We need functions.</p>
+</div>
+        </div>
+
+        <script src="/js/jquery-2.2.1.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
+
+		<script>
+        
+        function isBreak($p) {
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides").hide();
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            $reveal.show();
+
+            startReveal();
+        });
+
+        function startReveal() {
+			Reveal.initialize({
+				history: true,
+
+                slideNumber: true,
+
+                transition: "zoom",
+                transitionSpeed: "fast",
+
+				
+				dependencies: [
+                    
+                    
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+				]
+			});
+        }
+		</script>
+	</body>
+</html>
+
+
