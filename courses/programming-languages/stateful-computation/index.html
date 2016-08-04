@@ -1,9 +1,10 @@
-<!doctype html>
+
+    <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Introduction to algorithms</title>
+        <title></title>
 
         <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
         <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
@@ -26,65 +27,83 @@
 		</script>
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown
-						 data-separator="^---"
-						 data-separator-vertical="^--"
-						 data-separator-notes="^Note:"
-						data-charset="iso-8859-15">[!](columns 8:4)
+        <div class="reveal">
+            <div class="slides">
 
-# Introduction to algorithms
+<h1 id="computation-the-turing-machine">Computation &amp; the Turing Machine</h1>
 
-[!](split)
+<h1 id="break"><a href="break">!</a></h1>
 
-***
+<h1 id="computation">Computation</h1>
 
-Sorting
+<p><a href="columns 5:">!</a></p>
 
-***
+<p><img src="david-hilbert.png"></img></p>
 
-Hashing
+<p><a href="split">!</a></p>
 
-***
+<ul>
+<li>Hilbert&rsquo;s Ten&rsquo;s problem, 1900</li>
+<li>Entscheidungsproblem, 1928</li>
+</ul>
 
-Dynamic programming
+<h1 id="break-1"><a href="break">!</a></h1>
 
-***
+<h1 id="computation-1">Computation</h1>
 
-NP-completeness
+<p><a href="columns 5:">!</a></p>
 
-***
+<p><img src="kurt-godel.png"></img></p>
 
-*and a lot more...*
+<p><a href="split">!</a></p>
 
-***
-
----
-
-[!](columns 4:8)
-
-## A quiz
-
-&gt; This quiz is to test
-&gt; if you know how to do well.
-
-[!](split)
-
-&lt;iframe
-src=&#34;https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true&#34;
-width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
-marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
-</section>
-			</div>
-		</div>
+<ul>
+<li>Entscheidungsproblem, 1928</li>
+</ul>
+</div>
+        </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
         <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
         <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
 
 		<script>
-			
+        
+        function isBreak($p) {
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides").hide();
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            $reveal.show();
+
+            startReveal();
+        });
+
+        function startReveal() {
 			Reveal.initialize({
 				history: true,
 
@@ -95,14 +114,17 @@ marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
 
 				
 				dependencies: [
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/markdown/marked.js' },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/markdown/markdown.js' },
+                    
+                    
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
 				]
 			});
+        }
 		</script>
 	</body>
 </html>
+
+

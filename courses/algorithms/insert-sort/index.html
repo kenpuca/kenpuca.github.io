@@ -6,23 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title></title>
 
-        <link rel="stylesheet" href="http://kenpu.ca/css/bootstrap.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/fonts/fonts.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
 
 		
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal-style.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
 
 		
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'http:\/\/kenpu.ca/reveal.js/css/print/pdf.css' : 'http:\/\/kenpu.ca/reveal.js/css/print/paper.css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
@@ -134,13 +134,493 @@ while i &lt; 10:
 
 <p><a href="split">!</a></p>
 
-<p>We need functions.</p>
+<p>We need functions, mostly to better organize the implementation of an algorithm.</p>
+
+<p><a href="break">!</a> ============</p>
+
+<p>We may need to rely on external Python libraries for data generation and visualization of algorithmic actions.</p>
+
+<p><a href="columns 4:">!</a></p>
+
+<p><img src="random-graph.png"></img></p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-python">import networkx as nx
+import matplotlib.pyplot as plot
+
+G = nx.erdos_renyi_graph(100, 0.015)
+nx.draw(G)
+plot.save(&quot;random-graph.png&quot;)
+</code></pre>
+
+<h1 id="break-4"><a href="break">!</a></h1>
+
+<h1 id="the-sorting-problem">The sorting problem</h1>
+
+<p><a href="columns 9:">!</a></p>
+
+<ul>
+<li><p>Input:</p>
+
+<blockquote>
+<p>An array of elements: $x$
+where the elements are to be compared by a <em>comparator</em> function:</p>
+
+<p><code>$$f(x_1, x_2) \in \left[
+\begin{array}{cc}
+-1 &amp; x_1 &lt; x_2 \\
+0 &amp; x_1 = x_2 \\
+1 &amp; x_1 &gt; x_2
+\end{array}\right.$$</code></p>
+</blockquote></li>
+
+<li><p>Output:</p>
+
+<blockquote>
+<p>A permutation $y$ of the array of $x$, such that</p>
+
+<p><code>$$\forall i,j\in[0, \mathrm{length}(y)],\quad i\leq j \implies y[i] \leq y[j]$$</code></p>
+</blockquote></li>
+</ul>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li>This is called <em>comparison based sorting</em>.</li>
+<li>The comparison function can be arbitrary, and it defines the ordering.</li>
+</ul>
+
+<h1 id="break-5"><a href="break">!</a></h1>
+
+<h1 id="the-sorting-problem-1">The sorting problem</h1>
+
+<ul>
+<li><p>Permutation $\pi : [0, n] \to [0, n]$ such that <code>$i\not= j\implies \pi(i)\not=\pi(j)$</code></p></li>
+
+<li><p>Given a sorting problem $(x, f)$, there can be multiple non-unique permutations that sorts $x$.</p>
+
+<blockquote>
+<pre><code class="language-python">x = [3, 2, 2, 1]
+</code></pre>
+</blockquote></li>
+
+<li><p>Stable sorting requires an additional condition on the permutation:</p>
+
+<p><code>$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &lt; \pi(j) $$</code></p></li>
+</ul>
+
+<h1 id="break-6"><a href="break">!</a></h1>
+
+<h1 id="insertion-sort">Insertion sort</h1>
+
+<blockquote>
+<p>It&rsquo;s a highly <em>inefficient</em> sorting algorithm.</p>
+</blockquote>
+
+<p>It&rsquo;s simple enough that:</p>
+
+<ol>
+<li>It&rsquo;s intuitive.</li>
+<li>It can be fully analyzed relatively easily.</li>
+</ol>
+
+<h1 id="break-7"><a href="break">!</a></h1>
+
+<h1 id="insertion-sort-1">Insertion sort</h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<p><img src=cards.png width=100%></img></p>
+
+<p>Chapter 2, Figure 2.1 of textbook.</p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-python">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<h1 id="break-8"><a href="break">!</a></h1>
+
+<h1 id="analysis-of-correctness">Analysis of correctness</h1>
+
+<ul>
+<li><p>Intuition only takes us part way, <em>not the whole way</em>.</p></li>
+
+<li><p>Sometimes, we can formally prove that an algorithm is correct.</p>
+
+<p>But first, we need some machineries.</p></li>
+</ul>
+
+<h1 id="break-9"><a href="break">!</a></h1>
+
+<h2 id="loop-invariance">Loop invariance</h2>
+
+<p><a href="columns 4:">!</a></p>
+
+<p>Consider a loop:</p>
+
+<pre><code class="language-python">total = 0
+count = 0
+
+for v in array:
+  total += v
+  count += 1
+
+avg = total / count
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li><p>Precondition of a loop:
+a statement that is <strong>always</strong> *true at the start of
+the loop.</p></li>
+
+<li><p>Postcondition of a loop:
+a statement that is <strong>always</strong> true at by the end of
+the loop.</p></li>
+</ul>
+
+<p><br></p>
+
+<ul>
+<li><p><strong>Loop invariance</strong>:
+a statement that is <strong>always</strong> true
+<span style=color:#44f;font-size:120%>right at the end</span>
+of each iteration of
+the loop.</p>
+
+<blockquote>
+<ul>
+<li><code>count $\not=$ 0</code></li>
+
+<li><p><code>total</code><code>$_{i+1} \geq$</code> <code>total</code><code>$_i$</code></p>
+
+<p>Note: for loop-invariance, we can refer to the iteration index
+  $i\geq 0$.</p></li>
+</ul>
+</blockquote></li>
+</ul>
+
+<h1 id="break-10"><a href="break">!</a></h1>
+
+<h1 id="correctness-of-insertion-sort-by-loop-invariance">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>There are two loops, with <code>while</code>-loop nested in the <code>for</code>-loop.</p>
+
+<h1 id="break-11"><a href="break">!</a></h1>
+
+<h1 id="correctness-of-insertion-sort-by-loop-invariance-1">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p><strong>Inner-loop invariance</strong></p>
+
+<blockquote>
+<p><code>i</code> is an index such that</p>
+
+<ul>
+<li><code>A[0 .. i]</code> are all smaller than <code>key</code>.</li>
+<li><code>A[i+2 .. j]</code> are larger or equal to <code>key</code>.</li>
+<li><code>A[i] = A[i+1]</code></li>
+</ul>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>Can we say anything about <code>A[j+1]</code> to <code>A[len(A)-1]</code>?</p>
+</blockquote>
+
+<h1 id="break-12"><a href="break">!</a></h1>
+
+<h1 id="correctness-of-insertion-sort-by-loop-invariance-2">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p><strong>Outer-loop invariance</strong></p>
+
+<blockquote>
+<p>The subarray <code>A[0 .. j]</code> is sorted after the $j$-th iteration of the <code>for</code>-loop.</p>
+</blockquote>
+
+<p><em>Proof</em>: We prove by induction on $j$.</p>
+
+<p><em>Base case</em></p>
+
+<blockquote>
+<p>$j=0$, trivially true</p>
+</blockquote>
+
+<p><em>Induction</em></p>
+
+<blockquote>
+<p>If <code>A[0 .. j-1]</code> is sorted, by the inner-loop invariance, moving key to
+<code>A[i+1]</code> makes <code>A[0 .. j]</code> sorted.</p>
+</blockquote>
+
+<h1 id="break-13"><a href="break">!</a></h1>
+
+<h1 id="correctness-of-insertion-sort-by-loop-invariance-3">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p><em>Theorem</em>:</p>
+
+<blockquote>
+<p>The <code>insertion_sort</code> algorithm always correctly sorts the input array.</p>
+</blockquote>
+
+<p><em>Proof</em>:</p>
+
+<blockquote>
+<p>By the outer-loop invariance, by the end of the last iteration,
+with $j=$<code>len(A)-1</code>, the entire array <code>A[0 .. len(A)-1]</code> is sorted.</p>
+</blockquote>
+
+<h1 id="break-14"><a href="break">!</a></h1>
+
+<h1 id="performance-analysis">Performance analysis</h1>
+
+<h1 id="break-15"><a href="break">!</a></h1>
+
+<h3 id="every-statement-takes-the-same-amount-of-time">Every statement takes the same amount of time.</h3>
+
+<blockquote>
+<p>This is not exactly correct, but it is accurate enough to gauge the
+performance of algorithms.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="corollary"><em>Corollary</em></h3>
+
+<blockquote>
+<p>We measure the number of lines executed by the program before an array is
+completely sorted by <code>insertion_sort</code>.</p>
+
+<p>$T_\mathrm{LOC}(\mathrm{length}(A)) \Rightarrow T(n)$</p>
+</blockquote>
+
+<h1 id="break-16"><a href="break">!</a></h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li><p>Best case analysis</p></li>
+
+<li><p><strong>Worst case analysis</strong></p></li>
+
+<li><p>Average case analysis</p></li>
+</ul>
+
+<h1 id="break-17"><a href="break">!</a></h1>
+
+<p><a href="columns 5:">!</a></p>
+
+<pre><code class="language-python small">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p><strong>Worst case analysis</strong></p>
+
+<p>Let $n = \mathrm{length}(A)$</p>
+
+<blockquote>
+<ul>
+<li><p>The outer-loop <em>always</em> iterates $n$ times.</p></li>
+
+<li><p>The inner loop iterates <em>in the worst case</em> $j$ times.</p></li>
+</ul>
+</blockquote>
+
+<hr />
+
+<p><code>$$ T(n) = \sum_{j=0}^n j = \frac{n(n-1)}{2}$$</code></p>
+
+<h1 id="break-18"><a href="break">!</a></h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<p><code>insert_sort</code> is a pretty inefficient algorithm.</p>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>T</th>
+<th>time (1M LOC/s)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>10</td>
+<td>45</td>
+<td>45 $\mu s$</td>
+</tr>
+
+<tr>
+<td>100</td>
+<td>4950</td>
+<td>5 $ms$</td>
+</tr>
+
+<tr>
+<td>1000</td>
+<td>499500</td>
+<td>0.5 $s$</td>
+</tr>
+
+<tr>
+<td>1000000</td>
+<td>499999500000</td>
+<td>5.9 days</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="split">!</a></p>
+
+<p>A more efficient algorithm (to be discussed later):</p>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>T</th>
+<th>time (1M LOC/s)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>10</td>
+<td>23</td>
+<td>23 $\mu s$</td>
+</tr>
+
+<tr>
+<td>100</td>
+<td>460</td>
+<td>0.46 $ms$</td>
+</tr>
+
+<tr>
+<td>1000</td>
+<td>6907</td>
+<td>6.9 $s$</td>
+</tr>
+
+<tr>
+<td>1000000</td>
+<td>13815510</td>
+<td>13.8 $s$</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="break-19"><a href="break">!</a></h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li>INSERTION sort</li>
+<li>Analysis of correctness by loop-invariance</li>
+<li>Performance analysis by counting lines executed</li>
+</ul>
+
+<hr />
+
+<p>Text: 2.1, 2.2,</p>
 </div>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/lib/js/head.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/js/reveal.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
 
 		<script>
         
@@ -191,10 +671,10 @@ while i &lt; 10:
 				dependencies: [
                     
                     
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/notes/notes.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
 				]
 			});
         }

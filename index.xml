@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kenpu.ca</title>
-    <link>http://kenpu.ca/</link>
-    <description>Recent content on kenpu.ca</description>
+    <title>db@uoit</title>
+    <link>https://kenpuca.github.io/</link>
+    <description>Recent content on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://kenpu.ca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>http://kenpu.ca/writings/build-desk/</link>
+      <link>https://kenpuca.github.io/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/writings/build-desk/</guid>
+      <guid>https://kenpuca.github.io/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
@@ -96,10 +96,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/insert-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/insert-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
@@ -206,16 +206,537 @@ while i &amp;lt; 10:
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;We need functions.&lt;/p&gt;
+&lt;p&gt;We need functions, mostly to better organize the implementation of an algorithm.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ============&lt;/p&gt;
+
+&lt;p&gt;We may need to rely on external Python libraries for data generation and visualization of algorithmic actions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;random-graph.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import networkx as nx
+import matplotlib.pyplot as plot
+
+G = nx.erdos_renyi_graph(100, 0.015)
+nx.draw(G)
+plot.save(&amp;quot;random-graph.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;break-4&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;the-sorting-problem&#34;&gt;The sorting problem&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 9:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Input:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;An array of elements: $x$
+where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; function:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$f(x_1, x_2) \in \left[
+\begin{array}{cc}
+-1 &amp;amp; x_1 &amp;lt; x_2 \\
+0 &amp;amp; x_1 = x_2 \\
+1 &amp;amp; x_1 &amp;gt; x_2
+\end{array}\right.$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A permutation $y$ of the array of $x$, such that&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$\forall i,j\in[0, \mathrm{length}(y)],\quad i\leq j \implies y[i] \leq y[j]$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is called &lt;em&gt;comparison based sorting&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;The comparison function can be arbitrary, and it defines the ordering.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-5&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;the-sorting-problem-1&#34;&gt;The sorting problem&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Permutation $\pi : [0, n] \to [0, n]$ such that &lt;code&gt;$i\not= j\implies \pi(i)\not=\pi(j)$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Given a sorting problem $(x, f)$, there can be multiple non-unique permutations that sorts $x$.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [3, 2, 2, 1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Stable sorting requires an additional condition on the permutation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-6&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;insertion-sort&#34;&gt;Insertion sort&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s a highly &lt;em&gt;inefficient&lt;/em&gt; sorting algorithm.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It&amp;rsquo;s simple enough that:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It&amp;rsquo;s intuitive.&lt;/li&gt;
+&lt;li&gt;It can be fully analyzed relatively easily.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;break-7&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;insertion-sort-1&#34;&gt;Insertion sort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=cards.png width=100%&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Chapter 2, Figure 2.1 of textbook.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;break-8&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;analysis-of-correctness&#34;&gt;Analysis of correctness&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Intuition only takes us part way, &lt;em&gt;not the whole way&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sometimes, we can formally prove that an algorithm is correct.&lt;/p&gt;
+
+&lt;p&gt;But first, we need some machineries.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-9&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;loop-invariance&#34;&gt;Loop invariance&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Consider a loop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+count = 0
+
+for v in array:
+  total += v
+  count += 1
+
+avg = total / count
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Precondition of a loop:
+a statement that is &lt;strong&gt;always&lt;/strong&gt; *true at the start of
+the loop.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Postcondition of a loop:
+a statement that is &lt;strong&gt;always&lt;/strong&gt; true at by the end of
+the loop.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Loop invariance&lt;/strong&gt;:
+a statement that is &lt;strong&gt;always&lt;/strong&gt; true
+&lt;span style=color:#44f;font-size:120%&gt;right at the end&lt;/span&gt;
+of each iteration of
+the loop.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;count $\not=$ 0&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_{i+1} \geq$&lt;/code&gt; &lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_i$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Note: for loop-invariance, we can refer to the iteration index
+  $i\geq 0$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-10&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two loops, with &lt;code&gt;while&lt;/code&gt;-loop nested in the &lt;code&gt;for&lt;/code&gt;-loop.&lt;/p&gt;
+
+&lt;h1 id=&#34;break-11&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-1&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Inner-loop invariance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;i&lt;/code&gt; is an index such that&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;A[0 .. i]&lt;/code&gt; are all smaller than &lt;code&gt;key&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A[i+2 .. j]&lt;/code&gt; are larger or equal to &lt;code&gt;key&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A[i] = A[i+1]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Can we say anything about &lt;code&gt;A[j+1]&lt;/code&gt; to &lt;code&gt;A[len(A)-1]&lt;/code&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-12&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-2&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Outer-loop invariance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The subarray &lt;code&gt;A[0 .. j]&lt;/code&gt; is sorted after the $j$-th iteration of the &lt;code&gt;for&lt;/code&gt;-loop.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof&lt;/em&gt;: We prove by induction on $j$.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Base case&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$j=0$, trivially true&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Induction&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If &lt;code&gt;A[0 .. j-1]&lt;/code&gt; is sorted, by the inner-loop invariance, moving key to
+&lt;code&gt;A[i+1]&lt;/code&gt; makes &lt;code&gt;A[0 .. j]&lt;/code&gt; sorted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-13&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-3&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Theorem&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;insertion_sort&lt;/code&gt; algorithm always correctly sorts the input array.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;By the outer-loop invariance, by the end of the last iteration,
+with $j=$&lt;code&gt;len(A)-1&lt;/code&gt;, the entire array &lt;code&gt;A[0 .. len(A)-1]&lt;/code&gt; is sorted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-14&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;performance-analysis&#34;&gt;Performance analysis&lt;/h1&gt;
+
+&lt;h1 id=&#34;break-15&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h3 id=&#34;every-statement-takes-the-same-amount-of-time&#34;&gt;Every statement takes the same amount of time.&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is not exactly correct, but it is accurate enough to gauge the
+performance of algorithms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;corollary&#34;&gt;&lt;em&gt;Corollary&lt;/em&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We measure the number of lines executed by the program before an array is
+completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;$T_\mathrm{LOC}(\mathrm{length}(A)) \Rightarrow T(n)$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-16&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Best case analysis&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Worst case analysis&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Average case analysis&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-17&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python small&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Worst case analysis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Let $n = \mathrm{length}(A)$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The outer-loop &lt;em&gt;always&lt;/em&gt; iterates $n$ times.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The inner loop iterates &lt;em&gt;in the worst case&lt;/em&gt; $j$ times.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;code&gt;$$ T(n) = \sum_{j=0}^n j = \frac{n(n-1)}{2}$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;break-18&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;insert_sort&lt;/code&gt; is a pretty inefficient algorithm.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;time (1M LOC/s)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;45 $\mu s$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;4950&lt;/td&gt;
+&lt;td&gt;5 $ms$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;td&gt;499500&lt;/td&gt;
+&lt;td&gt;0.5 $s$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1000000&lt;/td&gt;
+&lt;td&gt;499999500000&lt;/td&gt;
+&lt;td&gt;5.9 days&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A more efficient algorithm (to be discussed later):&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;time (1M LOC/s)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;23 $\mu s$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;460&lt;/td&gt;
+&lt;td&gt;0.46 $ms$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;td&gt;6907&lt;/td&gt;
+&lt;td&gt;6.9 $s$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1000000&lt;/td&gt;
+&lt;td&gt;13815510&lt;/td&gt;
+&lt;td&gt;13.8 $s$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;break-19&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;INSERTION sort&lt;/li&gt;
+&lt;li&gt;Analysis of correctness by loop-invariance&lt;/li&gt;
+&lt;li&gt;Performance analysis by counting lines executed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Text: 2.1, 2.2,&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/kenpu/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/kenpu/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</guid>
+      <description>
+
+&lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
+
+&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computation&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;david-hilbert.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hilbert&amp;rsquo;s Ten&amp;rsquo;s problem, 1900&lt;/li&gt;
+&lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computation-1&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;kurt-godel.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/people/kenpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/people/kenpu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
 
@@ -243,15 +764,11 @@ while i &amp;lt; 10:
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
-
-&lt;div class=&#34;jumbotron&#34;&gt;
-&lt;h1&gt;Design &amp; Analysis of Algorithms&lt;/h1&gt;
-&lt;/div&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;alert:info&#34;&gt;!&lt;/a&gt;
@@ -263,19 +780,28 @@ Finally, the students will be introduced to &lt;em&gt;complexity classes&lt;/em&
 particular the class of &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;course-description&#34;&gt;Course description&lt;/h1&gt;
+&lt;div class=&#34;jumbotron&#34;&gt;
+&lt;h1&gt;Design &amp; Analysis of Algorithms&lt;/h1&gt;
+&lt;/div&gt;
 
-&lt;p&gt;We follow the bottom-up approach to algorithm design.  Starting with the
-correctness and performance analysis of simple algorithms, we will progressively
-study more sophisticated data structures and algorithms.&lt;/p&gt;
-
-&lt;p&gt;Students will gain working knowledge of algorithms and data structures.  We will
-be using the Python programming language.&lt;/p&gt;
+&lt;div class=row&gt;
+&lt;div class=col-md-4&gt;
+&lt;img src=&#34;textbook.jpg&#34; width=100%&gt;&lt;/img&gt;
+&lt;/div&gt;
+&lt;div class=col-md-4&gt;
+Introduction to Algorithms,
+&lt;i&gt;third edition&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&#34;course-outline&#34;&gt;Course Outline&lt;/h1&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Sorting (chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;sorting&#34;&gt;Sorting&lt;/h1&gt;
+
+&lt;p&gt;(chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
@@ -284,43 +810,69 @@ be using the Python programming language.&lt;/p&gt;
 &lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
 &lt;li&gt;Counting sort and radix sort&lt;/li&gt;
 &lt;li&gt;Bucket sort&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;Analysis of complexity (chapter 3, 4, 5)&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;analysis-of-complexity&#34;&gt;Analysis of complexity&lt;/h1&gt;
+
+&lt;p&gt;(chapter 3, 4, 5)&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Analysis of divide-and-conquer using recursion&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Solving recurrence equations&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Solving recurrence equations&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;(&lt;em&gt;Optional&lt;/em&gt;) Probabilistic analysis and randomized algorithm&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Bucket sort &lt;br&gt;
-Randomized quicksort&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Bucket sort&lt;/li&gt;
+&lt;li&gt;Randomized quicksort&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;Data structures (chapter 10, 11, 12)&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;data-structures-chapter-10-11-12&#34;&gt;Data structures (chapter 10, 11, 12)&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Elementary data structures and their operations&lt;/li&gt;
 &lt;li&gt;Hash tables&lt;/li&gt;
 &lt;li&gt;Trees&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;Design of optimization algorithms (chapter 15, 16)&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;design-of-optimization-algorithms-chapter-15-16&#34;&gt;Design of optimization algorithms (chapter 15, 16)&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Dynamic programming&lt;/li&gt;
 &lt;li&gt;Greedy algorithms&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Graphs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;graphs&#34;&gt;&lt;em&gt;Graphs&lt;/em&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Graphs and search&lt;/li&gt;
@@ -335,9 +887,15 @@ Floyd-Washall&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Maxflow&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;em&gt;NP-completeness &amp;amp; computational complexity&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;np-completeness-computational-complexity&#34;&gt;&lt;em&gt;NP-completeness &amp;amp; computational complexity&lt;/em&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Decision problems and formal language&lt;/li&gt;
@@ -346,8 +904,8 @@ Floyd-Washall&lt;/p&gt;
 &lt;li&gt;Reduction&lt;/li&gt;
 &lt;li&gt;NP-completeness&lt;/li&gt;
 &lt;li&gt;Beyond NPC&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 
 &lt;h1 id=&#34;marking-scheme&#34;&gt;Marking Scheme&lt;/h1&gt;
 
@@ -386,10 +944,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Introduction to algorithms</title>
-      <link>http://kenpu.ca/slides/algorithms/intro/</link>
+      <link>https://kenpuca.github.io/slides/algorithms/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/algorithms/intro/</guid>
+      <guid>https://kenpuca.github.io/slides/algorithms/intro/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -442,10 +1000,10 @@ marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
     
     <item>
       <title>Open Data Integration</title>
-      <link>http://kenpu.ca/projects/open-data/</link>
+      <link>https://kenpuca.github.io/projects/open-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/open-data/</guid>
+      <guid>https://kenpuca.github.io/projects/open-data/</guid>
       <description>&lt;p&gt;Open Data is the hottest addition to the Web.  Back by various nations and
 governments, millions of open data sets are being released by authoritative
 sources.  This is a vastly valuable opportunity for data scientists to gain
@@ -459,27 +1017,154 @@ finding linkages in Open Data.&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;The topic of this course is the theory and practice of &lt;em&gt;programming
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;alert:info&#34;&gt;!&lt;/a&gt;
+The topic of this course is the theory and practice of &lt;em&gt;programming
 languages&lt;/em&gt;.  We will be focused on the design principles and programming
 patterns of several programming languages from different programming
 paradigms.  We will pay particular attention to the program techniques in
 functional programming, and why they are gaining greater importance in modern
 programming.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;div class=&#34;jumbotron&#34;&gt;
+&lt;h1&gt;Programming Languages&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;course-outline&#34;&gt;Course Outline&lt;/h1&gt;
+
+&lt;p&gt;This course is divided into three parts.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Foundations of programming languages&lt;/li&gt;
+&lt;li&gt;Practical languages&lt;/li&gt;
+&lt;li&gt;Survey&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;i-foundations&#34;&gt;(I) Foundations&lt;/h2&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;computation&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Functional computation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;design-of-programming-languages&#34;&gt;Design of programming languages&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Organization of code&lt;/li&gt;
+&lt;li&gt;Operational semantics&lt;/li&gt;
+&lt;li&gt;Type system&lt;/li&gt;
+&lt;li&gt;Denotational semantics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;functional-programming&#34;&gt;Functional programming&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Introduction to Clojure&lt;/li&gt;
+&lt;li&gt;Programming without mutable data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;programming-paradigms&#34;&gt;Programming Paradigms&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Procedural programming&lt;/li&gt;
+&lt;li&gt;Object-oriented programming&lt;/li&gt;
+&lt;li&gt;Pure functional programming&lt;/li&gt;
+&lt;li&gt;Programming in reality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ii-practical-languages&#34;&gt;(II) Practical languages&lt;/h2&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;scala&#34;&gt;Scala&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pure object orientation in Scala&lt;/li&gt;
+&lt;li&gt;Strong type system&lt;/li&gt;
+&lt;li&gt;Functional programming in Scala&lt;/li&gt;
+&lt;li&gt;Concurrency &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;clojure&#34;&gt;Clojure&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clojure as Lisp&lt;/li&gt;
+&lt;li&gt;Functional programming in Clojure&lt;/li&gt;
+&lt;li&gt;Object-oriented programming in Clojure&lt;/li&gt;
+&lt;li&gt;Concurrency &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Macros &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt; &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;iii-survey&#34;&gt;(III) Survey&lt;/h2&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;More languages (e.g. Haskell, Javascript/Typescript, Go)&lt;/li&gt;
+&lt;li&gt;More paradigms (e.g. Logical programming with Prolog)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
     <item>
       <title>Symposium</title>
-      <link>http://kenpu.ca/slides/talks/symposium-on-teaching/</link>
+      <link>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/talks/symposium-on-teaching/</guid>
+      <guid>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;columns 7:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -582,10 +1267,10 @@ FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
     
     <item>
       <title>Mobile recommender</title>
-      <link>http://kenpu.ca/projects/mobile-recommender/</link>
+      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
+      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
       <description>&lt;p&gt;Your mobile phone knows more about what&amp;rsquo;s going on than you realize, and
 therefore, it should be able to make better recommendations that it&amp;rsquo;s doing now.&lt;/p&gt;
 
@@ -597,10 +1282,10 @@ and make more sensible recommendations to the user.&lt;/p&gt;
     
     <item>
       <title>Pixel level visualization</title>
-      <link>http://kenpu.ca/projects/pixel-packing/</link>
+      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
+      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
       <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
 pixels on a mobile device.  Is it possible to build an algorithm to map each
 movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
@@ -613,10 +1298,10 @@ visualization of (up to) millions of relational entities.&lt;/p&gt;
     
     <item>
       <title>Stream algebra for computer vision</title>
-      <link>http://kenpu.ca/projects/vision-pipeline/</link>
+      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
+      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
       <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
 data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
 
@@ -629,10 +1314,10 @@ expressions.&lt;/p&gt;
     
     <item>
       <title>Practical constraint solvers</title>
-      <link>http://kenpu.ca/projects/constraint-db/</link>
+      <link>https://kenpuca.github.io/projects/constraint-db/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/constraint-db/</guid>
+      <guid>https://kenpuca.github.io/projects/constraint-db/</guid>
       <description>&lt;p&gt;If computers can &lt;a href=&#34;https://en.wikipedia.org/wiki/AlphaGo&#34;&gt;play Go&lt;/a&gt; brilliantly,
 why can&amp;rsquo;t we use our mobile phones to solve general puzzles?&lt;/p&gt;
 
@@ -645,10 +1330,10 @@ application, or a special purpose programming language).&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/helala/</link>
+      <link>https://kenpuca.github.io/people/helala/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/helala/</guid>
+      <guid>https://kenpuca.github.io/people/helala/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
 
@@ -662,32 +1347,16 @@ vision applications.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/ferron/</link>
+      <link>https://kenpuca.github.io/people/ferron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/ferron/</guid>
+      <guid>https://kenpuca.github.io/people/ferron/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Michael Ferron&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Master in Computer Science&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Working on pixel level visualization of Big Data.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://kenpu.ca/people/hedrick/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://kenpu.ca/people/hedrick/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Adele Hedrick&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Master in Computer Science&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Building a mobile recommender system&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
