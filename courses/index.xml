@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on kenpu.ca</title>
-    <link>http://kenpu.ca/courses/</link>
-    <description>Recent content in Courses on kenpu.ca</description>
+    <title>Courses on db@uoit</title>
+    <link>https://kenpuca.github.io/courses/</link>
+    <description>Recent content in Courses on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/insert-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/insert-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
@@ -606,10 +606,50 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/stateful-computation/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/functional-computation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/stateful-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/functional-computation/</guid>
+      <description>
+
+&lt;h1 id=&#34;lambda-calculus-symbolic-computation&#34;&gt;$\lambda$-Calculus: symbolic computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;lambda-calculus&#34;&gt;$\lambda$-Calculus&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Proposed by Alonzo Church in ~1930.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;intented to formalize mathematics.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Syntactic expressions that represent &lt;em&gt;functions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;designed to represent the entire foundation of mathematics.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Rules of rewriting the syntactic expression&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;rewrite rules represent mathematical reasoning.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;syntax-of-lambda-calculus&#34;&gt;Syntax of $\lambda$-calculus&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
@@ -620,7 +660,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;david-hilbert.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;david-hilbert.png&#34; width=100%&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -635,22 +675,106 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;kurt-godel.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;kurt-godel.png&#34; width=100%&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
+&lt;li&gt;Gödel&amp;rsquo;s incompleteness theorem&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computation-2&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;alan-turing.png&#34; width=100%&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
+&lt;li&gt;Turing machine&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-3&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computation-3&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;alonzo-church.png&#34; width=100%&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
+&lt;li&gt;$\lambda$-calculus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-4&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computation-4&#34;&gt;Computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;john-von-neumann.jpg&#34; width=100%&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;von Neumann computing model&lt;/li&gt;
+&lt;li&gt;EDVAC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break-5&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;turing-machine&#34;&gt;Turing Machine&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;A completely mechanical device (1928)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;envisioned by Alan Turing as an intuitive formalism to
+describe the non-existing phenomenon of machine driven
+reasoning, now known as &lt;em&gt;computation&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Realized into an actual design (1945)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;John von Neumann designed an electronic version to simulate
+the mechanical definition of a TM in a document known as &lt;em&gt;First Draft of a
+Report on the EDVAC&lt;/em&gt;, 1945.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Turing-complete&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TM is the most powerful computing model we know.
+Up to know, we don&amp;rsquo;t know any other computing models more powerful than
+a TM.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;break-6&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;turing-machine-1&#34;&gt;Turing Machine&lt;/h1&gt;
+
+&lt;div style=color:red&gt;
+TM
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -827,10 +951,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -870,7 +994,7 @@ programming.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Functional computation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;functional-computation&#34;&gt;Functional computation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
