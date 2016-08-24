@@ -5,165 +5,182 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Symposium</title>
 
-        <link rel="stylesheet" href="http://kenpu.ca/css/bootstrap.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/fonts/fonts.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
 
 		
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal-style.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
 
 		
 		<script>
+            if(window.location.search.match(/print-pdf/gi)) {
+                window.print_pdf = true;
+            }
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'http:\/\/kenpu.ca/reveal.js/css/print/pdf.css' : 'http:\/\/kenpu.ca/reveal.js/css/print/paper.css';
+            link.href = window.print_pdf ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
+
+        
+<style>
+.reveal:after {
+    content: "Symposium on Teaching, Faculty of Science, 2016" !important;
+}
+</style>
+        
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown
-						 data-separator="^---"
-						 data-separator-vertical="^--"
-						 data-separator-notes="^Note:"
-						data-charset="iso-8859-15">[!](columns 7:5)
+        <div class="reveal">
+            <div class="slides">
 
-# Technology to enable instant gratification &amp; evaluation
+<h1 id="instant-gratification">Instant gratification</h1>
 
-[!](split)
+<div style=height:400px></div>
 
-## TL;TR
+<h2 id="ken-pu">Ken Pu</h2>
 
-&gt; Powerpoint (Keynote, Openoffice) is no longer considered *technology*.
+<h1 id="tl-tr">TL;TR</h1>
 
----
+<blockquote>
+<ul>
+<li><p>Instant gratification is a powerful equalizer
+<br><br></p></li>
 
-## Mycamps - the right way
+<li><p>Instant gratification is dangerous
+<br><br></p></li>
 
+<li><p>Technology is almost there
+<br><br></p></li>
 
-```sql
-SELECT * FROM schedule;
-```
+<li><p>Yes, you can use it now</p></li>
+</ul>
+</blockquote>
 
-[!](columns 8:4)
+<h1 id="the-equalizer-1">The equalizer (1)</h1>
 
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
+<p><a href="columns 5:2:5">!</a></p>
 
-[!](split)
-&gt; Haha.  Tricked you.  &lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt;
+<p><img class="fragment" src="degrasse.jpg"></img></p>
 
+<p><a href="split">!</a></p>
 
----
+<div style=margin-top:200px;font-size:500%>=</div>
 
-## Mycamps - the right way
+<p><a href="split">!</a></p>
 
+<p><img class="fragment" src="Instant-Gratification.jpg"></img></p>
 
-```sql
-SELECT distinct semester FROM schedule;
-```
+<h1 id="the-equalizer-2">The equalizer (2)</h1>
 
-[!](columns 8:4)
+<p><a href="columns 10:">!</a></p>
 
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+<p><img src="engineer.jpg"></img></p>
 
-[!](split)
+<blockquote>
+<p>Google Engineer</p>
+</blockquote>
 
-Try without the `distinct` keyword.
+<p><a href="split">!</a></p>
 
----
+<div style=font-size:500%>=</div>
 
-## Mycamps - the right way
+<h1 id="the-equalizer-2-1">The equalizer (2)</h1>
 
-```sql
-SELECT distinct semester, code 
-FROM schedule
-WHERE instructor like &#39;%Ken%&#39;;
-```
+<p><img style=height:500px src="women-in-cs.jpg"></img></p>
 
-[!](columns 8:4)
+<h1 id="example-1">Example (1)</h1>
 
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
-
-[!](split)
-
-Can you modify the query to suit your own needs?
-
-
-Can you see what the `LIKE` clause is doing?
-
----
-
-## Mycamps - the right way
-
-```sql
-SELECT distinct semester, code, weekday
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-```
-
-[!](columns 8:4)
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
-
-[!](split)
-
-How is your teaching assignment?
-
----
-
-## Mycamps - the right way
-
-```sql
-SELECT distinct semester, code, weekday, starthour || &#39;:&#39; || startmin AS time
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-```
-
-[!](columns 8:4)
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
-
-[!](split)
-
-How is your teaching schedule?
-
----
-
-# Where are we going with this?
-
-
-</section>
-			</div>
-		</div>
+<blockquote>
+<p>Common table expressions in SQL</p>
+</blockquote>
+</div>
+        </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/lib/js/head.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/js/reveal.js"></script>
+        <script src="/js/pdf.js"></script>
+
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
 
 		<script>
-			
+        
+        function isBreak($p, $section) {
+            if($p.is("h1") && $section.children().size() > 0)
+                return true;
+
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides").hide();
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem, $section)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                    if($elem.is("h1")) {
+                        $elem.appendTo($section);
+                    }
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            $reveal.show();
+
+            startReveal();
+        });
+
+        function startReveal() {
 			Reveal.initialize({
 				history: true,
 
                 slideNumber: true,
+
+                center: false,
 
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/markdown/marked.js' },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/markdown/markdown.js' },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/notes/notes.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
+                        async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    
+                        
+                    
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js',
+                        async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
+                        async: true}
 				]
 			});
+        }
 		</script>
 	</body>
 </html>
+

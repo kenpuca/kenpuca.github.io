@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kenpu.ca</title>
-    <link>http://kenpu.ca/</link>
-    <description>Recent content on kenpu.ca</description>
+    <title>db@uoit</title>
+    <link>https://kenpuca.github.io/</link>
+    <description>Recent content on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://kenpu.ca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a desk</title>
-      <link>http://kenpu.ca/writings/build-desk/</link>
+      <link>https://kenpuca.github.io/writings/build-desk/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/writings/build-desk/</guid>
+      <guid>https://kenpuca.github.io/writings/build-desk/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;wood-0.jpg&#34; alt=&#34;The block in its initial condition&#34; /&gt;
 Someone gave me a really gorgeous piece of wood.&lt;/p&gt;
@@ -96,10 +96,10 @@ to start with.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/insert-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/insert-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
@@ -692,10 +692,26 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/functional-computation/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/merge-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/functional-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/merge-sort/</guid>
+      <description>
+
+&lt;h1 id=&#34;mergesort&#34;&gt;Mergesort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;divide-and-conquer&#34;&gt;Divide and conquer&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/programming-languages/functional-computation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/functional-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;lambda-calculus-symbolic-computation&#34;&gt;$\lambda$-Calculus: symbolic computation&lt;/h1&gt;
@@ -726,16 +742,256 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;syntax-of-lambda-calculus&#34;&gt;Syntax of $\lambda$-calculus&lt;/h1&gt;
+&lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
+
+&lt;p&gt;Values&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Literals: 1, 2, 3, &amp;ldquo;Hello world&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Variables: $x, y, z, \dots$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Functions&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;$+ : (x,y)\mapsto x+y$&lt;/li&gt;
+&lt;li&gt;$\mathrm{inc} : x\mapsto x+1$&lt;/li&gt;
+&lt;li&gt;$\dots$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Always returns &lt;em&gt;one&lt;/em&gt; value.&lt;/li&gt;
+&lt;li&gt;Takes a fixed number of inputs: arity of the function
+&lt;span style=color:red&gt;*&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;value-as-function&#34;&gt;Value as function&lt;/h1&gt;
+
+&lt;p&gt;A value is a zero-arity function.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;function-as-value&#34;&gt;Function as value&lt;/h1&gt;
+
+&lt;p&gt;We want to extend the idea of &lt;em&gt;things&lt;/em&gt; to include functions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This is a central idea in functional programming&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;value-equiv-function-everything&#34;&gt;Value $\equiv$ Function = Everything&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;syntax-for-expressions-value-function&#34;&gt;Syntax for expressions (value / function)&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;$1, 2, 3, +, -, \dots$ are expressions&lt;/li&gt;
+&lt;li&gt;$x, y, z, \dots$ are expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Abstraction:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;If $x$ is a variable, and $e$ is an expression, then
+$\lambda x. e$ is an expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Application:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;If $e_1$ is a function with arity 1,
+&lt;code&gt;$e_2$&lt;/code&gt; is an expression, then
+$e_1 e_2$ is an expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We assume that all functions are with arity 1.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is not a restriction.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-weird-syntax-of-lambda-calculus&#34;&gt;The &lt;em&gt;weird&lt;/em&gt; syntax of $\lambda$ calculus&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$\lambda x.e$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a function taking &lt;em&gt;one&lt;/em&gt; input, represented by the variable $x$.
+It returns &lt;em&gt;one&lt;/em&gt; value, which is evaluated as the expression $e$.
+The expression $e$ usually makes uses of $x$, but not necessarily.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$e_1 e_2$&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is passing $e_2$ as an argument to the expression $e_1$.  Recall that
+everything is a function.  So $e_1$ is a function with &lt;em&gt;one&lt;/em&gt; argument.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$e_1 e_2 e_3 = ((e_1 e_2) e_3)$&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This shows that $e_1$ takes one argument ($e_2$), and returns an
+expression which is yet again a function which takes $e_3$ as an input.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;defining-things&#34;&gt;Defining things&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Identity function&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$\lambda x.x$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Functions with multiple arity&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Suppose we have a function $f(x,y,z) = e$ where the expression
+involves all three input variables $x, y, z$.&lt;/p&gt;
+
+&lt;p&gt;We can use the following expression to build $f$:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$\lambda x.(\lambda y.(\lambda z. e))$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;This is a big deal.&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;Functions as values in action here.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=height:220px&gt;&lt;/div&gt;
+
+&lt;p&gt;We can write it conveniently as $\lambda xyz.e$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;computing-with-lambda-calculus&#34;&gt;Computing with $\lambda$-Calculus&lt;/h1&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/stateful-computation/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/stateful-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</guid>
+      <description>
+
+&lt;h1 id=&#34;computation-in-practice&#34;&gt;Computation in practice&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Languages based on stateful computation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Languages based on functional computation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hybrid languages&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Languages&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Task&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quicksort&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;X = [6, 3, 4, 8, 1, 4]
+
+def quicksort(X, i, j):
+  if i &amp;lt; j:
+    p = partition(X, i, j)
+    quicksort(X, i, p-1)
+    quicksort(X, p+1, j)
+
+def partition(X, i, j):
+  pivot = X[j]
+  m = i
+  for n in range(i, j):
+    if X[n] &amp;lt;= pivot:
+      X[m], X[n] = X[n], X[m]
+      m += 1
+  X[m], X[j] = X[j], X[m]
+  return m
+
+def QuickSort(X):
+  return quicksort(X, 0, len(X)-1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;div pdf=&#34;qsort-py.pdf&#34;&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;python-v-s-javascript&#34;&gt;Python v.s. Javascript&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;script
+src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.py&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=height:600px;overflow:auto&gt;
+&lt;script
+src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
@@ -849,18 +1105,142 @@ a TM.&lt;/p&gt;
 
 &lt;h1 id=&#34;turing-machine-1&#34;&gt;Turing Machine&lt;/h1&gt;
 
-&lt;div style=color:red&gt;
-TM
-&lt;/div&gt;
+&lt;div pdf=&#34;turing-machine.pdf&#34; scale=0.8&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;break-7&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computational-power-of-tm&#34;&gt;Computational power of TM&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Church-Turing Thesis&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a procedure (algorithm) can be executed by &lt;em&gt;any&lt;/em&gt; computer, then it can be
+executed by a Turing Machine.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Turing Complete&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a mechanism is equivalent to TM, then it&amp;rsquo;s called &lt;em&gt;Turing Complete&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-8&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;simulation-of-a-function&#34;&gt;Simulation of a function&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Computable functions&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A function $f$ is computable if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Its input can be encoded as a binary string: &lt;code&gt;$2^*$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Its output can be encoded as a binary string: &lt;code&gt;$2^*$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Its evaluation can always be carried out by a TM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Any computable function can be implemented by a TM.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Any TM is some computable function.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Why is a TM always a function (over binary strings)?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;universal-tm&#34;&gt;Universal TM&lt;/h1&gt;
+
+&lt;p&gt;Consider a TM: $M$.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s a function &lt;code&gt;$M:2^*\to 2^*$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s mechanical description can be encoded as a binary string.
+&lt;i style=&#34;font-size:200%;color:#faa;vertical-align:middle;margin-left:10px&#34; class=&#34;fa fa-thumbs-up&#34;&gt;&lt;/i&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Function &lt;em&gt;eval&lt;/em&gt; takes two inputs - a TM and an input, and it computes the
+output.&lt;/p&gt;
+
+&lt;p&gt;$$\mathrm{eval} :\mathrm{TM} \times 2^* \to 2^*$$&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s input can be encoded as binary strings.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It can be carried out by a procedure.
+&lt;i style=&#34;font-size:200%;color:#faa;vertical-align:middle;margin-left:10px&#34; class=&#34;fa fa-thumbs-up&#34;&gt;&lt;/i&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By Church-Turing thesis, &lt;strong&gt;eval&lt;/strong&gt; is computable, so there is a TM for it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Definition&lt;/em&gt; &lt;strong&gt;Universal TM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The TM $\mathbf{U}$ that computes &lt;strong&gt;eval&lt;/strong&gt; is called &lt;em&gt;universal&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;universal-tm-1&#34;&gt;Universal TM&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The TM $\mathbf{U}$ initializes the tape with the binary encoding of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;a TM, $M$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;an input, $x$&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It outputs $\mathbf{eval}(M, x)$&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Modern Computer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$M$ is the program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$x$ is the input to the program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$\mathbf{U}$ is the general purpose computer&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tm-programming&#34;&gt;TM-Programming&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;We just need a single TM, namely $\mathbf{U}$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The universal programming language is the encoding of $M$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/people/kenpu/</link>
+      <link>https://kenpuca.github.io/people/kenpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/people/kenpu/</guid>
+      <guid>https://kenpuca.github.io/people/kenpu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Ken Pu&lt;/strong&gt;&lt;/p&gt;
 
@@ -888,10 +1268,10 @@ TM
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -929,7 +1309,7 @@ Introduction to Algorithms,
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mergesort&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;merge-sort&#34;&gt;Mergesort&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Quicksort&lt;/li&gt;
 &lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
 &lt;li&gt;Counting sort and radix sort&lt;/li&gt;
@@ -1068,10 +1448,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Introduction to algorithms</title>
-      <link>http://kenpu.ca/slides/algorithms/intro/</link>
+      <link>https://kenpuca.github.io/slides/algorithms/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/algorithms/intro/</guid>
+      <guid>https://kenpuca.github.io/slides/algorithms/intro/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1080,54 +1460,30 @@ Floyd-Washall&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;Hello&lt;/p&gt;
 
-&lt;p&gt;Sorting&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;Hashing&lt;/p&gt;
+&lt;h2 id=&#34;second-page&#34;&gt;Second page&lt;/h2&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Dynamic programming&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;NP-completeness&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;em&gt;and a lot more&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 4:8&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-quiz&#34;&gt;A quiz&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This quiz is to test
-if you know how to do well.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div pdf=&#34;output.pdf&#34; rotate=&#34;-90&#34; scale=&#34;0.8&#34;&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe
-src=&#34;https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true&#34;
-width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
-marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
+&lt;p&gt;This is a PDF&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Open Data Integration</title>
-      <link>http://kenpu.ca/projects/open-data/</link>
+      <link>https://kenpuca.github.io/projects/open-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/open-data/</guid>
+      <guid>https://kenpuca.github.io/projects/open-data/</guid>
       <description>&lt;p&gt;Open Data is the hottest addition to the Web.  Back by various nations and
 governments, millions of open data sets are being released by authoritative
 sources.  This is a vastly valuable opportunity for data scientists to gain
@@ -1141,10 +1497,10 @@ finding linkages in Open Data.&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -1185,6 +1541,7 @@ programming.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;functional-computation&#34;&gt;Functional computation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;intro-to-languages&#34;&gt;Programming languages: at a glance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -1196,10 +1553,8 @@ programming.&lt;/p&gt;
 &lt;h1 id=&#34;design-of-programming-languages&#34;&gt;Design of programming languages&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Organization of code&lt;/li&gt;
-&lt;li&gt;Operational semantics&lt;/li&gt;
+&lt;li&gt;Organization and semantics&lt;/li&gt;
 &lt;li&gt;Type system&lt;/li&gt;
-&lt;li&gt;Denotational semantics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -1285,116 +1640,81 @@ programming.&lt;/p&gt;
     
     <item>
       <title>Symposium</title>
-      <link>http://kenpu.ca/slides/talks/symposium-on-teaching/</link>
+      <link>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/talks/symposium-on-teaching/</guid>
+      <guid>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;columns 7:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;instant-gratification&#34;&gt;Instant gratification&lt;/h1&gt;
 
-&lt;h1 id=&#34;technology-to-enable-instant-gratification-evaluation&#34;&gt;Technology to enable instant gratification &amp;amp; evaluation&lt;/h1&gt;
+&lt;div style=height:400px&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ken-pu&#34;&gt;Ken Pu&lt;/h2&gt;
 
-&lt;h2 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h2&gt;
+&lt;h1 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h1&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Powerpoint (Keynote, Openoffice) is no longer considered &lt;em&gt;technology&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Instant gratification is a powerful equalizer
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Instant gratification is dangerous
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Technology is almost there
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Yes, you can use it now&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;hr /&gt;
+&lt;h1 id=&#34;the-equalizer-1&#34;&gt;The equalizer (1)&lt;/h1&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;columns 5:2:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT * FROM schedule;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;
-&amp;gt; Haha.  Tricked you.  &lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;mycamps-the-right-way-1&#34;&gt;Mycamps - the right way&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester FROM schedule;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;img class=&#34;fragment&#34; src=&#34;degrasse.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Try without the &lt;code&gt;distinct&lt;/code&gt; keyword.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;mycamps-the-right-way-2&#34;&gt;Mycamps - the right way&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code 
-FROM schedule
-WHERE instructor like &#39;%Ken%&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;div style=margin-top:200px;font-size:500%&gt;=&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Can you modify the query to suit your own needs?&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;fragment&#34; src=&#34;Instant-Gratification.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;p&gt;Can you see what the &lt;code&gt;LIKE&lt;/code&gt; clause is doing?&lt;/p&gt;
+&lt;h1 id=&#34;the-equalizer-2&#34;&gt;The equalizer (2)&lt;/h1&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&#34;columns 10:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way-3&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;engineer.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google Engineer&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;How is your teaching assignment?&lt;/p&gt;
+&lt;div style=font-size:500%&gt;=&lt;/div&gt;
 
-&lt;hr /&gt;
+&lt;h1 id=&#34;the-equalizer-2-1&#34;&gt;The equalizer (2)&lt;/h1&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way-4&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;img style=height:500px src=&#34;women-in-cs.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday, starthour || &#39;:&#39; || startmin AS time
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;example-1&#34;&gt;Example (1)&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How is your teaching schedule?&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;where-are-we-going-with-this&#34;&gt;Where are we going with this?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Common table expressions in SQL&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
     <item>
       <title>Mobile recommender</title>
-      <link>http://kenpu.ca/projects/mobile-recommender/</link>
+      <link>https://kenpuca.github.io/projects/mobile-recommender/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/mobile-recommender/</guid>
+      <guid>https://kenpuca.github.io/projects/mobile-recommender/</guid>
       <description>&lt;p&gt;Your mobile phone knows more about what&amp;rsquo;s going on than you realize, and
 therefore, it should be able to make better recommendations that it&amp;rsquo;s doing now.&lt;/p&gt;
 
@@ -1406,10 +1726,10 @@ and make more sensible recommendations to the user.&lt;/p&gt;
     
     <item>
       <title>Pixel level visualization</title>
-      <link>http://kenpu.ca/projects/pixel-packing/</link>
+      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/pixel-packing/</guid>
+      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
       <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
 pixels on a mobile device.  Is it possible to build an algorithm to map each
 movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
@@ -1422,10 +1742,10 @@ visualization of (up to) millions of relational entities.&lt;/p&gt;
     
     <item>
       <title>Stream algebra for computer vision</title>
-      <link>http://kenpu.ca/projects/vision-pipeline/</link>
+      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/projects/vision-pipeline/</guid>
+      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
       <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
 data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
 
@@ -1433,39 +1753,6 @@ data stream, and the intermediate processors often require fine tuning.&lt;/p&gt
 rapid development, deployment and tuning of computer vision workflow by the
 means of formal streaming algebra and structural optimization of algebraic
 expressions.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Practical constraint solvers</title>
-      <link>http://kenpu.ca/projects/constraint-db/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://kenpu.ca/projects/constraint-db/</guid>
-      <description>&lt;p&gt;If computers can &lt;a href=&#34;https://en.wikipedia.org/wiki/AlphaGo&#34;&gt;play Go&lt;/a&gt; brilliantly,
-why can&amp;rsquo;t we use our mobile phones to solve general puzzles?&lt;/p&gt;
-
-&lt;p&gt;The reason is that we don&amp;rsquo;t have a great algebra (and an interface) to enable
-user access to the powerful constraint solvers.  This project is to investigate
-the design and feasibility of such constraint solving interfaces (either as an
-application, or a special purpose programming language).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://kenpu.ca/people/helala/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://kenpu.ca/people/helala/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Mohamed Helala&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PhD Candidate in Computer Science&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Developing the theory and system of scalable streaming systems for computer
-vision applications.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
     </item>
     

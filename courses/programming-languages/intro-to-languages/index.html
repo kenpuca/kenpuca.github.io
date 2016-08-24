@@ -36,190 +36,80 @@
         <div class="reveal">
             <div class="slides">
 
-<h1 id="lambda-calculus-symbolic-computation">$\lambda$-Calculus: symbolic computation</h1>
-
-<p><a href="break">!</a></p>
-
-<h1 id="lambda-calculus">$\lambda$-Calculus</h1>
+<h1 id="computation-in-practice">Computation in practice</h1>
 
 <ul>
-<li><p>Proposed by Alonzo Church in ~1930.</p>
+<li><p>Languages based on stateful computation</p></li>
 
-<blockquote>
-<p>intented to formalize mathematics.</p>
-</blockquote></li>
+<li><p>Languages based on functional computation</p></li>
 
-<li><p>Syntactic expressions that represent <em>functions</em>.</p>
-
-<blockquote>
-<p>designed to represent the entire foundation of mathematics.</p>
-</blockquote></li>
-
-<li><p>Rules of rewriting the syntactic expression</p>
-
-<blockquote>
-<p>rewrite rules represent mathematical reasoning.</p>
-</blockquote></li>
+<li><p>Hybrid languages</p></li>
 </ul>
 
-<p><a href="break">!</a></p>
+<h1 id="break"><a href="break">!</a></h1>
 
-<h1 id="expressions">Expressions</h1>
+<h1 id="stateful-computation">Stateful computation</h1>
 
-<p>Values</p>
+<p><a href="columns 4:">!</a></p>
+
+<p>Languages</p>
 
 <blockquote>
 <ul>
-<li>Literals: 1, 2, 3, &ldquo;Hello world&rdquo;</li>
-<li>Variables: $x, y, z, \dots$</li>
+<li>Javascript</li>
+<li>Python</li>
 </ul>
 </blockquote>
 
-<p>Functions</p>
+<p>Task</p>
 
 <blockquote>
-<ul>
-<li>$+ : (x,y)\mapsto x+y$</li>
-<li>$\mathrm{inc} : x\mapsto x+1$</li>
-<li>$\dots$</li>
-</ul>
-
-<hr />
-
-<ul>
-<li>Always returns <em>one</em> value.</li>
-<li>Takes a fixed number of inputs: arity of the function
-<span style=color:red>*</span></li>
-</ul>
+<p>Quicksort</p>
 </blockquote>
 
-<p><a href="break">!</a></p>
+<p><a href="split">!</a></p>
 
-<h1 id="value-as-function">Value as function</h1>
+<pre><code class="language-python">X = [6, 3, 4, 8, 1, 4]
 
-<p>A value is a zero-arity function.</p>
+def quicksort(X, i, j):
+  if i &lt; j:
+    p = partition(X, i, j)
+    quicksort(X, i, p-1)
+    quicksort(X, p+1, j)
 
-<p><br><br></p>
+def partition(X, i, j):
+  pivot = X[j]
+  m = i
+  for n in range(i, j):
+    if X[n] &lt;= pivot:
+      X[m], X[n] = X[n], X[m]
+      m += 1
+  X[m], X[j] = X[j], X[m]
+  return m
 
-<h1 id="function-as-value">Function as value</h1>
+def QuickSort(X):
+  return quicksort(X, 0, len(X)-1)
+</code></pre>
 
-<p>We want to extend the idea of <em>things</em> to include functions.</p>
+<h1 id="break-1"><a href="break">!</a></h1>
 
-<blockquote>
-<p><em>This is a central idea in functional programming</em>.</p>
-</blockquote>
+<div pdf="qsort-py.pdf"></div>
 
-<p><br><br></p>
+<h1 id="break-2"><a href="break">!</a></h1>
 
-<h2 id="value-equiv-function-everything">Value $\equiv$ Function = Everything</h2>
+<h1 id="python-v-s-javascript">Python v.s. Javascript</h1>
 
-<p><a href="break">!</a></p>
+<p><a href="columns 6:">!</a></p>
 
-<h1 id="syntax-for-expressions-value-function">Syntax for expressions (value / function)</h1>
+<script
+src="https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.py"></script>
 
-<p><a href="columns 8:">!</a></p>
+<p><a href="split">!</a></p>
 
-<blockquote>
-<ul>
-<li>$1, 2, 3, +, -, \dots$ are expressions</li>
-<li>$x, y, z, \dots$ are expressions</li>
-</ul>
-</blockquote>
-
-<p>Abstraction:</p>
-
-<blockquote>
-<ul>
-<li>If $x$ is a variable, and $e$ is an expression, then
-$\lambda x. e$ is an expression</li>
-</ul>
-</blockquote>
-
-<p>Application:</p>
-
-<blockquote>
-<ul>
-<li>If $e_1$ is a function with arity 1,
-<code>$e_2$</code> is an expression, then
-$e_1 e_2$ is an expression</li>
-</ul>
-</blockquote>
-
-<p><a href="split note">!</a></p>
-
-<p>We assume that all functions are with arity 1.</p>
-
-<blockquote>
-<p>This is not a restriction.</p>
-</blockquote>
-
-<p><a href="break">!</a></p>
-
-<h1 id="the-weird-syntax-of-lambda-calculus">The <em>weird</em> syntax of $\lambda$ calculus</h1>
-
-<ul>
-<li><p>$\lambda x.e$</p>
-
-<blockquote>
-<p>This is a function taking <em>one</em> input, represented by the variable $x$.
-It returns <em>one</em> value, which is evaluated as the expression $e$.
-The expression $e$ usually makes uses of $x$, but not necessarily.</p>
-</blockquote></li>
-
-<li><p><code>$e_1 e_2$</code></p>
-
-<blockquote>
-<p>This is passing $e_2$ as an argument to the expression $e_1$.  Recall that
-everything is a function.  So $e_1$ is a function with <em>one</em> argument.</p>
-</blockquote></li>
-
-<li><p><code>$e_1 e_2 e_3 = ((e_1 e_2) e_3)$</code></p>
-
-<blockquote>
-<p>This shows that $e_1$ takes one argument ($e_2$), and returns an
-expression which is yet again a function which takes $e_3$ as an input.</p>
-</blockquote></li>
-</ul>
-
-<p><a href="break">!</a></p>
-
-<h1 id="defining-things">Defining things</h1>
-
-<ul>
-<li><p>Identity function</p>
-
-<blockquote>
-<p><code>$\lambda x.x$</code></p>
-</blockquote></li>
-</ul>
-
-<p><a href="columns 8:">!</a></p>
-
-<ul>
-<li><p>Functions with multiple arity</p>
-
-<blockquote>
-<p>Suppose we have a function $f(x,y,z) = e$ where the expression
-involves all three input variables $x, y, z$.</p>
-
-<p>We can use the following expression to build $f$:</p>
-
-<p><code>$\lambda x.(\lambda y.(\lambda z. e))$</code></p>
-</blockquote>
-
-<p><strong>This is a big deal.</strong> <br>
-<strong>Functions as values in action here.</strong></p></li>
-</ul>
-
-<p><a href="split note">!</a></p>
-
-<div style=height:220px></div>
-
-<p>We can write it conveniently as $\lambda xyz.e$</p>
-
-<p><a href="break">!</a></p>
-
-<h1 id="computing-with-lambda-calculus">Computing with $\lambda$-Calculus</h1>
+<div style=height:600px;overflow:auto>
+<script
+src="https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.js"></script>
+</div>
 </div>
         </div>
 

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slides on kenpu.ca</title>
-    <link>http://kenpu.ca/slides/</link>
-    <description>Recent content in Slides on kenpu.ca</description>
+    <title>Slides on db@uoit</title>
+    <link>https://kenpuca.github.io/slides/</link>
+    <description>Recent content in Slides on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to algorithms</title>
-      <link>http://kenpu.ca/slides/algorithms/intro/</link>
+      <link>https://kenpuca.github.io/slides/algorithms/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/algorithms/intro/</guid>
+      <guid>https://kenpuca.github.io/slides/algorithms/intro/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -22,151 +22,92 @@
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;Hello&lt;/p&gt;
 
-&lt;p&gt;Sorting&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;Hashing&lt;/p&gt;
+&lt;h2 id=&#34;second-page&#34;&gt;Second page&lt;/h2&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Dynamic programming&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;NP-completeness&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;em&gt;and a lot more&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 4:8&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-quiz&#34;&gt;A quiz&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This quiz is to test
-if you know how to do well.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div pdf=&#34;output.pdf&#34; rotate=&#34;-90&#34; scale=&#34;0.8&#34;&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe
-src=&#34;https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true&#34;
-width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
-marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
+&lt;p&gt;This is a PDF&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Symposium</title>
-      <link>http://kenpu.ca/slides/talks/symposium-on-teaching/</link>
+      <link>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/talks/symposium-on-teaching/</guid>
+      <guid>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;columns 7:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;instant-gratification&#34;&gt;Instant gratification&lt;/h1&gt;
 
-&lt;h1 id=&#34;technology-to-enable-instant-gratification-evaluation&#34;&gt;Technology to enable instant gratification &amp;amp; evaluation&lt;/h1&gt;
+&lt;div style=height:400px&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ken-pu&#34;&gt;Ken Pu&lt;/h2&gt;
 
-&lt;h2 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h2&gt;
+&lt;h1 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h1&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Powerpoint (Keynote, Openoffice) is no longer considered &lt;em&gt;technology&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Instant gratification is a powerful equalizer
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Instant gratification is dangerous
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Technology is almost there
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Yes, you can use it now&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;hr /&gt;
+&lt;h1 id=&#34;the-equalizer-1&#34;&gt;The equalizer (1)&lt;/h1&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;columns 5:2:5&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT * FROM schedule;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;
-&amp;gt; Haha.  Tricked you.  &lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;mycamps-the-right-way-1&#34;&gt;Mycamps - the right way&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester FROM schedule;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;img class=&#34;fragment&#34; src=&#34;degrasse.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Try without the &lt;code&gt;distinct&lt;/code&gt; keyword.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;mycamps-the-right-way-2&#34;&gt;Mycamps - the right way&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code 
-FROM schedule
-WHERE instructor like &#39;%Ken%&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;div style=margin-top:200px;font-size:500%&gt;=&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Can you modify the query to suit your own needs?&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;fragment&#34; src=&#34;Instant-Gratification.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;p&gt;Can you see what the &lt;code&gt;LIKE&lt;/code&gt; clause is doing?&lt;/p&gt;
+&lt;h1 id=&#34;the-equalizer-2&#34;&gt;The equalizer (2)&lt;/h1&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&#34;columns 10:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way-3&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;engineer.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:500px&gt;&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google Engineer&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;How is your teaching assignment?&lt;/p&gt;
+&lt;div style=font-size:500%&gt;=&lt;/div&gt;
 
-&lt;hr /&gt;
+&lt;h1 id=&#34;the-equalizer-2-1&#34;&gt;The equalizer (2)&lt;/h1&gt;
 
-&lt;h2 id=&#34;mycamps-the-right-way-4&#34;&gt;Mycamps - the right way&lt;/h2&gt;
+&lt;p&gt;&lt;img style=height:500px src=&#34;women-in-cs.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT distinct semester, code, weekday, starthour || &#39;:&#39; || startmin AS time
-FROM schedule WHERE instructor like &#39;%Ken%&#39; ORDER BY semester, weekday;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;example-1&#34;&gt;Example (1)&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;http://localhost:&#34; style=width:100%;height:400px&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How is your teaching schedule?&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;where-are-we-going-with-this&#34;&gt;Where are we going with this?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Common table expressions in SQL&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     

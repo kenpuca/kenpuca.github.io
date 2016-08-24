@@ -5,104 +5,137 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Introduction to algorithms</title>
 
-        <link rel="stylesheet" href="http://kenpu.ca/css/bootstrap.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/fonts/fonts.css">
-        <link rel="stylesheet" href="http://kenpu.ca/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
 
 		
-        <link rel="stylesheet" href="http://kenpu.ca/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="http://kenpu.ca/reveal-style.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
 
 		
 		<script>
+            if(window.location.search.match(/print-pdf/gi)) {
+                window.print_pdf = true;
+            }
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'http:\/\/kenpu.ca/reveal.js/css/print/pdf.css' : 'http:\/\/kenpu.ca/reveal.js/css/print/paper.css';
+            link.href = window.print_pdf ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
+
+        
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown
-						 data-separator="^---"
-						 data-separator-vertical="^--"
-						 data-separator-notes="^Note:"
-						data-charset="iso-8859-15">[!](columns 8:4)
+        <div class="reveal">
+            <div class="slides">
 
-# Introduction to algorithms
+<p><a href="columns 8:4">!</a></p>
 
-[!](split)
+<h1 id="introduction-to-algorithms">Introduction to algorithms</h1>
 
-***
+<p><a href="split">!</a></p>
 
-Sorting
+<p>Hello</p>
 
-***
+<p><a href="break">!</a></p>
 
-Hashing
+<h2 id="second-page">Second page</h2>
 
-***
+<hr />
 
-Dynamic programming
+<p><a href="columns 8:">!</a></p>
 
-***
+<div pdf="output.pdf" rotate="-90" scale="0.8"></div>
 
-NP-completeness
+<p><a href="split">!</a></p>
 
-***
-
-*and a lot more...*
-
-***
-
----
-
-[!](columns 4:8)
-
-## A quiz
-
-&gt; This quiz is to test
-&gt; if you know how to do well.
-
-[!](split)
-
-&lt;iframe
-src=&#34;https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true&#34;
-width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
-marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
-</section>
-			</div>
-		</div>
+<p>This is a PDF</p>
+</div>
+        </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/lib/js/head.min.js"></script>
-        <script src="http://kenpu.ca/reveal.js/js/reveal.js"></script>
+        <script src="/js/pdf.js"></script>
+
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
 
 		<script>
-			
+        
+        function isBreak($p, $section) {
+            if($p.is("h1") && $section.children().size() > 0)
+                return true;
+
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides").hide();
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem, $section)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                    if($elem.is("h1")) {
+                        $elem.appendTo($section);
+                    }
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            $reveal.show();
+
+            startReveal();
+        });
+
+        function startReveal() {
 			Reveal.initialize({
 				history: true,
 
                 slideNumber: true,
+
+                center: false,
 
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/markdown/marked.js' },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/markdown/markdown.js' },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/notes/notes.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'http:\/\/kenpu.ca/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
+                        async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                    
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js',
+                        async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
+                        async: true}
 				]
 			});
+        }
 		</script>
 	</body>
 </html>
+

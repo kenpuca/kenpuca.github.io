@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on kenpu.ca</title>
-    <link>http://kenpu.ca/courses/</link>
-    <description>Recent content in Courses on kenpu.ca</description>
+    <title>Courses on db@uoit</title>
+    <link>https://kenpuca.github.io/courses/</link>
+    <description>Recent content in Courses on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/insert-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/insert-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
@@ -606,10 +606,26 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/functional-computation/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/merge-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/functional-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/merge-sort/</guid>
+      <description>
+
+&lt;h1 id=&#34;mergesort&#34;&gt;Mergesort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;divide-and-conquer&#34;&gt;Divide and conquer&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/programming-languages/functional-computation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/functional-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;lambda-calculus-symbolic-computation&#34;&gt;$\lambda$-Calculus: symbolic computation&lt;/h1&gt;
@@ -640,16 +656,256 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;syntax-of-lambda-calculus&#34;&gt;Syntax of $\lambda$-calculus&lt;/h1&gt;
+&lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
+
+&lt;p&gt;Values&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Literals: 1, 2, 3, &amp;ldquo;Hello world&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Variables: $x, y, z, \dots$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Functions&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;$+ : (x,y)\mapsto x+y$&lt;/li&gt;
+&lt;li&gt;$\mathrm{inc} : x\mapsto x+1$&lt;/li&gt;
+&lt;li&gt;$\dots$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Always returns &lt;em&gt;one&lt;/em&gt; value.&lt;/li&gt;
+&lt;li&gt;Takes a fixed number of inputs: arity of the function
+&lt;span style=color:red&gt;*&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;value-as-function&#34;&gt;Value as function&lt;/h1&gt;
+
+&lt;p&gt;A value is a zero-arity function.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;function-as-value&#34;&gt;Function as value&lt;/h1&gt;
+
+&lt;p&gt;We want to extend the idea of &lt;em&gt;things&lt;/em&gt; to include functions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This is a central idea in functional programming&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;value-equiv-function-everything&#34;&gt;Value $\equiv$ Function = Everything&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;syntax-for-expressions-value-function&#34;&gt;Syntax for expressions (value / function)&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;$1, 2, 3, +, -, \dots$ are expressions&lt;/li&gt;
+&lt;li&gt;$x, y, z, \dots$ are expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Abstraction:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;If $x$ is a variable, and $e$ is an expression, then
+$\lambda x. e$ is an expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Application:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;If $e_1$ is a function with arity 1,
+&lt;code&gt;$e_2$&lt;/code&gt; is an expression, then
+$e_1 e_2$ is an expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We assume that all functions are with arity 1.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is not a restriction.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-weird-syntax-of-lambda-calculus&#34;&gt;The &lt;em&gt;weird&lt;/em&gt; syntax of $\lambda$ calculus&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$\lambda x.e$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a function taking &lt;em&gt;one&lt;/em&gt; input, represented by the variable $x$.
+It returns &lt;em&gt;one&lt;/em&gt; value, which is evaluated as the expression $e$.
+The expression $e$ usually makes uses of $x$, but not necessarily.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$e_1 e_2$&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is passing $e_2$ as an argument to the expression $e_1$.  Recall that
+everything is a function.  So $e_1$ is a function with &lt;em&gt;one&lt;/em&gt; argument.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$e_1 e_2 e_3 = ((e_1 e_2) e_3)$&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This shows that $e_1$ takes one argument ($e_2$), and returns an
+expression which is yet again a function which takes $e_3$ as an input.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;defining-things&#34;&gt;Defining things&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Identity function&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$\lambda x.x$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Functions with multiple arity&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Suppose we have a function $f(x,y,z) = e$ where the expression
+involves all three input variables $x, y, z$.&lt;/p&gt;
+
+&lt;p&gt;We can use the following expression to build $f$:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$\lambda x.(\lambda y.(\lambda z. e))$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;This is a big deal.&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;Functions as values in action here.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=height:220px&gt;&lt;/div&gt;
+
+&lt;p&gt;We can write it conveniently as $\lambda xyz.e$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;computing-with-lambda-calculus&#34;&gt;Computing with $\lambda$-Calculus&lt;/h1&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/stateful-computation/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/stateful-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</guid>
+      <description>
+
+&lt;h1 id=&#34;computation-in-practice&#34;&gt;Computation in practice&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Languages based on stateful computation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Languages based on functional computation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hybrid languages&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Languages&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Task&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quicksort&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;X = [6, 3, 4, 8, 1, 4]
+
+def quicksort(X, i, j):
+  if i &amp;lt; j:
+    p = partition(X, i, j)
+    quicksort(X, i, p-1)
+    quicksort(X, p+1, j)
+
+def partition(X, i, j):
+  pivot = X[j]
+  m = i
+  for n in range(i, j):
+    if X[n] &amp;lt;= pivot:
+      X[m], X[n] = X[n], X[m]
+      m += 1
+  X[m], X[j] = X[j], X[m]
+  return m
+
+def QuickSort(X):
+  return quicksort(X, 0, len(X)-1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;div pdf=&#34;qsort-py.pdf&#34;&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;python-v-s-javascript&#34;&gt;Python v.s. Javascript&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;script
+src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.py&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=height:600px;overflow:auto&gt;
+&lt;script
+src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=qsort.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
@@ -763,18 +1019,142 @@ a TM.&lt;/p&gt;
 
 &lt;h1 id=&#34;turing-machine-1&#34;&gt;Turing Machine&lt;/h1&gt;
 
-&lt;div style=color:red&gt;
-TM
-&lt;/div&gt;
+&lt;div pdf=&#34;turing-machine.pdf&#34; scale=0.8&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;break-7&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;computational-power-of-tm&#34;&gt;Computational power of TM&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Church-Turing Thesis&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a procedure (algorithm) can be executed by &lt;em&gt;any&lt;/em&gt; computer, then it can be
+executed by a Turing Machine.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Turing Complete&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a mechanism is equivalent to TM, then it&amp;rsquo;s called &lt;em&gt;Turing Complete&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;break-8&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;simulation-of-a-function&#34;&gt;Simulation of a function&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Computable functions&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A function $f$ is computable if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Its input can be encoded as a binary string: &lt;code&gt;$2^*$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Its output can be encoded as a binary string: &lt;code&gt;$2^*$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Its evaluation can always be carried out by a TM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Any computable function can be implemented by a TM.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Any TM is some computable function.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Why is a TM always a function (over binary strings)?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;universal-tm&#34;&gt;Universal TM&lt;/h1&gt;
+
+&lt;p&gt;Consider a TM: $M$.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s a function &lt;code&gt;$M:2^*\to 2^*$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s mechanical description can be encoded as a binary string.
+&lt;i style=&#34;font-size:200%;color:#faa;vertical-align:middle;margin-left:10px&#34; class=&#34;fa fa-thumbs-up&#34;&gt;&lt;/i&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Function &lt;em&gt;eval&lt;/em&gt; takes two inputs - a TM and an input, and it computes the
+output.&lt;/p&gt;
+
+&lt;p&gt;$$\mathrm{eval} :\mathrm{TM} \times 2^* \to 2^*$$&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s input can be encoded as binary strings.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It can be carried out by a procedure.
+&lt;i style=&#34;font-size:200%;color:#faa;vertical-align:middle;margin-left:10px&#34; class=&#34;fa fa-thumbs-up&#34;&gt;&lt;/i&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By Church-Turing thesis, &lt;strong&gt;eval&lt;/strong&gt; is computable, so there is a TM for it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Definition&lt;/em&gt; &lt;strong&gt;Universal TM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The TM $\mathbf{U}$ that computes &lt;strong&gt;eval&lt;/strong&gt; is called &lt;em&gt;universal&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;universal-tm-1&#34;&gt;Universal TM&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The TM $\mathbf{U}$ initializes the tape with the binary encoding of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;a TM, $M$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;an input, $x$&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It outputs $\mathbf{eval}(M, x)$&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Modern Computer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$M$ is the program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$x$ is the input to the program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$\mathbf{U}$ is the general purpose computer&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tm-programming&#34;&gt;TM-Programming&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;We just need a single TM, namely $\mathbf{U}$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The universal programming language is the encoding of $M$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -812,7 +1192,7 @@ Introduction to Algorithms,
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mergesort&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;merge-sort&#34;&gt;Mergesort&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Quicksort&lt;/li&gt;
 &lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
 &lt;li&gt;Counting sort and radix sort&lt;/li&gt;
@@ -951,10 +1331,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -995,6 +1375,7 @@ programming.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;functional-computation&#34;&gt;Functional computation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;intro-to-languages&#34;&gt;Programming languages: at a glance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -1006,10 +1387,8 @@ programming.&lt;/p&gt;
 &lt;h1 id=&#34;design-of-programming-languages&#34;&gt;Design of programming languages&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Organization of code&lt;/li&gt;
-&lt;li&gt;Operational semantics&lt;/li&gt;
+&lt;li&gt;Organization and semantics&lt;/li&gt;
 &lt;li&gt;Type system&lt;/li&gt;
-&lt;li&gt;Denotational semantics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
