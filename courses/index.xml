@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on kenpu.ca</title>
-    <link>http://kenpu.ca/courses/</link>
-    <description>Recent content in Courses on kenpu.ca</description>
+    <title>Courses on db@uoit</title>
+    <link>https://kenpuca.github.io/courses/</link>
+    <description>Recent content in Courses on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/insert-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/insert-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/insert-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/insert-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;basic-programming&#34;&gt;Basic programming&lt;/h1&gt;
@@ -606,10 +606,10 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/algorithms/merge-sort/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/merge-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/merge-sort/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/merge-sort/</guid>
       <description>
 
 &lt;h1 id=&#34;mergesort&#34;&gt;Mergesort&lt;/h1&gt;
@@ -622,10 +622,10 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/functional-computation/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/functional-computation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/functional-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/functional-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;lambda-calculus-symbolic-computation&#34;&gt;$\lambda$-Calculus: symbolic computation&lt;/h1&gt;
@@ -817,10 +817,10 @@ involves all three input variables $x, y, z$.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/intro-to-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/intro-to-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-in-practice&#34;&gt;Computation in practice&lt;/h1&gt;
@@ -902,10 +902,10 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
     
     <item>
       <title></title>
-      <link>http://kenpu.ca/courses/programming-languages/stateful-computation/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/stateful-computation/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/stateful-computation/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
@@ -1151,10 +1151,10 @@ output.&lt;/p&gt;
     
     <item>
       <title>Algorithms</title>
-      <link>http://kenpu.ca/courses/algorithms/</link>
+      <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/algorithms/</guid>
+      <guid>https://kenpuca.github.io/courses/algorithms/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -1331,10 +1331,10 @@ Floyd-Washall&lt;/p&gt;
     
     <item>
       <title>Programming Languages</title>
-      <link>http://kenpu.ca/courses/programming-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/courses/programming-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
       <description>
 
 &lt;blockquote&gt;
