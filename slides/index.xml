@@ -106,8 +106,42 @@
 &lt;h1 id=&#34;example-1&#34;&gt;Example (1)&lt;/h1&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Common table expressions in SQL&lt;/p&gt;
+&lt;p&gt;Finding the courses I teach.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;select distinct code, title from schedule where instructor like &amp;quot;Ken Pu&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;iframe class=fragment data-src=&#34;http://db.science.uoit.ca:8080&#34; style=&#34;max-width:1024px; width:100%; height:400px&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;example-2&#34;&gt;Example (2)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Anything that is early in the morning?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql sm&#34;&gt;select distinct code, title, weekday, starthour || &amp;quot;:&amp;quot; || startmin as t from schedule
+where starthour &amp;lt; 9 and instructor like &amp;quot;Ken Pu&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe data-src=&#34;http://db.science.uoit.ca:8080&#34; style=&#34;max-width:1024px; width:100%; height:300px&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;example-3&#34;&gt;Example (3)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Can I find an empty room?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql sm&#34;&gt;with R(room, weekday, t) as (
+    select distinct room, weekday, min(starthour) from schedule where room like &#39;% A1 %&#39; and weekday = &amp;quot;T&amp;quot; group by room order by room
+) select * from R where t &amp;gt;= 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe data-src=&#34;http://db.science.uoit.ca:8080&#34; style=&#34;max-width:1024px; width:100%; height:300px&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;data-science-with-jupyter&#34;&gt;Data Science with Jupyter&lt;/h1&gt;
+
+&lt;iframe data-src=&#34;http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb&#34; style=&#34;max-width:1024px; width:100%; height:500px&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     

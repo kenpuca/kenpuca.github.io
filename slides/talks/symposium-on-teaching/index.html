@@ -99,8 +99,42 @@
 <h1 id="example-1">Example (1)</h1>
 
 <blockquote>
-<p>Common table expressions in SQL</p>
+<p>Finding the courses I teach.</p>
+
+<pre><code class="language-sql">select distinct code, title from schedule where instructor like &quot;Ken Pu&quot;;
+</code></pre>
 </blockquote>
+
+<iframe class=fragment data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:400px"></iframe>
+
+<h1 id="example-2">Example (2)</h1>
+
+<blockquote>
+<p>Anything that is early in the morning?</p>
+
+<pre><code class="language-sql sm">select distinct code, title, weekday, starthour || &quot;:&quot; || startmin as t from schedule
+where starthour &lt; 9 and instructor like &quot;Ken Pu&quot;;
+</code></pre>
+</blockquote>
+
+<iframe data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:300px"></iframe>
+
+<h1 id="example-3">Example (3)</h1>
+
+<blockquote>
+<p>Can I find an empty room?</p>
+
+<pre><code class="language-sql sm">with R(room, weekday, t) as (
+    select distinct room, weekday, min(starthour) from schedule where room like '% A1 %' and weekday = &quot;T&quot; group by room order by room
+) select * from R where t &gt;= 10;
+</code></pre>
+</blockquote>
+
+<iframe data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:300px"></iframe>
+
+<h1 id="data-science-with-jupyter">Data Science with Jupyter</h1>
+
+<iframe data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
 </div>
         </div>
 
