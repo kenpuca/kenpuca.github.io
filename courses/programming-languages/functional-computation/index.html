@@ -38,7 +38,7 @@
 
 <h1 id="lambda-calculus-symbolic-computation">$\lambda$-Calculus: symbolic computation</h1>
 
-<p><a href="break">!</a></p>
+<p><a href="highlight">!</a></p>
 
 <h1 id="lambda-calculus">$\lambda$-Calculus</h1>
 
@@ -61,8 +61,6 @@
 <p>rewrite rules represent mathematical reasoning.</p>
 </blockquote></li>
 </ul>
-
-<p><a href="break">!</a></p>
 
 <h1 id="expressions">Expressions</h1>
 
@@ -93,8 +91,6 @@
 </ul>
 </blockquote>
 
-<p><a href="break">!</a></p>
-
 <h1 id="value-as-function">Value as function</h1>
 
 <p>A value is a zero-arity function.</p>
@@ -113,17 +109,16 @@
 
 <h2 id="value-equiv-function-everything">Value $\equiv$ Function = Everything</h2>
 
-<p><a href="break">!</a></p>
-
 <h1 id="syntax-for-expressions-value-function">Syntax for expressions (value / function)</h1>
 
 <p><a href="columns 8:">!</a></p>
 
 <blockquote>
+<blockquote>
 <ul>
-<li>$1, 2, 3, +, -, \dots$ are expressions</li>
 <li>$x, y, z, \dots$ are expressions</li>
 </ul>
+</blockquote>
 </blockquote>
 
 <p>Abstraction:</p>
@@ -153,8 +148,6 @@ $e_1 e_2$ is an expression</li>
 <p>This is not a restriction.</p>
 </blockquote>
 
-<p><a href="break">!</a></p>
-
 <h1 id="the-weird-syntax-of-lambda-calculus">The <em>weird</em> syntax of $\lambda$ calculus</h1>
 
 <ul>
@@ -180,8 +173,6 @@ everything is a function.  So $e_1$ is a function with <em>one</em> argument.</p
 expression which is yet again a function which takes $e_3$ as an input.</p>
 </blockquote></li>
 </ul>
-
-<p><a href="break">!</a></p>
 
 <h1 id="defining-things">Defining things</h1>
 
@@ -217,14 +208,265 @@ involves all three input variables $x, y, z$.</p>
 
 <p>We can write it conveniently as $\lambda xyz.e$</p>
 
-<p><a href="break">!</a></p>
-
 <h1 id="computing-with-lambda-calculus">Computing with $\lambda$-Calculus</h1>
+
+<p><a href="highlight">!</a></p>
+
+<blockquote>
+<p>We rely on string-rewriting to evaluate
+LC expressions.</p>
+</blockquote>
+
+<h1 id="substitution-of-variables-in-function-applications">Substitution of variables in function applications</h1>
+
+<p><strong>Notation</strong>:</p>
+
+<blockquote>
+<p>$e[x/e&rsquo;]$ is the expression obtained by substituting all occurances of $x$ in
+the expression $e$ with the expression $e&rsquo;$.</p>
+</blockquote>
+
+<p><a href="columns 8:">!</a></p>
+
+<p><strong>Substition</strong> as a way to evaluate function application:</p>
+
+<blockquote>
+<p>$(\lambda x. e) e&rsquo; \implies e[x/e&rsquo;]$.</p>
+
+<p><em>Example</em>:</p>
+
+<p><code>\begin{eqnarray}
+&amp;&amp; (\lambda x.x x) (\lambda y. y) \\
+&amp;\implies&amp; (x x)[x/(\lambda y.y)] \\
+&amp;\implies&amp; (\lambda y.y)(\lambda y.y) \\
+&amp;\implies&amp; y[y/(\lambda y.y)] \\
+&amp;\implies&amp; (\lambda y.y)
+\end{eqnarray}</code></p>
+</blockquote>
+
+<p><a href="split note">!</a></p>
+
+<p><strong>Warning</strong></p>
+
+<p>We can easily get into trouble.</p>
+
+<p>Substitution cannot be used freely.</p>
+
+<h1 id="free-bound-variables">Free &amp; Bound Variables</h1>
+
+<p><em>Variables in a function abstraction expression can be <em>free</em> or <em>bound</em>.</em></p>
+
+<p><a href="-----">!</a></p>
+
+<blockquote>
+<p>If a variable represents the input parameter in a function expression, then
+it&rsquo;s considered <em>bound</em>.  Otherwise, it&rsquo;s <em>free</em>.</p>
+</blockquote>
+
+<ul>
+<li>$\mathbf{FV}(e)$ are the free variables of $e$</li>
+<li>$\mathbf{BV}(e)$ are the bound variables</li>
+<li><a href="comfort">!</a></li>
+</ul>
+
+<h1 id="variable-capturing">Variable Capturing</h1>
+
+<p>Consider an expression:</p>
+
+<p>$$\lambda x. (\lambda x.x)$$</p>
+
+<p>There are multiple occurrences of $x$, so let&rsquo;s label them so we can refer to
+the individual occurrences.</p>
+
+<p>$$\lambda x_1. (\lambda x_2.x_3)$$</p>
+
+<blockquote>
+<p><em>Which input variable does $x_3$ refer to?</em></p>
+</blockquote>
+
+<p><a href="------">!</a></p>
+
+<p><a href="box">!</a> This is called capturing.</p>
+
+<h1 id="elimination-of-variable-capturing">Elimination of Variable Capturing</h1>
+
+<p>There is a rewrite rule that allows us to rename the parameter variables without
+changing the meaning of the expression.</p>
+
+<p>$$ \lambda x. x \equiv \lambda y.y \equiv \lambda \mathsf{hello}.\mathsf{hello} $$</p>
+
+<p><strong>Renaming</strong></p>
+
+<blockquote>
+<p>Suppose that $x$ is a free variable of $e$, and $y$ does not appear in $e$ at
+all.</p>
+
+<p>Then $\lambda x.e \implies \lambda y.e[x/y]$</p>
+</blockquote>
+
+<h1 id="elimination-of-variable-capturing-1">Elimination of Variable Capturing</h1>
+
+<p>Back to:</p>
+
+<p>$$\lambda x. (\lambda x.x)$$</p>
+
+<p><a href="-----">!</a></p>
+
+<ul>
+<li><a href="comfortable">!</a></li>
+
+<li><p>First we consider the sub expression $\lambda x.x$.</p>
+
+<blockquote>
+<p>Using renaming, we can rewrite it to $\lambda y.y$.</p>
+</blockquote></li>
+
+<li><p>Then we get:</p>
+
+<blockquote>
+<p>$$\lambda x. (\lambda x.x) \implies \lambda x.\lambda y. y$$</p>
+</blockquote></li>
+</ul>
+
+<p><a href="box">!</a>
+Generally, we only apply <strong>substitution</strong> to evaluate function applications
+if there is <em>no</em> variable capturing; and this can be achieved by <strong>renaming</strong>.</p>
+
+<h1 id="how-to-perform-computation-using-lc">How to perform computation using LC?</h1>
+
+<ul>
+<li><a href="comfort">!</a></li>
+<li>Natural numbers</li>
+<li>Arithmetics</li>
+<li>Loop and conditional branching</li>
+</ul>
+
+<p><a href="-----">!</a></p>
+
+<p><strong>All can be done using LC</strong></p>
+
+<blockquote>
+<ol>
+<li><p>Express the algorithm in terms of natural numbers, arithmetics,
+ loops and conditional branches.</p></li>
+
+<li><p>Encode the algorithm in LC.</p></li>
+
+<li><p>Apply syntax rewriting until no more rewriting is possible.</p></li>
+
+<li><p><a href="comfort">!</a></p></li>
+</ol>
+</blockquote>
+
+<h1 id="a-glance-of-lc-in-action">A glance of LC in action</h1>
+
+<p>A bit of notation:</p>
+
+<blockquote>
+<p>$\lambda x.\lambda y. \lambda z. e$ is written as as $\lambda xyz. e$.</p>
+</blockquote>
+
+<hr />
+
+<p>Now we can encode numbers:</p>
+
+<p>$0 \equiv \lambda sx. x$ (takes two inputs, but only keep the second one.)</p>
+
+<p>$1 \equiv \lambda sx. sx$</p>
+
+<p>$2 \equiv \lambda sx. ssx$</p>
+
+<p>$\vdots$</p>
+
+<h1 id="arithmetics">Arithmetics</h1>
+
+<p>Consider the simplest arithmetics: increment by 1.</p>
+
+<p><a href="columns 4:">!</a></p>
+
+<pre><code class="language-python">def succ(n):
+    return n + 1
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p><code>$$S \equiv \lambda n. \lambda yx.y(nyx)$$</code></p>
+
+<hr />
+
+<p>Let&rsquo;s try this out.</p>
+
+<p><code>\begin{eqnarray}
+S 0 &amp;=&amp; (\lambda n. \lambda yx.ynyx)0 \\
+    &amp;=&amp; (\lambda yx.ynyx)[n/0] \\
+    &amp;=&amp; \lambda yx.y(0yx) \\
+    &amp;=&amp; \lambda yx.y((\lambda sz.z)yx) \\
+    &amp;=&amp; \lambda yx.y(x) \\
+    &amp;=&amp; 1
+\end{eqnarray}</code></p>
+
+<h1 id="arithmetics-1">Arithmetics</h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<pre><code class="language-python">def add(n1, n2):
+    return n1 + n2
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+<p>Observe:</p>
+
+<p>$2 S 3 = 5$ (work it out, it&rsquo;s quite incredible.)</p>
+
+<p>So, we have:</p>
+
+<p>$$+ \equiv \lambda mn. mSn$$</p>
+
+<p><a href="------">!</a></p>
+
+<p>Can you guess the LC expression for multiplication?</p>
+
+<h1 id="recursion">Recursion</h1>
+
+<ul>
+<li><p>LC does not require assigning aliases to functions.</p>
+
+<blockquote>
+<p>Technically, there is just <strong>ONE</strong> expression for the entire algorthm.</p>
+</blockquote></li>
+
+<li><p>Why it&rsquo;s hard to do recursion without aliases?</p>
+
+<pre><code class="language-python">def factorial(n):
+    if n &lt;= 1:
+        return n
+    else:
+        return n * factorial(n-1)
+</code></pre></li>
+
+<li><p>Is it even possible?</p>
+
+<blockquote>
+<p>Yes.  It&rsquo;s called the <strong>Y</strong>-combinator.</p>
+
+<p>$$ \mathbf{Y} \equiv (\lambda y.(\lambda x.y(xx))(\lambda x.y(xx)))$$</p>
+</blockquote></li>
+</ul>
+
+<h1 id="y-combinator">Y-combinator</h1>
+
+<p>$$ \mathbf{Y} f = f (\mathbf{Y} f) $$</p>
+
+<p>So,</p>
+
+<p>$$ \mathbf{Y} f x \implies f (\mathbf{Y} f) x \implies f f \dots f x $$</p>
 </div>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
         <script src="/js/pdf.js"></script>
+        <script src="/js/clipboard.min.js"></script>
 
         <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
         <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
@@ -292,8 +534,8 @@ involves all three input variables $x, y, z$.</p>
                         { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
                     
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js',
-                        async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
                     {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
                         async: true}
 				]

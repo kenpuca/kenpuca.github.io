@@ -31,6 +31,12 @@
         <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
 
         
+<style>
+.reveal:after {
+    content: "Programming Languages, Ken Pu" !important;
+}
+</style>
+        
 	</head>
 	<body>
         <div class="reveal">
@@ -38,7 +44,7 @@
 
 <h1 id="computation-the-turing-machine">Computation &amp; the Turing Machine</h1>
 
-<h1 id="break"><a href="break">!</a></h1>
+<p><a href="highlight">!</a></p>
 
 <h1 id="computation">Computation</h1>
 
@@ -53,8 +59,6 @@
 <li>Entscheidungsproblem, 1928</li>
 </ul>
 
-<h1 id="break-1"><a href="break">!</a></h1>
-
 <h1 id="computation-1">Computation</h1>
 
 <p><a href="columns 5:">!</a></p>
@@ -67,8 +71,6 @@
 <li>Entscheidungsproblem, 1928</li>
 <li>Gödel&rsquo;s incompleteness theorem</li>
 </ul>
-
-<h1 id="break-2"><a href="break">!</a></h1>
 
 <h1 id="computation-2">Computation</h1>
 
@@ -83,8 +85,6 @@
 <li>Turing machine</li>
 </ul>
 
-<h1 id="break-3"><a href="break">!</a></h1>
-
 <h1 id="computation-3">Computation</h1>
 
 <p><a href="columns 6:">!</a></p>
@@ -98,8 +98,6 @@
 <li>$\lambda$-calculus</li>
 </ul>
 
-<h1 id="break-4"><a href="break">!</a></h1>
-
 <h1 id="computation-4">Computation</h1>
 
 <p><a href="columns 6:">!</a></p>
@@ -112,8 +110,6 @@
 <li>von Neumann computing model</li>
 <li>EDVAC</li>
 </ul>
-
-<h1 id="break-5"><a href="break">!</a></h1>
 
 <h1 id="turing-machine">Turing Machine</h1>
 
@@ -143,13 +139,9 @@ a TM.</p>
 </blockquote></li>
 </ol>
 
-<h1 id="break-6"><a href="break">!</a></h1>
-
 <h1 id="turing-machine-1">Turing Machine</h1>
 
 <div pdf="turing-machine.pdf" scale=0.8></div>
-
-<h1 id="break-7"><a href="break">!</a></h1>
 
 <h1 id="computational-power-of-tm">Computational power of TM</h1>
 
@@ -167,8 +159,6 @@ executed by a Turing Machine.</p>
 <blockquote>
 <p>If a mechanism is equivalent to TM, then it&rsquo;s called <em>Turing Complete</em>.</p>
 </blockquote>
-
-<h1 id="break-8"><a href="break">!</a></h1>
 
 <h1 id="simulation-of-a-function">Simulation of a function</h1>
 
@@ -237,8 +227,6 @@ output.</p>
 <p>The TM $\mathbf{U}$ that computes <strong>eval</strong> is called <em>universal</em>.</p>
 </blockquote>
 
-<p><a href="break">!</a></p>
-
 <h1 id="universal-tm-1">Universal TM</h1>
 
 <ul>
@@ -265,8 +253,6 @@ output.</p>
 <li><p>$\mathbf{U}$ is the general purpose computer</p></li>
 </ul>
 
-<p><a href="break">!</a></p>
-
 <h1 id="tm-programming">TM-Programming</h1>
 
 <ol>
@@ -274,11 +260,24 @@ output.</p>
 
 <li><p>The universal programming language is the encoding of $M$.</p></li>
 </ol>
+
+<h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
+
+<ul>
+<li>Turing Machine is a mechanically realizable device.</li>
+<li>TM is as powerful (but a lot slower) as any modern computers.</li>
+<li>There is a very special TM that is called the <em>Universal TM</em>.  It can be
+<em>programmed</em>!</li>
+<li><a href="comfortable">!</a></li>
+</ul>
 </div>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
         <script src="/js/pdf.js"></script>
+        <script src="/js/clipboard.min.js"></script>
 
         <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
         <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
@@ -346,8 +345,8 @@ output.</p>
                         { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
                     
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js',
-                        async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
                     {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
                         async: true}
 				]

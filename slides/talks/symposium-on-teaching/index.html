@@ -43,9 +43,15 @@
 
 <h1 id="instant-gratification">Instant gratification</h1>
 
-<div style=height:400px></div>
+<p><a href="highlight">!</a></p>
 
-<h2 id="ken-pu">Ken Pu</h2>
+<p style=text-align:right>
+<i>Ken Pu</i> <br>
+
+September 1, 2016 <br>
+
+Symposium on teaching
+</p>
 
 <h1 id="tl-tr">TL;TR</h1>
 
@@ -63,6 +69,10 @@
 <li><p>Yes, you can use it now</p></li>
 </ul>
 </blockquote>
+
+<h1 id="the-equalizer">The Equalizer</h1>
+
+<p><a href="highlight">!</a></p>
 
 <h1 id="the-equalizer-1">The equalizer (1)</h1>
 
@@ -101,7 +111,7 @@
 <blockquote>
 <p>Finding the courses I teach.</p>
 
-<pre><code class="language-sql">select distinct code, title from schedule where instructor like &quot;Ken Pu&quot;;
+<pre><code class="language-sql sm clipboard">select distinct code, title from schedule where instructor like &quot;Ken Pu&quot;;
 </code></pre>
 </blockquote>
 
@@ -112,7 +122,7 @@
 <blockquote>
 <p>Anything that is early in the morning?</p>
 
-<pre><code class="language-sql sm">select distinct code, title, weekday, starthour || &quot;:&quot; || startmin as t from schedule
+<pre><code class="language-sql sm clipboard">select distinct code, title, weekday, starthour || &quot;:&quot; || startmin as t from schedule
 where starthour &lt; 9 and instructor like &quot;Ken Pu&quot;;
 </code></pre>
 </blockquote>
@@ -124,7 +134,7 @@ where starthour &lt; 9 and instructor like &quot;Ken Pu&quot;;
 <blockquote>
 <p>Can I find an empty room?</p>
 
-<pre><code class="language-sql sm">with R(room, weekday, t) as (
+<pre><code class="language-sql sm clipboard">with R(room, weekday, t) as (
     select distinct room, weekday, min(starthour) from schedule where room like '% A1 %' and weekday = &quot;T&quot; group by room order by room
 ) select * from R where t &gt;= 10;
 </code></pre>
@@ -132,14 +142,161 @@ where starthour &lt; 9 and instructor like &quot;Ken Pu&quot;;
 
 <iframe data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:300px"></iframe>
 
-<h1 id="data-science-with-jupyter">Data Science with Jupyter</h1>
+<h1 id="on-the-distribution-of-primes">On the distribution of primes</h1>
 
-<iframe data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
+<iframe class=fragment data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
+
+<h1 id="data-science-visualization">Data Science &amp; Visualization</h1>
+
+<iframe data-src="http://db.science.uoit.ca:3000/notebooks/DataScience.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
+
+<h1 id="the-danger">The Danger</h1>
+
+<p><a href="highlight">!</a></p>
+
+<p><a href="break">!</a></p>
+
+<p><a href="columns 4:">!</a></p>
+
+<h2 id="danger-of-instant-gratification">Danger of instant gratification</h2>
+
+<p><a href="split">!</a></p>
+
+<h2 id="claim">Claim:</h2>
+
+<p><em>We just covered the following topics</em>:</p>
+
+<blockquote>
+<ol>
+<li>Data analysis using relational query language</li>
+<li>Python list comprehension</li>
+<li>Numerical approximation of the distribution of the primes</li>
+<li>Visualization of potential fields</li>
+</ol>
+</blockquote>
+
+<div style=height:150px></div>
+
+<h2 id="reality-zero-working-knowledge-even-after-hands-on-practice">Reality: <em>Zero working knowledge</em> even after hands on practice!</h2>
+
+<h1 id="instant-gratification-br-for-the-instructors">Instant gratification <br> for the instructors</h1>
+
+<p><a href="highlight">!</a></p>
+
+<h1 id="don-t-discount-google-education-app">Don&rsquo;t discount Google Education App</h1>
+
+<blockquote>
+<p>UOIT is paying for it.</p>
+</blockquote>
+
+<h1 id="activate-your-uoit-net-account-today">Activate your <code>uoit.net</code> account <strong>today</strong>.</h1>
+
+<blockquote>
+<p><a href="https://ssbp.mycampus.ca/apex/f?p=340:101:17205337333607">https://ssbp.mycampus.ca/apex/f?p=340:101:17205337333607</a></p>
+</blockquote>
+
+<h1 id="the-benefit">The benefit</h1>
+
+<ul>
+<li><p>Google Drive <br><br></p></li>
+
+<li><p>Google Plus <br><br></p></li>
+
+<li><h2 id="google-quiz">Google Quiz</h2>
+
+<blockquote>
+<p><a href="https://support.google.com/docs/answer/7032287?hl=en">https://support.google.com/docs/answer/7032287?hl=en</a></p>
+</blockquote></li>
+</ul>
+
+<h1 id="test-your-working-knowledge">Test your working knowledge</h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<iframe
+data-src="https://docs.google.com/forms/d/e/1FAIpQLScAHM9K4G_cZLIbOsjQUvIZJPzUYH33OI7qu-tvWckF45FMWw/viewform?embedded=true"
+width="760" height="500" frameborder="0" marginheight="0"
+marginwidth="0">Loading...</iframe>
+
+<p><a href="split">!</a></p>
+
+<p>Separate Window</p>
+
+<blockquote>
+<p><a href="http://goo.gl/lijEIT">http://goo.gl/lijEIT</a></p>
+</blockquote>
+
+<p>Realtime monitoring</p>
+
+<blockquote>
+<p><a href="http://goo.gl/xKUzKf">http://goo.gl/xKUzKf</a></p>
+</blockquote>
+
+<h1 id="closing-remarks">Closing Remarks</h1>
+
+<p><a href="highlight">!</a></p>
+
+<p><a href="break">!</a></p>
+
+<blockquote>
+<p><em>First, I try to dramatically increase a student&rsquo;s self-expectations and, of
+course, their knowledge about the subject. Being a good teacher means
+stretching students without discouraging them or destroying their confidence.</em></p>
+
+<p>Terence Parr, Professor of CS, University of San Francisco</p>
+</blockquote>
+
+<p><a href="break">!</a></p>
+
+<p>Technology is inherently disruptive.  Disruptive technology is <strong>bad</strong> 51% of the time.</p>
+
+<p><br><br></p>
+
+<p>&hellip; but good 45% of the time.</p>
+
+<p><br><br></p>
+
+<p>&hellip; and transformational 3.99999% of the time.</p>
+
+<h1 id="ama-on">AMA on</h1>
+
+<p><a href="highlight">!</a></p>
+
+<h2 id="experimental-technology"><em>Experimental technology</em></h2>
+
+<blockquote>
+<ul>
+<li>Docker</li>
+<li>SSH over HTTPS</li>
+<li>Jupyter Notebook</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<h2 id="rock-solid"><em>Rock solid</em></h2>
+
+<blockquote>
+<ul>
+<li>Google Quiz, but still&hellip;</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<p>&ldquo;In the midst of chaos, there is also opportunity&rdquo;</p>
+
+<p>危中機 (\ˈwā\ zhü \ˈȯn \ˈjē)</p>
+
+<p style=text-align:right>
+<i>Sun Tzu</i>, Art of War
+</p>
 </div>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
         <script src="/js/pdf.js"></script>
+        <script src="/js/clipboard.min.js"></script>
 
         <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
         <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
@@ -207,8 +364,8 @@ where starthour &lt; 9 and instructor like &quot;Ken Pu&quot;;
                         
                     
                     { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js',
-                        async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
                     {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
                         async: true}
 				]

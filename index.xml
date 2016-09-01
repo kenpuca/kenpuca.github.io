@@ -121,12 +121,6 @@ of catching up.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.codecademy.com/learn/python&#34;&gt;https://www.codecademy.com/learn/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;no-idea-what-to-say-about-this&#34;&gt;No idea what to say about this&lt;/h1&gt;
-&lt;/blockquote&gt;
-
 &lt;h1 id=&#34;programming-this-course&#34;&gt;Programming &amp;amp; This Course&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 6:6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -139,8 +133,6 @@ focused on the &lt;em&gt;algorithms&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;But &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;The reality is that &lt;em&gt;programming&lt;/em&gt; is absolutely essential.&lt;/p&gt;
-
-&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;basic-programming-for-this-course&#34;&gt;Basic programming for this course&lt;/h1&gt;
 
@@ -155,7 +147,7 @@ print &amp;quot;The middle number is %d&amp;quot; % x[1]
 
 &lt;p&gt;We need arrays as a fundamental data structure.&lt;/p&gt;
 
-&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -175,7 +167,7 @@ print &amp;quot;%s: %s&amp;quot; % (jack.name, jack.age)
 
 &lt;p&gt;We need objects.&lt;/p&gt;
 
-&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -193,7 +185,7 @@ while i &amp;lt; 10:
 
 &lt;p&gt;Various loops are needed.&lt;/p&gt;
 
-&lt;h1 id=&#34;break-3&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ==================================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -226,7 +218,7 @@ nx.draw(G)
 plot.save(&amp;quot;random-graph.png&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;break-4&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;the-sorting-problem&#34;&gt;The sorting problem&lt;/h1&gt;
 
@@ -263,7 +255,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;li&gt;The comparison function can be arbitrary, and it defines the ordering.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-5&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =========================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;the-sorting-problem-1&#34;&gt;The sorting problem&lt;/h1&gt;
 
@@ -282,7 +274,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-6&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =============================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;insertion-sort&#34;&gt;Insertion sort&lt;/h1&gt;
 
@@ -297,7 +289,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;li&gt;It can be fully analyzed relatively easily.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;break-7&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ============================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;insertion-sort-1&#34;&gt;Insertion sort&lt;/h1&gt;
 
@@ -319,7 +311,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
     A[i+1] = key
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;break-8&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ===========================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;analysis-of-correctness&#34;&gt;Analysis of correctness&lt;/h1&gt;
 
@@ -331,7 +323,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;p&gt;But first, we need some machineries.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-9&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ===========================================================================&lt;/p&gt;
 
 &lt;h2 id=&#34;loop-invariance&#34;&gt;Loop invariance&lt;/h2&gt;
 
@@ -382,7 +374,7 @@ the loop.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-10&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -402,7 +394,7 @@ the loop.&lt;/p&gt;
 
 &lt;p&gt;There are two loops, with &lt;code&gt;while&lt;/code&gt;-loop nested in the &lt;code&gt;for&lt;/code&gt;-loop.&lt;/p&gt;
 
-&lt;h1 id=&#34;break-11&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-1&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -438,7 +430,7 @@ the loop.&lt;/p&gt;
 &lt;p&gt;Can we say anything about &lt;code&gt;A[j+1]&lt;/code&gt; to &lt;code&gt;A[len(A)-1]&lt;/code&gt;?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;break-12&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-2&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -477,7 +469,7 @@ the loop.&lt;/p&gt;
 &lt;code&gt;A[i+1]&lt;/code&gt; makes &lt;code&gt;A[0 .. j]&lt;/code&gt; sorted.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;break-13&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-3&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -508,11 +500,13 @@ the loop.&lt;/p&gt;
 with $j=$&lt;code&gt;len(A)-1&lt;/code&gt;, the entire array &lt;code&gt;A[0 .. len(A)-1]&lt;/code&gt; is sorted.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;break-14&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;performance-analysis&#34;&gt;Performance analysis&lt;/h1&gt;
 
-&lt;h1 id=&#34;break-15&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h3 id=&#34;every-statement-takes-the-same-amount-of-time&#34;&gt;Every statement takes the same amount of time.&lt;/h3&gt;
 
@@ -532,7 +526,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;$T_\mathrm{LOC}(\mathrm{length}(A)) \Rightarrow T(n)$&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;break-16&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -556,7 +550,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Average case analysis&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-17&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -586,9 +580,9 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;code&gt;$$ T(n) = \sum_{j=0}^n j = \frac{n(n-1)}{2}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$ T(n) \leq \sum_{j=0}^n j = \frac{n(n-1)}{2}$$&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;break-18&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -670,7 +664,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&#34;break-19&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ====================================================================&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -700,9 +694,623 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;mergesort&#34;&gt;Mergesort&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfortable&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Divide and conquer, when and when not&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Bottom-up&lt;/li&gt;
+&lt;li&gt;Top-down&lt;/li&gt;
+&lt;li&gt;Correctness&lt;/li&gt;
+&lt;li&gt;Complexity analysis&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;divide-and-conquer&#34;&gt;Divide and conquer&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s a way to instruct &amp;ldquo;simple&amp;rdquo; solver to solve a complex problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-src=&#34;Minion.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-src=&#34;office-messy-desk.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;divide-and-conquer-and-combine&#34;&gt;Divide and conquer (and combine)&lt;/h1&gt;
+
+&lt;p&gt;Divide:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a problem $P$, the division of a problem is a procedure
+that produces a collection of &lt;em&gt;smaller&lt;/em&gt; problems &lt;code&gt;$\mathbf{Q} = \{Q_1, Q_2, \dots\}$&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Conquer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each sub-problem &lt;code&gt;$Q_i\in\mathbf{Q}$&lt;/code&gt; (hopefully) is easier to solve.
+Let &lt;code&gt;$S_i = \mathrm{solve}(Q_i)$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Combine:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hopefully, the solutions of subproblems, ${S_i}$, are not useless toward the
+solution of $P$.&lt;/p&gt;
+
+&lt;p&gt;We need a procedure to combine:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$\mathrm{solve}(P) = \mathrm{combine}(S_1, S_2, S_3, \dots)$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;example-cleaning-a-mess&#34;&gt;Example: cleaning a mess&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;Minion.jpg&#34; style=&#34;float:left;width:80px;margin:0 20px 0px 0&#34;&gt;&lt;/img&gt;
+Consider how you can instruct a minion to clean a messy office.  The minion has
+is overwhelmed by the mess of the entire office.  Divide and conquer is a great
+way to solve the cleaning problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;---------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some assumptions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The minion can clean up a very small section of an office - like a drawer, or
+a book shelf.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If every section of an office is organized, we deem the whole office
+organized.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;example-cleaning-a-mess-1&#34;&gt;Example: cleaning a mess&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Divide(Office) = &lt;code&gt;{Bookshelf, Desk, Floor, Cabinet, Drawer, $\dots$}&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Conquer: the minion can clean up each section&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Combine: Nothing needs to be done&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;sorting-with-divide-and-conquer&#34;&gt;Sorting with Divide and Conquer&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Divide &amp;amp; Conquer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A list of numbers can be divided into smaller lists.
+If a list is so small, we can sort it trivially.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;How small does a list need to be for us to know how to sort it?&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;sorting-with-divide-and-conquer-1&#34;&gt;Sorting with Divide and Conquer&lt;/h1&gt;
+
+&lt;p&gt;Combine:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If we have two lists that are already sorted, can we figure out how to combine
+them in a sorted way?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nosyntax&#34;&gt;+---+---+---+---+
+| 1 | 5 | 6 | 8 |          \
++---+---+---+---+          |
+                           |
+                           +------&amp;gt;  combined sorted list
+                           |
++---+---+---+---+----+     |
+| 3 | 4 | 5 | 8 | 10 |     /
++---+---+---+---+----+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;sorting-with-divide-and-conquer-2&#34;&gt;Sorting with Divide and Conquer&lt;/h1&gt;
+
+&lt;p&gt;Combine:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 10:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def merge(list1, list2):
+    i, j = 0, 0
+    list3 = []
+
+    while i &amp;lt; len(list1) and j &amp;lt; len(list2):
+        if list1[i] &amp;lt;= list2[j]:
+            list3.append(list1[i])
+            i += 1
+        else:
+            list3.append(list2[j])
+            j += 1
+
+    if i &amp;lt; len(list1): list3.extend(list1[i:])
+
+    if j &amp;lt; len(list2): list3.extend(list2[j:])
+
+    return list3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We want to be able to merge to sorted list into a larger list.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;bottom-up-mergesort&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;bottom-up-mergesort-1&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
+
+&lt;p&gt;We start with a list of arbitrary lenght $n$.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Observe that &lt;em&gt;all&lt;/em&gt; sublist of length 1 is already sorted.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;merge()&lt;/code&gt; to improve the &lt;em&gt;sortedness&lt;/em&gt; of the list to length 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;merge()&lt;/code&gt; to improve the &lt;em&gt;sortedness&lt;/em&gt; of the list to length 4, 8, 16, &amp;hellip;
+until the whole list is sorted.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;bottom-up-mergesort-2&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def mergesort(list):
+    sortedness = 1
+
+    while sortedness &amp;lt; len(list):
+        for i in range(0, len(list), 2*sortedness):
+            list1 = list[i:i+sortedness]
+            list2 = list[i+sortedness:i+2*sortedness]
+            list3 = merge(list1, list2)
+            list[i:i+len(list3)] = list3
+        sortedness = 2 * sortedness
+
+    return list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;bottom-up-mergesort-3&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
+
+&lt;script src=&#34;https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;bottom-up-mergesort-4&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A hierarchy of subproblems&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Small subproblems: sublist of length 1&lt;/p&gt;
+
+&lt;p&gt;Larger subproblems: sublist of length 2, 4, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;The largest subproblem: the whole list&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Why is it called &lt;em&gt;bottom-up&lt;/em&gt;?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The procedure, &lt;code&gt;mergesort()&lt;/code&gt;, recognizes the smallest subproblems &lt;em&gt;first&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;divide&lt;/strong&gt; stage starts at the bottom of the hierarchy.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;-------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;conquer&lt;/strong&gt; stage &lt;em&gt;always&lt;/em&gt; starts with the bottom of the hierarchy.&lt;/p&gt;
+
+&lt;h1 id=&#34;analysis-correctness&#34;&gt;Analysis: correctness&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm&#34;&gt;def mergesort(list):
+    sortedness = 1
+
+    while sortedness &amp;lt; len(list):
+        for i in range(0, len(list), 2*sortedness):
+            list1 = list[i:i+sortedness]
+            list2 = list[i+sortedness:i+2*sortedness]
+            list3 = merge(list1, list2)
+            list[i:i+len(list3)] = list3
+        sortedness = 2 * sortedness
+
+    return list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Loop-invariance:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;At the end of each loop,&lt;/p&gt;
+
+&lt;p&gt;for all $L[i\Delta \dots (i+1)\Delta]$ is sorted for all $i$,
+where $\Delta$ is the sortedness at the end of the iteration.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Overall correctness&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The loop terminates when $\Delta$ exceeds the length of the list, so the
+entire list is sorted by the loop invariance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Guaranteed termination&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each iteration strictly increases the sortedness $\Delta$ (by doubling it).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;analysis-performance&#34;&gt;Analysis: performance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm&#34;&gt;def mergesort(list):
+    sortedness = 1
+
+    while sortedness &amp;lt; len(list):
+        for i in range(0, len(list), 2*sortedness):
+            list1 = list[i:i+sortedness]
+            list2 = list[i+sortedness:i+2*sortedness]
+            list3 = merge(list1, list2)
+            list[i:i+len(list3)] = list3
+        sortedness = 2 * sortedness
+
+    return list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;How many iterations if there are $n$ elements in the list?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each iteration grows the &lt;em&gt;sortedness&lt;/em&gt; by a factor of 2 up to $n$.
+So, we need $\log_2(n)$ iterations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;How many instructions does each iteration take?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each iteration has four steps.  Each step requires no more than a linear scan
+of the list.
+We can guarantee that number of instructions do not exceed: $k\cdot n$ for some
+constant $k$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Putting it together:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;mergesort()&lt;/code&gt; requires no more than $k\cdot n\log(n)$ number of instructions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;top-down-mergesort&#34;&gt;Top-down mergesort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;top-down-mergesort-1&#34;&gt;Top-down mergesort&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Revisit the hierarchy of subproblems of sorting a list&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We can specify the &lt;em&gt;Divide-and-conquer&lt;/em&gt; top-down:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Divide sorting of $L$ to the first sublist $L[0 \dots \frac{n}{2}]$
+and the second sublist $L[\frac{n}{2} \dots n]$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If the sub-lists are not easy enough, then break down again.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Recursion&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def mergesort(L):
+    n = len(L)
+    if n &amp;lt;= 1:
+        return L
+    else:
+        L1 = mergesort(L[:n/2])
+        L2 = mergesort(L[n/2:])
+        return merge(L1, L2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;top-down-mergesort-analysis&#34;&gt;Top-down mergesort: Analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 7:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def mergesort(L):
+    n = len(L)
+    if n &amp;lt;= 1:
+        return L
+    else:
+        L1 = mergesort(L[:n/2])
+        L2 = mergesort(L[n/2:])
+        return merge(L1, L2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;correctness&#34;&gt;Correctness:&lt;/h2&gt;
+
+&lt;p&gt;Induction on depth of recursion.&lt;/p&gt;
+
+&lt;p&gt;Base case: depth = 0&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If there is no recursion, than the list $L$ is such that $|L|\leq 1$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Inductive case: depth = $k$, and assume that all mergesort at level $&amp;lt; k$ are
+correct.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let $L_1$ and $L_2$ be the two sublists.  The invocations &lt;code&gt;mergesort($L_i$)&lt;/code&gt;
+use $&amp;lt; k$ recursions, and thus, are &lt;em&gt;correct&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since $L_1$ and $L_2$ are properly sorted, and that &lt;code&gt;merge()&lt;/code&gt; is correct,
+we conclude that &lt;code&gt;mergesort(L)&lt;/code&gt; is correct.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;top-down-mergesort-analysis-1&#34;&gt;Top-down mergesort: Analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm clipboard&#34;&gt;def mergesort(L):
+    n = len(L)
+    if n &amp;lt;= 1:
+        return L
+    else:
+        L1 = mergesort(L[:n/2])
+        L2 = mergesort(L[n/2:])
+        return merge(L1, L2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;Let $n = |L|$.  How much time does it take to complete top-down
+&lt;code&gt;mergesort($L$)&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Let $T(n)$ = time of &lt;code&gt;mergesort($L$)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;\begin{eqnarray*}
+T(n) &amp;amp;\simeq&amp;amp; T(n/2) + T(n/2) + n \\
+  &amp;amp;=&amp;amp; 2 T(n/2) + n
+\end{eqnarray*}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We will develop an array of techniques to solve &lt;em&gt;recurrence equations&lt;/em&gt; to
+analyze recursive algorithms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Spoiler Alert:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$$ T(n) = n\log(n) + n $$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Divide and conquer&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Bottom-up mergesort&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Top-down mergesort&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/algorithms/optimal-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/optimal-sorting/</guid>
+      <description>
+
+&lt;h1 id=&#34;optimal-comparison-based-sorting-br-v-s-br-numerical-sorting&#34;&gt;Optimal Comparison Based Sorting &lt;br&gt; v.s. &lt;br&gt;  Numerical Sorting&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;lower-bounds-for-sorting&#34;&gt;Lower Bounds for Sorting&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/courses/algorithms/quicksort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/quicksort/</guid>
+      <description>
+
+&lt;h1 id=&#34;quicksort&#34;&gt;Quicksort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;quicksort-1&#34;&gt;Quicksort&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Divide and conquer&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a list $L$, we divide the sorting problem into two sub-problems.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Sort the elements in $L$ smaller than $x$: $L_1$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sort the elements in $L$ larger than $x$: $L_2$&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Combine&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$\mathrm{sorted}(L) = \mathrm{sorted}(L_1) \oplus \{x\} \oplus \mathrm{sorted}(L_2)$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;partition&#34;&gt;Partition&lt;/h1&gt;
+
+&lt;p&gt;Given a list &lt;code&gt;$L$&lt;/code&gt; and an element $x$ in $L$, &lt;em&gt;partitioning&lt;/em&gt; $L[p \dots r]$ by the &lt;em&gt;pivot&lt;/em&gt;
+element $x$ does the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Rearrange the elements in $L[p\dots r]$ so that there exists a position $q$
+such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;$L[q] = x$&lt;/li&gt;
+&lt;li&gt;$\forall i\in [p, q-1],\ L[i] \leq x$&lt;/li&gt;
+&lt;li&gt;$\forall i\in [q+1, r],\ L[i] \geq x$&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;version-0-1-simple-but-takes-more-memory&#34;&gt;Version 0.1: simple, but takes more memory&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s implement &lt;code&gt;partition(L, p, r)&lt;/code&gt; with the minimal effort:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pick $x = L[r]$&lt;/li&gt;
+&lt;li&gt;Filter the list for smaller elements: &lt;code&gt;$L_1 = \{y\in L[p\dots r-1]: y\leq x\}$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filter the list for larger elements: &lt;code&gt;$L_2 = \{y\in L[p\dots r-1]: y &amp;gt; x\}$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Reconstruct: &lt;code&gt;$L[p \dots r] = L_1 \oplus \{x\} \oplus L_2$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def partition(L, p, r):
+    x = L[r]
+    L1 = [y for y in L[p:r] if y &amp;lt;= x]
+    L2 = [y for y in L[p:r] if y &amp;gt; x]
+    L[p:r] = L1 + [x] + L2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;version-0-2-more-involved-but-takes-no-additional-memory&#34;&gt;Version 0.2: more involved, but takes no additional memory&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def partition(L, p, r):
+    x = L[r]
+    i = p - 1
+    for j in range(p, r):
+        if L[j] &amp;lt;= x:
+            i += 1
+            L[i], L[j] = L[j], L[i]
+    L[i+1], L[r] = L[r], L[i]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It only involves element swapping, so it requires &lt;em&gt;zero&lt;/em&gt; additional memory.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;But its correctness is much less obvious.&lt;/p&gt;
+
+&lt;h1 id=&#34;analysis-of-partition&#34;&gt;Analysis of partition&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 7:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def partition(L, p, r):
+    x = L[r]
+    i = p - 1
+    for j in range(p, r):
+        if L[j] &amp;lt;= x:
+            i += 1
+            L[i], L[j] = L[j], L[i]
+    L[i+1], L[r] = L[r], L[i]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bookkeeping is the key:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$p$ and $r$ are the boundaries of the sublist to be partitioned.&lt;/li&gt;
+&lt;li&gt;$r$ also holds the value of the pivot element.&lt;/li&gt;
+&lt;li&gt;Elements in $[p\dots j]$ are processed.&lt;/li&gt;
+&lt;li&gt;$i$ is a marker of the boundary between smaller and larger elements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;analysis-of-partition-1&#34;&gt;Analysis of partition&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 7:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def partition(L, p, r):
+    x = L[r]
+    i = p - 1
+    for j in range(p, r):
+        if L[j] &amp;lt;= x:
+            i += 1
+            L[i], L[j] = L[j], L[i]
+    L[i+1], L[r] = L[r], L[i]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Loop invariance:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;After each iteration, $L[p, j]$ is properly partitioned:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$L[p, i] \leq x$&lt;/li&gt;
+&lt;li&gt;$L[i+1, j] &amp;gt; x$&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;quicksort-2&#34;&gt;Quicksort&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def quicksort(L, p, r):
+    if p &amp;lt; r:
+        k = partition(L, p, r)
+        quicksort(L, p, k-1)
+        quicksort(L, k+1, r)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Partition: a simple version&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Partition: a zero-memory version&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Quicksort: a recursive sorting algorithm&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -716,7 +1324,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;lambda-calculus-symbolic-computation&#34;&gt;$\lambda$-Calculus: symbolic computation&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;lambda-calculus&#34;&gt;$\lambda$-Calculus&lt;/h1&gt;
 
@@ -739,8 +1347,6 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;rewrite rules represent mathematical reasoning.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
 
@@ -771,8 +1377,6 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;value-as-function&#34;&gt;Value as function&lt;/h1&gt;
 
 &lt;p&gt;A value is a zero-arity function.&lt;/p&gt;
@@ -791,17 +1395,16 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;value-equiv-function-everything&#34;&gt;Value $\equiv$ Function = Everything&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;syntax-for-expressions-value-function&#34;&gt;Syntax for expressions (value / function)&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
+&lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;$1, 2, 3, +, -, \dots$ are expressions&lt;/li&gt;
 &lt;li&gt;$x, y, z, \dots$ are expressions&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Abstraction:&lt;/p&gt;
@@ -831,8 +1434,6 @@ $e_1 e_2$ is an expression&lt;/li&gt;
 &lt;p&gt;This is not a restriction.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;the-weird-syntax-of-lambda-calculus&#34;&gt;The &lt;em&gt;weird&lt;/em&gt; syntax of $\lambda$ calculus&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -858,8 +1459,6 @@ everything is a function.  So $e_1$ is a function with &lt;em&gt;one&lt;/em&gt; 
 expression which is yet again a function which takes $e_3$ as an input.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;defining-things&#34;&gt;Defining things&lt;/h1&gt;
 
@@ -895,9 +1494,259 @@ involves all three input variables $x, y, z$.&lt;/p&gt;
 
 &lt;p&gt;We can write it conveniently as $\lambda xyz.e$&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;computing-with-lambda-calculus&#34;&gt;Computing with $\lambda$-Calculus&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We rely on string-rewriting to evaluate
+LC expressions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;substitution-of-variables-in-function-applications&#34;&gt;Substitution of variables in function applications&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Notation&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$e[x/e&amp;rsquo;]$ is the expression obtained by substituting all occurances of $x$ in
+the expression $e$ with the expression $e&amp;rsquo;$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Substition&lt;/strong&gt; as a way to evaluate function application:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$(\lambda x. e) e&amp;rsquo; \implies e[x/e&amp;rsquo;]$.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;\begin{eqnarray}
+&amp;amp;&amp;amp; (\lambda x.x x) (\lambda y. y) \\
+&amp;amp;\implies&amp;amp; (x x)[x/(\lambda y.y)] \\
+&amp;amp;\implies&amp;amp; (\lambda y.y)(\lambda y.y) \\
+&amp;amp;\implies&amp;amp; y[y/(\lambda y.y)] \\
+&amp;amp;\implies&amp;amp; (\lambda y.y)
+\end{eqnarray}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We can easily get into trouble.&lt;/p&gt;
+
+&lt;p&gt;Substitution cannot be used freely.&lt;/p&gt;
+
+&lt;h1 id=&#34;free-bound-variables&#34;&gt;Free &amp;amp; Bound Variables&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Variables in a function abstraction expression can be &lt;em&gt;free&lt;/em&gt; or &lt;em&gt;bound&lt;/em&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a variable represents the input parameter in a function expression, then
+it&amp;rsquo;s considered &lt;em&gt;bound&lt;/em&gt;.  Otherwise, it&amp;rsquo;s &lt;em&gt;free&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$\mathbf{FV}(e)$ are the free variables of $e$&lt;/li&gt;
+&lt;li&gt;$\mathbf{BV}(e)$ are the bound variables&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;variable-capturing&#34;&gt;Variable Capturing&lt;/h1&gt;
+
+&lt;p&gt;Consider an expression:&lt;/p&gt;
+
+&lt;p&gt;$$\lambda x. (\lambda x.x)$$&lt;/p&gt;
+
+&lt;p&gt;There are multiple occurrences of $x$, so let&amp;rsquo;s label them so we can refer to
+the individual occurrences.&lt;/p&gt;
+
+&lt;p&gt;$$\lambda x_1. (\lambda x_2.x_3)$$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Which input variable does $x_3$ refer to?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; This is called capturing.&lt;/p&gt;
+
+&lt;h1 id=&#34;elimination-of-variable-capturing&#34;&gt;Elimination of Variable Capturing&lt;/h1&gt;
+
+&lt;p&gt;There is a rewrite rule that allows us to rename the parameter variables without
+changing the meaning of the expression.&lt;/p&gt;
+
+&lt;p&gt;$$ \lambda x. x \equiv \lambda y.y \equiv \lambda \mathsf{hello}.\mathsf{hello} $$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Renaming&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Suppose that $x$ is a free variable of $e$, and $y$ does not appear in $e$ at
+all.&lt;/p&gt;
+
+&lt;p&gt;Then $\lambda x.e \implies \lambda y.e[x/y]$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;elimination-of-variable-capturing-1&#34;&gt;Elimination of Variable Capturing&lt;/h1&gt;
+
+&lt;p&gt;Back to:&lt;/p&gt;
+
+&lt;p&gt;$$\lambda x. (\lambda x.x)$$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfortable&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;First we consider the sub expression $\lambda x.x$.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Using renaming, we can rewrite it to $\lambda y.y$.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Then we get:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$$\lambda x. (\lambda x.x) \implies \lambda x.\lambda y. y$$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt;
+Generally, we only apply &lt;strong&gt;substitution&lt;/strong&gt; to evaluate function applications
+if there is &lt;em&gt;no&lt;/em&gt; variable capturing; and this can be achieved by &lt;strong&gt;renaming&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;how-to-perform-computation-using-lc&#34;&gt;How to perform computation using LC?&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Natural numbers&lt;/li&gt;
+&lt;li&gt;Arithmetics&lt;/li&gt;
+&lt;li&gt;Loop and conditional branching&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All can be done using LC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Express the algorithm in terms of natural numbers, arithmetics,
+ loops and conditional branches.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Encode the algorithm in LC.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Apply syntax rewriting until no more rewriting is possible.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;a-glance-of-lc-in-action&#34;&gt;A glance of LC in action&lt;/h1&gt;
+
+&lt;p&gt;A bit of notation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$\lambda x.\lambda y. \lambda z. e$ is written as as $\lambda xyz. e$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now we can encode numbers:&lt;/p&gt;
+
+&lt;p&gt;$0 \equiv \lambda sx. x$ (takes two inputs, but only keep the second one.)&lt;/p&gt;
+
+&lt;p&gt;$1 \equiv \lambda sx. sx$&lt;/p&gt;
+
+&lt;p&gt;$2 \equiv \lambda sx. ssx$&lt;/p&gt;
+
+&lt;p&gt;$\vdots$&lt;/p&gt;
+
+&lt;h1 id=&#34;arithmetics&#34;&gt;Arithmetics&lt;/h1&gt;
+
+&lt;p&gt;Consider the simplest arithmetics: increment by 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def succ(n):
+    return n + 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$S \equiv \lambda n. \lambda yx.y(nyx)$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let&amp;rsquo;s try this out.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;\begin{eqnarray}
+S 0 &amp;amp;=&amp;amp; (\lambda n. \lambda yx.ynyx)0 \\
+    &amp;amp;=&amp;amp; (\lambda yx.ynyx)[n/0] \\
+    &amp;amp;=&amp;amp; \lambda yx.y(0yx) \\
+    &amp;amp;=&amp;amp; \lambda yx.y((\lambda sz.z)yx) \\
+    &amp;amp;=&amp;amp; \lambda yx.y(x) \\
+    &amp;amp;=&amp;amp; 1
+\end{eqnarray}&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;arithmetics-1&#34;&gt;Arithmetics&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def add(n1, n2):
+    return n1 + n2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Observe:&lt;/p&gt;
+
+&lt;p&gt;$2 S 3 = 5$ (work it out, it&amp;rsquo;s quite incredible.)&lt;/p&gt;
+
+&lt;p&gt;So, we have:&lt;/p&gt;
+
+&lt;p&gt;$$+ \equiv \lambda mn. mSn$$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Can you guess the LC expression for multiplication?&lt;/p&gt;
+
+&lt;h1 id=&#34;recursion&#34;&gt;Recursion&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;LC does not require assigning aliases to functions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Technically, there is just &lt;strong&gt;ONE&lt;/strong&gt; expression for the entire algorthm.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Why it&amp;rsquo;s hard to do recursion without aliases?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def factorial(n):
+    if n &amp;lt;= 1:
+        return n
+    else:
+        return n * factorial(n-1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Is it even possible?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yes.  It&amp;rsquo;s called the &lt;strong&gt;Y&lt;/strong&gt;-combinator.&lt;/p&gt;
+
+&lt;p&gt;$$ \mathbf{Y} \equiv (\lambda y.(\lambda x.y(xx))(\lambda x.y(xx)))$$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;y-combinator&#34;&gt;Y-combinator&lt;/h1&gt;
+
+&lt;p&gt;$$ \mathbf{Y} f = f (\mathbf{Y} f) $$&lt;/p&gt;
+
+&lt;p&gt;So,&lt;/p&gt;
+
+&lt;p&gt;$$ \mathbf{Y} f x \implies f (\mathbf{Y} f) x \implies f f \dots f x $$&lt;/p&gt;
 </description>
     </item>
     
@@ -996,7 +1845,7 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 
 &lt;h1 id=&#34;computation-the-turing-machine&#34;&gt;Computation &amp;amp; the Turing Machine&lt;/h1&gt;
 
-&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;computation&#34;&gt;Computation&lt;/h1&gt;
 
@@ -1011,8 +1860,6 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 &lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
-
 &lt;h1 id=&#34;computation-1&#34;&gt;Computation&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1025,8 +1872,6 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 &lt;li&gt;Entscheidungsproblem, 1928&lt;/li&gt;
 &lt;li&gt;Gödel&amp;rsquo;s incompleteness theorem&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;computation-2&#34;&gt;Computation&lt;/h1&gt;
 
@@ -1041,8 +1886,6 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 &lt;li&gt;Turing machine&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-3&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
-
 &lt;h1 id=&#34;computation-3&#34;&gt;Computation&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1056,8 +1899,6 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 &lt;li&gt;$\lambda$-calculus&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;break-4&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
-
 &lt;h1 id=&#34;computation-4&#34;&gt;Computation&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1070,8 +1911,6 @@ src=&#34;https://gist.github.com/kenpu/e2e3fcc9feea16fb14a84c7ec98cdd75.js?file=
 &lt;li&gt;von Neumann computing model&lt;/li&gt;
 &lt;li&gt;EDVAC&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;break-5&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;turing-machine&#34;&gt;Turing Machine&lt;/h1&gt;
 
@@ -1101,13 +1940,9 @@ a TM.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;break-6&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
-
 &lt;h1 id=&#34;turing-machine-1&#34;&gt;Turing Machine&lt;/h1&gt;
 
 &lt;div pdf=&#34;turing-machine.pdf&#34; scale=0.8&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;break-7&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;computational-power-of-tm&#34;&gt;Computational power of TM&lt;/h1&gt;
 
@@ -1125,8 +1960,6 @@ executed by a Turing Machine.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If a mechanism is equivalent to TM, then it&amp;rsquo;s called &lt;em&gt;Turing Complete&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;h1 id=&#34;break-8&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;simulation-of-a-function&#34;&gt;Simulation of a function&lt;/h1&gt;
 
@@ -1195,8 +2028,6 @@ output.&lt;/p&gt;
 &lt;p&gt;The TM $\mathbf{U}$ that computes &lt;strong&gt;eval&lt;/strong&gt; is called &lt;em&gt;universal&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;universal-tm-1&#34;&gt;Universal TM&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -1223,8 +2054,6 @@ output.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;$\mathbf{U}$ is the general purpose computer&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;tm-programming&#34;&gt;TM-Programming&lt;/h1&gt;
 
 &lt;ol&gt;
@@ -1232,6 +2061,18 @@ output.&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;The universal programming language is the encoding of $M$.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Turing Machine is a mechanically realizable device.&lt;/li&gt;
+&lt;li&gt;TM is as powerful (but a lot slower) as any modern computers.&lt;/li&gt;
+&lt;li&gt;There is a very special TM that is called the &lt;em&gt;Universal TM&lt;/em&gt;.  It can be
+&lt;em&gt;programmed&lt;/em&gt;!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfortable&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -1292,9 +2133,12 @@ particular the class of &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=col-md-4&gt;
 &lt;img src=&#34;textbook.jpg&#34; width=100%&gt;&lt;/img&gt;
 &lt;/div&gt;
-&lt;div class=col-md-4&gt;
-Introduction to Algorithms,
-&lt;i&gt;third edition&lt;/i&gt;
+&lt;div class=col-md-8 style=font-size:200%&gt;
+&lt;h2&gt;Text book for the course:&lt;/h2&gt;
+    &lt;blockquote&gt;
+    Introduction to Algorithms, Third Edition,
+    &lt;i&gt;Coremen, Leiserson, Rivest and Stein&lt;/i&gt;
+    &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1310,8 +2154,8 @@ Introduction to Algorithms,
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;merge-sort&#34;&gt;Mergesort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Quicksort&lt;/li&gt;
-&lt;li&gt;Comparison based sorting vs numeric sorting&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;quicksort&#34;&gt;Quicksort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;optimal-sorting&#34;&gt;Comparison based sorting vs numeric sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Counting sort and radix sort&lt;/li&gt;
 &lt;li&gt;Bucket sort&lt;/li&gt;
 &lt;/ul&gt;
@@ -1428,7 +2272,7 @@ Floyd-Washall&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;Three assignments&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;assignments&#34;&gt;Three assignments&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;30%&lt;/td&gt;
 &lt;/tr&gt;
 
@@ -1648,9 +2492,15 @@ programming.&lt;/p&gt;
 
 &lt;h1 id=&#34;instant-gratification&#34;&gt;Instant gratification&lt;/h1&gt;
 
-&lt;div style=height:400px&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;ken-pu&#34;&gt;Ken Pu&lt;/h2&gt;
+&lt;p style=text-align:right&gt;
+&lt;i&gt;Ken Pu&lt;/i&gt; &lt;br&gt;
+
+September 1, 2016 &lt;br&gt;
+
+Symposium on teaching
+&lt;/p&gt;
 
 &lt;h1 id=&#34;tl-tr&#34;&gt;TL;TR&lt;/h1&gt;
 
@@ -1668,6 +2518,10 @@ programming.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Yes, you can use it now&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;h1 id=&#34;the-equalizer&#34;&gt;The Equalizer&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;the-equalizer-1&#34;&gt;The equalizer (1)&lt;/h1&gt;
 
@@ -1706,7 +2560,7 @@ programming.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Finding the courses I teach.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;select distinct code, title from schedule where instructor like &amp;quot;Ken Pu&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-sql sm clipboard&#34;&gt;select distinct code, title from schedule where instructor like &amp;quot;Ken Pu&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
@@ -1717,7 +2571,7 @@ programming.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Anything that is early in the morning?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql sm&#34;&gt;select distinct code, title, weekday, starthour || &amp;quot;:&amp;quot; || startmin as t from schedule
+&lt;pre&gt;&lt;code class=&#34;language-sql sm clipboard&#34;&gt;select distinct code, title, weekday, starthour || &amp;quot;:&amp;quot; || startmin as t from schedule
 where starthour &amp;lt; 9 and instructor like &amp;quot;Ken Pu&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
@@ -1729,7 +2583,7 @@ where starthour &amp;lt; 9 and instructor like &amp;quot;Ken Pu&amp;quot;;
 &lt;blockquote&gt;
 &lt;p&gt;Can I find an empty room?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql sm&#34;&gt;with R(room, weekday, t) as (
+&lt;pre&gt;&lt;code class=&#34;language-sql sm clipboard&#34;&gt;with R(room, weekday, t) as (
     select distinct room, weekday, min(starthour) from schedule where room like &#39;% A1 %&#39; and weekday = &amp;quot;T&amp;quot; group by room order by room
 ) select * from R where t &amp;gt;= 10;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1737,9 +2591,155 @@ where starthour &amp;lt; 9 and instructor like &amp;quot;Ken Pu&amp;quot;;
 
 &lt;iframe data-src=&#34;http://db.science.uoit.ca:8080&#34; style=&#34;max-width:1024px; width:100%; height:300px&#34;&gt;&lt;/iframe&gt;
 
-&lt;h1 id=&#34;data-science-with-jupyter&#34;&gt;Data Science with Jupyter&lt;/h1&gt;
+&lt;h1 id=&#34;on-the-distribution-of-primes&#34;&gt;On the distribution of primes&lt;/h1&gt;
 
-&lt;iframe data-src=&#34;http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb&#34; style=&#34;max-width:1024px; width:100%; height:500px&#34;&gt;&lt;/iframe&gt;
+&lt;iframe class=fragment data-src=&#34;http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb&#34; style=&#34;max-width:1024px; width:100%; height:500px&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;data-science-visualization&#34;&gt;Data Science &amp;amp; Visualization&lt;/h1&gt;
+
+&lt;iframe data-src=&#34;http://db.science.uoit.ca:3000/notebooks/DataScience.ipynb&#34; style=&#34;max-width:1024px; width:100%; height:500px&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;the-danger&#34;&gt;The Danger&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;danger-of-instant-gratification&#34;&gt;Danger of instant gratification&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;claim&#34;&gt;Claim:&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;We just covered the following topics&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Data analysis using relational query language&lt;/li&gt;
+&lt;li&gt;Python list comprehension&lt;/li&gt;
+&lt;li&gt;Numerical approximation of the distribution of the primes&lt;/li&gt;
+&lt;li&gt;Visualization of potential fields&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;div style=height:150px&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;reality-zero-working-knowledge-even-after-hands-on-practice&#34;&gt;Reality: &lt;em&gt;Zero working knowledge&lt;/em&gt; even after hands on practice!&lt;/h2&gt;
+
+&lt;h1 id=&#34;instant-gratification-br-for-the-instructors&#34;&gt;Instant gratification &lt;br&gt; for the instructors&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;don-t-discount-google-education-app&#34;&gt;Don&amp;rsquo;t discount Google Education App&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;UOIT is paying for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;activate-your-uoit-net-account-today&#34;&gt;Activate your &lt;code&gt;uoit.net&lt;/code&gt; account &lt;strong&gt;today&lt;/strong&gt;.&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://ssbp.mycampus.ca/apex/f?p=340:101:17205337333607&#34;&gt;https://ssbp.mycampus.ca/apex/f?p=340:101:17205337333607&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;the-benefit&#34;&gt;The benefit&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Google Drive &lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Google Plus &lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;google-quiz&#34;&gt;Google Quiz&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/docs/answer/7032287?hl=en&#34;&gt;https://support.google.com/docs/answer/7032287?hl=en&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;test-your-working-knowledge&#34;&gt;Test your working knowledge&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe
+data-src=&#34;https://docs.google.com/forms/d/e/1FAIpQLScAHM9K4G_cZLIbOsjQUvIZJPzUYH33OI7qu-tvWckF45FMWw/viewform?embedded=true&#34;
+width=&#34;760&#34; height=&#34;500&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34;
+marginwidth=&#34;0&#34;&gt;Loading...&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Separate Window&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/lijEIT&#34;&gt;http://goo.gl/lijEIT&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Realtime monitoring&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/xKUzKf&#34;&gt;http://goo.gl/xKUzKf&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;closing-remarks&#34;&gt;Closing Remarks&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;First, I try to dramatically increase a student&amp;rsquo;s self-expectations and, of
+course, their knowledge about the subject. Being a good teacher means
+stretching students without discouraging them or destroying their confidence.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Terence Parr, Professor of CS, University of San Francisco&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Technology is inherently disruptive.  Disruptive technology is &lt;strong&gt;bad&lt;/strong&gt; 51% of the time.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; but good 45% of the time.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; and transformational 3.99999% of the time.&lt;/p&gt;
+
+&lt;h1 id=&#34;ama-on&#34;&gt;AMA on&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;experimental-technology&#34;&gt;&lt;em&gt;Experimental technology&lt;/em&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;li&gt;SSH over HTTPS&lt;/li&gt;
+&lt;li&gt;Jupyter Notebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;rock-solid&#34;&gt;&lt;em&gt;Rock solid&lt;/em&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Quiz, but still&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&amp;ldquo;In the midst of chaos, there is also opportunity&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;危中機 (\ˈwā\ zhü \ˈȯn \ˈjē)&lt;/p&gt;
+
+&lt;p style=text-align:right&gt;
+&lt;i&gt;Sun Tzu&lt;/i&gt;, Art of War
+&lt;/p&gt;
 </description>
     </item>
     
@@ -1755,38 +2755,6 @@ therefore, it should be able to make better recommendations that it&amp;rsquo;s 
 &lt;p&gt;In this project, we are building a new mobile based recommender system that can
 safely and privately observe its environment, deduce the situational context,
 and make more sensible recommendations to the user.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pixel level visualization</title>
-      <link>https://kenpuca.github.io/projects/pixel-packing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/projects/pixel-packing/</guid>
-      <description>&lt;p&gt;There are over 1.5 million IMDB movie entries, and roughly the same number of
-pixels on a mobile device.  Is it possible to build an algorithm to map each
-movie to a single pixel for the purpose of data visualization?&lt;/p&gt;
-
-&lt;p&gt;We are looking into ways of discovering graph structures based on a relational
-database, and then use the graph structure to generate a pixel level data
-visualization of (up to) millions of relational entities.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Stream algebra for computer vision</title>
-      <link>https://kenpuca.github.io/projects/vision-pipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/projects/vision-pipeline/</guid>
-      <description>&lt;p&gt;Computer Vision algorithms are challenging to implement. The data input is a big
-data stream, and the intermediate processors often require fine tuning.&lt;/p&gt;
-
-&lt;p&gt;We are investigating the applications of streaming database technology to enable
-rapid development, deployment and tuning of computer vision workflow by the
-means of formal streaming algebra and structural optimization of algebraic
-expressions.&lt;/p&gt;
 </description>
     </item>
     
