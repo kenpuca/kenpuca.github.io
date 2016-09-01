@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slides on kenpu.ca</title>
-    <link>http://kenpu.ca/slides/</link>
-    <description>Recent content in Slides on kenpu.ca</description>
+    <title>Slides on db@uoit</title>
+    <link>https://kenpuca.github.io/slides/</link>
+    <description>Recent content in Slides on db@uoit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://kenpu.ca/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kenpuca.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to algorithms</title>
-      <link>http://kenpu.ca/slides/algorithms/intro/</link>
+      <link>https://kenpuca.github.io/slides/algorithms/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/algorithms/intro/</guid>
+      <guid>https://kenpuca.github.io/slides/algorithms/intro/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;columns 8:4&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -42,10 +42,10 @@
     
     <item>
       <title>Symposium</title>
-      <link>http://kenpu.ca/slides/talks/symposium-on-teaching/</link>
+      <link>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://kenpu.ca/slides/talks/symposium-on-teaching/</guid>
+      <guid>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</guid>
       <description>
 
 &lt;h1 id=&#34;instant-gratification&#34;&gt;Instant gratification&lt;/h1&gt;
