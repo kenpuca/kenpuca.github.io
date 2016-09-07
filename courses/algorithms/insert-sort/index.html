@@ -34,7 +34,7 @@
 	</head>
 	<body>
         <div class="reveal">
-            <div class="slides">
+            <div class="slides" style="opacity: 0">
 
 <h1 id="basic-programming">Basic programming</h1>
 
@@ -598,13 +598,7 @@ completely sorted by <code>insertion_sort</code>.</p>
 </tbody>
 </table>
 
-<p><a href="break">!</a> ====================================================================</p>
-
-<p><a href="columns 4:">!</a></p>
-
-<h2 id="summary">Summary</h2>
-
-<p><a href="split">!</a></p>
+<h1 id="summary">Summary</h1>
 
 <ul>
 <li>INSERTION sort</li>
@@ -615,6 +609,18 @@ completely sorted by <code>insertion_sort</code>.</p>
 <hr />
 
 <p>Text: 2.1, 2.2,</p>
+
+<h1 id="challenge">Challenge</h1>
+
+<p>Is <code>INSERTSORT</code> a stable sorting algorithm?</p>
+
+<p>Recall:</p>
+
+<blockquote>
+<p>Stable sorting requires an additional condition on the permutation:</p>
+
+<p><code>$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &lt; \pi(j) $$</code></p>
+</blockquote>
 </div>
         </div>
 
@@ -641,7 +647,7 @@ completely sorted by <code>insertion_sort</code>.</p>
             return false;
         }
         $(function() {
-            var $reveal = $(".reveal > .slides").hide();
+            var $reveal = $(".reveal > .slides");
             var $elems = $reveal.children();
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
@@ -662,38 +668,38 @@ completely sorted by <code>insertion_sort</code>.</p>
                 $section.appendTo($reveal);
             }
 
-            $reveal.show();
-
-            startReveal();
+            startReveal($reveal);
         });
 
-        function startReveal() {
+        function startReveal($slides) {
 			Reveal.initialize({
 				history: true,
-
                 slideNumber: true,
-
                 center: false,
-
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
-                        async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
-                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
                     
-                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
-                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
-                        async: true}
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
 				]
 			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
         }
 		</script>
 	</body>

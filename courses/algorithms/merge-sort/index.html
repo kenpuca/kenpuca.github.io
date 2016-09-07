@@ -34,7 +34,7 @@
 	</head>
 	<body>
         <div class="reveal">
-            <div class="slides">
+            <div class="slides" style="opacity: 0">
 
 <h1 id="mergesort">Mergesort</h1>
 
@@ -185,7 +185,7 @@ them in a sorted way?</p>
 
 <p><a href="break">!</a></p>
 
-<script src="https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py"></script>
+<script src="//gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py"></script>
 
 <h1 id="bottom-up-mergesort">Bottom-up Mergesort</h1>
 
@@ -222,7 +222,7 @@ until the whole list is sorted.</p></li>
 
 <h1 id="bottom-up-mergesort-3">Bottom-up Mergesort</h1>
 
-<script src="https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py"></script>
+<script src="//gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py"></script>
 
 <h1 id="bottom-up-mergesort-4">Bottom-up Mergesort</h1>
 
@@ -466,6 +466,18 @@ analyze recursive algorithms.</p>
 
 <li><p>Top-down mergesort</p></li>
 </ul>
+
+<h1 id="challenge">Challenge</h1>
+
+<p>Is <code>MERGESORT</code> a stable sorting algorithm?</p>
+
+<p>Recall:</p>
+
+<blockquote>
+<p>Stable sorting requires an additional condition on the permutation:</p>
+
+<p><code>$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &lt; \pi(j) $$</code></p>
+</blockquote>
 </div>
         </div>
 
@@ -492,7 +504,7 @@ analyze recursive algorithms.</p>
             return false;
         }
         $(function() {
-            var $reveal = $(".reveal > .slides").hide();
+            var $reveal = $(".reveal > .slides");
             var $elems = $reveal.children();
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
@@ -513,38 +525,38 @@ analyze recursive algorithms.</p>
                 $section.appendTo($reveal);
             }
 
-            $reveal.show();
-
-            startReveal();
+            startReveal($reveal);
         });
 
-        function startReveal() {
+        function startReveal($slides) {
 			Reveal.initialize({
 				history: true,
-
                 slideNumber: true,
-
                 center: false,
-
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
-                        async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
-                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
                     
-                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
-                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
-                        async: true}
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
 				]
 			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
         }
 		</script>
 	</body>

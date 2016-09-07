@@ -34,7 +34,7 @@
 	</head>
 	<body>
         <div class="reveal">
-            <div class="slides">
+            <div class="slides" style="opacity: 0">
 
 <h1 id="quicksort">Quicksort</h1>
 
@@ -187,6 +187,83 @@ such that <em>after</em> rearrangment:</p>
         quicksort(L, k+1, r)
 </code></pre>
 
+<h1 id="performance-analysis">Performance Analysis</h1>
+
+<p><a href="highlight">!</a></p>
+
+<blockquote>
+<p>We will only give a terse outline of the analysis.  The full version is deferred to later lectures.</p>
+</blockquote>
+
+<h1 id="performance-analysis-1">Performance Analysis</h1>
+
+<p>Let there be $n$ elements in the array.</p>
+
+<p>Key obsevation:</p>
+
+<ul>
+<li><p><code>partition(L, p, r)</code> takes $(r - p)$ iterations.  Each iteration has a fixed number of instructions.  So, $T_\mathrm{partition} = c_1 (r-p) \leq c\cdot n$.</p></li>
+
+<li><p>At each <em>invocation</em> of <code>quicksort(L, p, k-1)</code> and <code>quicksort(L, k+1, r)</code>, we need to determine the number of elements: $k-1-p$, and $r-k-1$.</p></li>
+</ul>
+
+<h1 id="performance-analysis-worst-case">Performance Analysis: Worst-case</h1>
+
+<ul>
+<li>The worst case for $T_\mathrm{partition} = n$</li>
+<li>The worst case for $k-1-p = n-1$</li>
+<li>The worst case for $r-k-1 = n-1$</li>
+</ul>
+
+<hr />
+
+<p>We have enough to set-up an equation to estimate the number of instructions of <code>quicksort(L, a, b)</code>:</p>
+
+<p>Let $|L[a\dots b]| = n$.</p>
+
+<p><code>$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &amp;=&amp; n + 2\cdot T_\mathrm{quicksort}(n-1)
+\end{eqnarray}$$</code></p>
+
+<hr />
+
+<p><a href="columns 8:">!</a></p>
+
+<p>This leads to a (poor) performance characteristics of: $\approx n^2$</p>
+
+<p><a href="split note">!</a></p>
+
+<blockquote>
+<p>We will show how to solve such equations (known as recurrence equations) in the next section of this course.</p>
+</blockquote>
+
+<h1 id="performance-analysis-average-case">Performance Analysis: average case</h1>
+
+<p>Quicksort as the name suggests is actually quite quick (most of the time&hellip;)</p>
+
+<hr />
+
+<p>Revisiting <code>k = partition(L, p, q)</code>.</p>
+
+<blockquote>
+<p>The pivot value should be somewhere in the middle of the subarray.
+Namely: $k\approx p+q/2$, and so $k-1-p \approx n/2$, and $q-k-1\approx n/2$.</p>
+</blockquote>
+
+<hr />
+
+<p>Revisiting the recurrence equation:</p>
+
+<blockquote>
+<p><code>$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &amp;=&amp; n + 2\cdot T_\mathrm{quicksort}(n/2)
+\end{eqnarray}$$</code></p>
+</blockquote>
+
+<hr />
+
+<p>This leads to a satisfying performance characteristics of: $\approx n\log(n)$</p>
+
 <h1 id="summary">Summary</h1>
 
 <p><a href="highlight">!</a></p>
@@ -198,6 +275,18 @@ such that <em>after</em> rearrangment:</p>
 
 <li><p>Quicksort: a recursive sorting algorithm</p></li>
 </ul>
+
+<h1 id="challenge">Challenge</h1>
+
+<p>Is <code>QUICKSORT</code> a stable sorting algorithm?</p>
+
+<p>Recall:</p>
+
+<blockquote>
+<p>Stable sorting requires an additional condition on the permutation:</p>
+
+<p><code>$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &lt; \pi(j) $$</code></p>
+</blockquote>
 </div>
         </div>
 
@@ -224,7 +313,7 @@ such that <em>after</em> rearrangment:</p>
             return false;
         }
         $(function() {
-            var $reveal = $(".reveal > .slides").hide();
+            var $reveal = $(".reveal > .slides");
             var $elems = $reveal.children();
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
@@ -245,38 +334,38 @@ such that <em>after</em> rearrangment:</p>
                 $section.appendTo($reveal);
             }
 
-            $reveal.show();
-
-            startReveal();
+            startReveal($reveal);
         });
 
-        function startReveal() {
+        function startReveal($slides) {
 			Reveal.initialize({
 				history: true,
-
                 slideNumber: true,
-
                 center: false,
-
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
-                        async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
-                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
                     
-                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
-                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
-                        async: true}
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
 				]
 			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
         }
 		</script>
 	</body>

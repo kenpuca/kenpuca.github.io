@@ -34,13 +34,231 @@
 	</head>
 	<body>
         <div class="reveal">
-            <div class="slides">
+            <div class="slides" style="opacity: 0">
 
 <h1 id="optimal-comparison-based-sorting-br-v-s-br-numerical-sorting">Optimal Comparison Based Sorting <br> v.s. <br>  Numerical Sorting</h1>
 
 <p><a href="highlight">!</a></p>
 
 <h1 id="lower-bounds-for-sorting">Lower Bounds for Sorting</h1>
+
+<p><strong>Assumption</strong></p>
+
+<blockquote>
+<p>The elements in the array are <em>black boxes</em>, and only comparison can be made between two elements.</p>
+</blockquote>
+
+<p><strong>The decision-tree model</strong></p>
+
+<p><a href="columns 6:">!</a></p>
+
+<blockquote>
+<p>Given a sorting algorithm $A$, we record <em>all</em> possible comparison operations executed in $A$.</p>
+
+<p><a href="box">!</a> A comparison operation: $(i,j)$ where $i, j$ are the <em>original</em> index of the elements.</p>
+</blockquote>
+
+<p><a href="split">!</a></p>
+
+<p><img src="decision-tree.png" width="100%"></img></p>
+
+<p>The leaf records the final ordering of the original index.</p>
+
+<h1 id="lower-bounds-for-sorting-1">Lower Bounds for Sorting</h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<p><img src="decision-tree.png" width="100%"></img></p>
+
+<p><a href="split">!</a></p>
+
+<p><em>Q</em>:</p>
+
+<blockquote>
+<p>How many comparison operations did $A$ take as illustrated in the diagram?</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>What is the worst case number of comparision operations?</p>
+</blockquote>
+
+<h1 id="lower-bounds-for-sorting-2">Lower Bounds for Sorting</h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<p><img src="decision-tree.png" width="100%"></img></p>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+
+<li><p>What type of tree is the deicion tree?</p>
+
+<blockquote>
+<p>Binary tree</p>
+</blockquote></li>
+
+<li><p>How many leaf nodes are there for $n$ elements?</p>
+
+<blockquote>
+<p>All possible permutations of $[1, 2, 3, \dots n] = n!$</p>
+</blockquote></li>
+
+<li><p>What is the height of the tree if there are $n!$ leaf nodes?</p>
+
+<blockquote>
+<p>$\log_2(n!) \approx c\dot n\log(n)$</p>
+</blockquote></li>
+</ul>
+
+<h1 id="optimal-comparison-based-sorting">Optimal Comparison Based Sorting</h1>
+
+<p><strong>Theorem</strong></p>
+
+<blockquote>
+<p>Any comparision based sorting algorithm will necessarily take at least $c n\log(n)$ number of comparison operations in the <em>worst</em> case.</p>
+</blockquote>
+
+<p><strong>Optimal sorting</strong></p>
+
+<blockquote>
+<p>If a comparison based sorting algorithm always makes at most $c n\log(n)$ number of comparisons, then it&rsquo;s called <em>optimal</em>.</p>
+</blockquote>
+
+<h1 id="optimal-comparison-based-sorting-1">Optimal Comparison Based Sorting</h1>
+
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Optimal?</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Insertion sort</td>
+<td>No, $n^2$</td>
+</tr>
+
+<tr>
+<td>Mergesort</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Quicksort</td>
+<td>No, $n^2$ in the worst case</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="sorting-integers">Sorting Integers</h1>
+
+<p><a href="highlight">!</a></p>
+
+<blockquote>
+<p>If an array contains (bounded) integers, we can beat optimal comparison based sorting.</p>
+</blockquote>
+
+<p>Why?</p>
+
+<blockquote>
+<p>Elements are not blackboxes.  We can look at individual digits of an bounded integer.</p>
+</blockquote>
+
+<h1 id="counting-sort">Counting sort</h1>
+
+<p>Assumptions:</p>
+
+<blockquote>
+<ol>
+<li>The elements are integers.</li>
+<li>The elements are all in the range of $[0, k-1]$ for some $k \geq 0$.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<p>Amazing fact:</p>
+
+<blockquote>
+<p>With $n$ elements, we can do it with only $2\cdot(n+k)$ number of instructions,
+compare to $n\log(n)$ in the case of optimal comparison sorting.</p>
+</blockquote>
+
+<h1 id="counting-sort-1">Counting sort</h1>
+
+<pre><code class="language-python clipboard">def empty_array(size, init=None):
+    return [init for i in range(size)]
+</code></pre>
+
+<p><a href="note">!</a> allocate an empty array with an optional initial value.</p>
+
+<h1 id="counting-sort-2">Counting sort</h1>
+
+<p><a href="columns 8:">!</a></p>
+
+<pre><code class="language-python clipboard">def COUNTING_SORT(A):
+    n = len(A)
+    k = max(A) + 1
+    B = empty_array(size=n)
+    C = empty_array(size=k, init=0)
+
+    for a in A:
+        C[a] = C[a] + 1
+
+    for i in range(1,k):
+        C[i] = C[i] + C[i-1]
+
+    for a in reversed(A):
+        B[C[a]-1] = a
+        C[a] = C[a] - 1
+
+    return B
+</code></pre>
+
+<p><a href="split note">!</a></p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+<li>We compute the frequency of each distinct value in <code>A</code>.</li>
+<li>The frequence is then turned into cummulative frequency.  Namely:
+<code>$C[x] = |\{y\in A: y\leq x\}|$</code></li>
+<li>With $C$, we can quickly deduce which each element should be positioned.</li>
+</ul>
+
+<h1 id="counting-sort-3">Counting Sort</h1>
+
+<p>Question:</p>
+
+<blockquote>
+<p>Is <code>COUNTING_SORT</code> stable?</p>
+</blockquote>
+
+<p>Answer:</p>
+
+<blockquote>
+<p>Yes.  It&rsquo;s crucial to place $x$ into <code>B</code> from <code>reverse(A)</code> instead of <code>A</code>.</p>
+</blockquote>
+
+<h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+<li>The best comparison sorting algorithms are in the order of $n\log(n)$.</li>
+<li>The best integer comparison algorithms can achieve the efficiency in the order of $n$.</li>
+<li><code>COUNTING_SORT</code> requires too much memory in practice to be applied to arrays with large integer values.  However, it will be instrumental later (as part of radix sort).</li>
+</ul>
+
+<hr />
+
+<p>The measure of algorithmic efficiency will be made much more rigorous in the next section of this course.</p>
 </div>
         </div>
 
@@ -67,7 +285,7 @@
             return false;
         }
         $(function() {
-            var $reveal = $(".reveal > .slides").hide();
+            var $reveal = $(".reveal > .slides");
             var $elems = $reveal.children();
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
@@ -88,38 +306,38 @@
                 $section.appendTo($reveal);
             }
 
-            $reveal.show();
-
-            startReveal();
+            startReveal($reveal);
         });
 
-        function startReveal() {
+        function startReveal($slides) {
 			Reveal.initialize({
 				history: true,
-
                 slideNumber: true,
-
                 center: false,
-
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				
 				dependencies: [
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', 
-                        async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
-                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
                     
-                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
-                    { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
-                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', 
-                        async: true}
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
 				]
 			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
         }
 		</script>
 	</body>

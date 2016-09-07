@@ -32,7 +32,7 @@
   </url>
   
   <url>
-    <loc>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</loc>
+    <loc>https://kenpuca.github.io/courses/programming-languages/old/intro-to-languages/</loc>
   </url>
   
   <url>
@@ -48,7 +48,11 @@
   </url>
   
   <url>
-    <loc>https://kenpuca.github.io/slides/algorithms/intro/</loc>
+    <loc>https://kenpuca.github.io/courses/algorithms/bucket-sort/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/slides/sandbox/</loc>
   </url>
   
   <url>
@@ -60,7 +64,15 @@
   </url>
   
   <url>
+    <loc>https://kenpuca.github.io/courses/algorithms/sorting-numbers/</loc>
+  </url>
+  
+  <url>
     <loc>https://kenpuca.github.io/slides/talks/symposium-on-teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/courses/programming-languages/tour-of-languages/</loc>
   </url>
   
   <url>

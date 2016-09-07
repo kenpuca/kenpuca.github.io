@@ -578,13 +578,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ====================================================================&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;INSERTION sort&lt;/li&gt;
@@ -595,6 +589,18 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;Text: 2.1, 2.2,&lt;/p&gt;
+
+&lt;h1 id=&#34;challenge&#34;&gt;Challenge&lt;/h1&gt;
+
+&lt;p&gt;Is &lt;code&gt;INSERTSORT&lt;/code&gt; a stable sorting algorithm?&lt;/p&gt;
+
+&lt;p&gt;Recall:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Stable sorting requires an additional condition on the permutation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -755,7 +761,7 @@ them in a sorted way?&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;script src=&#34;https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py&#34;&gt;&lt;/script&gt;
 
 &lt;h1 id=&#34;bottom-up-mergesort&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
 
@@ -792,7 +798,7 @@ until the whole list is sorted.&lt;/p&gt;&lt;/li&gt;
 
 &lt;h1 id=&#34;bottom-up-mergesort-3&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
 
-&lt;script src=&#34;https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py&#34;&gt;&lt;/script&gt;
 
 &lt;h1 id=&#34;bottom-up-mergesort-4&#34;&gt;Bottom-up Mergesort&lt;/h1&gt;
 
@@ -1036,6 +1042,18 @@ analyze recursive algorithms.&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;Top-down mergesort&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;challenge&#34;&gt;Challenge&lt;/h1&gt;
+
+&lt;p&gt;Is &lt;code&gt;MERGESORT&lt;/code&gt; a stable sorting algorithm?&lt;/p&gt;
+
+&lt;p&gt;Recall:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Stable sorting requires an additional condition on the permutation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -1052,6 +1070,224 @@ analyze recursive algorithms.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;lower-bounds-for-sorting&#34;&gt;Lower Bounds for Sorting&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Assumption&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The elements in the array are &lt;em&gt;black boxes&lt;/em&gt;, and only comparison can be made between two elements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The decision-tree model&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a sorting algorithm $A$, we record &lt;em&gt;all&lt;/em&gt; possible comparison operations executed in $A$.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; A comparison operation: $(i,j)$ where $i, j$ are the &lt;em&gt;original&lt;/em&gt; index of the elements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;decision-tree.png&#34; width=&#34;100%&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;The leaf records the final ordering of the original index.&lt;/p&gt;
+
+&lt;h1 id=&#34;lower-bounds-for-sorting-1&#34;&gt;Lower Bounds for Sorting&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;decision-tree.png&#34; width=&#34;100%&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Q&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;How many comparison operations did $A$ take as illustrated in the diagram?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is the worst case number of comparision operations?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;lower-bounds-for-sorting-2&#34;&gt;Lower Bounds for Sorting&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;decision-tree.png&#34; width=&#34;100%&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What type of tree is the deicion tree?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Binary tree&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How many leaf nodes are there for $n$ elements?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All possible permutations of $[1, 2, 3, \dots n] = n!$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is the height of the tree if there are $n!$ leaf nodes?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$\log_2(n!) \approx c\dot n\log(n)$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;optimal-comparison-based-sorting&#34;&gt;Optimal Comparison Based Sorting&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Any comparision based sorting algorithm will necessarily take at least $c n\log(n)$ number of comparison operations in the &lt;em&gt;worst&lt;/em&gt; case.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Optimal sorting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a comparison based sorting algorithm always makes at most $c n\log(n)$ number of comparisons, then it&amp;rsquo;s called &lt;em&gt;optimal&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;optimal-comparison-based-sorting-1&#34;&gt;Optimal Comparison Based Sorting&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Algorithm&lt;/th&gt;
+&lt;th&gt;Optimal?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Insertion sort&lt;/td&gt;
+&lt;td&gt;No, $n^2$&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Mergesort&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Quicksort&lt;/td&gt;
+&lt;td&gt;No, $n^2$ in the worst case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;sorting-integers&#34;&gt;Sorting Integers&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If an array contains (bounded) integers, we can beat optimal comparison based sorting.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Elements are not blackboxes.  We can look at individual digits of an bounded integer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;counting-sort&#34;&gt;Counting sort&lt;/h1&gt;
+
+&lt;p&gt;Assumptions:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The elements are integers.&lt;/li&gt;
+&lt;li&gt;The elements are all in the range of $[0, k-1]$ for some $k \geq 0$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Amazing fact:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;With $n$ elements, we can do it with only $2\cdot(n+k)$ number of instructions,
+compare to $n\log(n)$ in the case of optimal comparison sorting.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;counting-sort-1&#34;&gt;Counting sort&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def empty_array(size, init=None):
+    return [init for i in range(size)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; allocate an empty array with an optional initial value.&lt;/p&gt;
+
+&lt;h1 id=&#34;counting-sort-2&#34;&gt;Counting sort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def COUNTING_SORT(A):
+    n = len(A)
+    k = max(A) + 1
+    B = empty_array(size=n)
+    C = empty_array(size=k, init=0)
+
+    for a in A:
+        C[a] = C[a] + 1
+
+    for i in range(1,k):
+        C[i] = C[i] + C[i-1]
+
+    for a in reversed(A):
+        B[C[a]-1] = a
+        C[a] = C[a] - 1
+
+    return B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;We compute the frequency of each distinct value in &lt;code&gt;A&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The frequence is then turned into cummulative frequency.  Namely:
+&lt;code&gt;$C[x] = |\{y\in A: y\leq x\}|$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;With $C$, we can quickly deduce which each element should be positioned.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;counting-sort-3&#34;&gt;Counting Sort&lt;/h1&gt;
+
+&lt;p&gt;Question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Is &lt;code&gt;COUNTING_SORT&lt;/code&gt; stable?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Answer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yes.  It&amp;rsquo;s crucial to place $x$ into &lt;code&gt;B&lt;/code&gt; from &lt;code&gt;reverse(A)&lt;/code&gt; instead of &lt;code&gt;A&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The best comparison sorting algorithms are in the order of $n\log(n)$.&lt;/li&gt;
+&lt;li&gt;The best integer comparison algorithms can achieve the efficiency in the order of $n$.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;COUNTING_SORT&lt;/code&gt; requires too much memory in practice to be applied to arrays with large integer values.  However, it will be instrumental later (as part of radix sort).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The measure of algorithmic efficiency will be made much more rigorous in the next section of this course.&lt;/p&gt;
 </description>
     </item>
     
@@ -1214,6 +1450,83 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
         quicksort(L, k+1, r)
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h1 id=&#34;performance-analysis&#34;&gt;Performance Analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We will only give a terse outline of the analysis.  The full version is deferred to later lectures.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;performance-analysis-1&#34;&gt;Performance Analysis&lt;/h1&gt;
+
+&lt;p&gt;Let there be $n$ elements in the array.&lt;/p&gt;
+
+&lt;p&gt;Key obsevation:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;partition(L, p, r)&lt;/code&gt; takes $(r - p)$ iterations.  Each iteration has a fixed number of instructions.  So, $T_\mathrm{partition} = c_1 (r-p) \leq c\cdot n$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At each &lt;em&gt;invocation&lt;/em&gt; of &lt;code&gt;quicksort(L, p, k-1)&lt;/code&gt; and &lt;code&gt;quicksort(L, k+1, r)&lt;/code&gt;, we need to determine the number of elements: $k-1-p$, and $r-k-1$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;performance-analysis-worst-case&#34;&gt;Performance Analysis: Worst-case&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The worst case for $T_\mathrm{partition} = n$&lt;/li&gt;
+&lt;li&gt;The worst case for $k-1-p = n-1$&lt;/li&gt;
+&lt;li&gt;The worst case for $r-k-1 = n-1$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We have enough to set-up an equation to estimate the number of instructions of &lt;code&gt;quicksort(L, a, b)&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Let $|L[a\dots b]| = n$.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &amp;amp;=&amp;amp; n + 2\cdot T_\mathrm{quicksort}(n-1)
+\end{eqnarray}$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This leads to a (poor) performance characteristics of: $\approx n^2$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We will show how to solve such equations (known as recurrence equations) in the next section of this course.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;performance-analysis-average-case&#34;&gt;Performance Analysis: average case&lt;/h1&gt;
+
+&lt;p&gt;Quicksort as the name suggests is actually quite quick (most of the time&amp;hellip;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Revisiting &lt;code&gt;k = partition(L, p, q)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The pivot value should be somewhere in the middle of the subarray.
+Namely: $k\approx p+q/2$, and so $k-1-p \approx n/2$, and $q-k-1\approx n/2$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Revisiting the recurrence equation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &amp;amp;=&amp;amp; n + 2\cdot T_\mathrm{quicksort}(n/2)
+\end{eqnarray}$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This leads to a satisfying performance characteristics of: $\approx n\log(n)$&lt;/p&gt;
+
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1225,6 +1538,18 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;Quicksort: a recursive sorting algorithm&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;challenge&#34;&gt;Challenge&lt;/h1&gt;
+
+&lt;p&gt;Is &lt;code&gt;QUICKSORT&lt;/code&gt; a stable sorting algorithm?&lt;/p&gt;
+
+&lt;p&gt;Recall:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Stable sorting requires an additional condition on the permutation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -1666,10 +1991,10 @@ S 0 &amp;amp;=&amp;amp; (\lambda n. \lambda yx.ynyx)0 \\
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</link>
+      <link>https://kenpuca.github.io/courses/programming-languages/old/intro-to-languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/courses/programming-languages/intro-to-languages/</guid>
+      <guid>https://kenpuca.github.io/courses/programming-languages/old/intro-to-languages/</guid>
       <description>
 
 &lt;h1 id=&#34;computation-in-practice&#34;&gt;Computation in practice&lt;/h1&gt;
@@ -1681,8 +2006,6 @@ S 0 &amp;amp;=&amp;amp; (\lambda n. \lambda yx.ynyx)0 \\
 
 &lt;li&gt;&lt;p&gt;Hybrid languages&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;break&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/h1&gt;
 
@@ -1727,11 +2050,9 @@ def QuickSort(X):
   return quicksort(X, 0, len(X)-1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;break-1&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;breakdown-of-python&#34;&gt;Breakdown of python&lt;/h1&gt;
 
-&lt;div pdf=&#34;qsort-py.pdf&#34;&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;break-2&#34;&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/h1&gt;
+&lt;div pdf=&#34;qsort-py.pdf&#34; scale=0.8&gt;&lt;/div&gt;
 
 &lt;h1 id=&#34;python-v-s-javascript&#34;&gt;Python v.s. Javascript&lt;/h1&gt;
 
@@ -1996,181 +2317,129 @@ output.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kenpuca.github.io/courses/algorithms/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;alert:info&#34;&gt;!&lt;/a&gt;
-This course is about problem solving and computation via algorithms.
-We will cover a number of known algorithms (sorting, hashing, search,
-indexing) and their applications.  We will discuss methods for analyzing
-existing algorithms and designing new algorithms.
-Finally, the students will be introduced to &lt;em&gt;complexity classes&lt;/em&gt;, in
-particular the class of &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&#34;jumbotron&#34;&gt;
-&lt;h1&gt;Design &amp; Analysis of Algorithms&lt;/h1&gt;
+      <description>&lt;div class=&#34;jumbotron&#34;&gt;
+	&lt;h1&gt;Design &amp; Analysis of Algorithms&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;div class=row&gt;
-&lt;div class=col-md-4&gt;
-&lt;img src=&#34;textbook.jpg&#34; width=100%&gt;&lt;/img&gt;
+	&lt;div class=col-md-3&gt;
+		&lt;img src=&#34;textbook.jpg&#34; width=100%&gt;&lt;/img&gt;
+		&lt;figcaption&gt;
+	    Introduction to Algorithms, Third Edition,
+	    &lt;i&gt;Coremen, Leiserson, Rivest and Stein&lt;/i&gt;
+	    &lt;/figcaption&gt;
+	    &lt;p style=margin-top:10px;font-style:italic;font-size:90%&gt;
+			This course is about problem solving and computation via algorithms.
+			We will cover a number of known algorithms (sorting, hashing, search,
+			indexing) and their applications.  We will discuss methods for analyzing
+			existing algorithms and designing new algorithms.
+			Finally, the students will be introduced to &lt;i&gt;complexity classes&lt;/i&gt;, in
+			particular the class of &lt;i&gt;NP-completeness&lt;/i&gt;.
+		&lt;/p&gt;
+
+	&lt;/div&gt;
+	&lt;div class=col-md-9&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Sorting&lt;/h1&gt;
+				&lt;p&gt; Chapter 2.1, 2.3, 6, 7, 8&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;merge-sort&#34;&gt;Mergesort&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;quicksort&#34;&gt;Quicksort&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;
+						&lt;a href=&#34;optimal-sorting&#34;&gt;
+							Comparision based sorting versus numeric sorting
+						&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;sorting-numbers&#34;&gt;Sorting integers&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Analysis of Complexity&lt;/h1&gt;
+				&lt;p&gt; Chapter 3, 4, 5&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Asymptotic notations&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Recurrence equations&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Probabilistic analysis of randomized algorithms&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Data structures&lt;/h1&gt;
+				&lt;p&gt;Chapter 10, 11, 12&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Elementary data structures&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Hash tables&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Trees&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Optimization&lt;/h1&gt;
+				&lt;p&gt;Chapter 15, 16&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Greedy algorithms&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Huffman codes&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Graphs&lt;/h1&gt;
+				&lt;p&gt;Chapter 22, 23, 24, 25, 26&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Graph search&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Spanning trees&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Shortest path algorithms&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Maxflow&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Complexity &amp; Tractability&lt;/h1&gt;
+				&lt;p&gt;Chapter 34&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Decision problems&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;P, NP and reduction&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;NP-complete and other complexity classes&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Computability&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=col-md-8 style=font-size:200%&gt;
-&lt;h2&gt;Text book for the course:&lt;/h2&gt;
-    &lt;blockquote&gt;
-    Introduction to Algorithms, Third Edition,
-    &lt;i&gt;Coremen, Leiserson, Rivest and Stein&lt;/i&gt;
-    &lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
-&lt;h1 id=&#34;course-outline&#34;&gt;Course Outline&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;sorting&#34;&gt;Sorting&lt;/h1&gt;
-
-&lt;p&gt;(chapter 2.1, 2.3, 6, 7, 8)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;insert-sort&#34;&gt;Insertion sort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;merge-sort&#34;&gt;Mergesort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;quicksort&#34;&gt;Quicksort&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;optimal-sorting&#34;&gt;Comparison based sorting vs numeric sorting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Counting sort and radix sort&lt;/li&gt;
-&lt;li&gt;Bucket sort&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;analysis-of-complexity&#34;&gt;Analysis of complexity&lt;/h1&gt;
-
-&lt;p&gt;(chapter 3, 4, 5)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Analysis of divide-and-conquer using recursion&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Solving recurrence equations&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;(&lt;em&gt;Optional&lt;/em&gt;) Probabilistic analysis and randomized algorithm&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bucket sort&lt;/li&gt;
-&lt;li&gt;Randomized quicksort&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;data-structures-chapter-10-11-12&#34;&gt;Data structures (chapter 10, 11, 12)&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Elementary data structures and their operations&lt;/li&gt;
-&lt;li&gt;Hash tables&lt;/li&gt;
-&lt;li&gt;Trees&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;design-of-optimization-algorithms-chapter-15-16&#34;&gt;Design of optimization algorithms (chapter 15, 16)&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dynamic programming&lt;/li&gt;
-&lt;li&gt;Greedy algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;graphs&#34;&gt;&lt;em&gt;Graphs&lt;/em&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Graphs and search&lt;/li&gt;
-&lt;li&gt;Minimal spanning tree&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Shortest path&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bellman-Ford &lt;br&gt;
-Dijkstra
-Floyd-Washall&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Maxflow&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;np-completeness-computational-complexity&#34;&gt;&lt;em&gt;NP-completeness &amp;amp; computational complexity&lt;/em&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Decision problems and formal language&lt;/li&gt;
-&lt;li&gt;Complexity classes&lt;/li&gt;
-&lt;li&gt;(In)tractability&lt;/li&gt;
-&lt;li&gt;Reduction&lt;/li&gt;
-&lt;li&gt;NP-completeness&lt;/li&gt;
-&lt;li&gt;Beyond NPC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;marking-scheme&#34;&gt;Marking Scheme&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Evaluation&lt;/th&gt;
-&lt;th&gt;Grade&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;There are many quizzes.&lt;/td&gt;
-&lt;td&gt;10%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;assignments&#34;&gt;Three assignments&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;30%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Two tests&lt;/td&gt;
-&lt;td&gt;30%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Final exam&lt;/td&gt;
-&lt;td&gt;30%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;style&gt; a[href=&#34;&#34;] {color: #888;} &lt;/style&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Bucket Sort</title>
+      <link>https://kenpuca.github.io/courses/algorithms/bucket-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/bucket-sort/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -2179,140 +2448,504 @@ Floyd-Washall&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;alert:info&#34;&gt;!&lt;/a&gt;
-The topic of this course is the theory and practice of &lt;em&gt;programming
-languages&lt;/em&gt;.  We will be focused on the design principles and programming
-patterns of several programming languages from different programming
-paradigms.  We will pay particular attention to the program techniques in
-functional programming, and why they are gaining greater importance in modern
-programming.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&#34;jumbotron&#34;&gt;
-&lt;h1&gt;Programming Languages&lt;/h1&gt;
+      <description>&lt;div class=&#34;jumbotron&#34;&gt;
+	&lt;h1&gt;Programming Languages&lt;/h1&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&#34;course-outline&#34;&gt;Course Outline&lt;/h1&gt;
+&lt;div class=row&gt;
+	&lt;div class=col-md-3&gt;
+	    &lt;p style=margin-top:10px;font-style:italic;font-size:90%&gt;
+			The topic of this course is the theory and practice of *programming languages*.  We will be focused on the design principles and programming patterns of several programming languages from different programming paradigms.  We will pay particular attention to the program techniques in functional programming, and why they are gaining greater importance in modern programming.
+		&lt;/p&gt;
+		&lt;img src=&#34;text-1.png&#34; width=100%&gt;&lt;/img&gt;
+		&lt;img src=&#34;text-2.png&#34; width=100%&gt;&lt;/img&gt;
+		&lt;img src=&#34;text-3.png&#34; width=100%&gt;&lt;/img&gt;
+	&lt;/div&gt;
+	&lt;div class=col-md-9&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Foundations of computation&lt;/h1&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;functional-computation&#34;&gt; Symbolic computation&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;tour-of-languages&#34;&gt;Programming languages&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
 
-&lt;p&gt;This course is divided into three parts.&lt;/p&gt;
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Functional programming in &lt;b&gt;Clojure&lt;/b&gt;&lt;/h1&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Lisp &amp; Clojure&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Readers - form - data - function&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Sequences, Lazy evaluation and other functional constructs&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces and polymorphism&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Lisp in other languages&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
 
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Object oriented programming in &lt;b&gt;Scala&lt;/b&gt;&lt;/h1&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Syntax and semantics of Scala&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Classes, objects and traits&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Types&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Functions&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Collections&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Pattern matching&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Concurrency and reactive programming&lt;/h1&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in Clojure&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in Scala&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in other languages&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Reactive programming&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&#34;panel panel-info&#34;&gt;
+			&lt;div class=&#34;panel-heading&#34;&gt;
+				&lt;h1 class=&#34;panel-title&#34;&gt;Advanced topics&lt;/h1&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;panel-body&#34;&gt;
+				&lt;ul class=list-group&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Macros&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Logical programming&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;style&gt; a[href=&#34;&#34;] {color: #888;} &lt;/style&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sorting numbers</title>
+      <link>https://kenpuca.github.io/courses/algorithms/sorting-numbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/sorting-numbers/</guid>
+      <description>
+
+&lt;h1 id=&#34;radix-sort&#34;&gt;Radix Sort&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A scalable and efficient sorting algorithm.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Assumes all the elements are &lt;strong&gt;integers&lt;/strong&gt; bounded by the number of digits.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is much more practical than the assumption of &lt;code&gt;COUNTING_SORT&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;radix-sort-1&#34;&gt;Radix Sort&lt;/h1&gt;
+
+&lt;p&gt;Intuition:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Write each integer as &lt;code&gt;$x = x_n x_{n-1} \dots x_3 x_2 x_1$&lt;/code&gt; base $k$.  The least significant digit is $x_1$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Consider $x = $ one thousand four hundred and thirty seven.&lt;/p&gt;
+
+&lt;p&gt;We can write&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$x$ in base-10: $x = 1437$.&lt;/li&gt;
+&lt;li&gt;$x$ in base-16: $x = 59d$.&lt;/li&gt;
+&lt;li&gt;$x$ in base-2: $x = 10110011101$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;radix-sort-2&#34;&gt;Radix Sort&lt;/h1&gt;
+
+&lt;p&gt;Intuition:&lt;/p&gt;
+
+&lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;Foundations of programming languages&lt;/li&gt;
-&lt;li&gt;Practical languages&lt;/li&gt;
-&lt;li&gt;Survey&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write each element in $A$ with $n$ digits of base $k$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Repeatly sort the array, $A$, $n$ times, sorting by only one digit.  Start sorting by the least significant digit, and finish by the most significant digit.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The digit sorting algorithm used &lt;strong&gt;must&lt;/strong&gt; be &lt;strong&gt;stable&lt;/strong&gt;.  Use &lt;code&gt;COUNTING_SORT&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;i-foundations&#34;&gt;(I) Foundations&lt;/h2&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;computation&#34;&gt;Computation&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;functional-computation&#34;&gt;Functional computation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;intro-to-languages&#34;&gt;Programming languages: at a glance&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&#34;radix-sort-3&#34;&gt;Radix Sort&lt;/h1&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some help from Python:&lt;/p&gt;
 
-&lt;h1 id=&#34;design-of-programming-languages&#34;&gt;Design of programming languages&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;# convert a number to its binary representation
+def radix2(num):
+    return &amp;quot;{0:b}&amp;quot;.format(num)
 
-&lt;ul&gt;
-&lt;li&gt;Organization and semantics&lt;/li&gt;
-&lt;li&gt;Type system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+# Get the i-th digit of binary string x
+def digit(num, i):
+    x = radix2(num)
+    if i &amp;gt;= len(x):
+        return 0
+    else:
+        d = x[-(i+1)]
+        return 0 if d == &#39;0&#39; else 1
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&#34;radix-sort-4&#34;&gt;Radix Sort&lt;/h1&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Modify &lt;code&gt;COUNTING_SORT(A, i)&lt;/code&gt;:&lt;/p&gt;
 
-&lt;h1 id=&#34;functional-programming&#34;&gt;Functional programming&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Introduction to Clojure&lt;/li&gt;
-&lt;li&gt;Programming without mutable data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;# Sort A using binary digit i
+def COUNTING_SORT(A, i):
+    n = len(A)
+    k = 2
+    B = empty_array(size=n)
+    C = empty_array(size=k, init=0)
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    for a in A:
+        d = digit(a, i)
+        C[d] = C[d] + 1
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+    for j in range(1,k):
+        C[j] = C[j] + C[j-1]
 
-&lt;h1 id=&#34;programming-paradigms&#34;&gt;Programming Paradigms&lt;/h1&gt;
+    for a in reversed(A):
+        d = digit(a, i)
+        B[C[d]-1] = a
+        C[d] = C[d] - 1
 
-&lt;ul&gt;
-&lt;li&gt;Procedural programming&lt;/li&gt;
-&lt;li&gt;Object-oriented programming&lt;/li&gt;
-&lt;li&gt;Pure functional programming&lt;/li&gt;
-&lt;li&gt;Programming in reality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+    return B
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ii-practical-languages&#34;&gt;(II) Practical languages&lt;/h2&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;scala&#34;&gt;Scala&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Pure object orientation in Scala&lt;/li&gt;
-&lt;li&gt;Strong type system&lt;/li&gt;
-&lt;li&gt;Functional programming in Scala&lt;/li&gt;
-&lt;li&gt;Concurrency &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Note that $k = 2$, we always assume binary encoding.  This is just for convenience.&lt;/li&gt;
+&lt;li&gt;Instead of computing the (cumulative) frequency of elements of &lt;code&gt;A&lt;/code&gt;, we use the $i$-th digit,
+&lt;code&gt;digit(a, i)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfortable&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&#34;radix-sort-5&#34;&gt;Radix Sort&lt;/h1&gt;
+
+&lt;p&gt;Finally the radix sort algorithm:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def RADIX_SORT(A):
+    n = max(len(radix2(x)) for x in A)
+    for i in range(n):
+        A = COUNTING_SORT(A, i)
+    return A
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;on-radix-sort&#34;&gt;On Radix Sort&lt;/h1&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;clojure&#34;&gt;Clojure&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Clojure as Lisp&lt;/li&gt;
-&lt;li&gt;Functional programming in Clojure&lt;/li&gt;
-&lt;li&gt;Object-oriented programming in Clojure&lt;/li&gt;
-&lt;li&gt;Concurrency &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Macros &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt; &lt;span class=&#34;fa fa-star&#34;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;We introduced a very important sorting algorithm that is capable of sorting collections of very large integers (e.g. 64-bit values).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stable&lt;/li&gt;
+&lt;li&gt;Very efficient: beats the best comparison based sorting algorithms&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&#34;iii-survey&#34;&gt;(III) Survey&lt;/h2&gt;
+&lt;h1 id=&#34;sorting-the-reals&#34;&gt;Sorting the Reals&lt;/h1&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sorting decimal numbers between [0, 1]&lt;/li&gt;
+&lt;li&gt;Bucket sort&lt;/li&gt;
+&lt;li&gt;Efficient in the average case&lt;/li&gt;
+&lt;li&gt;Inefficient in the worst case&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;sorting-the-reals-1&#34;&gt;Sorting the Reals&lt;/h1&gt;
+
+&lt;p&gt;Real numbers:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;panel:info&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Any number, with arbitrary precision&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Assumption:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We are concerned with sorting arrays of real numbers whose values are between $[0, 1]$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;As long as the values are bounded by any interview $[a, b]$, we can apply the algorithm developed here by means of normalization:&lt;/p&gt;
+
+&lt;p&gt;$$ x&amp;rsquo; = \frac{x - a}{b - a}$$&lt;/p&gt;
+
+&lt;h1 id=&#34;intuition&#34;&gt;Intuition&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;More languages (e.g. Haskell, Javascript/Typescript, Go)&lt;/li&gt;
-&lt;li&gt;More paradigms (e.g. Logical programming with Prolog)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Partition the interval [0, 1] into $n$ equally divided intervals:&lt;/p&gt;
+
+&lt;p&gt;$$B = \big[0, \frac{1}{n}\big), \big[\frac{1}{n}, \frac{2}{n}\big), \dots, \big[\frac{n-1}{n}, 1\big]$$&lt;/p&gt;
+
+&lt;p&gt;with $B_i = [\frac{i}{n}, \frac{i+1}{n})$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Given an array $A$, distribute $x\in A$ into the respective buckets $B_i$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sort each $B_i$ individually, and then concatenate all sorted buckets.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This is &lt;em&gt;surprisingly&lt;/em&gt; effective.&lt;/p&gt;
+
+&lt;h1 id=&#34;bucket-sort&#34;&gt;Bucket Sort&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def bucketsort(A, n):
+    buckets = [[] for i in range(n)]
+    # distribute the buckets
+    for a in A:
+        i = int(math.floor(a * n))
+        INSERT_SORT(buckets[i])
+    # sort each bucket
+    for bucket in buckets:
+        bucket.sort()
+
+    # place the elements from the sorted buckets
+    # back to the array
+    i = 0
+    for bucket in buckets:
+        for a in bucket:
+            A[i] = a
+            i += 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;bucket-sort-1&#34;&gt;Bucket Sort&lt;/h1&gt;
+
+&lt;p&gt;We will defer the analysis of bucket sort to later as it will greatly benefit from some probability and asympotic notations.&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Numbers are &lt;em&gt;easier&lt;/em&gt; to sort than blackboxed elements.&lt;/li&gt;
+&lt;li&gt;For bounded integers, we can use radix sort even if the bound is very very large (e.g. 256-bit integers).&lt;/li&gt;
+&lt;li&gt;For bounded reals, we can use bucket sort.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tour of langauges</title>
+      <link>https://kenpuca.github.io/courses/programming-languages/tour-of-languages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/tour-of-languages/</guid>
+      <description>
+
+&lt;h1 id=&#34;a-tour-of-programming-languages&#34;&gt;A tour of programming languages&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;stateful-languages&#34;&gt;Stateful languages&lt;/h1&gt;
+
+&lt;p&gt;Principles of a TM&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Memory:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;the infinite tape&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mutable data:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;cells of the tape stores data, which can be &lt;strong&gt;modified&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Flow control:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;control logic is an automaton which can branch and loop&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;stateful-languages-1&#34;&gt;Stateful languages&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt;
+Describing computation based on the principles of a TM s called &lt;em&gt;imperative&lt;/em&gt;
+programming.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C / C++&lt;/li&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;Ruby&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;stateful-languages-2&#34;&gt;Stateful languages&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Elements of TM&lt;/th&gt;
+&lt;th&gt;Programming construct&lt;/th&gt;
+&lt;th&gt;Jargon&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Memory&lt;/td&gt;
+&lt;td&gt;Array, struct&lt;/td&gt;
+&lt;td&gt;Builtin aggregate types&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Multable&lt;/td&gt;
+&lt;td&gt;Assignments&lt;/td&gt;
+&lt;td&gt;lvalues&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Flow control&lt;/td&gt;
+&lt;td&gt;if-else, while, for&lt;/td&gt;
+&lt;td&gt;Branche and loops&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;stateful-languages-3&#34;&gt;Stateful languages&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Extensions to the TM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;They are necessary for humans to author and reason about the program.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Variables: Give &lt;em&gt;names&lt;/em&gt; to represent specific memory addresses.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Types: Give restruction to the type of data that can be stored in memory.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Functions: Grouping of multiple statements in isolation.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Scoping: Isolation of the usage of &lt;em&gt;names&lt;/em&gt; (for variables and functions).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Code organization: Hierarchical management of large number of statements&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; Procedural programming languages&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-procedural-languages&#34;&gt;Variables (in procedural languages)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ultimately, &lt;em&gt;variables&lt;/em&gt; are names which are aliases for memory addresses.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Declaration&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int i;
+int[10] j;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Read / Write&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;i = 10;
+j[2] = i * j[0];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;types&#34;&gt;Types&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;typedef Point2D struct {
+    float x;
+    float y;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This declares a struct aggregate type in C&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Point2D struct {
+    X float
+    Y float
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Same structure in Go&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;class Point2D(val x:Float, val y:Float)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Same structure in Scala&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We can build arbitrarily complex data structures using user-defined types.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;functions&#34;&gt;Functions&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;Point2D rotate(Point2D p, float a) {
+    Point2D p2;
+    p2.x = p.x * cos(a) - p.y * sin(a);
+    p2.y = p.x * sin(a) + p.y * cos(a);
+    return p2;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in C&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func rotate(p Point2D, a float) (p2 Point2D) {
+    p2.X = p.X * math.Cos(a) - p.Y * math.Sin(a)
+    p2.Y = p.X * math.Sin(a) + p.Y * math.Cos(a)
+    return
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in Go. Note the name binding in the return type.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;def rotate(p: Point2D, a : Float) : Point2D {
+    val x = p.x * cos(a) - p.y * sin(a);
+    val y = p.x * sin(a) + p.y * cos(a);
+    Point2D(x, y)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in Scala.  Note the &lt;code&gt;val&lt;/code&gt; keyword, and the lack
+of explicit return&lt;/p&gt;
 </description>
     </item>
     
