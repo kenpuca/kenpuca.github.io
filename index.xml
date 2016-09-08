@@ -2256,7 +2256,7 @@ Report on the EDVAC&lt;/em&gt;, 1945.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;TM is the most powerful computing model we know.
-Up to know, we don&amp;rsquo;t know any other computing models more powerful than
+Up to now, we don&amp;rsquo;t know any other computing models more powerful than
 a TM.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -2429,6 +2429,31 @@ output.&lt;/p&gt;
     </item>
     
     <item>
+      <title></title>
+      <link>https://kenpuca.github.io/sandbox/slide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/sandbox/slide/</guid>
+      <description>
+
+&lt;h1 id=&#34;hello&#34;&gt;Hello&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure sm clipboard&#34;&gt;(println &amp;quot;hello&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;iframe 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/clojure&#39;
+    
+    style=&#39;width:100%;height:400px&#39;&gt;&lt;/iframe&gt;
+
+
+</description>
+    </item>
+    
+    <item>
       <title>Algorithms</title>
       <link>https://kenpuca.github.io/courses/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2576,8 +2601,11 @@ output.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 
+
 &lt;iframe 
-    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu%2fclojure&#39; 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/clojure&#39;
+    
     style=&#39;width:100%;height:500px&#39;&gt;&lt;/iframe&gt;
 
 
@@ -2699,232 +2727,6 @@ finding linkages in Open Data.&lt;/p&gt;
 
 
 &lt;style&gt; a[href=&#34;&#34;] {color: #888;} &lt;/style&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sorting numbers</title>
-      <link>https://kenpuca.github.io/courses/algorithms/sorting-numbers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/courses/algorithms/sorting-numbers/</guid>
-      <description>
-
-&lt;h1 id=&#34;radix-sort&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A scalable and efficient sorting algorithm.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Assumes all the elements are &lt;strong&gt;integers&lt;/strong&gt; bounded by the number of digits.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This is much more practical than the assumption of &lt;code&gt;COUNTING_SORT&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;radix-sort-1&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;Intuition:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Write each integer as &lt;code&gt;$x = x_n x_{n-1} \dots x_3 x_2 x_1$&lt;/code&gt; base $k$.  The least significant digit is $x_1$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Example:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Consider $x = $ one thousand four hundred and thirty seven.&lt;/p&gt;
-
-&lt;p&gt;We can write&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;$x$ in base-10: $x = 1437$.&lt;/li&gt;
-&lt;li&gt;$x$ in base-16: $x = 59d$.&lt;/li&gt;
-&lt;li&gt;$x$ in base-2: $x = 10110011101$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;radix-sort-2&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;Intuition:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Write each element in $A$ with $n$ digits of base $k$.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Repeatly sort the array, $A$, $n$ times, sorting by only one digit.  Start sorting by the least significant digit, and finish by the most significant digit.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The digit sorting algorithm used &lt;strong&gt;must&lt;/strong&gt; be &lt;strong&gt;stable&lt;/strong&gt;.  Use &lt;code&gt;COUNTING_SORT&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;radix-sort-3&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;Some help from Python:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;# convert a number to its binary representation
-def radix2(num):
-    return &amp;quot;{0:b}&amp;quot;.format(num)
-
-# Get the i-th digit of binary string x
-def digit(num, i):
-    x = radix2(num)
-    if i &amp;gt;= len(x):
-        return 0
-    else:
-        d = x[-(i+1)]
-        return 0 if d == &#39;0&#39; else 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;radix-sort-4&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;Modify &lt;code&gt;COUNTING_SORT(A, i)&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;# Sort A using binary digit i
-def COUNTING_SORT(A, i):
-    n = len(A)
-    k = 2
-    B = empty_array(size=n)
-    C = empty_array(size=k, init=0)
-
-    for a in A:
-        d = digit(a, i)
-        C[d] = C[d] + 1
-
-    for j in range(1,k):
-        C[j] = C[j] + C[j-1]
-
-    for a in reversed(A):
-        d = digit(a, i)
-        B[C[d]-1] = a
-        C[d] = C[d] - 1
-
-    return B
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Note that $k = 2$, we always assume binary encoding.  This is just for convenience.&lt;/li&gt;
-&lt;li&gt;Instead of computing the (cumulative) frequency of elements of &lt;code&gt;A&lt;/code&gt;, we use the $i$-th digit,
-&lt;code&gt;digit(a, i)&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;comfortable&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;radix-sort-5&#34;&gt;Radix Sort&lt;/h1&gt;
-
-&lt;p&gt;Finally the radix sort algorithm:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def RADIX_SORT(A):
-    n = max(len(radix2(x)) for x in A)
-    for i in range(n):
-        A = COUNTING_SORT(A, i)
-    return A
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;on-radix-sort&#34;&gt;On Radix Sort&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We introduced a very important sorting algorithm that is capable of sorting collections of very large integers (e.g. 64-bit values).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Stable&lt;/li&gt;
-&lt;li&gt;Very efficient: beats the best comparison based sorting algorithms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;sorting-the-reals&#34;&gt;Sorting the Reals&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sorting decimal numbers between [0, 1]&lt;/li&gt;
-&lt;li&gt;Bucket sort&lt;/li&gt;
-&lt;li&gt;Efficient in the average case&lt;/li&gt;
-&lt;li&gt;Inefficient in the worst case&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;sorting-the-reals-1&#34;&gt;Sorting the Reals&lt;/h1&gt;
-
-&lt;p&gt;Real numbers:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Any number, with arbitrary precision&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Assumption:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We are concerned with sorting arrays of real numbers whose values are between $[0, 1]$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;As long as the values are bounded by any interview $[a, b]$, we can apply the algorithm developed here by means of normalization:&lt;/p&gt;
-
-&lt;p&gt;$$ x&amp;rsquo; = \frac{x - a}{b - a}$$&lt;/p&gt;
-
-&lt;h1 id=&#34;intuition&#34;&gt;Intuition&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Partition the interval [0, 1] into $n$ equally divided intervals:&lt;/p&gt;
-
-&lt;p&gt;$$B = \big[0, \frac{1}{n}\big), \big[\frac{1}{n}, \frac{2}{n}\big), \dots, \big[\frac{n-1}{n}, 1\big]$$&lt;/p&gt;
-
-&lt;p&gt;with $B_i = [\frac{i}{n}, \frac{i+1}{n})$.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Given an array $A$, distribute $x\in A$ into the respective buckets $B_i$&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Sort each $B_i$ individually, and then concatenate all sorted buckets.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This is &lt;em&gt;surprisingly&lt;/em&gt; effective.&lt;/p&gt;
-
-&lt;h1 id=&#34;bucket-sort&#34;&gt;Bucket Sort&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python clipboard&#34;&gt;def bucketsort(A, n):
-    buckets = [[] for i in range(n)]
-    # distribute the buckets
-    for a in A:
-        i = int(math.floor(a * n))
-        INSERT_SORT(buckets[i])
-    # sort each bucket
-    for bucket in buckets:
-        bucket.sort()
-
-    # place the elements from the sorted buckets
-    # back to the array
-    i = 0
-    for bucket in buckets:
-        for a in bucket:
-            A[i] = a
-            i += 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;bucket-sort-1&#34;&gt;Bucket Sort&lt;/h1&gt;
-
-&lt;p&gt;We will defer the analysis of bucket sort to later as it will greatly benefit from some probability and asympotic notations.&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Numbers are &lt;em&gt;easier&lt;/em&gt; to sort than blackboxed elements.&lt;/li&gt;
-&lt;li&gt;For bounded integers, we can use radix sort even if the bound is very very large (e.g. 256-bit integers).&lt;/li&gt;
-&lt;li&gt;For bounded reals, we can use bucket sort.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
