@@ -40,7 +40,15 @@
 
 <p><a href="highlight">!</a></p>
 
+<blockquote>
+<p>We will examine the influence of TM and LC on the design of programming languages.</p>
+</blockquote>
+
 <h1 id="stateful-languages">Stateful languages</h1>
+
+<p><a href="highlight">!</a></p>
+
+<h1 id="stateful-languages-1">Stateful languages</h1>
 
 <p>Principles of a TM</p>
 
@@ -64,7 +72,7 @@
 </blockquote></li>
 </ul>
 
-<h1 id="stateful-languages-1">Stateful languages</h1>
+<h1 id="stateful-languages-2">Stateful languages</h1>
 
 <p><a href="box">!</a>
 Describing computation based on the principles of a TM s called <em>imperative</em>
@@ -78,7 +86,7 @@ programming.</p>
 <li>&hellip;</li>
 </ul>
 
-<h1 id="stateful-languages-2">Stateful languages</h1>
+<h1 id="stateful-languages-3">Stateful languages</h1>
 
 <table>
 <thead>
@@ -110,7 +118,7 @@ programming.</p>
 </tbody>
 </table>
 
-<h1 id="stateful-languages-3">Stateful languages</h1>
+<h1 id="stateful-languages-4">Stateful languages</h1>
 
 <p><strong>Extensions to the TM</strong></p>
 
@@ -207,6 +215,301 @@ j[2] = i * j[0];
 
 <p><a href="note 3">!</a> A function in Scala.  Note the <code>val</code> keyword, and the lack
 of explicit return</p>
+
+<h1 id="more-on-functions">More on functions</h1>
+
+<p><a href="columns 3:">!</a></p>
+
+<p><em>In modern languages</em>, functions can be values and can be constructed and passed around like values.</p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-javascript sm">var log = function(message) {
+    console.info(&quot;Message: &quot; + message);
+}
+</code></pre>
+
+<p><a href="note">!</a> Function as value in Javascript.</p>
+
+<pre><code class="language-go sm">var log = func(msg string) {
+    fmt.Println(&quot;Message:&quot; + msg)
+}
+</code></pre>
+
+<p><a href="note">!</a> Function as value in Go.</p>
+
+<pre><code class="language-scala sm">val log = {msg : String =&gt; println(msg)}
+</code></pre>
+
+<p><a href="note">!</a> Function as value in Scala.</p>
+
+<h1 id="expression-vs-statement">Expression vs Statement</h1>
+
+<pre><code class="language-c">printf(&quot;hello world\n&quot;)
+</code></pre>
+
+<p><a href="note">!</a> This is a <em>statement</em>.  It is <em>invalid</em> to ask the value of a statement.  It&rsquo;s meant to do something, not represent something.</p>
+
+<pre><code class="language-c">get_age() &gt; 65
+</code></pre>
+
+<p><a href="note">!</a> This is an <em>expression</em>. It doesn&rsquo;t (necessarily) do anything, but it represents a value of some type.  In this case, it&rsquo;s a boolean expression.</p>
+
+<h1 id="branching">Branching</h1>
+
+<pre><code class="language-javascript">var discount = 0;
+if(age &lt; 10)
+  discount = 0.4;
+else if(age &gt;= 65)
+  discount = 0.2;
+else
+  discount = 0;
+</code></pre>
+
+<p><a href="note">!</a> Javascript branching with <code>if-else</code>.  C and Java have the same style of <code>if-else</code>.
+Here <code>if-else</code> is an statement.  What it does is the assignment of some variable <code>discount</code>.</p>
+
+<pre><code class="language-scala">val discount = if(age &lt; 10) 0.4
+               else if(age &gt;= 65) 0.2
+               else 0
+</code></pre>
+
+<p><a href="note">!</a> In <em>Scala</em>, everything is an expression.  It represents the value of <code>discount</code>.</p>
+
+<pre><code class="language-scala">val discount = age match {
+    case _ if age &lt; 10 =&gt; 0.4
+    case _ if age &gt;= 65 =&gt; 0.2
+    case _ =&gt; 0
+}
+</code></pre>
+
+<p><a href="note">!</a> Scala supports <em>pattern matching</em>.</p>
+
+<h1 id="iteration">Iteration</h1>
+
+<p><a href="columns 3:">!</a></p>
+
+<p>Possibly the most used and thought-out feature of procedural programming.</p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-c sm">for(int i=0; i &lt; 100; i++)
+  for(int j=0; j &lt; 100; j++)
+    if(i + j == 55) printf(&quot;%d, %d\n&quot;, i, j)
+</code></pre>
+
+<p><a href="note">!</a> <code>for</code> loop in C/Java/Javascript.  <i class="fa fa-thumbs-down"></i></p>
+
+<pre><code class="language-python sm">for i in range(100):
+  for j in range(100):
+    if i + j == 55:  print i,j
+</code></pre>
+
+<p><a href="note">!</a> <code>for</code> loop in Python</p>
+
+<pre><code class="language-python sm">print [(i,j) for i in range(100) \
+    for j in range(100) if i + j == 55]
+</code></pre>
+
+<p><a href="note">!</a> List comprehension in Python</p>
+
+<h1 id="scope">Scope</h1>
+
+<p><a href="columns 3:">!</a></p>
+
+<p>The scope of a variable is context in which the variable exists.  This will be discussed in depth later.</p>
+
+<p>Scoping is not part of the syntax, but rules on variable life-time.</p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-c sm">int i = 0;
+if(i == 0) {
+    int i = 10;
+    printf(&quot;%d&quot;, i);
+}
+printf(&quot;%d\n&quot;, i)
+</code></pre>
+
+<p><a href="note">!</a> C will print out <code>10 0</code>.  Note that there are <em>two</em> variables, both with the name <code>i</code>.</p>
+
+<pre><code class="language-javascript sm">function friendlyLogger() {
+    var greeting = &quot;Hi there, &quot;;
+    return function(message) {
+        console.info(greeting + message);
+    }
+}
+
+...
+
+var logger = friendlyLogger();
+logger(&quot;my name is Einstein.&quot;);
+</code></pre>
+
+<p><a href="note">!</a> For Javascript, scopes are nested, and the parent scope (<code>friendlyLogger</code>) is preserved in the scope of <code>function(message)</code>.  This is called <em>closure</em>.</p>
+
+<h1 id="functional-languages">Functional languages</h1>
+
+<p><a href="highlight">!</a></p>
+
+<h1 id="functional-languages-1">Functional languages</h1>
+
+<p><strong>Principles of LC</strong></p>
+
+<ul>
+<li><p>No such thing as memory or mutable data</p></li>
+
+<li><p>Purely symbolic rewrites</p></li>
+
+<li><p>Functions are necessarily expressions, and most (actually <em>all</em>) expressions are functions.</p></li>
+
+<li><p>Totally unsupported by any computer hardware</p></li>
+</ul>
+
+<h1 id="functional-languages-2">Functional languages</h1>
+
+<p><strong>LC influence on programming language design</strong></p>
+
+<ul>
+<li><p>Symbols</p></li>
+
+<li><p>Functions are <em>cheap</em> to create</p></li>
+
+<li><p>Functions are used <em>everywhere</em></p></li>
+
+<li><p>Read-only semantics for data</p></li>
+</ul>
+
+<h1 id="functional-languages-3">Functional languages</h1>
+
+<p><strong>Extensions to beyond LC</strong></p>
+
+<ul>
+<li>Functions as data</li>
+<li>Symbol binding</li>
+<li>Scopes</li>
+<li>Evaluate function application eagerly or lazily</li>
+<li>Data structures (especially Lists)</li>
+<li><em>Native</em> functions which are implemented by imperative programming</li>
+<li>Organization of code through namespaces, polymorphism and object orientation.</li>
+<li><a href="comfort">!</a></li>
+</ul>
+
+<p><a href="box">!</a> We will illustrate these topics using <span style=color:red><strong>Clojure</strong></span>.</p>
+
+<h1 id="syntax-from-lc-to-lisp">Syntax: from LC to Lisp</h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<p>LC is so syntactically clean that Lisp (and its dialets including Clojure) has borrowed the LC syntax almost verbatim.</p>
+
+<p><a href="split">!</a></p>
+
+<h2 id="abstraction">Abstraction</h2>
+
+<hr />
+
+<p>$\lambda x.e$</p>
+
+<blockquote>
+<p><a href="note 6">!</a></p>
+
+<pre><code class="language-clojure">(fn [x] e)
+</code></pre>
+</blockquote>
+
+<h2 id="application">Application</h2>
+
+<hr />
+
+<p>$f e$</p>
+
+<blockquote>
+<p><a href="note 6">!</a></p>
+
+<pre><code class="language-clojure">(f e)
+</code></pre>
+</blockquote>
+
+<h1 id="functions-as-data">Functions as data</h1>
+
+<pre><code class="language-clojure">(defn log [message]
+  (println message))
+</code></pre>
+
+<p><a href="note">!</a> Declaring a function with a <em>name</em>.</p>
+
+<pre><code class="language-clojure">(fn [message] (println message))
+</code></pre>
+
+<p><a href="note">!</a> Creating a value which happens to be a function.  This function has no name, so we call such functions <em>anonymous functions</em>.</p>
+
+<pre><code class="language-clojure">#(println %1)
+</code></pre>
+
+<p><a href="note">!</a> A quicker way to create a function without a name.</p>
+
+<h1 id="name-binding">Name binding</h1>
+
+<pre><code class="language-clojure">(def pi 3.1415)
+</code></pre>
+
+<p><a href="note">!</a> Global name binding</p>
+
+<pre><code class="language-clojure">(def log (fn [message]
+           (println message)))
+</code></pre>
+
+<p><a href="note">!</a> This is another way to create a named function.</p>
+
+<pre><code class="language-clojure">(let [name &quot;Einstein&quot;]
+  (println name))
+</code></pre>
+
+<p><a href="note">!</a> The <code>let</code> form helps to create name bindings with limited scopes.</p>
+
+<h1 id="immutable-data">Immutable data</h1>
+
+<p><a href="columns 4:">!</a></p>
+
+<p>Data can only be:</p>
+
+<ul>
+<li>created</li>
+<li>bind to a name</li>
+<li>cloned</li>
+</ul>
+
+<p><a href="---">!</a></p>
+
+<p>But never modified.</p>
+
+<p><a href="split">!</a></p>
+
+<pre><code class="language-clojure">(def x [1 2 3 4])
+</code></pre>
+
+<p><a href="note">!</a> Create a list of numbers, and bind it a name <code>x</code>.</p>
+
+<pre><code class="language-clojure">(conj x 5)
+</code></pre>
+
+<p><a href="note">!</a> This makes a copy of <code>x</code> and append 5.  But since it&rsquo;s not bound to any name, the result is lost.</p>
+
+<pre><code class="language-clojure">(def y (concat x [10 20 30]))
+</code></pre>
+
+<p><a href="note">!</a> <code>x</code> is still <code>[1,2,3,4]</code> (forever), and <code>y</code> is <code>[1,2,3,4,10,20,30]</code></p>
+
+<h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
+
+<ul>
+<li><p>The influence of TM to imperative language design</p></li>
+
+<li><p>The influence of LC to functional language design</p></li>
+</ul>
 </div>
         </div>
 
