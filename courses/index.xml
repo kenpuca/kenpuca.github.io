@@ -132,8 +132,6 @@ nx.draw(G)
 plot.save(&amp;quot;random-graph.png&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ================================================&lt;/p&gt;
-
 &lt;h1 id=&#34;the-sorting-problem&#34;&gt;The sorting problem&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 9:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -169,8 +167,6 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;li&gt;The comparison function can be arbitrary, and it defines the ordering.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =========================================================&lt;/p&gt;
-
 &lt;h1 id=&#34;the-sorting-problem-1&#34;&gt;The sorting problem&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -188,8 +184,6 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;p&gt;&lt;code&gt;$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &amp;lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &amp;lt; \pi(j) $$&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =============================================================&lt;/p&gt;
-
 &lt;h1 id=&#34;insertion-sort&#34;&gt;Insertion sort&lt;/h1&gt;
 
 &lt;blockquote&gt;
@@ -203,7 +197,20 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 &lt;li&gt;It can be fully analyzed relatively easily.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ============================================================&lt;/p&gt;
+&lt;h1 id=&#34;insertion-sort-the-intuition&#34;&gt;Insertion sort: the intuition&lt;/h1&gt;
+
+&lt;p&gt;Suppose you have an array such that the &lt;em&gt;initial&lt;/em&gt; subarray is already sorted.  But the last element may be out of place.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-x&#34;&gt;+---+---+---+----+---+
+| 2 | 4 | 5 | 10 | x |
++---+---+---+----+---+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Q&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is a procedure to rearrange such array?  Imagine that &lt;code&gt;x=7&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h1 id=&#34;insertion-sort-1&#34;&gt;Insertion sort&lt;/h1&gt;
 
@@ -225,21 +232,51 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
     A[i+1] = key
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ===========================================================&lt;/p&gt;
+&lt;h1 id=&#34;try-it-out&#34;&gt;Try it out&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm clipboard&#34;&gt;def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &amp;gt;= 0 and A[i] &amp;gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm clipboard&#34;&gt;import random
+A = [random.randint(0, 100) for i in range(10)]
+print A
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python sm clipboard&#34;&gt;insertion_sort(A)
+print A
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;iframe 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/python&#39;
+    
+    style=&#39;max-width:100%;width:100%;height:500px&#39;&gt;&lt;/iframe&gt;
+
+
 
 &lt;h1 id=&#34;analysis-of-correctness&#34;&gt;Analysis of correctness&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Intuition only takes us part way, &lt;em&gt;not the whole way&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Intuition is not to be trusted.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Sometimes, we can formally prove that an algorithm is correct.&lt;/p&gt;
-
-&lt;p&gt;But first, we need some machineries.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We can formally prove that an algorithm is correct.
+But first, we need some machinery.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; ===========================================================================&lt;/p&gt;
-
-&lt;h2 id=&#34;loop-invariance&#34;&gt;Loop invariance&lt;/h2&gt;
+&lt;h1 id=&#34;loop-invariance&#34;&gt;Loop invariance&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -276,19 +313,20 @@ a statement that is &lt;strong&gt;always&lt;/strong&gt; true
 of each iteration of
 the loop.&lt;/p&gt;
 
+&lt;p&gt;At the &lt;em&gt;end&lt;/em&gt; of the $i$-th iteration:&lt;/p&gt;
+
 &lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;count $\not=$ 0&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_{i+1} \geq$&lt;/code&gt; &lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_i$&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Note: for loop-invariance, we can refer to the iteration index
-  $i\geq 0$.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;count&lt;/code&gt;$_i$ $\not=$ &lt;code&gt;0&lt;/code&gt;
+&lt;i class=&#34;fa fa-thumbs-up&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_{i+1} \geq$&lt;/code&gt; &lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_i$&lt;/code&gt;
+&lt;i class=&#34;fa fa-thumbs-down&#34;&gt;&lt;/i&gt;:
+This is not a loop-invariance because it may not be true.
+Consider if $v=0$ for some iteration.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -308,8 +346,6 @@ the loop.&lt;/p&gt;
 
 &lt;p&gt;There are two loops, with &lt;code&gt;while&lt;/code&gt;-loop nested in the &lt;code&gt;for&lt;/code&gt;-loop.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
-
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-1&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;columns 5:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -328,23 +364,16 @@ the loop.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Inner-loop invariance&lt;/strong&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;i&lt;/code&gt; is an index such that&lt;/p&gt;
+&lt;p&gt;If we assume that $A[0 .. j-1]$ is sorted, then
+the following loop invariance holds for the &lt;code&gt;for&lt;/code&gt; loop:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;A[0 .. i]&lt;/code&gt; are all smaller than &lt;code&gt;key&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;A[i+2 .. j]&lt;/code&gt; are larger or equal to &lt;code&gt;key&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;A[i] = A[i+1]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;At the end of the iteration, we have $A[i\dots j]$ is sorted.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Can we say anything about &lt;code&gt;A[j+1]&lt;/code&gt; to &lt;code&gt;A[len(A)-1]&lt;/code&gt;?&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-2&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -382,8 +411,6 @@ the loop.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;A[0 .. j-1]&lt;/code&gt; is sorted, by the inner-loop invariance, moving key to
 &lt;code&gt;A[i+1]&lt;/code&gt; makes &lt;code&gt;A[0 .. j]&lt;/code&gt; sorted.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt; =================================================================&lt;/p&gt;
 
 &lt;h1 id=&#34;correctness-of-insertion-sort-by-loop-invariance-3&#34;&gt;Correctness of &lt;code&gt;INSERTION SORT&lt;/code&gt; by loop-invariance&lt;/h1&gt;
 
@@ -579,6 +606,8 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 &lt;/table&gt;
 
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;INSERTION sort&lt;/li&gt;

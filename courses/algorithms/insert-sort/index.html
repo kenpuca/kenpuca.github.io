@@ -152,8 +152,6 @@ nx.draw(G)
 plot.save(&quot;random-graph.png&quot;)
 </code></pre>
 
-<p><a href="break">!</a> ================================================</p>
-
 <h1 id="the-sorting-problem">The sorting problem</h1>
 
 <p><a href="columns 9:">!</a></p>
@@ -189,8 +187,6 @@ where the elements are to be compared by a <em>comparator</em> function:</p>
 <li>The comparison function can be arbitrary, and it defines the ordering.</li>
 </ul>
 
-<p><a href="break">!</a> =========================================================</p>
-
 <h1 id="the-sorting-problem-1">The sorting problem</h1>
 
 <ul>
@@ -208,8 +204,6 @@ where the elements are to be compared by a <em>comparator</em> function:</p>
 <p><code>$$ \forall i,j\in [0, \mathrm{length}(x)],\ i &lt; j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) &lt; \pi(j) $$</code></p></li>
 </ul>
 
-<p><a href="break">!</a> =============================================================</p>
-
 <h1 id="insertion-sort">Insertion sort</h1>
 
 <blockquote>
@@ -223,7 +217,20 @@ where the elements are to be compared by a <em>comparator</em> function:</p>
 <li>It can be fully analyzed relatively easily.</li>
 </ol>
 
-<p><a href="break">!</a> ============================================================</p>
+<h1 id="insertion-sort-the-intuition">Insertion sort: the intuition</h1>
+
+<p>Suppose you have an array such that the <em>initial</em> subarray is already sorted.  But the last element may be out of place.</p>
+
+<pre><code class="language-x">+---+---+---+----+---+
+| 2 | 4 | 5 | 10 | x |
++---+---+---+----+---+
+</code></pre>
+
+<p><em>Q</em>:</p>
+
+<blockquote>
+<p>What is a procedure to rearrange such array?  Imagine that <code>x=7</code>.</p>
+</blockquote>
 
 <h1 id="insertion-sort-1">Insertion sort</h1>
 
@@ -245,21 +252,51 @@ where the elements are to be compared by a <em>comparator</em> function:</p>
     A[i+1] = key
 </code></pre>
 
-<p><a href="break">!</a> ===========================================================</p>
+<h1 id="try-it-out">Try it out</h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<pre><code class="language-python sm clipboard">def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i &gt;= 0 and A[i] &gt; key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+</code></pre>
+
+<pre><code class="language-python sm clipboard">import random
+A = [random.randint(0, 100) for i in range(10)]
+print A
+</code></pre>
+
+<pre><code class="language-python sm clipboard">insertion_sort(A)
+print A
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+
+
+<iframe 
+    
+    data-src='http://db.science.uoit.ca:8080/?arg=kenpu/python'
+    
+    style='max-width:100%;width:100%;height:500px'></iframe>
+
+
 
 <h1 id="analysis-of-correctness">Analysis of correctness</h1>
 
 <ul>
-<li><p>Intuition only takes us part way, <em>not the whole way</em>.</p></li>
+<li><p>Intuition is not to be trusted.</p></li>
 
-<li><p>Sometimes, we can formally prove that an algorithm is correct.</p>
-
-<p>But first, we need some machineries.</p></li>
+<li><p>We can formally prove that an algorithm is correct.
+But first, we need some machinery.</p></li>
 </ul>
 
-<p><a href="break">!</a> ===========================================================================</p>
-
-<h2 id="loop-invariance">Loop invariance</h2>
+<h1 id="loop-invariance">Loop invariance</h1>
 
 <p><a href="columns 4:">!</a></p>
 
@@ -296,19 +333,20 @@ a statement that is <strong>always</strong> true
 of each iteration of
 the loop.</p>
 
+<p>At the <em>end</em> of the $i$-th iteration:</p>
+
 <blockquote>
 <ul>
-<li><code>count $\not=$ 0</code></li>
-
-<li><p><code>total</code><code>$_{i+1} \geq$</code> <code>total</code><code>$_i$</code></p>
-
-<p>Note: for loop-invariance, we can refer to the iteration index
-  $i\geq 0$.</p></li>
+<li><a href="comfort">!</a></li>
+<li><code>count</code>$_i$ $\not=$ <code>0</code>
+<i class="fa fa-thumbs-up"></i></li>
+<li><code>total</code><code>$_{i+1} \geq$</code> <code>total</code><code>$_i$</code>
+<i class="fa fa-thumbs-down"></i>:
+This is not a loop-invariance because it may not be true.
+Consider if $v=0$ for some iteration.</li>
 </ul>
 </blockquote></li>
 </ul>
-
-<p><a href="break">!</a> =================================================================</p>
 
 <h1 id="correctness-of-insertion-sort-by-loop-invariance">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
 
@@ -328,8 +366,6 @@ the loop.</p>
 
 <p>There are two loops, with <code>while</code>-loop nested in the <code>for</code>-loop.</p>
 
-<p><a href="break">!</a> =================================================================</p>
-
 <h1 id="correctness-of-insertion-sort-by-loop-invariance-1">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
 
 <p><a href="columns 5:">!</a></p>
@@ -348,23 +384,16 @@ the loop.</p>
 
 <p><strong>Inner-loop invariance</strong></p>
 
-<blockquote>
-<p><code>i</code> is an index such that</p>
+<p>If we assume that $A[0 .. j-1]$ is sorted, then
+the following loop invariance holds for the <code>for</code> loop:</p>
 
-<ul>
-<li><code>A[0 .. i]</code> are all smaller than <code>key</code>.</li>
-<li><code>A[i+2 .. j]</code> are larger or equal to <code>key</code>.</li>
-<li><code>A[i] = A[i+1]</code></li>
-</ul>
-</blockquote>
+<p>At the end of the iteration, we have $A[i\dots j]$ is sorted.</p>
 
 <hr />
 
 <blockquote>
 <p>Can we say anything about <code>A[j+1]</code> to <code>A[len(A)-1]</code>?</p>
 </blockquote>
-
-<p><a href="break">!</a> =================================================================</p>
 
 <h1 id="correctness-of-insertion-sort-by-loop-invariance-2">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
 
@@ -402,8 +431,6 @@ the loop.</p>
 <p>If <code>A[0 .. j-1]</code> is sorted, by the inner-loop invariance, moving key to
 <code>A[i+1]</code> makes <code>A[0 .. j]</code> sorted.</p>
 </blockquote>
-
-<p><a href="break">!</a> =================================================================</p>
 
 <h1 id="correctness-of-insertion-sort-by-loop-invariance-3">Correctness of <code>INSERTION SORT</code> by loop-invariance</h1>
 
@@ -599,6 +626,8 @@ completely sorted by <code>insertion_sort</code>.</p>
 </table>
 
 <h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
 
 <ul>
 <li>INSERTION sort</li>
