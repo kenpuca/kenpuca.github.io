@@ -323,7 +323,7 @@ the loop.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_{i+1} \geq$&lt;/code&gt; &lt;code&gt;total&lt;/code&gt;&lt;code&gt;$_i$&lt;/code&gt;
 &lt;i class=&#34;fa fa-thumbs-down&#34;&gt;&lt;/i&gt;:
 This is not a loop-invariance because it may not be true.
-Consider if $v=0$ for some iteration.&lt;/li&gt;
+Consider if $v &amp;lt; 0$ for some iteration.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
