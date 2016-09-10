@@ -1,0 +1,590 @@
+
+    <!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>From Lisp to Clojure</title>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/bootstrap.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/fonts/fonts.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/css/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/css/theme/white.css">
+
+		
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal.js/lib/css/zenburn.css">
+
+		
+		<script>
+            if(window.location.search.match(/print-pdf/gi)) {
+                window.print_pdf = true;
+            }
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+            link.href = window.print_pdf ? 'https:\/\/kenpuca.github.io/reveal.js/css/print/pdf.css' : 'https:\/\/kenpuca.github.io/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <link rel="stylesheet" href="https://kenpuca.github.io/reveal-style.css">
+
+        
+	</head>
+	<body>
+        <div class="reveal">
+            <div class="slides" style="opacity: 0">
+
+<h1 id="from-lisp-to-clojure">From Lisp to Clojure</h1>
+
+<p><a href="highlight">!</a></p>
+
+<p>Lisp</p>
+
+<blockquote>
+<ul>
+<li>Inspired by $\lambda$-Calculus</li>
+<li>Hyper-productive syntax</li>
+</ul>
+</blockquote>
+
+<p>Clojure</p>
+
+<blockquote>
+<ul>
+<li>Extension to Lisp</li>
+<li>Supports a slightly richer set of syntactic sugars for readability</li>
+<li>Runs on JVM</li>
+</ul>
+</blockquote>
+
+<h1 id="lisp">Lisp</h1>
+
+<ul>
+<li><p>Invented by John McCarthy, 1958</p></li>
+
+<li><p>It&rsquo;s been the foundation of A.I. research ever since.</p></li>
+</ul>
+
+<h1 id="lisp-1">Lisp</h1>
+
+<p><img src="quote1.jpg"></img></p>
+
+<h1 id="lisp-2">Lisp</h1>
+
+<p><img src="quote2.jpg"></img></p>
+
+<h1 id="review-of-lc">Review of LC</h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<h2 id="abstraction">Abstraction</h2>
+
+<p>$\lambda x. e$</p>
+
+<blockquote>
+<p>Example:</p>
+
+<p>$\lambda x.\lambda y. x+y$</p>
+
+<p>$\lambda xy. x+y$ (with syntactic abbreviation)</p>
+</blockquote>
+
+<p><a href="split">!</a></p>
+
+<h2 id="application">Application</h2>
+
+<p>$(e_1 e_2)$</p>
+
+<blockquote>
+<p>Example:</p>
+
+<p>$(((\lambda xy. x+y)\ 1)\ 2)$</p>
+
+<p>$((\lambda xy. x+y)\ 1\ 2)$ (abbreviation)</p>
+</blockquote>
+
+<p><em>Observation</em>:</p>
+
+<p>Application is always a <strong>list</strong> of expressions.  The first expression is the function, and the rest of the list is arguments.</p>
+
+<h1 id="design-of-lisp">Design of Lisp</h1>
+
+<p>LISP = <span style=color:red>LIS</span>t <span style=color:red>P</span>rocessing</p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+<li>Function applications are <em>lists</em>.</li>
+<li>Unless specified, lists are treated as function applications.</li>
+<li>As few additions to LC as possible while still making it humanly usable.</li>
+</ul>
+
+<hr />
+
+<p>Results:</p>
+
+<blockquote>
+<ol>
+<li>The entire language only needs one data structure: lists.</li>
+<li>Simplicity kicks ass.</li>
+</ol>
+</blockquote>
+
+<h1 id="from-lisp-to-clojure-1">From Lisp to Clojure</h1>
+
+<blockquote>
+<p><i>Simplicity is hard work. But, there&rsquo;s a huge payoff. The person who has a genuinely simpler system - a system made out of genuinely simple parts, is going to be able to [e]ffect the greatest change with the least work. He&rsquo;s going to kick your ass. He&rsquo;s gonna spend more time simplifying things up front and in the long haul he&rsquo;s gonna wipe the plate with you because he&rsquo;ll have that ability to change things when you&rsquo;re struggling to push elephants around.</i></p>
+
+<div style=float:right>Rich Hickey, Inventor of Clo<i>j</i>ure</div>
+</blockquote>
+
+<p><a href="--------">!</a></p>
+
+<p><a href="columns 4:">!</a></p>
+
+<div style=font-size:300%>Why Clojure?</div>
+
+<p><a href="split">!</a></p>
+
+<ul>
+<li>Dialect of Lisp</li>
+<li>Runs on JVM with native execution speed of Java</li>
+<li>Natively access Java libraries (huge deal)</li>
+<li>Ported to Javascript &ndash; powers the front-end with React.js</li>
+</ul>
+
+<h1 id="homoiconic-languages">Homoiconic Languages</h1>
+
+<p>Every language must support data structures:</p>
+
+<ul>
+<li><p>C:</p>
+
+<blockquote>
+<p>Arrays: <code>(char*)[] names</code>
+Structures: <code>struct { char *name; }</code></p>
+</blockquote></li>
+
+<li><p>Javascript:</p>
+
+<blockquote>
+<p>JSON: <code>{name: &quot;Jack&quot;, age: 39}</code></p>
+</blockquote></li>
+
+<li><p>Lisp:</p>
+
+<blockquote>
+<p>(Nested) Lists: <code>(1 (2 3) (4 (5 6 7)))</code></p>
+</blockquote></li>
+</ul>
+
+<hr />
+
+<p><strong>Data</strong></p>
+
+<blockquote>
+<p>Given a language $L$, let $\mathbf{D}(L)$ be all possible data structures that can be represented by the language.</p>
+</blockquote>
+
+<h1 id="homoiconic-languages-1">Homoiconic Languages</h1>
+
+<p>Every language must support a (sometimes VAST) collectio of programming constructs:</p>
+
+<ul>
+<li><p>C:</p>
+
+<blockquote>
+<p><code>for(int i=0; i &lt; 10; i++) { ... }</code></p>
+</blockquote></li>
+
+<li><p>Rust:</p>
+
+<blockquote>
+<p><code>fn foo(v1: Vec&lt;i32&gt;, v2: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {...}</code></p>
+</blockquote></li>
+
+<li><p>Lisp:</p>
+
+<blockquote>
+<p>(Nested) lists: <code>(when (nice weather) (go outside))</code></p>
+</blockquote></li>
+</ul>
+
+<hr />
+
+<p><strong>Program</strong></p>
+
+<blockquote>
+<p>Given a language $L$, let $\mathbf{P}(L)$ be all possible (valid) programs that can be constructed in the langauge.</p>
+</blockquote>
+
+<h1 id="homoiconic-languages-2">Homoiconic Languages</h1>
+
+<p><strong>Definition</strong></p>
+
+<p><a href="columns 8:">!</a></p>
+
+<p>A language $L$ is homoiconic if:</p>
+
+<p>$$ \mathbf{P}(L) \subseteq \mathbf{D}(L) $$</p>
+
+<p><a href="split note">!</a></p>
+
+<blockquote>
+<p>Make sure you understand this property.</p>
+
+<p>It means that a homoiconic language can always digest its own program as data, and treat its data as programs.</p>
+</blockquote>
+
+<h1 id="backbone-of-lisp-s-expressions">Backbone of Lisp: S-expressions</h1>
+
+<p>S-expressions can be two things:</p>
+
+<ol>
+<li>Nested lists, or</li>
+<li>A completely valid Lisp program.</li>
+</ol>
+
+<hr />
+
+<p>Atoms:</p>
+
+<blockquote>
+<p><em>Atoms</em> are values such as strings, characters, numbers or symbols.</p>
+</blockquote>
+
+<p>Lists:</p>
+
+<blockquote>
+<p>A bracket enclosed, whitespace separated list of elements.  Each element can
+be an atom or a list.</p>
+</blockquote>
+
+<p>S-expression:</p>
+
+<blockquote>
+<p>A <em>s-exp</em> is a list.</p>
+</blockquote>
+
+<h1 id="s-expression">S-expression</h1>
+
+<pre><code class="language-cfg">s-expr    : '(' expr-list ')'
+
+expr-list : elem expr-list
+          | &lt;Empty&gt;
+
+elem      : s-expr
+          | &lt;Atom&gt;
+</code></pre>
+
+<p><a href="note">!</a> This summarizes the Lisp syntax.</p>
+
+<h1 id="s-expressions-as-syntax">S-expressions as syntax</h1>
+
+<p>S-expressions are so simple that designing programming constructs with with becomes <em>obvious</em>.</p>
+
+<blockquote>
+<ul>
+<li><a href="comfort">!</a></li>
+<li>Declaring a function</li>
+<li>Declaring a variable (this is done with a more general mechanism known as <em>name binding</em>).</li>
+<li>Invoking (evaluating) a function with given parameters</li>
+<li>When a list is just a list</li>
+<li>Flow control</li>
+</ul>
+</blockquote>
+
+<h1 id="s-expressions-as-function-declaration">S-expressions as function declaration</h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<p>Recall in LC:</p>
+
+<p>$$\lambda xyz. \left&lt;\mathrm{expression}\right&gt;$$</p>
+
+<p>Here, we need a function name.</p>
+
+<p>$$\left&lt;\mathrm{name}\right&gt; := \lambda xyz. \left&lt;\mathrm{expression}\right&gt;$$</p>
+
+<p><a href="split">!</a></p>
+
+<p>Turning it into a S-expression:</p>
+
+<pre><code class="language-lisp">(defun &lt;name&gt; ...)
+</code></pre>
+
+<p>Treat the parameters as a list</p>
+
+<pre><code class="language-lisp">(defun &lt;name&gt; (x y z) &lt;body&gt;)
+</code></pre>
+
+<p>This approach of encoding function declaration to s-expressions is used by <em>Common Lisp</em>.</p>
+
+<h1 id="dialects">Dialects</h1>
+
+<pre><code class="language-lisp">(define (&lt;name&gt; x y z) &lt;body&gt;
+</code></pre>
+
+<p>Note the function name is grouped together with the parameters.  This approach is used by <em>Racket</em> (formerly known as <em>Scheme</em>).</p>
+
+<h1 id="name-binding">Name binding</h1>
+
+<pre><code>(define PI 3.1415)
+</code></pre>
+
+<h1 id="local-name-bindings">Local name bindings</h1>
+
+<p>Create a <em>scope</em> with a new nested list:</p>
+
+<pre><code class="language-lisp">(let ...)
+</code></pre>
+
+<p>Create additional &ldquo;local&rdquo; variables in the scope:</p>
+
+<pre><code class="language-lisp">(let ((x &lt;expression&gt;)
+      (y &lt;expression&gt;)) &lt;body&gt;)
+</code></pre>
+
+<p><a href="note">!</a> This is the syntax of Common Lisp.</p>
+
+<h1 id="function-invocation">Function invocation</h1>
+
+<p>Because this is considered to be the <em>most</em> frequently used programming construct, it is represented simply by a list.</p>
+
+<pre><code class="language-lisp">(&lt;name&gt; &lt;expression&gt; &lt;expression&gt; ...)
+</code></pre>
+
+<h1 id="when-a-list-is-just-a-list">When a list is just a list</h1>
+
+<p>What if we really mean to represent a list of elements?</p>
+
+<pre><code class="language-lisp">(quote (&lt;element&gt; &lt;element&gt; ...))
+</code></pre>
+
+<p><a href="note">!</a> This suppresses the inner list as function evaluation.</p>
+
+<h1 id="branching">Branching</h1>
+
+<pre><code class="language-lisp">(if &lt;test&gt; &lt;when-true&gt; &lt;when-false&gt;)
+</code></pre>
+
+<p>The <code>if</code> start of a list indicates that it is a branching form.</p>
+
+<ul>
+<li>It can only have four elements.</li>
+<li>The second element, <code>&lt;test&gt;</code>, is the condition.</li>
+<li>The third element, <code>&lt;when-true&gt;</code>, is evaluated if the condition is true.</li>
+<li>The fourth element, <code>&lt;when-false&gt;</code>, is evaluated if the condition is false.</li>
+</ul>
+
+<h1 id="rolling-up-the-sleeves">Rolling up the sleeves</h1>
+
+<p>Let&rsquo;s flex the <strong>power</strong> of simplicity.</p>
+
+<ol>
+<li>We have only been dealing with lists.</li>
+<li>Some lists start with distinct names, like <code>define</code>, <code>let</code>, <code>if</code>.</li>
+<li>Some nesting of lists needs to be respected, like grouping the parameters as a nested list.</li>
+</ol>
+
+<p><a href="------">!</a></p>
+
+<p><strong>Challenge</strong></p>
+
+<blockquote>
+<p>Compute the factorial of 100.</p>
+</blockquote>
+
+<h1 id="rolling-up-the-sleeves-1">Rolling up the sleeves</h1>
+
+<p><strong>Challenge</strong></p>
+
+<blockquote>
+<p>Compute the factorial of 100.</p>
+</blockquote>
+
+<p><a href="columns 6:">!</a></p>
+
+<pre><code class="language-lisp sm clipboard">(define (factorial n)
+  (if (&lt; n 2) 
+    n 
+    (* n (factorial (- n 1)))))
+</code></pre>
+
+<p><a href="split">!</a></p>
+
+
+
+<iframe 
+    
+    data-src='http://db.science.uoit.ca:8080/?arg=kenpu/racket'
+    
+    style='max-width:100%;width:100%;height:400px'></iframe>
+
+
+
+<h1 id="moving-on-from-lisp-to-clojure">Moving on from Lisp to Clojure</h1>
+
+<p>Lisp is <em>simple</em> (and thus powerful) in syntax.  At the same time, it&rsquo;s also simple in terms of the data structure it can support.  No native support for vectors (dynamic list with random access), hash-maps (associative collections), sets (list without order or multiplicity), &hellip;</p>
+
+<p><a href="-----">!</a></p>
+
+<p><a href="columns 6:">!</a></p>
+
+<p>Clojure is <em>Lisp</em>:</p>
+
+<blockquote>
+<p>Clojure faithfully minimizes syntax by sticking with s-expressions for programming constructs, so it remains <em>homoiconic</em>.</p>
+</blockquote>
+
+<p><a href="split">!</a></p>
+
+<p>Clojure extends <em>Lisp</em>:</p>
+
+<blockquote>
+<p>It adds more syntax (YES&hellip;) to support a richer <em>data</em> constructors for vectors, hash-map etc&hellip;  It also support even more succinct definition of functions.</p>
+</blockquote>
+
+<h1 id="clojure-at-a-glance">Clojure at a glance</h1>
+
+<pre><code class="language-clojure sm clipboard">(defn f [n] (if (&lt; n 2) n (* n (f (dec n)))))
+</code></pre>
+
+<p><a href="note">!</a> The <code>dec</code> function decreases an integer by 1.  You might want to know about <code>bigint</code> function which converts an integer to a BigInteger, when computing the value <code>(f 100)</code>.</p>
+
+
+
+<iframe 
+    
+    data-src='http://db.science.uoit.ca:8080/?arg=kenpu/clojure'
+    
+    style='max-width:100%;width:100%;height:300px'></iframe>
+
+
+
+<h1 id="clojure-at-a-glance-1">Clojure at a glance</h1>
+
+<pre><code class="language-clojure sm clipboard">(import java.util.Vector)
+(let [v (java.util.Vector. (quote (1 2 &quot;blah&quot;)))]
+  (println &quot;Last element =&quot; (.lastElement v)))
+</code></pre>
+
+<p><a href="note">!</a> Wow, we are converting a Lisp list <code>(1 2 &quot;blah&quot;)</code> to a Java vector object, and using the method <code>java.util.Vector.lastElement</code> to access the last element.  &hellip; <strong>And we are still just using nested lists.</strong></p>
+
+
+
+<iframe 
+    
+    data-src='http://db.science.uoit.ca:8080/?arg=kenpu/clojure'
+    
+    style='max-width:100%;width:100%;height:300px'></iframe>
+
+
+
+<h1 id="looking-ahead">Looking ahead</h1>
+
+<ul>
+<li>We will <em>not</em> use Common Lisp, nor Scheme, nor Racket for this course.</li>
+<li>We will explore Clojure into great detail instead.</li>
+<li><a href="comfort">!</a></li>
+</ul>
+
+<h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
+
+<ul>
+<li><p>Once we have lists, we immediately have an entire programming language.</p>
+
+<blockquote>
+<p>All variations of PL based on (nested) lists are referred to as Lisp.</p>
+</blockquote></li>
+
+<li><p>Clojure is a particularly attactive Lisp as it can immediately tap into the vast ecosystem of Java libraries.</p></li>
+</ul>
+</div>
+        </div>
+
+        <script src="/js/jquery-2.2.1.min.js"></script>
+        <script src="/js/pdf.js"></script>
+        <script src="/js/clipboard.min.js"></script>
+
+        <script src="https://kenpuca.github.io/reveal.js/lib/js/head.min.js"></script>
+        <script src="https://kenpuca.github.io/reveal.js/js/reveal.js"></script>
+
+		<script>
+        
+        function isBreak($p, $section) {
+            if($p.is("h1") && $section.children().size() > 0)
+                return true;
+
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides");
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem, $section)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                    if($elem.is("h1")) {
+                        $elem.appendTo($section);
+                    }
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            startReveal($reveal);
+        });
+
+        function startReveal($slides) {
+			Reveal.initialize({
+				history: true,
+                slideNumber: true,
+                center: false,
+                transition: "zoom",
+                transitionSpeed: "fast",
+
+				
+				dependencies: [
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
+                    
+                        { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
+                    
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/math/math.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
+				]
+			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
+        }
+		</script>
+	</body>
+</html>
+
+

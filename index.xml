@@ -782,7 +782,7 @@ solution of $P$.&lt;/p&gt;
 &lt;h1 id=&#34;example-cleaning-a-mess&#34;&gt;Example: cleaning a mess&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&#34;Minion.jpg&#34; style=&#34;float:left;width:80px;margin:0 20px 0px 0&#34;&gt;&lt;/img&gt;
-Consider how you can instruct a minion to clean a messy office.  The minion has
+Consider how you can instruct a minion to clean a messy office.  The minion
 is overwhelmed by the mess of the entire office.  Divide and conquer is a great
 way to solve the cleaning problem.&lt;/p&gt;
 
@@ -2614,6 +2614,484 @@ output.&lt;/p&gt;
     </item>
     
     <item>
+      <title>From Lisp to Clojure</title>
+      <link>https://kenpuca.github.io/courses/programming-languages/lisp-clojure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/lisp-clojure/</guid>
+      <description>
+
+&lt;h1 id=&#34;from-lisp-to-clojure&#34;&gt;From Lisp to Clojure&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lisp&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Inspired by $\lambda$-Calculus&lt;/li&gt;
+&lt;li&gt;Hyper-productive syntax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Clojure&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Extension to Lisp&lt;/li&gt;
+&lt;li&gt;Supports a slightly richer set of syntactic sugars for readability&lt;/li&gt;
+&lt;li&gt;Runs on JVM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;lisp&#34;&gt;Lisp&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Invented by John McCarthy, 1958&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s been the foundation of A.I. research ever since.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;lisp-1&#34;&gt;Lisp&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;quote1.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;lisp-2&#34;&gt;Lisp&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;quote2.jpg&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;review-of-lc&#34;&gt;Review of LC&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;abstraction&#34;&gt;Abstraction&lt;/h2&gt;
+
+&lt;p&gt;$\lambda x. e$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;p&gt;$\lambda x.\lambda y. x+y$&lt;/p&gt;
+
+&lt;p&gt;$\lambda xy. x+y$ (with syntactic abbreviation)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;application&#34;&gt;Application&lt;/h2&gt;
+
+&lt;p&gt;$(e_1 e_2)$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;p&gt;$(((\lambda xy. x+y)\ 1)\ 2)$&lt;/p&gt;
+
+&lt;p&gt;$((\lambda xy. x+y)\ 1\ 2)$ (abbreviation)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Observation&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;Application is always a &lt;strong&gt;list&lt;/strong&gt; of expressions.  The first expression is the function, and the rest of the list is arguments.&lt;/p&gt;
+
+&lt;h1 id=&#34;design-of-lisp&#34;&gt;Design of Lisp&lt;/h1&gt;
+
+&lt;p&gt;LISP = &lt;span style=color:red&gt;LIS&lt;/span&gt;t &lt;span style=color:red&gt;P&lt;/span&gt;rocessing&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Function applications are &lt;em&gt;lists&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Unless specified, lists are treated as function applications.&lt;/li&gt;
+&lt;li&gt;As few additions to LC as possible while still making it humanly usable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Results:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The entire language only needs one data structure: lists.&lt;/li&gt;
+&lt;li&gt;Simplicity kicks ass.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;from-lisp-to-clojure-1&#34;&gt;From Lisp to Clojure&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;i&gt;Simplicity is hard work. But, there&amp;rsquo;s a huge payoff. The person who has a genuinely simpler system - a system made out of genuinely simple parts, is going to be able to [e]ffect the greatest change with the least work. He&amp;rsquo;s going to kick your ass. He&amp;rsquo;s gonna spend more time simplifying things up front and in the long haul he&amp;rsquo;s gonna wipe the plate with you because he&amp;rsquo;ll have that ability to change things when you&amp;rsquo;re struggling to push elephants around.&lt;/i&gt;&lt;/p&gt;
+
+&lt;div style=float:right&gt;Rich Hickey, Inventor of Clo&lt;i&gt;j&lt;/i&gt;ure&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;--------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=font-size:300%&gt;Why Clojure?&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dialect of Lisp&lt;/li&gt;
+&lt;li&gt;Runs on JVM with native execution speed of Java&lt;/li&gt;
+&lt;li&gt;Natively access Java libraries (huge deal)&lt;/li&gt;
+&lt;li&gt;Ported to Javascript &amp;ndash; powers the front-end with React.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;homoiconic-languages&#34;&gt;Homoiconic Languages&lt;/h1&gt;
+
+&lt;p&gt;Every language must support data structures:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;C:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Arrays: &lt;code&gt;(char*)[] names&lt;/code&gt;
+Structures: &lt;code&gt;struct { char *name; }&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Javascript:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;JSON: &lt;code&gt;{name: &amp;quot;Jack&amp;quot;, age: 39}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Lisp:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(Nested) Lists: &lt;code&gt;(1 (2 3) (4 (5 6 7)))&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a language $L$, let $\mathbf{D}(L)$ be all possible data structures that can be represented by the language.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;homoiconic-languages-1&#34;&gt;Homoiconic Languages&lt;/h1&gt;
+
+&lt;p&gt;Every language must support a (sometimes VAST) collectio of programming constructs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;C:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;for(int i=0; i &amp;lt; 10; i++) { ... }&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Rust:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;fn foo(v1: Vec&amp;lt;i32&amp;gt;, v2: Vec&amp;lt;i32&amp;gt;) -&amp;gt; Vec&amp;lt;i32&amp;gt; {...}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Lisp:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(Nested) lists: &lt;code&gt;(when (nice weather) (go outside))&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Program&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a language $L$, let $\mathbf{P}(L)$ be all possible (valid) programs that can be constructed in the langauge.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;homoiconic-languages-2&#34;&gt;Homoiconic Languages&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A language $L$ is homoiconic if:&lt;/p&gt;
+
+&lt;p&gt;$$ \mathbf{P}(L) \subseteq \mathbf{D}(L) $$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Make sure you understand this property.&lt;/p&gt;
+
+&lt;p&gt;It means that a homoiconic language can always digest its own program as data, and treat its data as programs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;backbone-of-lisp-s-expressions&#34;&gt;Backbone of Lisp: S-expressions&lt;/h1&gt;
+
+&lt;p&gt;S-expressions can be two things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Nested lists, or&lt;/li&gt;
+&lt;li&gt;A completely valid Lisp program.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Atoms:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Atoms&lt;/em&gt; are values such as strings, characters, numbers or symbols.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lists:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A bracket enclosed, whitespace separated list of elements.  Each element can
+be an atom or a list.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;S-expression:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A &lt;em&gt;s-exp&lt;/em&gt; is a list.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;s-expression&#34;&gt;S-expression&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cfg&#34;&gt;s-expr    : &#39;(&#39; expr-list &#39;)&#39;
+
+expr-list : elem expr-list
+          | &amp;lt;Empty&amp;gt;
+
+elem      : s-expr
+          | &amp;lt;Atom&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This summarizes the Lisp syntax.&lt;/p&gt;
+
+&lt;h1 id=&#34;s-expressions-as-syntax&#34;&gt;S-expressions as syntax&lt;/h1&gt;
+
+&lt;p&gt;S-expressions are so simple that designing programming constructs with with becomes &lt;em&gt;obvious&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Declaring a function&lt;/li&gt;
+&lt;li&gt;Declaring a variable (this is done with a more general mechanism known as &lt;em&gt;name binding&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;Invoking (evaluating) a function with given parameters&lt;/li&gt;
+&lt;li&gt;When a list is just a list&lt;/li&gt;
+&lt;li&gt;Flow control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;s-expressions-as-function-declaration&#34;&gt;S-expressions as function declaration&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Recall in LC:&lt;/p&gt;
+
+&lt;p&gt;$$\lambda xyz. \left&amp;lt;\mathrm{expression}\right&amp;gt;$$&lt;/p&gt;
+
+&lt;p&gt;Here, we need a function name.&lt;/p&gt;
+
+&lt;p&gt;$$\left&amp;lt;\mathrm{name}\right&amp;gt; := \lambda xyz. \left&amp;lt;\mathrm{expression}\right&amp;gt;$$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Turning it into a S-expression:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(defun &amp;lt;name&amp;gt; ...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Treat the parameters as a list&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(defun &amp;lt;name&amp;gt; (x y z) &amp;lt;body&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This approach of encoding function declaration to s-expressions is used by &lt;em&gt;Common Lisp&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;dialects&#34;&gt;Dialects&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(define (&amp;lt;name&amp;gt; x y z) &amp;lt;body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the function name is grouped together with the parameters.  This approach is used by &lt;em&gt;Racket&lt;/em&gt; (formerly known as &lt;em&gt;Scheme&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h1 id=&#34;name-binding&#34;&gt;Name binding&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;(define PI 3.1415)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;local-name-bindings&#34;&gt;Local name bindings&lt;/h1&gt;
+
+&lt;p&gt;Create a &lt;em&gt;scope&lt;/em&gt; with a new nested list:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(let ...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create additional &amp;ldquo;local&amp;rdquo; variables in the scope:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(let ((x &amp;lt;expression&amp;gt;)
+      (y &amp;lt;expression&amp;gt;)) &amp;lt;body&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This is the syntax of Common Lisp.&lt;/p&gt;
+
+&lt;h1 id=&#34;function-invocation&#34;&gt;Function invocation&lt;/h1&gt;
+
+&lt;p&gt;Because this is considered to be the &lt;em&gt;most&lt;/em&gt; frequently used programming construct, it is represented simply by a list.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(&amp;lt;name&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;expression&amp;gt; ...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;when-a-list-is-just-a-list&#34;&gt;When a list is just a list&lt;/h1&gt;
+
+&lt;p&gt;What if we really mean to represent a list of elements?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(quote (&amp;lt;element&amp;gt; &amp;lt;element&amp;gt; ...))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This suppresses the inner list as function evaluation.&lt;/p&gt;
+
+&lt;h1 id=&#34;branching&#34;&gt;Branching&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(if &amp;lt;test&amp;gt; &amp;lt;when-true&amp;gt; &amp;lt;when-false&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;if&lt;/code&gt; start of a list indicates that it is a branching form.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It can only have four elements.&lt;/li&gt;
+&lt;li&gt;The second element, &lt;code&gt;&amp;lt;test&amp;gt;&lt;/code&gt;, is the condition.&lt;/li&gt;
+&lt;li&gt;The third element, &lt;code&gt;&amp;lt;when-true&amp;gt;&lt;/code&gt;, is evaluated if the condition is true.&lt;/li&gt;
+&lt;li&gt;The fourth element, &lt;code&gt;&amp;lt;when-false&amp;gt;&lt;/code&gt;, is evaluated if the condition is false.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;rolling-up-the-sleeves&#34;&gt;Rolling up the sleeves&lt;/h1&gt;
+
+&lt;p&gt;Let&amp;rsquo;s flex the &lt;strong&gt;power&lt;/strong&gt; of simplicity.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We have only been dealing with lists.&lt;/li&gt;
+&lt;li&gt;Some lists start with distinct names, like &lt;code&gt;define&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt;, &lt;code&gt;if&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Some nesting of lists needs to be respected, like grouping the parameters as a nested list.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;------&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Challenge&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Compute the factorial of 100.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;rolling-up-the-sleeves-1&#34;&gt;Rolling up the sleeves&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Challenge&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Compute the factorial of 100.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp sm clipboard&#34;&gt;(define (factorial n)
+  (if (&amp;lt; n 2) 
+    n 
+    (* n (factorial (- n 1)))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;iframe 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/racket&#39;
+    
+    style=&#39;max-width:100%;width:100%;height:400px&#39;&gt;&lt;/iframe&gt;
+
+
+
+&lt;h1 id=&#34;moving-on-from-lisp-to-clojure&#34;&gt;Moving on from Lisp to Clojure&lt;/h1&gt;
+
+&lt;p&gt;Lisp is &lt;em&gt;simple&lt;/em&gt; (and thus powerful) in syntax.  At the same time, it&amp;rsquo;s also simple in terms of the data structure it can support.  No native support for vectors (dynamic list with random access), hash-maps (associative collections), sets (list without order or multiplicity), &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clojure is &lt;em&gt;Lisp&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Clojure faithfully minimizes syntax by sticking with s-expressions for programming constructs, so it remains &lt;em&gt;homoiconic&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clojure extends &lt;em&gt;Lisp&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It adds more syntax (YES&amp;hellip;) to support a richer &lt;em&gt;data&lt;/em&gt; constructors for vectors, hash-map etc&amp;hellip;  It also support even more succinct definition of functions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;clojure-at-a-glance&#34;&gt;Clojure at a glance&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure sm clipboard&#34;&gt;(defn f [n] (if (&amp;lt; n 2) n (* n (f (dec n)))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; The &lt;code&gt;dec&lt;/code&gt; function decreases an integer by 1.  You might want to know about &lt;code&gt;bigint&lt;/code&gt; function which converts an integer to a BigInteger, when computing the value &lt;code&gt;(f 100)&lt;/code&gt;.&lt;/p&gt;
+
+
+
+&lt;iframe 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/clojure&#39;
+    
+    style=&#39;max-width:100%;width:100%;height:300px&#39;&gt;&lt;/iframe&gt;
+
+
+
+&lt;h1 id=&#34;clojure-at-a-glance-1&#34;&gt;Clojure at a glance&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure sm clipboard&#34;&gt;(import java.util.Vector)
+(let [v (java.util.Vector. (quote (1 2 &amp;quot;blah&amp;quot;)))]
+  (println &amp;quot;Last element =&amp;quot; (.lastElement v)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Wow, we are converting a Lisp list &lt;code&gt;(1 2 &amp;quot;blah&amp;quot;)&lt;/code&gt; to a Java vector object, and using the method &lt;code&gt;java.util.Vector.lastElement&lt;/code&gt; to access the last element.  &amp;hellip; &lt;strong&gt;And we are still just using nested lists.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;iframe 
+    
+    data-src=&#39;http://db.science.uoit.ca:8080/?arg=kenpu/clojure&#39;
+    
+    style=&#39;max-width:100%;width:100%;height:300px&#39;&gt;&lt;/iframe&gt;
+
+
+
+&lt;h1 id=&#34;looking-ahead&#34;&gt;Looking ahead&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We will &lt;em&gt;not&lt;/em&gt; use Common Lisp, nor Scheme, nor Racket for this course.&lt;/li&gt;
+&lt;li&gt;We will explore Clojure into great detail instead.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Once we have lists, we immediately have an entire programming language.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All variations of PL based on (nested) lists are referred to as Lisp.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clojure is a particularly attactive Lisp as it can immediately tap into the vast ecosystem of Java libraries.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Hello sandbox</title>
       <link>https://kenpuca.github.io/slides/sandbox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2655,107 +3133,6 @@ greater insights into a multitude of social and economic issues.&lt;/p&gt;
 &lt;p&gt;In collaboration with &lt;a href=&#34;http://www.cs.toronto.edu/~ekzhu/&#34;&gt;Toronto&lt;/a&gt;, we are
 building an Internet scale data integration system specifically designed for
 finding linkages in Open Data.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Programming Languages</title>
-      <link>https://kenpuca.github.io/courses/programming-languages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/courses/programming-languages/</guid>
-      <description>&lt;div class=&#34;jumbotron&#34;&gt;
-	&lt;h1&gt;Programming Languages&lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class=row&gt;
-	&lt;div class=col-md-3&gt;
-	    &lt;p style=margin-top:10px;font-style:italic;font-size:90%&gt;
-			The topic of this course is the theory and practice of *programming languages*.  We will be focused on the design principles and programming patterns of several programming languages from different programming paradigms.  We will pay particular attention to the program techniques in functional programming, and why they are gaining greater importance in modern programming.
-		&lt;/p&gt;
-		&lt;img src=&#34;text-1.png&#34; width=100%&gt;&lt;/img&gt;
-		&lt;img src=&#34;text-2.png&#34; width=100%&gt;&lt;/img&gt;
-		&lt;img src=&#34;text-3.png&#34; width=100%&gt;&lt;/img&gt;
-	&lt;/div&gt;
-	&lt;div class=col-md-9&gt;
-		&lt;div class=&#34;panel panel-info&#34;&gt;
-			&lt;div class=&#34;panel-heading&#34;&gt;
-				&lt;h1 class=&#34;panel-title&#34;&gt;Foundations of computation&lt;/h1&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;panel-body&#34;&gt;
-				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;stateful-computation&#34;&gt;Stateful computation&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;functional-computation&#34;&gt; Symbolic computation&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;
-						&lt;a href=&#34;tour-of-languages&#34;&gt;Programming languages&lt;/a&gt;
-					&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		&lt;div class=&#34;panel panel-info&#34;&gt;
-			&lt;div class=&#34;panel-heading&#34;&gt;
-				&lt;h1 class=&#34;panel-title&#34;&gt;Functional programming in &lt;b&gt;Clojure&lt;/b&gt;&lt;/h1&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;panel-body&#34;&gt;
-				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Lisp &amp; Clojure&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Readers - form - data - function&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Sequences, Lazy evaluation and other functional constructs&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces and polymorphism&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Lisp in other languages&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		&lt;div class=&#34;panel panel-info&#34;&gt;
-			&lt;div class=&#34;panel-heading&#34;&gt;
-				&lt;h1 class=&#34;panel-title&#34;&gt;Object oriented programming in &lt;b&gt;Scala&lt;/b&gt;&lt;/h1&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;panel-body&#34;&gt;
-				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Syntax and semantics of Scala&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Classes, objects and traits&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Types&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Functions&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Collections&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Pattern matching&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		&lt;div class=&#34;panel panel-info&#34;&gt;
-			&lt;div class=&#34;panel-heading&#34;&gt;
-				&lt;h1 class=&#34;panel-title&#34;&gt;Concurrency and reactive programming&lt;/h1&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;panel-body&#34;&gt;
-				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in Clojure&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in Scala&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Concurrency in other languages&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Reactive programming&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		&lt;div class=&#34;panel panel-info&#34;&gt;
-			&lt;div class=&#34;panel-heading&#34;&gt;
-				&lt;h1 class=&#34;panel-title&#34;&gt;Advanced topics&lt;/h1&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;panel-body&#34;&gt;
-				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Macros&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Logical programming&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-	&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;style&gt; a[href=&#34;&#34;] {color: #888;} &lt;/style&gt;
 </description>
     </item>
     
