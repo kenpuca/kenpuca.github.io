@@ -222,7 +222,7 @@ where the elements are to be compared by a &lt;em&gt;comparator&lt;/em&gt; funct
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def insertion_sort(A):
+&lt;pre&gt;&lt;code class=&#34;language-python nu&#34;&gt;def insertion_sort(A):
   for j in range(1, len(A)):
     key = A[j]
     i = j-1
@@ -621,7 +621,7 @@ completely sorted by &lt;code&gt;insertion_sort&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;challenge&#34;&gt;Challenge&lt;/h1&gt;
 
-&lt;p&gt;Is &lt;code&gt;INSERTSORT&lt;/code&gt; a stable sorting algorithm?&lt;/p&gt;
+&lt;p&gt;Is INSERTION sort a stable sorting algorithm?&lt;/p&gt;
 
 &lt;p&gt;Recall:&lt;/p&gt;
 
@@ -2015,6 +2015,55 @@ S 0 &amp;amp;=&amp;amp; (\lambda n. \lambda yx.ynyx)0 \\
 &lt;p&gt;So,&lt;/p&gt;
 
 &lt;p&gt;$$ \mathbf{Y} f x \implies f (\mathbf{Y} f) x \implies f f \dots f x $$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; $\mathbf{Y} f$ is a &lt;em&gt;fixed point&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;using-y-combinator-to-implement-factorial&#34;&gt;Using Y-combinator to implement factorial&lt;/h1&gt;
+
+&lt;p&gt;Consider a function $F$ as:&lt;/p&gt;
+
+&lt;p&gt;$$\lambda fx. (\mathrm{ifzero}\ x)\ 1\ (*\ x\ (f\ (\mathrm{dec}\ x)))$$&lt;/p&gt;
+
+&lt;p&gt;If we apply the Y-combinator to $F$, we get:&lt;/p&gt;
+
+&lt;p&gt;$$ (\mathbf{Y} F) n = F (\mathbf{Y} F) n $$&lt;/p&gt;
+
+&lt;p&gt;You can check the following:&lt;/p&gt;
+
+&lt;p&gt;$$ (\mathbf{Y} F) n = (\mathrm{ifzero}\ n)\ 1\ (*\ n\ ((\mathbf{Y} F)\ (\mathrm{dec}\ n))) $$&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This is really quite amazing.  We have achieved Turing-completeness via recursion.  The amazing part is that we don&amp;rsquo;t need variables to refer to any values.  So $F$ is just for convenience and readability.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;LC is purely symbolic.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It carries out computation by very simple string rewrites:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Function application&lt;/li&gt;
+&lt;li&gt;Variable renaming&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It solves problem by:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Encode the problem as a single (huge) string of LC expression.&lt;/li&gt;
+&lt;li&gt;Using the rules to rewrite the string to a &lt;em&gt;normal&lt;/em&gt; form.&lt;/li&gt;
+&lt;li&gt;The resulting LC expression is the answer.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No variables are needed.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -2469,6 +2518,308 @@ output.&lt;/p&gt;
       
       <guid>https://kenpuca.github.io/courses/algorithms/bucket-sort/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Clojure: the language</title>
+      <link>https://kenpuca.github.io/courses/programming-languages/clojure-language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/clojure-language/</guid>
+      <description>
+
+&lt;h1 id=&#34;clojure-the-language&#34;&gt;Clojure: the language&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Life cycle of Lisp code&lt;/li&gt;
+&lt;li&gt;Raw basics&lt;/li&gt;
+&lt;li&gt;Syntactic sugars&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;review-of-lisp&#34;&gt;Review of Lisp&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A program is a (nested) list.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Not all lists are valid programs.  Only certain type of lists can be interpreted as programs.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Valid: &lt;code&gt;(+ 1 2 (* 3 5))&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Invalid: &lt;code&gt;(1 2 +)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sometimes the validity of a list depends on the dialect of Lisp:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;(defun add (a b) (+ a b))&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Valid for &lt;em&gt;Common Lisp&lt;/em&gt;, but not &lt;em&gt;Racket&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;(define (add a b) (+ a b))&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Valid for &lt;em&gt;Racket&lt;/em&gt;, but not &lt;em&gt;Common Lisp&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;lifecycle-of-lists-in-lisp&#34;&gt;Lifecycle of lists in Lisp&lt;/h1&gt;
+
+&lt;p&gt;The unified representation of programs using a data structure that programs can manipulate, Lisp has a uniquely self-referencial nature that makes it exceedingly powerful (and intellectually challenging).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; &lt;i style=font-size:200%;vertical-align:middle class=&#34;fa fa-bolt&#34;&gt;&lt;/i&gt; Lisp rewrites itself, and it &lt;em&gt;grows&lt;/em&gt; by itself.&lt;/p&gt;
+
+&lt;h1 id=&#34;two-phase-compilation&#34;&gt;Two-phase compilation&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;lisp-pre-expand.jpg&#34; alt=&#34;pre-expanded&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; During expansion, functions, known as &lt;em&gt;macros&lt;/em&gt;, evaluate certain fragments in the program.  These fragments are the extensions to the language.&lt;/p&gt;
+
+&lt;h1 id=&#34;two-phase-compilation-1&#34;&gt;Two-phase compilation&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 7:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;lisp-post-expand.jpg&#34; alt=&#34;post-expanded&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The macro functions converts the entire nested list to a valid Lisp program.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp sm&#34;&gt;(... (macro (quote (... invalid-list ...))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gets evaluated to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp sm&#34;&gt;(... (... valid-list ...))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;core-clojure&#34;&gt;Core Clojure&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;List-only core syntax (low-level and verbose)&lt;/li&gt;
+&lt;li&gt;(Sensible) syntactic extensions&lt;/li&gt;
+&lt;li&gt;Tons of macros&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;clojure&#34;&gt;Clojure&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition:&lt;/strong&gt; (Atoms)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;An &lt;em&gt;atom&lt;/em&gt; is a value that can be an element of a list.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;*******&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s go through the different atoms of the core-clojure langauge.&lt;/p&gt;
+
+&lt;h1 id=&#34;numbers&#34;&gt;Numbers&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Numbers&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Long numbers&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;3.1415&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ratio&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;1/3&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;BigInt&lt;/td&gt;
+&lt;td&gt;10000N&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;BigDecimal&lt;/td&gt;
+&lt;td&gt;3.1415M&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;strings&#34;&gt;Strings&lt;/h1&gt;
+
+&lt;p&gt;Simple strings:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;Hello world.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;I say \&amp;quot;Hello\&amp;quot; to the world&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Multiline string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;&amp;quot;Hello,
+This is a big world of long
+sentences.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;character&#34;&gt;Character&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;\a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;keywords&#34;&gt;Keywords&lt;/h1&gt;
+
+&lt;p&gt;Keywords are a staple of Clojure programs.  They are quick and efficient way to create &lt;em&gt;constants&lt;/em&gt;.
+They are similar to the Java &lt;code&gt;enum&lt;/code&gt; values.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 8:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Keywords have the same rule as variable names (aka &lt;em&gt;symbols&lt;/em&gt;), except they must start with &lt;code&gt;:&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:red
+:blue
+:green
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:big-red-apple
+:blue-sky
+:important-field!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;split note&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Later, we will introduce namespaces.  Like symbols, keywords can be specialized by a namespace.&lt;/p&gt;
+
+&lt;h1 id=&#34;symbols&#34;&gt;Symbols&lt;/h1&gt;
+
+&lt;p&gt;Symbols are variables which are labels referring to some data or function.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; It&amp;rsquo;s natural to think of Clojure symbols as variables.  But Clojure can do &lt;em&gt;more&lt;/em&gt; with its symbols than other languages can do with variables.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Clojure has some very relaxed rules in naming symbols:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure sm&#34;&gt;a                 ; looks like a variable.
+*a*               ; can have (almost) any characters except whitespaces
+int-&amp;gt;float        ; good names can be extremely satisfying
+java.lang/Integer ; a symbol that has a namespace &amp;quot;java.lang&amp;quot;, and name &amp;quot;Integer&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;more-about-symbols&#34;&gt;More about symbols&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Var&lt;/em&gt; s are symbols which represent other expressions&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nosyntax&#34;&gt;a =&amp;gt; 42
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Almost) each time a &lt;em&gt;var&lt;/em&gt; appears, it is evaluated to its expression.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other languages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In other programming languages, one can &lt;em&gt;only&lt;/em&gt; access the expression referred by variables.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lisp&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In Lisp, we can (and need) to access (and create) the variable &lt;em&gt;itself&lt;/em&gt; using Lisp.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure sm&#34;&gt;(var a)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;beyond-parentheses-in-clojure&#34;&gt;Beyond parentheses in Clojure&lt;/h1&gt;
+
+&lt;p&gt;Clojure uses other brackets to improve the parentheses overload.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-lisp&#34;&gt;(let ((a 10)
+      (b 20))
+  (+ a b))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Common Lisp&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(let [a 10
+      b 20]
+  (+ a b))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Clojure&lt;/p&gt;
+
+&lt;h1 id=&#34;lambda-calculus-in-clojure&#34;&gt;Lambda Calculus in Clojure&lt;/h1&gt;
+
+&lt;p&gt;We will focus on the core Clojure - which is a Turing-complete implementation of Lambda Calculus.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;***&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Function application&lt;/li&gt;
+&lt;li&gt;Function abstraction&lt;/li&gt;
+&lt;li&gt;Symbol binding&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;function-application&#34;&gt;Function application&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(f &amp;lt;arg&amp;gt; &amp;lt;arg&amp;gt; ...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(+ 1 2 3 4)
+(/ (+ 1 2 3 4) 4.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;function-abstraction&#34;&gt;Function Abstraction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(fn &amp;lt;alias?&amp;gt; [ &amp;lt;args&amp;gt; ] &amp;lt;body&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(fn [a b] (/ (+ a b) 2))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Computing the average of two numbers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(fn factorial [n]
+  (if (&amp;lt; n 2) n (* n (factorial (dec n)))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Recursion function that uses an alias &lt;code&gt;factorial&lt;/code&gt; for itself.  The alias is only valid in the body of the &lt;code&gt;fn&lt;/code&gt; defintion.&lt;/p&gt;
+
+&lt;h1 id=&#34;symbol-binding&#34;&gt;Symbol binding&lt;/h1&gt;
+
+&lt;p&gt;Symbols are just names, and they can be used to represent anything, such as:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;expressions&lt;/li&gt;
+&lt;li&gt;functions&lt;/li&gt;
+&lt;li&gt;variables&lt;/li&gt;
+&lt;li&gt;lists (or programs)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: &lt;em&gt;Symbols Binding&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When we associate a symbol to something else, the &lt;em&gt;association&lt;/em&gt; is called a &lt;em&gt;binding&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -2991,7 +3342,11 @@ elem      : s-expr
 			&lt;div class=&#34;panel-body&#34;&gt;
 				&lt;ul class=list-group&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;lisp-clojure&#34;&gt;Lisp &amp; Clojure&lt;/a&gt;&lt;/li&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Readers - form - data - function&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;
+                        &lt;a href=&#34;clojure-language&#34;&gt;Readers - form - data - function&lt;/a&gt;
+                        &lt;span style=float:right class=&#34;label
+                        label-warning&#34;&gt;Draft&lt;/span&gt;
+                    &lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Sequences, Lazy evaluation and other functional constructs&lt;/a&gt;&lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces and polymorphism&lt;/a&gt;&lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Lisp in other languages&lt;/a&gt;&lt;/li&gt;

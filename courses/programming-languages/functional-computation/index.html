@@ -461,6 +461,55 @@ S 0 &amp;=&amp; (\lambda n. \lambda yx.ynyx)0 \\
 <p>So,</p>
 
 <p>$$ \mathbf{Y} f x \implies f (\mathbf{Y} f) x \implies f f \dots f x $$</p>
+
+<blockquote>
+<p><a href="note">!</a> $\mathbf{Y} f$ is a <em>fixed point</em>.</p>
+</blockquote>
+
+<h1 id="using-y-combinator-to-implement-factorial">Using Y-combinator to implement factorial</h1>
+
+<p>Consider a function $F$ as:</p>
+
+<p>$$\lambda fx. (\mathrm{ifzero}\ x)\ 1\ (*\ x\ (f\ (\mathrm{dec}\ x)))$$</p>
+
+<p>If we apply the Y-combinator to $F$, we get:</p>
+
+<p>$$ (\mathbf{Y} F) n = F (\mathbf{Y} F) n $$</p>
+
+<p>You can check the following:</p>
+
+<p>$$ (\mathbf{Y} F) n = (\mathrm{ifzero}\ n)\ 1\ (*\ n\ ((\mathbf{Y} F)\ (\mathrm{dec}\ n))) $$</p>
+
+<blockquote>
+<p><a href="note">!</a> This is really quite amazing.  We have achieved Turing-completeness via recursion.  The amazing part is that we don&rsquo;t need variables to refer to any values.  So $F$ is just for convenience and readability.</p>
+</blockquote>
+
+<h1 id="summary">Summary</h1>
+
+<p><a href="highlight">!</a></p>
+
+<ul>
+<li><p><a href="comfort">!</a></p></li>
+
+<li><p>LC is purely symbolic.</p></li>
+
+<li><p>It carries out computation by very simple string rewrites:</p>
+
+<ol>
+<li>Function application</li>
+<li>Variable renaming</li>
+</ol></li>
+
+<li><p>It solves problem by:</p>
+
+<ol>
+<li>Encode the problem as a single (huge) string of LC expression.</li>
+<li>Using the rules to rewrite the string to a <em>normal</em> form.</li>
+<li>The resulting LC expression is the answer.</li>
+</ol></li>
+
+<li><p>No variables are needed.</p></li>
+</ul>
 </div>
         </div>
 
@@ -524,7 +573,9 @@ S 0 &amp;=&amp; (\lambda n. \lambda yx.ynyx)0 \\
                     {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/notes/notes.js', async: true },
                     {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/highlight/highlight.js', 
                         async: true, 
-                        callback: function() { hljs.initHighlightingOnLoad(); } },
+                        callback: function() { hljs.initHighlightingOnLoad(); } 
+                    },
+                    {src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/hljslinenumber/index.js', async: true},
                     
                         { src: 'https:\/\/kenpuca.github.io/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     
