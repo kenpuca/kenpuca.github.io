@@ -52,7 +52,15 @@
   </url>
   
   <url>
+    <loc>https://kenpuca.github.io/courses/algorithms/big-o/</loc>
+  </url>
+  
+  <url>
     <loc>https://kenpuca.github.io/courses/algorithms/bucket-sort/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/courses/programming-languages/clojure-language-2/</loc>
   </url>
   
   <url>

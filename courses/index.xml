@@ -2443,7 +2443,10 @@ output.&lt;/p&gt;
 			&lt;/div&gt;
 			&lt;div class=&#34;panel-body&#34;&gt;
 				&lt;ul class=list-group&gt;
-					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Asymptotic notations&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=list-group-item&gt;
+						&lt;a href=&#34;big-o&#34;&gt;Asymptotic notations&lt;/a&gt;
+						&lt;span style=&#34;float:right&#34; class=&#34;label label-warning&#34;&gt;DRAFT&lt;/span&gt;
+					&lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Recurrence equations&lt;/a&gt;&lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Probabilistic analysis of randomized algorithms&lt;/a&gt;&lt;/li&gt;
 				&lt;/ul&gt;
@@ -2512,12 +2515,70 @@ output.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Asymptotic notation</title>
+      <link>https://kenpuca.github.io/courses/algorithms/big-o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/algorithms/big-o/</guid>
+      <description>
+
+&lt;h1 id=&#34;asymptotic-notation&#34;&gt;Asymptotic notation&lt;/h1&gt;
+
+&lt;p&gt;We will develop a way to measure the efficiency of algorithms which is &lt;em&gt;invariant&lt;/em&gt; to the non-essential issues such as the speed of computer hardware and the effiency of the programming language used.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;&amp;amp;&amp;amp;&amp;amp;&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The measurement functions is only sensitive to the &lt;em&gt;growth&lt;/em&gt; of the time it takes for an algorithm to complete with respect to the size of the input.&lt;/p&gt;
+
+&lt;h1 id=&#34;functions-over-integers&#34;&gt;Functions over integers&lt;/h1&gt;
+
+&lt;p&gt;For the time being, we will limit the discussion to functions over positive integers. $f(n), g(n), \dots$&lt;/p&gt;
+
+&lt;h1 id=&#34;comparing-two-functions&#34;&gt;Comparing two functions&lt;/h1&gt;
+
+&lt;p&gt;If we have&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bucket Sort</title>
       <link>https://kenpuca.github.io/courses/algorithms/bucket-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kenpuca.github.io/courses/algorithms/bucket-sort/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Clojure Language</title>
+      <link>https://kenpuca.github.io/courses/programming-languages/clojure-language-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/courses/programming-languages/clojure-language-2/</guid>
+      <description>
+
+&lt;h1 id=&#34;clojure-part-ii&#34;&gt;Clojure: Part II&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We will be covering the &lt;em&gt;rest&lt;/em&gt; of the Clojure syntax.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Native data structures beyond just lists:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;vector&lt;/li&gt;
+&lt;li&gt;set&lt;/li&gt;
+&lt;li&gt;hash-map&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Iteration and branching&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Functions and higher order functions&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -2528,7 +2589,7 @@ output.&lt;/p&gt;
       <guid>https://kenpuca.github.io/courses/programming-languages/clojure-language/</guid>
       <description>
 
-&lt;h1 id=&#34;clojure-the-language&#34;&gt;Clojure: the language&lt;/h1&gt;
+&lt;h1 id=&#34;clojure-part-i&#34;&gt;Clojure: Part I&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
@@ -2617,7 +2678,7 @@ output.&lt;/p&gt;
 &lt;p&gt;An &lt;em&gt;atom&lt;/em&gt; is a value that can be an element of a list.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;*******&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;&amp;amp;&amp;amp;&amp;amp;&amp;amp;&amp;amp;&amp;amp;&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s go through the different atoms of the core-clojure langauge.&lt;/p&gt;
 
@@ -2763,7 +2824,7 @@ java.lang/Integer ; a symbol that has a namespace &amp;quot;java.lang&amp;quot;,
 
 &lt;p&gt;We will focus on the core Clojure - which is a Turing-complete implementation of Lambda Calculus.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;***&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;&amp;amp;&amp;amp;&amp;amp;&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
@@ -2819,6 +2880,116 @@ java.lang/Integer ; a symbol that has a namespace &amp;quot;java.lang&amp;quot;,
 &lt;blockquote&gt;
 &lt;p&gt;When we associate a symbol to something else, the &lt;em&gt;association&lt;/em&gt; is called a &lt;em&gt;binding&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h1 id=&#34;symbol-binding-1&#34;&gt;Symbol binding&lt;/h1&gt;
+
+&lt;p&gt;&lt;span style=color:red&gt;Insert diagram here&lt;/span&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;global-symbol-binding&#34;&gt;Global symbol binding&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def &amp;lt;symbol&amp;gt; &amp;lt;expression&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Creates a global symbol binding that exists throughout the entire &lt;em&gt;namespace&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;More on &lt;em&gt;namespaces&lt;/em&gt; later&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;---&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def PI 3.1415)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def area-of-circle (fn [r] (* r r PI)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(area-of-circle 100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;global-symbol-binding-1&#34;&gt;Global symbol binding&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Must resist the usage of global symbol binding.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Java/C/C++ tend to bind functions to global symbols.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Because functions are values, think of functions as simple as &lt;em&gt;integers&lt;/em&gt;.
+So, Clojure requires minimal global symbol binding.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use &lt;em&gt;local binding&lt;/em&gt; (coming up next) as much as you can.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;local-symbol-binding&#34;&gt;Local symbol binding&lt;/h1&gt;
+
+&lt;p&gt;We want to create new symbol bindings in expressions &lt;em&gt;on-the-fly&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;lang-nosyntax&#34; data-noescape&gt;(def two-circles
+  &lt;span style=&#34;color:#944;
+                border:thin solid #888;
+                padding:5px;
+                margin:5px;
+                font-weight: bold;
+                display:inline-block&#34;&gt;(+ (* 3.1415 100 100) (* 3.1415 100 100))&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Let&amp;rsquo;s create a symbol bindings which are &lt;em&gt;only&lt;/em&gt; valid in the inner-expression.&lt;/p&gt;
+
+&lt;h2 id=&#34;span-style-color-red-bad-idea-span&#34;&gt;&lt;span style=color:red&gt;BAD IDEA&lt;/span&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def PI 3.1415)
+(def radius 100)
+(def area (* 3.1415 radius radius))
+(def two-circles (+ area area))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt;
+Why is it bad?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;radius&lt;/code&gt; is not really a universal constant.  It&amp;rsquo;s 100 only for this expression.&lt;/li&gt;
+&lt;li&gt;same for area.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;local-symbol-binding-1&#34;&gt;Local Symbol Binding&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(...
+  (let [&amp;lt;symbol&amp;gt; &amp;lt;expression&amp;gt;
+        &amp;lt;symbol&amp;gt; &amp;lt;expression&amp;gt;
+        ...]
+    &amp;lt;inner-expression&amp;gt;) ...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;&amp;amp;&amp;amp;&amp;amp;&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def PI 3.1415)
+(def two-circle
+  (let [r    100
+        area (* PI r r)]
+    (+ r r)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Can you summarize why local symbol binding is more desirable to compute the value of &lt;code&gt;two-circle&lt;/code&gt;?&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Atoms&lt;/li&gt;
+&lt;li&gt;Lists as code and code as lists&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;li&gt;Invocation of functions&lt;/li&gt;
+&lt;li&gt;Symbol bindings (global v.s. local)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -3344,8 +3515,11 @@ elem      : s-expr
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;lisp-clojure&#34;&gt;Lisp &amp; Clojure&lt;/a&gt;&lt;/li&gt;
 					&lt;li class=list-group-item&gt;
                         &lt;a href=&#34;clojure-language&#34;&gt;Readers - form - data - function&lt;/a&gt;
-                        &lt;span style=float:right class=&#34;label
-                        label-warning&#34;&gt;Draft&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=list-group-item&gt;
+                        &lt;a href=&#34;clojure-language-2&#34;&gt;General purpose programming
+                            with Clojure&lt;/a&gt;
+                        &lt;span style=float:right class=&#34;label label-warning&#34;&gt;Draft&lt;/span&gt;
                     &lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Sequences, Lazy evaluation and other functional constructs&lt;/a&gt;&lt;/li&gt;
 					&lt;li class=list-group-item&gt;&lt;a href=&#34;&#34;&gt;Namespaces and polymorphism&lt;/a&gt;&lt;/li&gt;
@@ -3627,491 +3801,6 @@ def COUNTING_SORT(A, i):
 &lt;li&gt;Numbers are &lt;em&gt;easier&lt;/em&gt; to sort than blackboxed elements.&lt;/li&gt;
 &lt;li&gt;For bounded integers, we can use radix sort even if the bound is very very large (e.g. 256-bit integers).&lt;/li&gt;
 &lt;li&gt;For bounded reals, we can use bucket sort.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tour of langauges</title>
-      <link>https://kenpuca.github.io/courses/programming-languages/tour-of-languages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/courses/programming-languages/tour-of-languages/</guid>
-      <description>
-
-&lt;h1 id=&#34;a-tour-of-programming-languages&#34;&gt;A tour of programming languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We will examine the influence of TM and LC on the design of programming languages.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;stateful-languages&#34;&gt;Stateful languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;stateful-languages-1&#34;&gt;Stateful languages&lt;/h1&gt;
-
-&lt;p&gt;Principles of a TM&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Memory:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;the infinite tape&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Mutable data:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;cells of the tape stores data, which can be &lt;strong&gt;modified&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Flow control:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;control logic is an automaton which can branch and loop&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;stateful-languages-2&#34;&gt;Stateful languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt;
-Describing computation based on the principles of a TM s called &lt;em&gt;imperative&lt;/em&gt;
-programming.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;C / C++&lt;/li&gt;
-&lt;li&gt;Java&lt;/li&gt;
-&lt;li&gt;Ruby&lt;/li&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;stateful-languages-3&#34;&gt;Stateful languages&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Elements of TM&lt;/th&gt;
-&lt;th&gt;Programming construct&lt;/th&gt;
-&lt;th&gt;Jargon&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Memory&lt;/td&gt;
-&lt;td&gt;Array, struct&lt;/td&gt;
-&lt;td&gt;Builtin aggregate types&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Multable&lt;/td&gt;
-&lt;td&gt;Assignments&lt;/td&gt;
-&lt;td&gt;lvalues&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Flow control&lt;/td&gt;
-&lt;td&gt;if-else, while, for&lt;/td&gt;
-&lt;td&gt;Branche and loops&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;stateful-languages-4&#34;&gt;Stateful languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Extensions to the TM&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;They are necessary for humans to author and reason about the program.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Variables: Give &lt;em&gt;names&lt;/em&gt; to represent specific memory addresses.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Types: Give restruction to the type of data that can be stored in memory.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Functions: Grouping of multiple statements in isolation.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Scoping: Isolation of the usage of &lt;em&gt;names&lt;/em&gt; (for variables and functions).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Code organization: Hierarchical management of large number of statements&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; Procedural programming languages&lt;/p&gt;
-
-&lt;h1 id=&#34;variables-in-procedural-languages&#34;&gt;Variables (in procedural languages)&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Ultimately, &lt;em&gt;variables&lt;/em&gt; are names which are aliases for memory addresses.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;-----&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Declaration&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int i;
-int[10] j;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Read / Write&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;i = 10;
-j[2] = i * j[0];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;types&#34;&gt;Types&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;typedef Point2D struct {
-    float x;
-    float y;
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This declares a struct aggregate type in C&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Point2D struct {
-    X float
-    Y float
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Same structure in Go&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;class Point2D(val x:Float, val y:Float)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Same structure in Scala&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We can build arbitrarily complex data structures using user-defined types.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;functions&#34;&gt;Functions&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;Point2D rotate(Point2D p, float a) {
-    Point2D p2;
-    p2.x = p.x * cos(a) - p.y * sin(a);
-    p2.y = p.x * sin(a) + p.y * cos(a);
-    return p2;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in C&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func rotate(p Point2D, a float) (p2 Point2D) {
-    p2.X = p.X * math.Cos(a) - p.Y * math.Sin(a)
-    p2.Y = p.X * math.Sin(a) + p.Y * math.Cos(a)
-    return
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in Go. Note the name binding in the return type.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;def rotate(p: Point2D, a : Float) : Point2D {
-    val x = p.x * cos(a) - p.y * sin(a);
-    val y = p.x * sin(a) + p.y * cos(a);
-    Point2D(x, y)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note 3&#34;&gt;!&lt;/a&gt; A function in Scala.  Note the &lt;code&gt;val&lt;/code&gt; keyword, and the lack
-of explicit return&lt;/p&gt;
-
-&lt;h1 id=&#34;more-on-functions&#34;&gt;More on functions&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 3:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;In modern languages&lt;/em&gt;, functions can be values and can be constructed and passed around like values.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript sm&#34;&gt;var log = function(message) {
-    console.info(&amp;quot;Message: &amp;quot; + message);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Function as value in Javascript.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go sm&#34;&gt;var log = func(msg string) {
-    fmt.Println(&amp;quot;Message:&amp;quot; + msg)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Function as value in Go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala sm&#34;&gt;val log = {msg : String =&amp;gt; println(msg)}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Function as value in Scala.&lt;/p&gt;
-
-&lt;h1 id=&#34;expression-vs-statement&#34;&gt;Expression vs Statement&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;printf(&amp;quot;hello world\n&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This is a &lt;em&gt;statement&lt;/em&gt;.  It is &lt;em&gt;invalid&lt;/em&gt; to ask the value of a statement.  It&amp;rsquo;s meant to do something, not represent something.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;get_age() &amp;gt; 65
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This is an &lt;em&gt;expression&lt;/em&gt;. It doesn&amp;rsquo;t (necessarily) do anything, but it represents a value of some type.  In this case, it&amp;rsquo;s a boolean expression.&lt;/p&gt;
-
-&lt;h1 id=&#34;branching&#34;&gt;Branching&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var discount = 0;
-if(age &amp;lt; 10)
-  discount = 0.4;
-else if(age &amp;gt;= 65)
-  discount = 0.2;
-else
-  discount = 0;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Javascript branching with &lt;code&gt;if-else&lt;/code&gt;.  C and Java have the same style of &lt;code&gt;if-else&lt;/code&gt;.
-Here &lt;code&gt;if-else&lt;/code&gt; is an statement.  What it does is the assignment of some variable &lt;code&gt;discount&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val discount = if(age &amp;lt; 10) 0.4
-               else if(age &amp;gt;= 65) 0.2
-               else 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; In &lt;em&gt;Scala&lt;/em&gt;, everything is an expression.  It represents the value of &lt;code&gt;discount&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val discount = age match {
-    case _ if age &amp;lt; 10 =&amp;gt; 0.4
-    case _ if age &amp;gt;= 65 =&amp;gt; 0.2
-    case _ =&amp;gt; 0
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Scala supports &lt;em&gt;pattern matching&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;iteration&#34;&gt;Iteration&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 3:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Possibly the most used and thought-out feature of procedural programming.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c sm&#34;&gt;for(int i=0; i &amp;lt; 100; i++)
-  for(int j=0; j &amp;lt; 100; j++)
-    if(i + j == 55) printf(&amp;quot;%d, %d\n&amp;quot;, i, j)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; &lt;code&gt;for&lt;/code&gt; loop in C/Java/Javascript.  &lt;i class=&#34;fa fa-thumbs-down&#34;&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python sm&#34;&gt;for i in range(100):
-  for j in range(100):
-    if i + j == 55:  print i,j
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; &lt;code&gt;for&lt;/code&gt; loop in Python&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python sm&#34;&gt;print [(i,j) for i in range(100) \
-    for j in range(100) if i + j == 55]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; List comprehension in Python&lt;/p&gt;
-
-&lt;h1 id=&#34;scope&#34;&gt;Scope&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 3:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The scope of a variable is context in which the variable exists.  This will be discussed in depth later.&lt;/p&gt;
-
-&lt;p&gt;Scoping is not part of the syntax, but rules on variable life-time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c sm&#34;&gt;int i = 0;
-if(i == 0) {
-    int i = 10;
-    printf(&amp;quot;%d&amp;quot;, i);
-}
-printf(&amp;quot;%d\n&amp;quot;, i)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; C will print out &lt;code&gt;10 0&lt;/code&gt;.  Note that there are &lt;em&gt;two&lt;/em&gt; variables, both with the name &lt;code&gt;i&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript sm&#34;&gt;function friendlyLogger() {
-    var greeting = &amp;quot;Hi there, &amp;quot;;
-    return function(message) {
-        console.info(greeting + message);
-    }
-}
-
-...
-
-var logger = friendlyLogger();
-logger(&amp;quot;my name is Einstein.&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; For Javascript, scopes are nested, and the parent scope (&lt;code&gt;friendlyLogger&lt;/code&gt;) is preserved in the scope of &lt;code&gt;function(message)&lt;/code&gt;.  This is called &lt;em&gt;closure&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;functional-languages&#34;&gt;Functional languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;functional-languages-1&#34;&gt;Functional languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Principles of LC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;No such thing as memory or mutable data&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Purely symbolic rewrites&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Functions are necessarily expressions, and most (actually &lt;em&gt;all&lt;/em&gt;) expressions are functions.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Totally unsupported by any computer hardware&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;functional-languages-2&#34;&gt;Functional languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;LC influence on programming language design&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Symbols&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Functions are &lt;em&gt;cheap&lt;/em&gt; to create&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Functions are used &lt;em&gt;everywhere&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Read-only semantics for data&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;functional-languages-3&#34;&gt;Functional languages&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Extensions to beyond LC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Functions as data&lt;/li&gt;
-&lt;li&gt;Symbol binding&lt;/li&gt;
-&lt;li&gt;Scopes&lt;/li&gt;
-&lt;li&gt;Evaluate function application eagerly or lazily&lt;/li&gt;
-&lt;li&gt;Data structures (especially Lists)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Native&lt;/em&gt; functions which are implemented by imperative programming&lt;/li&gt;
-&lt;li&gt;Organization of code through namespaces, polymorphism and object orientation.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;box&#34;&gt;!&lt;/a&gt; We will illustrate these topics using &lt;span style=color:red&gt;&lt;strong&gt;Clojure&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;syntax-from-lc-to-lisp&#34;&gt;Syntax: from LC to Lisp&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;LC is so syntactically clean that Lisp (and its dialets including Clojure) has borrowed the LC syntax almost verbatim.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;abstraction&#34;&gt;Abstraction&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;$\lambda x.e$&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;note 6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(fn [x] e)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;application&#34;&gt;Application&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;$f e$&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;note 6&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(f e)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;functions-as-data&#34;&gt;Functions as data&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn log [message]
-  (println message))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Declaring a function with a &lt;em&gt;name&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(fn [message] (println message))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Creating a value which happens to be a function.  This function has no name, so we call such functions &lt;em&gt;anonymous functions&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;#(println %1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; A quicker way to create a function without a name.&lt;/p&gt;
-
-&lt;h1 id=&#34;name-binding&#34;&gt;Name binding&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def pi 3.1415)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Global name binding&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def log (fn [message]
-           (println message)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This is another way to create a named function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(let [name &amp;quot;Einstein&amp;quot;]
-  (println name))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; The &lt;code&gt;let&lt;/code&gt; form helps to create name bindings with limited scopes.&lt;/p&gt;
-
-&lt;h1 id=&#34;immutable-data&#34;&gt;Immutable data&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;columns 4:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Data can only be:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;created&lt;/li&gt;
-&lt;li&gt;bind to a name&lt;/li&gt;
-&lt;li&gt;cloned&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;---&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;But never modified.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def x [1 2 3 4])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; Create a list of numbers, and bind it a name &lt;code&gt;x&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(conj x 5)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; This makes a copy of &lt;code&gt;x&lt;/code&gt; and append 5.  But since it&amp;rsquo;s not bound to any name, the result is lost.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def y (concat x [10 20 30]))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;note&#34;&gt;!&lt;/a&gt; &lt;code&gt;x&lt;/code&gt; is still &lt;code&gt;[1,2,3,4]&lt;/code&gt; (forever), and &lt;code&gt;y&lt;/code&gt; is &lt;code&gt;[1,2,3,4,10,20,30]&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;highlight&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The influence of TM to imperative language design&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The influence of LC to functional language design&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -56,18 +56,31 @@
         }
         // =========================================
         else if(cmd[0].startsWith("---") ||
-                cmd[0].startsWith("***")) {
+                cmd[0].startsWith("***") ||
+                cmd[0].startsWith("&&&")) {
             var n = cmd[0].length;
             var i = $("<i class='fa fa-asterisk'></i>").css({
                 marginLeft: 5,
                 marginRight: 5,
+                fontSize: 15,
                 color: '#888',
             });
+            if(cmd[0].startsWith("---")) {
+                i = $("<hr>");
+            } else if(cmd[0].startsWith("&&&")) {
+                i.removeClass("fa-asterisk").addClass("fa-leaf").css({
+                    color: "#0a0",
+                    fontSize: 25,
+                });
+            } else {
+                var i1 = i, i2 = i.clone(), i3 = i.clone();
+                i = $("<div>").append(i1, i2, i3);
+            }
             var div = $("<div></div>").css({
                 marginTop: 10*n,
                 marginBottom: 10*n,
                 textAlign: "center"
-            }).append(i,i.clone(),i.clone());
+            }).append(i);
             $a.after(div);
             $a.detach();
         }
