@@ -1491,7 +1491,7 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
         if L[j] &amp;lt;= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1513,7 +1513,7 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
         if L[j] &amp;lt;= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -1539,7 +1539,7 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
         if L[j] &amp;lt;= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
