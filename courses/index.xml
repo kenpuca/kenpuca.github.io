@@ -1389,7 +1389,7 @@ such that &lt;em&gt;after&lt;/em&gt; rearrangment:&lt;/p&gt;
     x = L[r]
     L1 = [y for y in L[p:r] if y &amp;lt;= x]
     L2 = [y for y in L[p:r] if y &amp;gt; x]
-    L[p:r] = L1 + [x] + L2
+    L[p:r+1] = L1 + [x] + L2
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;break&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
@@ -2530,13 +2530,112 @@ output.&lt;/p&gt;
 
 &lt;p&gt;The measurement functions is only sensitive to the &lt;em&gt;growth&lt;/em&gt; of the time it takes for an algorithm to complete with respect to the size of the input.&lt;/p&gt;
 
-&lt;h1 id=&#34;functions-over-integers&#34;&gt;Functions over integers&lt;/h1&gt;
+&lt;h1 id=&#34;measure&#34;&gt;Measure&lt;/h1&gt;
 
-&lt;p&gt;For the time being, we will limit the discussion to functions over positive integers. $f(n), g(n), \dots$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The size of the input is an integer $n$&lt;/li&gt;
+&lt;li&gt;We use functions over integers to measure the efficiency of an algorithm.&lt;/li&gt;
+&lt;li&gt;$f(n)$ is the &lt;strong&gt;time&lt;/strong&gt; it takes to process input of size $n$ in the &lt;em&gt;worst case&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;$f$ is monotonic: if $m \leq n$, then $f(m)\leq f(n)$.&lt;/li&gt;
+&lt;li&gt;$f$ is strictly positive: $f(n) &amp;gt; 0$ for all $n$.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h1 id=&#34;comparing-two-functions&#34;&gt;Comparing two functions&lt;/h1&gt;
+&lt;h1 id=&#34;using-functions-as-measurement-of-algorithmic-complexity&#34;&gt;Using functions as measurement of algorithmic complexity&lt;/h1&gt;
 
-&lt;p&gt;If we have&lt;/p&gt;
+&lt;p&gt;We want to use functions to measure the inherit &lt;em&gt;complexity&lt;/em&gt; of &lt;em&gt;algorithms&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is not very straight-forward.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;---&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;We don&amp;rsquo;t care about&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Runtime environment&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CPU speed&lt;/li&gt;
+&lt;li&gt;Start-up time of the program&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Implementation issues&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Speed of the language&lt;/li&gt;
+&lt;li&gt;Number of statements used&lt;/li&gt;
+&lt;li&gt;Overhead in memory data structure&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;We do care about&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Inherit complexity of the algorithm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;capturing-the-essentials&#34;&gt;Capturing the essentials&lt;/h1&gt;
+
+&lt;p&gt;Suppose that we have an algorithm $P$.  Let&amp;rsquo;s use some function $f(n)$ to represent the time, in the &lt;em&gt;worst case&lt;/em&gt;, that $P$ takes to process an input of size $n$.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;&amp;amp;&amp;amp;&amp;amp;&amp;amp;&amp;amp;&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s look at the effects of various environmental factors on the measure $f(n)$.&lt;/p&gt;
+
+&lt;h1 id=&#34;effects-on-the-measure&#34;&gt;Effects on the measure&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$P$ is reimplemented using C (from Python), so it runs 20 times faster now.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$f&amp;rsquo;(n) = \frac{1}{20} f(n)$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$P$ runs inside a &lt;em&gt;docker&lt;/em&gt; image, so it takes an additional 300 ms to start.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$f&amp;rsquo;(n) = f(n) + 300\mathrm{ms}$&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But we don&amp;rsquo;t want to care about these implementation and runtime factors when investigating the complexity of algorithms.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Intuition: given $f(n)$, we define family of (infinite) functions&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;comfort&#34;&gt;!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$\{g(n): g(n)\ \mathrm{better\ than}\ f(n) \}$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$\{g(n): g(n)\ \mathrm{worse\ than}\ f(n) \}$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$\{g(n): g(n)\ \mathrm{equivalent\ to}\ f(n) \}$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;mathcal-o-notation-better-than&#34;&gt;$\mathcal{O}$-notation - better than&lt;/h1&gt;
+
+&lt;p&gt;We want to define all function which are measure of algorithms which are better than (or same as) $g(n)$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: The Big-O notation&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0 &amp;lt; f(n) &amp;lt; c\dots g(n)\}$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We call $g(n)$ the asymptotic upper bound.&lt;/p&gt;
+
+&lt;h1 id=&#34;omega-notation-worse-than&#34;&gt;$\Omega$-notation - worse than&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: The $\Omega$-notation&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0  &amp;lt; c\dots g(n) &amp;lt; f(n) \}$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     

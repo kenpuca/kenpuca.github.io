@@ -45,13 +45,112 @@
 
 <p>The measurement functions is only sensitive to the <em>growth</em> of the time it takes for an algorithm to complete with respect to the size of the input.</p>
 
-<h1 id="functions-over-integers">Functions over integers</h1>
+<h1 id="measure">Measure</h1>
 
-<p>For the time being, we will limit the discussion to functions over positive integers. $f(n), g(n), \dots$</p>
+<ul>
+<li><a href="comfort">!</a></li>
+<li>The size of the input is an integer $n$</li>
+<li>We use functions over integers to measure the efficiency of an algorithm.</li>
+<li>$f(n)$ is the <strong>time</strong> it takes to process input of size $n$ in the <em>worst case</em>.</li>
+<li>$f$ is monotonic: if $m \leq n$, then $f(m)\leq f(n)$.</li>
+<li>$f$ is strictly positive: $f(n) &gt; 0$ for all $n$.</li>
+</ul>
 
-<h1 id="comparing-two-functions">Comparing two functions</h1>
+<h1 id="using-functions-as-measurement-of-algorithmic-complexity">Using functions as measurement of algorithmic complexity</h1>
 
-<p>If we have</p>
+<p>We want to use functions to measure the inherit <em>complexity</em> of <em>algorithms</em>.</p>
+
+<p>This is not very straight-forward.</p>
+
+<p><a href="---">!</a></p>
+
+<p><a href="columns 6:">!</a></p>
+
+<p><em>We don&rsquo;t care about</em>:</p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+
+<li><p>Runtime environment</p>
+
+<ul>
+<li>CPU speed</li>
+<li>Start-up time of the program</li>
+</ul></li>
+
+<li><p>Implementation issues</p>
+
+<ul>
+<li>Speed of the language</li>
+<li>Number of statements used</li>
+<li>Overhead in memory data structure</li>
+</ul></li>
+</ul>
+
+<p><a href="split">!</a></p>
+
+<p><em>We do care about</em>:</p>
+
+<ul>
+<li>Inherit complexity of the algorithm</li>
+</ul>
+
+<h1 id="capturing-the-essentials">Capturing the essentials</h1>
+
+<p>Suppose that we have an algorithm $P$.  Let&rsquo;s use some function $f(n)$ to represent the time, in the <em>worst case</em>, that $P$ takes to process an input of size $n$.</p>
+
+<p><a href="&amp;&amp;&amp;&amp;&amp;">!</a></p>
+
+<p>Let&rsquo;s look at the effects of various environmental factors on the measure $f(n)$.</p>
+
+<h1 id="effects-on-the-measure">Effects on the measure</h1>
+
+<ul>
+<li><p>$P$ is reimplemented using C (from Python), so it runs 20 times faster now.</p>
+
+<blockquote>
+<p>$f&rsquo;(n) = \frac{1}{20} f(n)$</p>
+</blockquote></li>
+
+<li><p>$P$ runs inside a <em>docker</em> image, so it takes an additional 300 ms to start.</p>
+
+<blockquote>
+<p>$f&rsquo;(n) = f(n) + 300\mathrm{ms}$</p>
+</blockquote></li>
+</ul>
+
+<p>But we don&rsquo;t want to care about these implementation and runtime factors when investigating the complexity of algorithms.</p>
+
+<hr />
+
+<p>Intuition: given $f(n)$, we define family of (infinite) functions</p>
+
+<ul>
+<li><a href="comfort">!</a></li>
+<li><code>$\{g(n): g(n)\ \mathrm{better\ than}\ f(n) \}$</code></li>
+<li><code>$\{g(n): g(n)\ \mathrm{worse\ than}\ f(n) \}$</code></li>
+<li><code>$\{g(n): g(n)\ \mathrm{equivalent\ to}\ f(n) \}$</code></li>
+</ul>
+
+<h1 id="mathcal-o-notation-better-than">$\mathcal{O}$-notation - better than</h1>
+
+<p>We want to define all function which are measure of algorithms which are better than (or same as) $g(n)$.</p>
+
+<p><strong>Definition</strong>: The Big-O notation</p>
+
+<blockquote>
+<p><code>$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0 &lt; f(n) &lt; c\dots g(n)\}$$</code></p>
+</blockquote>
+
+<p>We call $g(n)$ the asymptotic upper bound.</p>
+
+<h1 id="omega-notation-worse-than">$\Omega$-notation - worse than</h1>
+
+<p><strong>Definition</strong>: The $\Omega$-notation</p>
+
+<blockquote>
+<p><code>$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0  &lt; c\dots g(n) &lt; f(n) \}$$</code></p>
+</blockquote>
 </div>
         </div>
 

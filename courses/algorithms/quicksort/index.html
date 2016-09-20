@@ -98,7 +98,7 @@ such that <em>after</em> rearrangment:</p>
     x = L[r]
     L1 = [y for y in L[p:r] if y &lt;= x]
     L2 = [y for y in L[p:r] if y &gt; x]
-    L[p:r] = L1 + [x] + L2
+    L[p:r+1] = L1 + [x] + L2
 </code></pre>
 
 <p><a href="break">!</a></p>
