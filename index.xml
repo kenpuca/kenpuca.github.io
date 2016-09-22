@@ -2766,18 +2766,81 @@ output.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: The Big-O notation&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0 &amp;lt; f(n) &amp;lt; c\dots g(n)\}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0 &amp;lt; f(n) &amp;lt; c\cdot g(n)\}$$&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We call $g(n)$ the asymptotic upper bound.&lt;/p&gt;
+&lt;p&gt;We call $g(n)$ the asymptotic upper bound of the functions in $\mathcal{O}(g(n))$.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;big-o.png&#34; style=float:right;height:300px&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;significance-of-asymptotic-analysis&#34;&gt;Significance of asymptotic analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;columns 6:&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If we have an algorithm $A$, and its precise time measurement (on a specific hardware) is given precisely as &lt;code&gt;$T(n)$&lt;/code&gt;, where $n$ is the input size in &lt;em&gt;bytes&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If &lt;code&gt;$T(n)\in\mathcal{O}(g(n))$&lt;/code&gt;, we are saying that $A$ is &lt;strong&gt;better&lt;/strong&gt; than $g(n)$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;split&#34;&gt;!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Challenge&lt;/em&gt;:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Check that the variations on the way that the efficiency of $A$ is
+measured also are in $\mathcal{O}(g(n))$.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;$T_1(n)$ is the time that $A$ runs on a slow processor.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$T_2(n)$ is the time that $A$ if the input is measured in the array length.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1 id=&#34;omega-notation-worse-than&#34;&gt;$\Omega$-notation - worse than&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: The $\Omega$-notation&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0  &amp;lt; c\dots g(n) &amp;lt; f(n) \}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$\Omega(g(n)) = \{f(n) : \exists n_0, c &amp;gt; 0,\forall n &amp;gt; n_0, \ 0  &amp;lt; c\cdot g(n) &amp;lt; f(n) \}$$&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We say that $g(n)$ is the asymptotic lower bound of the functions in $\Omega(g(n))$.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;omega.png&#34; style=float:right;height:300px&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;theta-notation-same-as&#34;&gt;$\Theta$-notation - same as&lt;/h1&gt;
+
+&lt;p&gt;*&lt;em&gt;Definition&lt;/em&gt;: The $\Theta$-notation&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$$\Theta(g(n)) = \mathcal{O}(g(n)) \cap \Omega(g(n))$$&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;More precisely,&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$
+\begin{eqnarray}
+&amp;amp;&amp;amp; \Theta(g(n)) \\
+&amp;amp;=&amp;amp; 
+\{f(n): \exists n_0, c_1, c_2 &amp;gt; 0,\forall n &amp;gt; n_0,\ 0 \leq c_1\cdot g(n) \leq f(n) \leq c_2\cdot g(n)\}
+\end{eqnarray}
+$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;theta.png&#34; style=float:right;height:300px&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;recap&#34;&gt;Recap&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;$\mathcal{O}(g(n))$ is the collection of &lt;strong&gt;all&lt;/strong&gt; the performance measures that are better (or equivalent) to $g(n)$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$\Omega(g(n))$ is the collection of &lt;strong&gt;all&lt;/strong&gt; the performance measures that are worse (or equivalent) to $g(n)$.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;$\Theta(g(n))$ is the collection of &lt;strong&gt;all&lt;/strong&gt; the performance measures that are equivalent to $g(n)$.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;why-is&#34;&gt;Why is&lt;/h1&gt;
 </description>
     </item>
     
@@ -3124,7 +3187,7 @@ java.lang/Integer ; a symbol that has a namespace &amp;quot;java.lang&amp;quot;,
 
 &lt;h1 id=&#34;symbol-binding-1&#34;&gt;Symbol binding&lt;/h1&gt;
 
-&lt;p&gt;&lt;span style=color:red&gt;Insert diagram here&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;binding.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;global-symbol-binding&#34;&gt;Global symbol binding&lt;/h1&gt;
 

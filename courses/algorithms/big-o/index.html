@@ -139,18 +139,81 @@
 <p><strong>Definition</strong>: The Big-O notation</p>
 
 <blockquote>
-<p><code>$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0 &lt; f(n) &lt; c\dots g(n)\}$$</code></p>
+<p><code>$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0 &lt; f(n) &lt; c\cdot g(n)\}$$</code></p>
 </blockquote>
 
-<p>We call $g(n)$ the asymptotic upper bound.</p>
+<p>We call $g(n)$ the asymptotic upper bound of the functions in $\mathcal{O}(g(n))$.</p>
+
+<p><img src="big-o.png" style=float:right;height:300px></img></p>
+
+<h1 id="significance-of-asymptotic-analysis">Significance of asymptotic analysis</h1>
+
+<p><a href="columns 6:">!</a></p>
+
+<ul>
+<li><p>If we have an algorithm $A$, and its precise time measurement (on a specific hardware) is given precisely as <code>$T(n)$</code>, where $n$ is the input size in <em>bytes</em>.</p></li>
+
+<li><p>If <code>$T(n)\in\mathcal{O}(g(n))$</code>, we are saying that $A$ is <strong>better</strong> than $g(n)$.</p></li>
+</ul>
+
+<p><a href="split">!</a></p>
+
+<p><em>Challenge</em>:</p>
+
+<hr />
+
+<p>Check that the variations on the way that the efficiency of $A$ is
+measured also are in $\mathcal{O}(g(n))$.</p>
+
+<ol>
+<li><p>$T_1(n)$ is the time that $A$ runs on a slow processor.</p></li>
+
+<li><p>$T_2(n)$ is the time that $A$ if the input is measured in the array length.</p></li>
+</ol>
 
 <h1 id="omega-notation-worse-than">$\Omega$-notation - worse than</h1>
 
 <p><strong>Definition</strong>: The $\Omega$-notation</p>
 
 <blockquote>
-<p><code>$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0  &lt; c\dots g(n) &lt; f(n) \}$$</code></p>
+<p><code>$$\Omega(g(n)) = \{f(n) : \exists n_0, c &gt; 0,\forall n &gt; n_0, \ 0  &lt; c\cdot g(n) &lt; f(n) \}$$</code></p>
 </blockquote>
+
+<p>We say that $g(n)$ is the asymptotic lower bound of the functions in $\Omega(g(n))$.</p>
+
+<p><img src="omega.png" style=float:right;height:300px></img></p>
+
+<h1 id="theta-notation-same-as">$\Theta$-notation - same as</h1>
+
+<p>*<em>Definition</em>: The $\Theta$-notation</p>
+
+<blockquote>
+<p><code>$$\Theta(g(n)) = \mathcal{O}(g(n)) \cap \Omega(g(n))$$</code></p>
+</blockquote>
+
+<p>More precisely,</p>
+
+<p><code>$$
+\begin{eqnarray}
+&amp;&amp; \Theta(g(n)) \\
+&amp;=&amp; 
+\{f(n): \exists n_0, c_1, c_2 &gt; 0,\forall n &gt; n_0,\ 0 \leq c_1\cdot g(n) \leq f(n) \leq c_2\cdot g(n)\}
+\end{eqnarray}
+$$</code></p>
+
+<p><img src="theta.png" style=float:right;height:300px></img></p>
+
+<h1 id="recap">Recap</h1>
+
+<ul>
+<li><p>$\mathcal{O}(g(n))$ is the collection of <strong>all</strong> the performance measures that are better (or equivalent) to $g(n)$.</p></li>
+
+<li><p>$\Omega(g(n))$ is the collection of <strong>all</strong> the performance measures that are worse (or equivalent) to $g(n)$.</p></li>
+
+<li><p>$\Theta(g(n))$ is the collection of <strong>all</strong> the performance measures that are equivalent to $g(n)$.</p></li>
+</ul>
+
+<h1 id="why-is">Why is</h1>
 </div>
         </div>
 
