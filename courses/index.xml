@@ -1168,7 +1168,7 @@ analyze recursive algorithms.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;What is the height of the tree if there are $n!$ leaf nodes?&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;$\log_2(n!) \approx c\dot n\log(n)$&lt;/p&gt;
+&lt;p&gt;$\log_2(n!) \approx c\cdot n\log(n)$&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
