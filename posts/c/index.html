@@ -21,7 +21,7 @@
     <div class="page-break no-print"></div>
     <div class="single container ">
         <h1 class="single-title"> 
-            About Programming - 2 
+            Functional Approach 
         </h1>
 
         <div class="turn-page no-print">
@@ -29,50 +29,56 @@
    
     
     
-    <a class="prev" href="https://kenpuca.github.io/posts/a/">Previous</a>
+    <a class="prev" href="https://kenpuca.github.io/posts/b/">Previous</a>
     
     
 
     
     
-    <a class="next" href="https://kenpuca.github.io/posts/c/">Next</a>
+    <a class="next" href="https://kenpuca.github.io/posts/d/">Next</a>
     
     
  
 </div>
 
 
-        <p>Let&rsquo;s examine basics of Clojure.</p>
+        <p>The on-going assumption is that programming
+is all about data transformation.  Let&rsquo;s
+see how we achieve this with functions.</p>
 
 <p></p>
 
-<h2 id="literal">Literal</h2>
+<h2 id="functions">Functions</h2>
 
-<pre><code>3.1415
-</code></pre>
+<p>Function is a programming construct.  Function is a piece of code that
+requires zero or more values as <em>input</em>, and function will generate a new data
+using some sort of computation.</p>
 
-<h2 id="symbols-bindings-scope">Symbols, Bindings &amp; Scope</h2>
-
-<p>We can define bindings that are valid for
-the entire program.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="k">def </span><span class="nv">pi</span> <span class="mf">3.1415</span><span class="p">)</span></code></pre></div>
-
-<p>Sometimes, we want a binding to exist
-with a limited duration.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="c1">; Two bindings are created, but they</span>
-<span class="c1">; are only valid within the (let ...)</span>
-<span class="c1">; block.</span>
-<span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">first-name</span> <span class="s">&#34;Albert&#34;</span>
-      <span class="nv">last-name</span> <span class="s">&#34;Einstein&#34;</span><span class="p">]</span>
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="kd">defn </span><span class="nv">f</span> <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span>
   <span class="nv">...</span>
   <span class="nv">...</span><span class="p">)</span></code></pre></div>
+
+<blockquote>
+<p>This is synonymous to how mathematicians express
+functions.
+$$ f(x, y) = \dots $$</p>
+
+<p><code>(defn f ...)</code> creates a top-level symbol <code>f</code> that is bound to
+a 2-arity function.</p>
+</blockquote>
+
+<h2 id="using-functions">Using functions.</h2>
+
+<p>Mathematicians invoke functions all the time: $f(f(\pi, 1), 2)$.
+Clojure presents function invocations as a list, with the first element as
+function, and the rest as the arguments.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nv">f</span> <span class="p">(</span><span class="nv">f</span> <span class="nv">π</span> <span class="mi">1</span><span class="p">)</span> <span class="mi">2</span><span class="p">)</span></code></pre></div>
 
         
         <p class="author"> 
         Ken Pu <br>
-        Monday, Apr 2, 2018
+        Thursday, Apr 5, 2018
         </p>
         
     </div>
