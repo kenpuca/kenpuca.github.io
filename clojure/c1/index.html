@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" 
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://kenpuca.github.io/css/syntax.css">
+<link rel="stylesheet" href="https://kenpuca.github.io/css/style.css">
+
+        
+<link rel="stylesheet" href="https://kenpuca.github.io/css/single.css">
+<script>
+var disqus_developer = 1;
+</script>
+
+    </head>
+    <body>
+        
+    
+    
+    <div class="page-break no-print"></div>
+    <div class="single container tiny">
+        <h1 class="single-title"> 
+            Testing Your Hands Dirty 
+        </h1>
+
+        <div class="turn-page no-print">
+    <a class="home" href="https://kenpuca.github.io/">Home</a>
+   
+    
+    
+    <a class="prev" href="https://kenpuca.github.io/clojure/b/">Previous</a>
+    
+    
+
+    
+    
+    <a class="next" href="https://kenpuca.github.io/clojure/c/">Next</a>
+    
+    
+ 
+</div>
+
+
+        <p>Learning Clojure requires you to install Clojure.
+Luckily, contrary to common belief, Clojure compiler
+is as simple as a single file.</p>
+
+<p></p>
+
+<p>Let&rsquo;s see how we setup a running environment for Linux or macos.</p>
+
+<h2 id="you-need-java">You need Java</h2>
+
+<p>You will need Java runtime.  I use Java 8 (in 2018) with my Clojure
+installation. You only need the JRE.</p>
+
+<pre><code>$ sudo apt-get install openjdk-8-jre
+</code></pre>
+
+<h2 id="download-clojure-compiler">Download Clojure compiler</h2>
+
+<p>The Clojure compiler comes as a single <code>.jar</code> file.  How convenient.</p>
+
+<p>Here is the URL.  Just download <code>clojure-1.8.0.jar</code> (~3.5M)</p>
+
+<pre><code>https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/
+</code></pre>
+
+<h2 id="write-clojure-and-run">Write Clojure and run</h2>
+
+<pre><code>$ echo '(println &quot;hello world&quot;)' &gt; hello.clj
+$ java -jar clojure-1.8.0.jar hello.clj
+</code></pre>
+
+<h2 id="repl">REPL</h2>
+
+<pre><code>$ java -jar clojure-1.8.0.jar
+Clojure 1.8.0
+user =&gt;
+</code></pre>
+
+<h2 id="a-little-program">A little program</h2>
+
+<pre><code>; a.clj
+(let [name &quot;Jack&quot;]
+  (println &quot;Greetings&quot; name))
+</code></pre>
+
+<p>Let&rsquo;s run it:</p>
+
+<pre><code>$ java -jar clojure-1.8.0.jar a.clj
+</code></pre>
+
+        
+        <p class="author"> 
+        Ken Pu <br>
+        Thursday, Apr 5, 2018
+        </p>
+        <div class="comments no-print">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kenpuca" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+    </div>
+
+        
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-52618243-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+        
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    elements: [],
+    skipStartupTypeset: false,
+    /*
+    "HTML-CSS": {
+        scale: 83,
+    },
+    */
+    //showMathMenu: false,
+    //zoom: "None",
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true,
+      skipTags: ["script", 
+      "noscript", 
+      "style", 
+      "textarea", 
+      "nomath", 
+      "pre",
+      ],
+      // nomathjax used by (code ...) component
+      ignoreClass: "nomath|nomathjax|tex2jax_ignore", 
+    },
+    /*
+    TeX: {
+        equationNumbers: {autoNumber: "AMS"},
+    },
+    */
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js"></script>
+
+
+    </body>
+</html>
