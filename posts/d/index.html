@@ -12,6 +12,9 @@
 
         
 <link rel="stylesheet" href="https://kenpuca.github.io/css/single.css">
+<script>
+var disqus_developer = 1;
+</script>
 
     </head>
     <body>
@@ -74,10 +77,12 @@ to the function <em>forever</em>.</p>
   <span class="p">(</span><span class="kd">defn </span><span class="nv">calc-tax</span> <span class="p">[</span><span class="nv">income</span><span class="p">]</span>
     <span class="p">(</span><span class="nb">* </span><span class="nv">tax-rate</span> <span class="nv">tax</span><span class="p">)))</span>
 
-<span class="p">(</span><span class="nv">calc-tax</span> <span class="mi">1000</span><span class="p">)</span><span class="c1">; =&gt; 100</span></code></pre></div>
+<span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">tax-rate</span> <span class="mf">0.2</span><span class="p">]</span> <span class="p">(</span><span class="nv">calc-tax</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="c1">; =&gt; 100</span></code></pre></div>
 
 <div class="remark"><p>The body of <code>calc-tax</code> does not declare <code>tax-rate</code>, but
-it <em>inherited</em> the symbol from outer scope.</p>
+it <em>inherited</em> the symbol from scope of function declaration,
+not scope of function invocation.</p>
 </div>
 
         
@@ -85,6 +90,9 @@ it <em>inherited</em> the symbol from outer scope.</p>
         Ken Pu <br>
         Thursday, Apr 5, 2018
         </p>
+        <div class="comments">
+            
+        </div>
         
     </div>
 
