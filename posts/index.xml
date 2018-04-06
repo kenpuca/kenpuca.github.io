@@ -6,10 +6,25 @@
     <description>Recent content in Posts on CS Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Apr 2018 16:13:47 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 05 Apr 2018 17:18:01 -0400</lastBuildDate>
     
 	<atom:link href="https://kenpuca.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Functions and Scopes - 2</title>
+      <link>https://kenpuca.github.io/posts/e/</link>
+      <pubDate>Thu, 05 Apr 2018 17:18:01 -0400</pubDate>
+      
+      <guid>https://kenpuca.github.io/posts/e/</guid>
+      <description>&lt;p&gt;Dynamic variables are symbols that can be temporally
+bound to a new value, and the binding propagates into
+the body of a function.  This pattern is known as
+&lt;em&gt;dynamic scopes&lt;/em&gt;, and is generally considered as a
+&lt;strong&gt;bad idea&lt;/strong&gt;.  Nonetheless, here it is.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Functions and Scopes - 1</title>
