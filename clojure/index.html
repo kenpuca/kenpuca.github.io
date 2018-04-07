@@ -12,12 +12,118 @@
 
         
 <link rel=stylesheet href="https://kenpuca.github.io/css/index.css">
+<style>
+.summary-entry {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-column-gap: 20px;
+}
+.summary-entry h1 {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 600px) {
+    .summary-entry {
+        display: block;
+    }
+    .summary-entry > h1 {
+        margin-bottom: 1em;
+    }
+    .summary-entry > div {
+        margin-left: 1em;
+        font-size: 100%;
+    }
+}
+.content {
+    margin-bottom: 2em;
+}
+</style>
 
     </head>
     <body>
         
     <div class="list container">
-        <h1> Clojure </h1>
+        <h1> Clojure on a page </h1>
+
+        <div class="content">
+            <p>Clojure is a cool language. I like how the language features allows
+a programmer to think in Clojure.  This series of posts describe
+ideas in the language of <em>Clojure</em>.</p>
+
+<p>Each post is on a specific idea around Clojure, and each post
+fits on a page when printed.</p>
+
+        </div>
+
+        <div class="summary">
+            <div class="section-listing">
+    <ul class="summaries">
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/e/>Functions and Scopes - 2</a> </h1>
+    <div><p>Dynamic variables are symbols that can be temporally
+bound to a new value, and the binding propagates into
+the body of a function.  This pattern is known as
+<em>dynamic scopes</em>, and is generally considered as a
+<strong>bad idea</strong>.  Nonetheless, here it is.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/d/>Functions and Scopes - 1</a> </h1>
+    <div><p>The body of a function is a new scope.  In side this new
+scope, we can refer to symbols.  We will look at different
+types of symbols that are available inside a function.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/c/>Functional Approach</a> </h1>
+    <div><p>The on-going assumption is that programming
+is all about data transformation.  Let&rsquo;s
+see how we achieve this with functions.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/c1/>Getting Your Hands Dirty</a> </h1>
+    <div><p>Learning Clojure requires you to install Clojure.
+Luckily, contrary to common belief, Clojure compiler
+is as simple as a single file.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/b/>About Programming - 2</a> </h1>
+    <div><p>Clojure has really nice syntax for
+specifying values, symbols and bindings.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+        <li> <div class="summary-entry">
+    <h1> <a href=https://kenpuca.github.io/clojure/a/>About Programming - 1</a> </h1>
+    <div><p>Programs are a way for us humans to communicate with
+machines.  Literals, symbols and bindings of symbols to values
+are incredibly fundamental, and yet often left implicit.</p>
+
+<p></p></div>
+</div>
+ </li>
+        
+    </ul>
+</div>
+
+        </div>
     </div>
 
         
