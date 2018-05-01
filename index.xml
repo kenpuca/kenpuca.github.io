@@ -13,10 +13,10 @@
     
     <item>
       <title>Functions and Scopes - 1</title>
-      <link>https://kenpuca.github.io/clojure/top/func-scopes/1/</link>
+      <link>https://kenpuca.github.io/debug/top/func-scopes/1/</link>
       <pubDate>Thu, 05 Apr 2018 16:13:47 -0400</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/top/func-scopes/1/</guid>
+      <guid>https://kenpuca.github.io/debug/top/func-scopes/1/</guid>
       <description>&lt;p&gt;The body of a function is a new scope.  In side this new
 scope, we can refer to symbols.  We will look at different
 types of symbols that are available inside a function.&lt;/p&gt;
@@ -26,10 +26,10 @@ types of symbols that are available inside a function.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/clojure/top/elem-programming/a/</link>
+      <link>https://kenpuca.github.io/debug/top/elem-programming/a/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/top/elem-programming/a/</guid>
+      <guid>https://kenpuca.github.io/debug/top/elem-programming/a/</guid>
       <description>&lt;p&gt;Programs are a way for us humans to communicate with
 machines.  Literals, symbols and bindings of symbols to values
 are incredibly fundamental, and yet often left implicit.&lt;/p&gt;
@@ -39,10 +39,10 @@ are incredibly fundamental, and yet often left implicit.&lt;/p&gt;
     
     <item>
       <title>Functions and Scopes - 2</title>
-      <link>https://kenpuca.github.io/clojure/top/func-scopes/2/</link>
+      <link>https://kenpuca.github.io/debug/top/func-scopes/2/</link>
       <pubDate>Thu, 05 Apr 2018 17:18:01 -0400</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/top/func-scopes/2/</guid>
+      <guid>https://kenpuca.github.io/debug/top/func-scopes/2/</guid>
       <description>&lt;p&gt;Dynamic variables are symbols that can be temporally
 bound to a new value, and the binding propagates into
 the body of a function.  This pattern is known as
@@ -54,10 +54,10 @@ the body of a function.  This pattern is known as
     
     <item>
       <title></title>
-      <link>https://kenpuca.github.io/clojure/top/elem-programming/b/</link>
+      <link>https://kenpuca.github.io/debug/top/elem-programming/b/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/top/elem-programming/b/</guid>
+      <guid>https://kenpuca.github.io/debug/top/elem-programming/b/</guid>
       <description>&lt;p&gt;Clojure has really nice syntax for
 specifying values, symbols and bindings.&lt;/p&gt;
 
@@ -78,10 +78,10 @@ A Clojure program is represented entirely as a data structure.&lt;/p&gt;
     
     <item>
       <title>Functional Approach</title>
-      <link>https://kenpuca.github.io/clojure/c/</link>
+      <link>https://kenpuca.github.io/debug/c/</link>
       <pubDate>Thu, 05 Apr 2018 14:42:00 -0400</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/c/</guid>
+      <guid>https://kenpuca.github.io/debug/c/</guid>
       <description>&lt;p&gt;The on-going assumption is that programming
 is all about data transformation.  Let&amp;rsquo;s
 see how we achieve this with functions.&lt;/p&gt;
@@ -91,10 +91,10 @@ see how we achieve this with functions.&lt;/p&gt;
     
     <item>
       <title>Getting Your Hands Dirty</title>
-      <link>https://kenpuca.github.io/clojure/c1/</link>
+      <link>https://kenpuca.github.io/debug/c1/</link>
       <pubDate>Thu, 05 Apr 2018 14:42:00 -0400</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/c1/</guid>
+      <guid>https://kenpuca.github.io/debug/c1/</guid>
       <description>&lt;p&gt;Learning Clojure requires you to install Clojure.
 Luckily, contrary to common belief, Clojure compiler
 is as simple as a single file.&lt;/p&gt;
