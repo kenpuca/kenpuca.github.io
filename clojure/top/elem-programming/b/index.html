@@ -19,71 +19,49 @@ var disqus_developer = 2;
     </head>
     <body>
         
-    <div class="single container tiny clojure">
+    <div class="single container  clojure">
     
-    <h1 class="single-title"> Getting Your Hands Dirty </h1>
+    <h1 class="single-title"> Elements of Programming - 2 </h1>
     
 
     
 
     <p class="author no-print"> 
     Ken Pu <br>
-    Thursday, Apr 5, 2018
+    Monday, Apr 2, 2018
     </p>
 
 
 
 
 
-    <p>Learning Clojure requires you to install Clojure.
-Luckily, contrary to common belief, Clojure compiler
-is as simple as a single file.</p>
+    <p>Clojure has really nice syntax for
+specifying values, symbols and bindings.</p>
 
 <p></p>
 
-<p>Let&rsquo;s see how we setup a running environment for Linux or macos.</p>
+<h2 id="literal">Literal</h2>
 
-<h2 id="you-need-java">You need Java</h2>
-
-<p>You will need Java runtime.  I use Java 8 (in 2018) with my Clojure
-installation. You only need the JRE.</p>
-
-<pre><code>$ sudo apt-get install openjdk-8-jre
+<pre><code>3.1415
 </code></pre>
 
-<h2 id="download-clojure-compiler">Download Clojure compiler</h2>
+<h2 id="symbols-bindings-scope">Symbols, Bindings &amp; Scope</h2>
 
-<p>The Clojure compiler comes as a single <code>.jar</code> file.  How convenient.</p>
+<p>We can define bindings that are valid for
+the entire program.</p>
 
-<p>Here is the URL.  Just download <code>clojure-1.8.0.jar</code> (~3.5M)</p>
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="k">def </span><span class="nv">pi</span> <span class="mf">3.1415</span><span class="p">)</span></code></pre></div>
 
-<pre><code>https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/
-</code></pre>
+<p>Sometimes, we want a binding to exist
+with a limited duration.</p>
 
-<h2 id="write-clojure-and-run">Write Clojure and run</h2>
-
-<pre><code>$ echo '(println &quot;hello world&quot;)' &gt; hello.clj
-$ java -jar clojure-1.8.0.jar hello.clj
-</code></pre>
-
-<h2 id="repl">REPL</h2>
-
-<pre><code>$ java -jar clojure-1.8.0.jar
-Clojure 1.8.0
-user =&gt;
-</code></pre>
-
-<h2 id="a-little-program">A little program</h2>
-
-<pre><code>; a.clj
-(let [name &quot;Jack&quot;]
-  (println &quot;Greetings&quot; name))
-</code></pre>
-
-<p>Let&rsquo;s run it:</p>
-
-<pre><code>$ java -jar clojure-1.8.0.jar a.clj
-</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="c1">; Two bindings are created, but they</span>
+<span class="c1">; are only valid within the (let ...)</span>
+<span class="c1">; block.</span>
+<span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">first-name</span> <span class="s">&#34;Albert&#34;</span>
+      <span class="nv">last-name</span> <span class="s">&#34;Einstein&#34;</span><span class="p">]</span>
+  <span class="nv">...</span>
+  <span class="nv">...</span><span class="p">)</span></code></pre></div>
 
     
 </div>

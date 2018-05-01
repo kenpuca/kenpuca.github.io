@@ -6,17 +6,43 @@
     <description>Recent content on Programming &amp; Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Apr 2018 17:18:01 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 05 Apr 2018 16:13:47 -0400</lastBuildDate>
     
 	<atom:link href="https://kenpuca.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Functions and Scopes - 1</title>
+      <link>https://kenpuca.github.io/clojure/top/func-scopes/1/</link>
+      <pubDate>Thu, 05 Apr 2018 16:13:47 -0400</pubDate>
+      
+      <guid>https://kenpuca.github.io/clojure/top/func-scopes/1/</guid>
+      <description>&lt;p&gt;The body of a function is a new scope.  In side this new
+scope, we can refer to symbols.  We will look at different
+types of symbols that are available inside a function.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kenpuca.github.io/clojure/top/elem-programming/a/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/clojure/top/elem-programming/a/</guid>
+      <description>&lt;p&gt;Programs are a way for us humans to communicate with
+machines.  Literals, symbols and bindings of symbols to values
+are incredibly fundamental, and yet often left implicit.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Functions and Scopes - 2</title>
-      <link>https://kenpuca.github.io/clojure/e/</link>
+      <link>https://kenpuca.github.io/clojure/top/func-scopes/2/</link>
       <pubDate>Thu, 05 Apr 2018 17:18:01 -0400</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/e/</guid>
+      <guid>https://kenpuca.github.io/clojure/top/func-scopes/2/</guid>
       <description>&lt;p&gt;Dynamic variables are symbols that can be temporally
 bound to a new value, and the binding propagates into
 the body of a function.  This pattern is known as
@@ -27,14 +53,25 @@ the body of a function.  This pattern is known as
     </item>
     
     <item>
-      <title>Functions and Scopes - 1</title>
-      <link>https://kenpuca.github.io/clojure/d/</link>
-      <pubDate>Thu, 05 Apr 2018 16:13:47 -0400</pubDate>
+      <title></title>
+      <link>https://kenpuca.github.io/clojure/top/elem-programming/b/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/clojure/d/</guid>
-      <description>&lt;p&gt;The body of a function is a new scope.  In side this new
-scope, we can refer to symbols.  We will look at different
-types of symbols that are available inside a function.&lt;/p&gt;
+      <guid>https://kenpuca.github.io/clojure/top/elem-programming/b/</guid>
+      <description>&lt;p&gt;Clojure has really nice syntax for
+specifying values, symbols and bindings.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Review of Clojure</title>
+      <link>https://kenpuca.github.io/summer-school/clojure/1-elements/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/summer-school/clojure/1-elements/</guid>
+      <description>&lt;p&gt;Clojure is very different from imperative languages such as Java / C / Go.
+A Clojure program is represented entirely as a data structure.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -66,31 +103,6 @@ is as simple as a single file.&lt;/p&gt;
     </item>
     
     <item>
-      <title>About Programming - 2</title>
-      <link>https://kenpuca.github.io/clojure/b/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/clojure/b/</guid>
-      <description>&lt;p&gt;Clojure has really nice syntax for
-specifying values, symbols and bindings.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About Programming - 1</title>
-      <link>https://kenpuca.github.io/clojure/a/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://kenpuca.github.io/clojure/a/</guid>
-      <description>&lt;p&gt;Programs are a way for us humans to communicate with
-machines.  Literals, symbols and bindings of symbols to values
-are incredibly fundamental, and yet often left implicit.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://kenpuca.github.io/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,6 +123,18 @@ Teaching
       <description>Ken Pu, Ph.D. (Toronto, 2006)
 ken . pu @ uoit.ca
 kenpu @ cs.toronto.ca</description>
+    </item>
+    
+    <item>
+      <title>Syntax of Clojure</title>
+      <link>https://kenpuca.github.io/summer-school/clojure/2-syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/summer-school/clojure/2-syntax/</guid>
+      <description>&lt;p&gt;Let survey the elements of Clojure constructs.  Each programming
+construct is actually a fragment of Clojure&amp;rsquo;s data descriptive language.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

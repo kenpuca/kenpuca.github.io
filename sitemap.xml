@@ -3,13 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kenpuca.github.io/clojure/e/</loc>
+    <loc>https://kenpuca.github.io/clojure/top/func-scopes/1/</loc>
+    <lastmod>2018-04-05T16:13:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/clojure/top/elem-programming/a/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/clojure/top/elem-programming/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/summer-school/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/clojure/top/func-scopes/2/</loc>
     <lastmod>2018-04-05T17:18:01-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kenpuca.github.io/clojure/d/</loc>
-    <lastmod>2018-04-05T16:13:47-04:00</lastmod>
+    <loc>https://kenpuca.github.io/clojure/top/elem-programming/b/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/summer-school/clojure/1-elements/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -20,16 +45,6 @@
   <url>
     <loc>https://kenpuca.github.io/clojure/c1/</loc>
     <lastmod>2018-04-05T14:42:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kenpuca.github.io/clojure/b/</loc>
-    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kenpuca.github.io/clojure/a/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -51,17 +66,31 @@
   
   <url>
     <loc>https://kenpuca.github.io/clojure/</loc>
-    <lastmod>2018-04-05T17:18:01-04:00</lastmod>
+    <lastmod>2018-04-05T14:42:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/clojure/top/func-scopes/</loc>
+    <lastmod>2018-04-05T16:13:47-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://kenpuca.github.io/</loc>
-    <lastmod>2018-04-05T17:18:01-04:00</lastmod>
+    <lastmod>2018-04-05T16:13:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kenpuca.github.io/research/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/clojure/top/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kenpuca.github.io/summer-school/clojure/2-syntax/</loc>
   </url>
   
   <url>

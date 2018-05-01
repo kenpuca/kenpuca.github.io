@@ -19,71 +19,64 @@ var disqus_developer = 2;
     </head>
     <body>
         
-    <div class="single container tiny clojure">
+    <div class="single container  clojure">
     
-    <h1 class="single-title"> Getting Your Hands Dirty </h1>
+    <h1 class="single-title"> Elements of Programming - 1 </h1>
     
 
     
 
     <p class="author no-print"> 
     Ken Pu <br>
-    Thursday, Apr 5, 2018
+    Sunday, Apr 1, 2018
     </p>
 
 
 
 
 
-    <p>Learning Clojure requires you to install Clojure.
-Luckily, contrary to common belief, Clojure compiler
-is as simple as a single file.</p>
+    <p>Programs are a way for us humans to communicate with
+machines.  Literals, symbols and bindings of symbols to values
+are incredibly fundamental, and yet often left implicit.</p>
 
 <p></p>
 
-<p>Let&rsquo;s see how we setup a running environment for Linux or macos.</p>
+<blockquote>
+<blockquote>
+<p>I finally understood that the half page of code on the bottom of page 13 of
+the Lisp 1.5 manual was Lisp in itself. These were <strong>Maxwell’s Equations of
+Software</strong>!</p>
 
-<h2 id="you-need-java">You need Java</h2>
+<p><author>Alan Kay</author></p>
+</blockquote>
+</blockquote>
 
-<p>You will need Java runtime.  I use Java 8 (in 2018) with my Clojure
-installation. You only need the JRE.</p>
+<h2 id="literals">Literals</h2>
 
-<pre><code>$ sudo apt-get install openjdk-8-jre
-</code></pre>
+<ul>
+<li><p>We can specify data verbatim as part of the source code.
+The syntax that allows us to do this is called <em>literals</em>.</p>
 
-<h2 id="download-clojure-compiler">Download Clojure compiler</h2>
+<ul>
+<li>String literal <code>&quot;Hello world&quot;</code></li>
+<li>Numerical literal <code>3.14159265</code></li>
+</ul></li>
+</ul>
 
-<p>The Clojure compiler comes as a single <code>.jar</code> file.  How convenient.</p>
+<h2 id="symbols-variables">Symbols / Variables</h2>
 
-<p>Here is the URL.  Just download <code>clojure-1.8.0.jar</code> (~3.5M)</p>
+<ul>
+<li>We can give data one or more names.  The names we give
+to data is called a <em>symbol</em> which are also known as <em>variables</em>.</li>
+</ul>
 
-<pre><code>https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/
-</code></pre>
+<h2 id="bindings">Bindings</h2>
 
-<h2 id="write-clojure-and-run">Write Clojure and run</h2>
-
-<pre><code>$ echo '(println &quot;hello world&quot;)' &gt; hello.clj
-$ java -jar clojure-1.8.0.jar hello.clj
-</code></pre>
-
-<h2 id="repl">REPL</h2>
-
-<pre><code>$ java -jar clojure-1.8.0.jar
-Clojure 1.8.0
-user =&gt;
-</code></pre>
-
-<h2 id="a-little-program">A little program</h2>
-
-<pre><code>; a.clj
-(let [name &quot;Jack&quot;]
-  (println &quot;Greetings&quot; name))
-</code></pre>
-
-<p>Let&rsquo;s run it:</p>
-
-<pre><code>$ java -jar clojure-1.8.0.jar a.clj
-</code></pre>
+<ul>
+<li>Symbols are only useful when they label some data.  When a symbol $\pi$
+is used as a label of a value <code>3.14159265</code>, we say that $\pi$ is bound to the
+value <code>3.14159265</code>.</li>
+</ul>
 
     
 </div>
