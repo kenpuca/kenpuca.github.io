@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Review of Clojure</title>
-      <link>https://kenpuca.github.io/summer-school/clojure/1-elements/</link>
+      <title>Elements</title>
+      <link>https://kenpuca.github.io/summer-school/review-clojure/1-elements/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/summer-school/clojure/1-elements/</guid>
+      <guid>https://kenpuca.github.io/summer-school/review-clojure/1-elements/</guid>
       <description>&lt;p&gt;Clojure is very different from imperative languages such as Java / C / Go.
 A Clojure program is represented entirely as a data structure.&lt;/p&gt;
 
@@ -77,11 +77,11 @@ specifying values, symbols and bindings.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Syntax of Clojure</title>
-      <link>https://kenpuca.github.io/summer-school/clojure/2-syntax/</link>
+      <title>Syntax</title>
+      <link>https://kenpuca.github.io/summer-school/review-clojure/2-syntax/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/summer-school/clojure/2-syntax/</guid>
+      <guid>https://kenpuca.github.io/summer-school/review-clojure/2-syntax/</guid>
       <description>&lt;p&gt;Let survey the elements of Clojure constructs.  Each programming
 construct is actually a fragment of Clojure&amp;rsquo;s data descriptive language.&lt;/p&gt;
 
@@ -89,12 +89,26 @@ construct is actually a fragment of Clojure&amp;rsquo;s data descriptive languag
     </item>
     
     <item>
-      <title>Control structures in Clojure</title>
-      <link>https://kenpuca.github.io/summer-school/clojure/3-control/</link>
+      <title>Data</title>
+      <link>https://kenpuca.github.io/summer-school/review-clojure/3-data/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/summer-school/review-clojure/3-data/</guid>
+      <description>We will look at how data is accessed and processed in Clojure.
+Principles of Data-driven Programming Clojure is a functional language. It&amp;rsquo;s data storage is primarily write once, read only.
+ Construction Transformation  We (almost) never modify data in-place.
+Managing Data Construction Definition: Construction Building a data structure from smaller pieces is known as construction.
+ ;; A vector [&amp;#34;Ken&amp;#34; &amp;#34;CS&amp;#34; &amp;#34;Clojure&amp;#34;] ;; A hashmap {:name &amp;#34;Ken&amp;#34; :group &amp;#34;CS&amp;#34; :likes &amp;#34;Clojure&amp;#34;} ;; A set #{ :red :green :blue } ;; A list (note the quote) &amp;#39;(&amp;#34;Ken&amp;#34; &amp;#34;likes&amp;#34; &amp;#34;Clojure&amp;#34;) Destructure Definition: Destructure The process of extracting smaller constituents from a data structure is known as destructure.</description>
+    </item>
+    
+    <item>
+      <title>Control</title>
+      <link>https://kenpuca.github.io/summer-school/review-clojure/4-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kenpuca.github.io/summer-school/clojure/3-control/</guid>
-      <description></description>
+      <guid>https://kenpuca.github.io/summer-school/review-clojure/4-control/</guid>
+      <description> Let&amp;rsquo;s look at the interplay of Clojure data structure and its control logic.
+Recursion </description>
     </item>
     
     <item>
@@ -144,6 +158,16 @@ Teaching
       <description>Ken Pu, Ph.D. (Toronto, 2006)
 ken . pu @ uoit.ca
 kenpu @ cs.toronto.ca</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://kenpuca.github.io/summer-school/tools/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kenpuca.github.io/summer-school/tools/install/</guid>
+      <description>Leiningen We assume that the development environment is either Linux or macos.
+ Make sure you have Java runtime environment installed. Download the lein script. It is the compiler toolchain. Run lein as an executable script, and it will automatically install the necessary Clojure compiler and libraries.  Create a project $ lein new hello-world Generating a project called hello-world based on the &#39;default&#39; template. The default template is intended for library projects, not applications.</description>
     </item>
     
   </channel>
