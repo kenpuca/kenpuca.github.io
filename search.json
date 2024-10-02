@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Recent Publications",
-    "section": "",
-    "text": "Nargesian, Fatemeh, Ken Qian Pu, Bahar Ghadiri Bashardoost, Erkang Zhu, and Renee J. Miller. “Data Lake Organization.” IEEE Transactions on Knowledge and Data Engineering (2022). PDF"
-  },
-  {
-    "objectID": "publications.html#journals",
-    "href": "publications.html#journals",
-    "title": "Recent Publications",
-    "section": "",
-    "text": "Nargesian, Fatemeh, Ken Qian Pu, Bahar Ghadiri Bashardoost, Erkang Zhu, and Renee J. Miller. “Data Lake Organization.” IEEE Transactions on Knowledge and Data Engineering (2022). PDF"
-  },
-  {
-    "objectID": "publications.html#conferences-workshops",
-    "href": "publications.html#conferences-workshops",
-    "title": "Recent Publications",
-    "section": "Conferences & Workshops",
-    "text": "Conferences & Workshops\n\nLimin Ma and Ken Q. Pu. “Accelerating Relational Keyword Queries With Embedded Predictive Neural Networks.” 2024 IEEE 25th International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2024.\nMekael Wasti, Ken Q. Pu and Ali Neshati. “Voice Interactive User Interfaces Powered by LLMs.” Intelligent Systems Conference (IntelliSys) 2024.\nPu, Ken, and Limin Ma. “Incremental Computation of Information Gain in Temporal Relational Streams.” 2022 IEEE 23rd International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2022.\nValdron, Michael, and Pu, Ken. “Data Driven Relational Constraint Programming.” 2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2020. PDF\n\n\nA complete list can be found on Google Scholar."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n\n\n\nAI Automation Group, 2024 ©"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Research Statement",
@@ -61,5 +33,96 @@
     "title": "Research Statement",
     "section": "AI readiness report for industry sectors",
     "text": "AI readiness report for industry sectors\nWe assess AI readiness across various industry sectors, identifying opportunities and challenges. Our reports offer insights into the practical implementation of AI technologies and their impact on industry operations."
+  },
+  {
+    "objectID": "articles/index.html",
+    "href": "articles/index.html",
+    "title": "Articles",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nStructured Constraint Programming\n\n\nKen Pu\n\n\n\n\n\nNo matching items\n\n\nAI Automation Group, 2024 ©"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n\nAI Automation Group, 2024 ©"
+  },
+  {
+    "objectID": "articles/constraint-modeling.html",
+    "href": "articles/constraint-modeling.html",
+    "title": "Structured Constraint Programming",
+    "section": "",
+    "text": "Let’s look at ways we can build constraint programs (CP) in a structured way. As a case study, we will model the curriculum requirements of the Computer Science program."
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#introduction",
+    "href": "articles/constraint-modeling.html#introduction",
+    "title": "Structured Constraint Programming",
+    "section": "",
+    "text": "Let’s look at ways we can build constraint programs (CP) in a structured way. As a case study, we will model the curriculum requirements of the Computer Science program."
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#data",
+    "href": "articles/constraint-modeling.html#data",
+    "title": "Structured Constraint Programming",
+    "section": "Data",
+    "text": "Data\nLet’s start with data. The environment is modeled as a database. Let’s build a database to model the curriculum.\n\ndata = []\nfor i in range(4):\n    for s in ['Fall', 'Winter']:\n        data.append(f\"Y{i+1} {s}\")\n\nsemesters = Series(data, name='semesters')\nsemesters\n\n0      Y1 Fall\n1    Y1 Winter\n2      Y2 Fall\n3    Y2 Winter\n4      Y3 Fall\n5    Y3 Winter\n6      Y4 Fall\n7    Y4 Winter\nName: semesters, dtype: object\n\n\n\n\nThe semesters of the curriculum.\n\ndata = [\n    'CSCI 1030U', 'CSCI 1060U', 'CSCI 1061U', 'CSCI 1062U', 'CSCI 1063U', \n    'CSCI 2000U', 'CSCI 2010U', 'CSCI 2020U', 'CSCI 2040U', 'CSCI 2050U',\n    'CSCI 2072U', 'CSCI 2110U', 'CSCI 3010U', 'CSCI 3030U', 'CSCI 3055U', \n    'CSCI 3060U', 'CSCI 3070U', 'CSCI 3090U', 'CSCI 3230U', 'CSCI 3240U', \n    'CSCI 3310U', 'CSCI 3540U', 'CSCI 4020U', 'CSCI 4030U', 'CSCI 4040U', \n    'CSCI 4050U', 'CSCI 4052U', 'CSCI 4055U', 'CSCI 4060U', 'CSCI 4080U', \n    'CSCI 4100U', 'CSCI 4110U', 'CSCI 4140U', 'CSCI 4150U', 'CSCI 4160U', \n    'CSCI 4210U', 'CSCI 4220U', 'CSCI 4230U', 'CSCI 4410U', 'CSCI 4420U', \n    'CSCI 4430U', 'CSCI 4610U', 'CSCI 4620U'\n]\n\ncourses = Series(data, name='courses')\ncourses.head()\n\n0    CSCI 1030U\n1    CSCI 1060U\n2    CSCI 1061U\n3    CSCI 1062U\n4    CSCI 1063U\nName: courses, dtype: object\n\n\nData is needed to model prerequisites and areas of senior courses. For now, let’s get back to these relations laters."
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#unknowns",
+    "href": "articles/constraint-modeling.html#unknowns",
+    "title": "Structured Constraint Programming",
+    "section": "Unknowns",
+    "text": "Unknowns\nWe will also call them independent variables. These are the variables that should be solved to derive the desired solution.\n\ndef make_unknowns(model:CpModel)-&gt;DataFrame:\n    data = np.empty((len(courses), len(semesters)), dtype=object)\n    for i,c in enumerate(courses):\n        for (j, s) in enumerate(semesters):\n            data[i,j] = model.new_bool_var(f\"{c}∈{s}?\")\n\n    unknown = pd.DataFrame(data, index=courses, columns=semesters)\n    return unknown\n\n\nmodel = CpModel()\nunknown = make_unknowns(model)\nunknown.head()\n\n\n\n\n\n\n\nsemesters\nY1 Fall\nY1 Winter\nY2 Fall\nY2 Winter\nY3 Fall\nY3 Winter\nY4 Fall\nY4 Winter\n\n\ncourses\n\n\n\n\n\n\n\n\n\n\n\n\nCSCI 1030U\nCSCI 1030U∈Y1 Fall?\nCSCI 1030U∈Y1 Winter?\nCSCI 1030U∈Y2 Fall?\nCSCI 1030U∈Y2 Winter?\nCSCI 1030U∈Y3 Fall?\nCSCI 1030U∈Y3 Winter?\nCSCI 1030U∈Y4 Fall?\nCSCI 1030U∈Y4 Winter?\n\n\nCSCI 1060U\nCSCI 1060U∈Y1 Fall?\nCSCI 1060U∈Y1 Winter?\nCSCI 1060U∈Y2 Fall?\nCSCI 1060U∈Y2 Winter?\nCSCI 1060U∈Y3 Fall?\nCSCI 1060U∈Y3 Winter?\nCSCI 1060U∈Y4 Fall?\nCSCI 1060U∈Y4 Winter?\n\n\nCSCI 1061U\nCSCI 1061U∈Y1 Fall?\nCSCI 1061U∈Y1 Winter?\nCSCI 1061U∈Y2 Fall?\nCSCI 1061U∈Y2 Winter?\nCSCI 1061U∈Y3 Fall?\nCSCI 1061U∈Y3 Winter?\nCSCI 1061U∈Y4 Fall?\nCSCI 1061U∈Y4 Winter?\n\n\nCSCI 1062U\nCSCI 1062U∈Y1 Fall?\nCSCI 1062U∈Y1 Winter?\nCSCI 1062U∈Y2 Fall?\nCSCI 1062U∈Y2 Winter?\nCSCI 1062U∈Y3 Fall?\nCSCI 1062U∈Y3 Winter?\nCSCI 1062U∈Y4 Fall?\nCSCI 1062U∈Y4 Winter?\n\n\nCSCI 1063U\nCSCI 1063U∈Y1 Fall?\nCSCI 1063U∈Y1 Winter?\nCSCI 1063U∈Y2 Fall?\nCSCI 1063U∈Y2 Winter?\nCSCI 1063U∈Y3 Fall?\nCSCI 1063U∈Y3 Winter?\nCSCI 1063U∈Y4 Fall?\nCSCI 1063U∈Y4 Winter?"
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#constraints",
+    "href": "articles/constraint-modeling.html#constraints",
+    "title": "Structured Constraint Programming",
+    "section": "Constraints",
+    "text": "Constraints\nWe can immediate declare some basic constraints.\n\nEach course can only be taken at most once.\nEach semester can have at most 5 courses.\nMust take lots of courses.\n\n\ndef make_taken_atmost_once(model:CpModel, unknown:DataFrame)-&gt;Series:\n    def fn(row:pd.Series):\n        c = sum(row) &lt;= 1\n        model.Add(c)\n        return c\n\n    return unknown.apply(fn, axis=1)\n\n\n\nEach course can only be taken at most once.\n\nmodel = CpModel()\nunknown = make_unknowns(model)\nC1 = make_taken_atmost_once(model, unknown)\nC1.head()\n\ncourses\nCSCI 1030U    (((((((CSCI 1030U∈Y1 Fall? + CSCI 1030U∈Y1 Win...\nCSCI 1060U    (((((((CSCI 1060U∈Y1 Fall? + CSCI 1060U∈Y1 Win...\nCSCI 1061U    (((((((CSCI 1061U∈Y1 Fall? + CSCI 1061U∈Y1 Win...\nCSCI 1062U    (((((((CSCI 1062U∈Y1 Fall? + CSCI 1062U∈Y1 Win...\nCSCI 1063U    (((((((CSCI 1063U∈Y1 Fall? + CSCI 1063U∈Y1 Win...\ndtype: object\n\n\n\ndef make_semester_atmost_five(model:CpModel, unknown:DataFrame)-&gt;Series:\n    def fn(col:pd.Series):\n        c = sum(col) &lt;= 5\n        model.Add(c)\n        return c\n\n    return unknown.apply(fn, axis=0)\n\n\n\nEach semester can only have at most five courses.\n\nmodel = CpModel()\nunknown = make_unknowns(model)\nC1 = make_semester_atmost_five(model, unknown)\nC1.head()\n\nsemesters\nY1 Fall      ((((((((((((((((((((((((((((((((((((((((((CSCI...\nY1 Winter    ((((((((((((((((((((((((((((((((((((((((((CSCI...\nY2 Fall      ((((((((((((((((((((((((((((((((((((((((((CSCI...\nY2 Winter    ((((((((((((((((((((((((((((((((((((((((((CSCI...\nY3 Fall      ((((((((((((((((((((((((((((((((((((((((((CSCI...\ndtype: object\n\n\n\ndef make_min_selection(model:CpModel, unknown:DataFrame, min:int):\n    vars = unknown.values.reshape(-1)\n    c = sum(vars) &gt; min\n    model.Add(c)\n    return c"
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#dependent-variables",
+    "href": "articles/constraint-modeling.html#dependent-variables",
+    "title": "Structured Constraint Programming",
+    "section": "Dependent Variables",
+    "text": "Dependent Variables\nWe will declare a number of dependent variables. These values are derived from data and unkowns (and maybe other dependent variables). Since the values of unknowns are non-deterministic, derived qualities are also variables.\nThey can be general integer variables.\nLet’s create a set of dependent integer variables, taken_in, which indicates the semester that the courses are taken in. The taken_in[c] is from 1 to \\(n\\) if the course [c] is taken. Otherwise taken_in[c] = 0.\n\ndef make_taken_in(model:CpModel, unknown:DataFrame)-&gt;Series:\n    def fn(row:pd.Series)-&gt;cp_model.IntVar:\n        var = model.NewIntVar(0, len(row)+1, 'taken_in')\n        model.add_map_domain(var, row, offset=1)\n        return var\n\n    taken_in = unknown.apply(fn, axis=1)\n    return taken_in\n\n\nmodel = CpModel()\nunknowns = make_unknowns(model)\ntaken_in = make_taken_in(model, unknown)\n\ntaken_in.head()\n\ncourses\nCSCI 1030U    taken_in\nCSCI 1060U    taken_in\nCSCI 1061U    taken_in\nCSCI 1062U    taken_in\nCSCI 1063U    taken_in\ndtype: object\n\n\nLet’s also define the set of dependent variables, taken, which are booleans indicating of the course is taken.\n\ndef make_taken(model:CpModel, unknown:DataFrame)-&gt;Series:\n    def fn(row:pd.Series)-&gt;cp_model.IntVar:\n        var = model.NewBoolVar('taken')\n        model.AddMaxEquality(var, row)\n        return var\n\n    taken = unknown.apply(fn, axis=1)\n    return taken\n\n\nmodel = CpModel()\nunknown = make_unknowns(model)\ntaken = make_taken(model, unknown)\n\ntaken.head()\n\ncourses\nCSCI 1030U    taken\nCSCI 1060U    taken\nCSCI 1061U    taken\nCSCI 1062U    taken\nCSCI 1063U    taken\ndtype: object"
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#solution",
+    "href": "articles/constraint-modeling.html#solution",
+    "title": "Structured Constraint Programming",
+    "section": "Solution",
+    "text": "Solution\nWe can solve the unknowns (hopefully) and the derived variables using a Solver. The solution will be rendered by views.\n\nmodel = CpModel()\nunknown = make_unknowns(model)\n\n#\n# constraints\n#\ntaken_atmost_once = make_taken_atmost_once(model, unknown)\nsemester_atmost_five = make_semester_atmost_five(model, unknown)\n\n#\n# dependent variables\n#\ntaken_in = make_taken_in(model, unknown)\ntaken = make_taken(model, unknown)\nmake_min_selection(model, unknown, min=35)\n\n#\n# solution\n#\nsolver = cp_model.CpSolver()\nstatus = solver.solve(model)\n\nstatus_name = {\n    cp_model.OPTIMAL: 'optimal',\n    cp_model.FEASIBLE: 'feasible',\n    cp_model.INFEASIBLE: 'infeasible',\n    cp_model.MODEL_INVALID: 'invalid',\n    cp_model.UNKNOWN: 'unknown',\n}[status]\n\nstatus_name\n\n'optimal'"
+  },
+  {
+    "objectID": "articles/constraint-modeling.html#viewing-the-solution",
+    "href": "articles/constraint-modeling.html#viewing-the-solution",
+    "title": "Structured Constraint Programming",
+    "section": "Viewing the solution",
+    "text": "Viewing the solution\n\ndef view(solver:CpSolver, df:DataFrame)-&gt;DataFrame:\n    def fn(x):\n        return solver.value(x)\n    return df.map(fn)\n\n\nview(solver, unknown)\n# view(solver, taken).head()\n# view(solver, taken_in).head()\n\n\n\n\n\n\n\nsemesters\nY1 Fall\nY1 Winter\nY2 Fall\nY2 Winter\nY3 Fall\nY3 Winter\nY4 Fall\nY4 Winter\n\n\ncourses\n\n\n\n\n\n\n\n\n\n\n\n\nCSCI 1030U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 1060U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 1061U\n0\n0\n0\n0\n1\n0\n0\n0\n\n\nCSCI 1062U\n0\n0\n0\n0\n1\n0\n0\n0\n\n\nCSCI 1063U\n1\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 2000U\n0\n1\n0\n0\n0\n0\n0\n0\n\n\nCSCI 2010U\n0\n0\n0\n0\n0\n1\n0\n0\n\n\nCSCI 2020U\n0\n0\n0\n0\n0\n0\n1\n0\n\n\nCSCI 2040U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 2050U\n0\n1\n0\n0\n0\n0\n0\n0\n\n\nCSCI 2072U\n1\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 2110U\n0\n0\n1\n0\n0\n0\n0\n0\n\n\nCSCI 3010U\n0\n0\n0\n1\n0\n0\n0\n0\n\n\nCSCI 3030U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 3055U\n0\n0\n0\n0\n0\n0\n1\n0\n\n\nCSCI 3060U\n0\n0\n0\n0\n0\n0\n0\n1\n\n\nCSCI 3070U\n0\n0\n0\n1\n0\n0\n0\n0\n\n\nCSCI 3090U\n0\n1\n0\n0\n0\n0\n0\n0\n\n\nCSCI 3230U\n0\n0\n0\n1\n0\n0\n0\n0\n\n\nCSCI 3240U\n0\n0\n0\n0\n1\n0\n0\n0\n\n\nCSCI 3310U\n0\n0\n0\n0\n0\n0\n0\n1\n\n\nCSCI 3540U\n0\n0\n0\n0\n0\n1\n0\n0\n\n\nCSCI 4020U\n0\n0\n0\n0\n0\n0\n1\n0\n\n\nCSCI 4030U\n0\n0\n0\n0\n0\n1\n0\n0\n\n\nCSCI 4040U\n0\n0\n0\n0\n0\n0\n0\n1\n\n\nCSCI 4050U\n0\n0\n1\n0\n0\n0\n0\n0\n\n\nCSCI 4052U\n0\n0\n0\n0\n0\n0\n0\n1\n\n\nCSCI 4055U\n0\n0\n1\n0\n0\n0\n0\n0\n\n\nCSCI 4060U\n0\n0\n1\n0\n0\n0\n0\n0\n\n\nCSCI 4080U\n0\n0\n0\n0\n0\n0\n1\n0\n\n\nCSCI 4100U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4110U\n0\n0\n0\n0\n0\n0\n1\n0\n\n\nCSCI 4140U\n0\n0\n0\n0\n0\n1\n0\n0\n\n\nCSCI 4150U\n1\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4160U\n0\n0\n0\n1\n0\n0\n0\n0\n\n\nCSCI 4210U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4220U\n0\n1\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4230U\n0\n0\n0\n1\n0\n0\n0\n0\n\n\nCSCI 4410U\n0\n0\n0\n0\n0\n1\n0\n0\n\n\nCSCI 4420U\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4430U\n0\n1\n0\n0\n0\n0\n0\n0\n\n\nCSCI 4610U\n0\n0\n0\n0\n1\n0\n0\n0\n\n\nCSCI 4620U\n0\n0\n0\n0\n0\n0\n0\n1\n\n\n\n\n\n\n\n\nview(solver, taken_in)\n\ncourses\nCSCI 1030U    0\nCSCI 1060U    0\nCSCI 1061U    5\nCSCI 1062U    5\nCSCI 1063U    1\nCSCI 2000U    2\nCSCI 2010U    6\nCSCI 2020U    7\nCSCI 2040U    0\nCSCI 2050U    2\nCSCI 2072U    1\nCSCI 2110U    3\nCSCI 3010U    4\nCSCI 3030U    0\nCSCI 3055U    7\nCSCI 3060U    8\nCSCI 3070U    4\nCSCI 3090U    2\nCSCI 3230U    4\nCSCI 3240U    5\nCSCI 3310U    8\nCSCI 3540U    6\nCSCI 4020U    7\nCSCI 4030U    6\nCSCI 4040U    8\nCSCI 4050U    3\nCSCI 4052U    8\nCSCI 4055U    3\nCSCI 4060U    3\nCSCI 4080U    7\nCSCI 4100U    0\nCSCI 4110U    7\nCSCI 4140U    6\nCSCI 4150U    1\nCSCI 4160U    4\nCSCI 4210U    0\nCSCI 4220U    2\nCSCI 4230U    4\nCSCI 4410U    6\nCSCI 4420U    0\nCSCI 4430U    2\nCSCI 4610U    5\nCSCI 4620U    8\ndtype: int64\n\n\n\nview(solver, taken)\n\ncourses\nCSCI 1030U    0\nCSCI 1060U    0\nCSCI 1061U    1\nCSCI 1062U    1\nCSCI 1063U    1\nCSCI 2000U    1\nCSCI 2010U    1\nCSCI 2020U    1\nCSCI 2040U    0\nCSCI 2050U    1\nCSCI 2072U    1\nCSCI 2110U    1\nCSCI 3010U    1\nCSCI 3030U    0\nCSCI 3055U    1\nCSCI 3060U    1\nCSCI 3070U    1\nCSCI 3090U    1\nCSCI 3230U    1\nCSCI 3240U    1\nCSCI 3310U    1\nCSCI 3540U    1\nCSCI 4020U    1\nCSCI 4030U    1\nCSCI 4040U    1\nCSCI 4050U    1\nCSCI 4052U    1\nCSCI 4055U    1\nCSCI 4060U    1\nCSCI 4080U    1\nCSCI 4100U    0\nCSCI 4110U    1\nCSCI 4140U    1\nCSCI 4150U    1\nCSCI 4160U    1\nCSCI 4210U    0\nCSCI 4220U    1\nCSCI 4230U    1\nCSCI 4410U    1\nCSCI 4420U    0\nCSCI 4430U    1\nCSCI 4610U    1\nCSCI 4620U    1\ndtype: int64"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Recent Publications",
+    "section": "",
+    "text": "Nargesian, Fatemeh, Ken Qian Pu, Bahar Ghadiri Bashardoost, Erkang Zhu, and Renee J. Miller. “Data Lake Organization.” IEEE Transactions on Knowledge and Data Engineering (2022). PDF"
+  },
+  {
+    "objectID": "publications.html#journals",
+    "href": "publications.html#journals",
+    "title": "Recent Publications",
+    "section": "",
+    "text": "Nargesian, Fatemeh, Ken Qian Pu, Bahar Ghadiri Bashardoost, Erkang Zhu, and Renee J. Miller. “Data Lake Organization.” IEEE Transactions on Knowledge and Data Engineering (2022). PDF"
+  },
+  {
+    "objectID": "publications.html#conferences-workshops",
+    "href": "publications.html#conferences-workshops",
+    "title": "Recent Publications",
+    "section": "Conferences & Workshops",
+    "text": "Conferences & Workshops\n\nLimin Ma and Ken Q. Pu. “Accelerating Relational Keyword Queries With Embedded Predictive Neural Networks.” 2024 IEEE 25th International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2024.\nMekael Wasti, Ken Q. Pu and Ali Neshati. “Voice Interactive User Interfaces Powered by LLMs.” Intelligent Systems Conference (IntelliSys) 2024.\nPu, Ken, and Limin Ma. “Incremental Computation of Information Gain in Temporal Relational Streams.” 2022 IEEE 23rd International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2022.\nValdron, Michael, and Pu, Ken. “Data Driven Relational Constraint Programming.” 2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science (IRI). IEEE Computer Society, 2020. PDF\n\n\nA complete list can be found on Google Scholar."
   }
 ]
