@@ -228,7 +228,7 @@ window.Quarto = {
 <section id="data" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>Let’s start with data. The <em>environment</em> is modeled as a database. Let’s build a database to model the curriculum.</p>
-<div id="cell-4" class="cell" data-execution_count="2">
+<div id="cell-4" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> []</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> [<span class="st">'Fall'</span>, <span class="st">'Winter'</span>]:</span>
@@ -236,7 +236,7 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>semesters <span class="op">=</span> Series(data, name<span class="op">=</span><span class="st">'semesters'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>semesters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>0      Y1 Fall
 1    Y1 Winter
 2      Y2 Fall
@@ -251,7 +251,7 @@ Name: semesters, dtype: object</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>The semesters of the curriculum.</p>
-</div></div><div id="cell-6" class="cell" data-execution_count="3">
+</div></div><div id="cell-6" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CSCI 1030U'</span>, <span class="st">'CSCI 1060U'</span>, <span class="st">'CSCI 1061U'</span>, <span class="st">'CSCI 1062U'</span>, <span class="st">'CSCI 1063U'</span>, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CSCI 2000U'</span>, <span class="st">'CSCI 2010U'</span>, <span class="st">'CSCI 2020U'</span>, <span class="st">'CSCI 2040U'</span>, <span class="st">'CSCI 2050U'</span>,</span>
@@ -266,7 +266,7 @@ Name: semesters, dtype: object</code></pre>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>courses <span class="op">=</span> Series(data, name<span class="op">=</span><span class="st">'courses'</span>)</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>courses.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>0    CSCI 1030U
 1    CSCI 1060U
 2    CSCI 1061U
@@ -280,7 +280,7 @@ Name: courses, dtype: object</code></pre>
 <section id="unknowns" class="level2">
 <h2 class="anchored" data-anchor-id="unknowns">Unknowns</h2>
 <p>We will also call them <em>independent variables</em>. These are the variables that should be solved to derive the desired solution.</p>
-<div id="cell-9" class="cell" data-execution_count="4">
+<div id="cell-9" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_unknowns(model:CpModel)<span class="op">-&gt;</span>DataFrame:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> np.empty((<span class="bu">len</span>(courses), <span class="bu">len</span>(semesters)), dtype<span class="op">=</span><span class="bu">object</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i,c <span class="kw">in</span> <span class="bu">enumerate</span>(courses):</span>
@@ -290,11 +290,11 @@ Name: courses, dtype: object</code></pre>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    unknown <span class="op">=</span> pd.DataFrame(data, index<span class="op">=</span>courses, columns<span class="op">=</span>semesters)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> unknown</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>unknown <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>unknown.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="35">
 <div>
 
 
@@ -394,7 +394,7 @@ Name: courses, dtype: object</code></pre>
 <li>Each semester can have at most 5 courses.</li>
 <li>Must take lots of courses.</li>
 </ol>
-<div id="cell-12" class="cell" data-execution_count="6">
+<div id="cell-12" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_taken_atmost_once(model:CpModel, unknown:DataFrame)<span class="op">-&gt;</span>Series:</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fn(row:pd.Series):</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        c <span class="op">=</span> <span class="bu">sum</span>(row) <span class="op">&lt;=</span> <span class="dv">1</span></span>
@@ -406,12 +406,12 @@ Name: courses, dtype: object</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Each course can only be taken at most once.</p>
-</div></div><div id="cell-14" class="cell" data-execution_count="7">
+</div></div><div id="cell-14" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>unknown <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>C1 <span class="op">=</span> make_taken_atmost_once(model, unknown)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>C1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="37">
 <pre><code>courses
 CSCI 1030U    (((((((CSCI 1030U∈Y1 Fall? + CSCI 1030U∈Y1 Win...
 CSCI 1060U    (((((((CSCI 1060U∈Y1 Fall? + CSCI 1060U∈Y1 Win...
@@ -421,7 +421,7 @@ CSCI 1063U    (((((((CSCI 1063U∈Y1 Fall? + CSCI 1063U∈Y1 Win...
 dtype: object</code></pre>
 </div>
 </div>
-<div id="cell-15" class="cell" data-execution_count="8">
+<div id="cell-15" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_semester_atmost_five(model:CpModel, unknown:DataFrame)<span class="op">-&gt;</span>Series:</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fn(col:pd.Series):</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        c <span class="op">=</span> <span class="bu">sum</span>(col) <span class="op">&lt;=</span> <span class="dv">5</span></span>
@@ -433,12 +433,12 @@ dtype: object</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Each semester can only have at most five courses.</p>
-</div></div><div id="cell-17" class="cell" data-execution_count="9">
+</div></div><div id="cell-17" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>unknown <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>C1 <span class="op">=</span> make_semester_atmost_five(model, unknown)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>C1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>semesters
 Y1 Fall      ((((((((((((((((((((((((((((((((((((((((((CSCI...
 Y1 Winter    ((((((((((((((((((((((((((((((((((((((((((CSCI...
@@ -448,7 +448,7 @@ Y3 Fall      ((((((((((((((((((((((((((((((((((((((((((CSCI...
 dtype: object</code></pre>
 </div>
 </div>
-<div id="cell-18" class="cell" data-execution_count="21">
+<div id="cell-18" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_min_selection(model:CpModel, unknown:DataFrame, <span class="bu">min</span>:<span class="bu">int</span>):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">vars</span> <span class="op">=</span> unknown.values.reshape(<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">vars</span>) <span class="op">&gt;</span> <span class="bu">min</span></span>
@@ -461,7 +461,7 @@ dtype: object</code></pre>
 <p>We will declare a number of dependent variables. These values are derived from data and unkowns (and maybe other dependent variables). Since the values of unknowns are non-deterministic, derived qualities are also variables.</p>
 <p>They can be general integer variables.</p>
 <p>Let’s create a set of dependent integer variables, <code>taken_in</code>, which indicates the semester that the courses are taken in. The <code>taken_in[c]</code> is from 1 to <span class="math inline">\(n\)</span> if the course <code>[c]</code> is taken. Otherwise <code>taken_in[c] = 0</code>.</p>
-<div id="cell-21" class="cell" data-execution_count="22">
+<div id="cell-21" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_taken_in(model:CpModel, unknown:DataFrame)<span class="op">-&gt;</span>Series:</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fn(row:pd.Series)<span class="op">-&gt;</span>cp_model.IntVar:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        var <span class="op">=</span> model.NewIntVar(<span class="dv">0</span>, <span class="bu">len</span>(row)<span class="op">+</span><span class="dv">1</span>, <span class="st">'taken_in'</span>)</span>
@@ -471,13 +471,13 @@ dtype: object</code></pre>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    taken_in <span class="op">=</span> unknown.<span class="bu">apply</span>(fn, axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> taken_in</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-22" class="cell" data-execution_count="23">
+<div id="cell-22" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>unknowns <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>taken_in <span class="op">=</span> make_taken_in(model, unknown)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>taken_in.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-display" data-execution_count="42">
 <pre><code>courses
 CSCI 1030U    taken_in
 CSCI 1060U    taken_in
@@ -488,7 +488,7 @@ dtype: object</code></pre>
 </div>
 </div>
 <p>Let’s also define the set of dependent variables, <code>taken</code>, which are booleans indicating of the course is taken.</p>
-<div id="cell-24" class="cell" data-execution_count="24">
+<div id="cell-24" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_taken(model:CpModel, unknown:DataFrame)<span class="op">-&gt;</span>Series:</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fn(row:pd.Series)<span class="op">-&gt;</span>cp_model.IntVar:</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        var <span class="op">=</span> model.NewBoolVar(<span class="st">'taken'</span>)</span>
@@ -498,13 +498,13 @@ dtype: object</code></pre>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    taken <span class="op">=</span> unknown.<span class="bu">apply</span>(fn, axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> taken</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-25" class="cell" data-execution_count="25">
+<div id="cell-25" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>unknown <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>taken <span class="op">=</span> make_taken(model, unknown)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>taken.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="44">
 <pre><code>courses
 CSCI 1030U    taken
 CSCI 1060U    taken
@@ -518,7 +518,7 @@ dtype: object</code></pre>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
 <p>We can solve the unknowns (hopefully) and the derived variables using a <code>Solver</code>. The solution will be rendered by views.</p>
-<div id="cell-27" class="cell" data-execution_count="26">
+<div id="cell-27" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CpModel()</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>unknown <span class="op">=</span> make_unknowns(model)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -550,24 +550,22 @@ dtype: object</code></pre>
 <span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>}[status]</span>
 <span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>status_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="45">
 <pre><code>'optimal'</code></pre>
 </div>
 </div>
 </section>
 <section id="viewing-the-solution" class="level2">
 <h2 class="anchored" data-anchor-id="viewing-the-solution">Viewing the solution</h2>
-<div id="cell-29" class="cell" data-execution_count="27">
+<div id="cell-29" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> view(solver:CpSolver, df:DataFrame)<span class="op">-&gt;</span>DataFrame:</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fn(x):</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> solver.value(x)</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df.<span class="bu">map</span>(fn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-30" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>view(solver, unknown)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># view(solver, taken).head()</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># view(solver, taken_in).head()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div id="cell-30" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>view(solver, unknown).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
 <div>
 
 
@@ -599,7 +597,7 @@ dtype: object</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">CSCI 1030U</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -625,7 +623,7 @@ dtype: object</code></pre>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -636,7 +634,7 @@ dtype: object</code></pre>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -652,423 +650,122 @@ dtype: object</code></pre>
 <td>0</td>
 <td>0</td>
 </tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 2000U</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>view(solver, taken_in)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<pre><code>courses
+CSCI 1030U    1
+CSCI 1060U    0
+CSCI 1061U    0
+CSCI 1062U    0
+CSCI 1063U    1
+CSCI 2000U    1
+CSCI 2010U    1
+CSCI 2020U    1
+CSCI 2040U    2
+CSCI 2050U    2
+CSCI 2072U    2
+CSCI 2110U    2
+CSCI 3010U    2
+CSCI 3030U    3
+CSCI 3055U    3
+CSCI 3060U    3
+CSCI 3070U    3
+CSCI 3090U    3
+CSCI 3230U    4
+CSCI 3240U    4
+CSCI 3310U    4
+CSCI 3540U    4
+CSCI 4020U    4
+CSCI 4030U    5
+CSCI 4040U    5
+CSCI 4050U    5
+CSCI 4052U    5
+CSCI 4055U    5
+CSCI 4060U    6
+CSCI 4080U    6
+CSCI 4100U    6
+CSCI 4110U    6
+CSCI 4140U    6
+CSCI 4150U    7
+CSCI 4160U    7
+CSCI 4210U    7
+CSCI 4220U    7
+CSCI 4230U    7
+CSCI 4410U    8
+CSCI 4420U    8
+CSCI 4430U    8
+CSCI 4610U    8
+CSCI 4620U    8
+dtype: int64</code></pre>
+</div>
+</div>
+<div id="cell-32" class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>view(solver, taken_in) <span class="op">\</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>.to_frame() <span class="op">\</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>.reset_index() <span class="op">\</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>.rename(columns<span class="op">=</span>{<span class="dv">0</span>: <span class="st">'semester'</span>}) <span class="op">\</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>.groupby(by<span class="op">=</span><span class="st">'semester'</span>) <span class="op">\</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>.agg({</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'courses'</span>: <span class="kw">lambda</span> x: (<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(x)<span class="sc">}</span><span class="ss"> :"</span> <span class="op">+</span> <span class="st">", "</span>.join(x))</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">courses</th>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 2010U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
+<th data-quarto-table-cell-role="th">semester</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3 :CSCI 1060U, CSCI 1061U, CSCI 1062U</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 2020U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">1</td>
+<td>5 :CSCI 1030U, CSCI 1063U, CSCI 2000U, CSCI 20...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 2040U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">2</td>
+<td>5 :CSCI 2040U, CSCI 2050U, CSCI 2072U, CSCI 21...</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 2050U</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">3</td>
+<td>5 :CSCI 3030U, CSCI 3055U, CSCI 3060U, CSCI 30...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 2072U</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">4</td>
+<td>5 :CSCI 3230U, CSCI 3240U, CSCI 3310U, CSCI 35...</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 2110U</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">5</td>
+<td>5 :CSCI 4030U, CSCI 4040U, CSCI 4050U, CSCI 40...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 3010U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">6</td>
+<td>5 :CSCI 4060U, CSCI 4080U, CSCI 4100U, CSCI 41...</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 3030U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td data-quarto-table-cell-role="th">7</td>
+<td>5 :CSCI 4150U, CSCI 4160U, CSCI 4210U, CSCI 42...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 3055U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 3060U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 3070U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 3090U</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 3230U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 3240U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 3310U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 3540U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4020U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4030U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4040U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4050U</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4052U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4055U</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4060U</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4080U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4100U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4110U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4140U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4150U</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4160U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4210U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4220U</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4230U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4410U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4420U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4430U</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">CSCI 4610U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">CSCI 4620U</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
+<td data-quarto-table-cell-role="th">8</td>
+<td>5 :CSCI 4410U, CSCI 4420U, CSCI 4430U, CSCI 46...</td>
 </tr>
 </tbody>
 </table>
@@ -1076,113 +773,11 @@ dtype: object</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-31" class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>view(solver, taken_in)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
-<pre><code>courses
-CSCI 1030U    0
-CSCI 1060U    0
-CSCI 1061U    5
-CSCI 1062U    5
-CSCI 1063U    1
-CSCI 2000U    2
-CSCI 2010U    6
-CSCI 2020U    7
-CSCI 2040U    0
-CSCI 2050U    2
-CSCI 2072U    1
-CSCI 2110U    3
-CSCI 3010U    4
-CSCI 3030U    0
-CSCI 3055U    7
-CSCI 3060U    8
-CSCI 3070U    4
-CSCI 3090U    2
-CSCI 3230U    4
-CSCI 3240U    5
-CSCI 3310U    8
-CSCI 3540U    6
-CSCI 4020U    7
-CSCI 4030U    6
-CSCI 4040U    8
-CSCI 4050U    3
-CSCI 4052U    8
-CSCI 4055U    3
-CSCI 4060U    3
-CSCI 4080U    7
-CSCI 4100U    0
-CSCI 4110U    7
-CSCI 4140U    6
-CSCI 4150U    1
-CSCI 4160U    4
-CSCI 4210U    0
-CSCI 4220U    2
-CSCI 4230U    4
-CSCI 4410U    6
-CSCI 4420U    0
-CSCI 4430U    2
-CSCI 4610U    5
-CSCI 4620U    8
-dtype: int64</code></pre>
-</div>
-</div>
-<div id="cell-32" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>view(solver, taken)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
-<pre><code>courses
-CSCI 1030U    0
-CSCI 1060U    0
-CSCI 1061U    1
-CSCI 1062U    1
-CSCI 1063U    1
-CSCI 2000U    1
-CSCI 2010U    1
-CSCI 2020U    1
-CSCI 2040U    0
-CSCI 2050U    1
-CSCI 2072U    1
-CSCI 2110U    1
-CSCI 3010U    1
-CSCI 3030U    0
-CSCI 3055U    1
-CSCI 3060U    1
-CSCI 3070U    1
-CSCI 3090U    1
-CSCI 3230U    1
-CSCI 3240U    1
-CSCI 3310U    1
-CSCI 3540U    1
-CSCI 4020U    1
-CSCI 4030U    1
-CSCI 4040U    1
-CSCI 4050U    1
-CSCI 4052U    1
-CSCI 4055U    1
-CSCI 4060U    1
-CSCI 4080U    1
-CSCI 4100U    0
-CSCI 4110U    1
-CSCI 4140U    1
-CSCI 4150U    1
-CSCI 4160U    1
-CSCI 4210U    0
-CSCI 4220U    1
-CSCI 4230U    1
-CSCI 4410U    1
-CSCI 4420U    0
-CSCI 4430U    1
-CSCI 4610U    1
-CSCI 4620U    1
-dtype: int64</code></pre>
-</div>
-</div>
 
 
 </section>
 
-<div class="footer">
-AI Automation Group, 2024 ©
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
